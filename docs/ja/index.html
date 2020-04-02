@@ -24,10 +24,10 @@
             <div class="col-lg-12">
                 <div class="form-group">
                     <label for="hero-select">英雄選択</label>
-                    <select class="form-control" id="hero-select">
-                        <option selected value="">-</option>
-                    </select>
+                    <input type="text" class="form-control" id="hero-select" autocomplete="on" list="herolist" placeholder="名前を入力...">
                 </div>
+                <datalist id="herolist">
+                </datalist>
             </div>
         </div>
         <div class="row" id="content">
@@ -227,8 +227,10 @@
                 .then(text => JSON.parse(text))
                 .then(json => {
                     json.forEach((e) => {
-                        $("#hero-select").append($("<option>").attr("value", e).text(e.substring(0, e.length - 5)));
+                        $("#herolist").append($("<option>").attr("value", e.substring(0, e.length - 5)).text(e.substring(0, e.length - 5)));
                     });
+
+                    
                     const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
                     $("#hero-select").val(id);
                     loadPage(id);
@@ -236,6 +238,7 @@
 
             $("#hero-select").change((e) => {
                 location.hash = $(e.target).val();
+                $("#hero-select").blur();
             });
 
             window.addEventListener('hashchange', () => {
@@ -263,7 +266,7 @@
                     return;
                 }
 
-                fetch('./' + id)
+                fetch('./' + id + ".json")
                     .then((response) => response.text())
                     .then(text => JSON.parse(text))
                     .then(json => template(json))
