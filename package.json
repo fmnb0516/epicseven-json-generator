@@ -21,7 +21,9 @@
   "homepage": "https://github.com/fmnb0516/epicseven-json-generator#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
     "request": "^2.88.2",
-    "request-promise": "^4.2.5"
+    "request-promise": "^4.2.5",
+    "serve-index": "^1.9.1"
   }
 }

@@ -214,6 +214,8 @@ const runner = (() => {
         const response = await requestWithCache(generator["characterListUrl"]);
         const $ = cheerio.load(response);
         const pages = await generator["caharacterListPageParser"]($);
+
+        const heros = [];
     
         for(let i =0; i<pages.length; i++) {
             const page = pages[i];
@@ -228,7 +230,10 @@ const runner = (() => {
             await generator["CaharacterDataPageParser"]($$, dataBuilder);
 
             await fs.writeFile(jsonPath, dataBuilder.toJsonString(), "utf8");
+            heros.push(heroName + ".json");
         }
+
+        await fs.writeFile("./docs/"+lang+"/_heros.json", JSON.stringify(heros, null, "\t"), "utf8");
     };
 })();
 
