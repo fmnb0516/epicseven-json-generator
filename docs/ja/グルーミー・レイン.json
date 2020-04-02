@@ -101,40 +101,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "慟哭",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与え、10%の確率で追加ターンが発生する。自身が弱体状態の場合、発生率が2倍になる。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率が",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率が",
+					"value": 3,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
+			"name": "悪意",
 			"tern": 0,
-			"desc": "",
+			"desc": "自身が弱体状態の場合、攻撃力とスピードがUPする。スタン・睡眠・挑発状態にならない。",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ•スピード",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ•スピード",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ•スピード",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "霊魂破壊",
+			"tern": 4,
+			"desc": "敵全体にダメージを与え、75%の確率で自身の弱体効果をすべて転移させて、自身の弱体効果をすべて解除する。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "ダメージがUPする。(魂力20消費)",
+				"usesoul": 20
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "グルーミー・レイン",

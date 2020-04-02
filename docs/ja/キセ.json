@@ -81,40 +81,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "満月の鎌",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与える。攻撃対象が強化状態の場合、ダメージが70%UPする。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "ダメージがUPする。(魂力10消費)",
+				"usesoul": 10
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "暗黒の痕跡",
+			"tern": 4,
+			"desc": "敵全体にダメージを与える。自分が潜伏状態の場合、対象の防御力を60%貫通する。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 2,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "夜想曲",
+			"tern": 5,
+			"desc": "敵単体にダメージを与え、自身に2ターンの間潜伏状態を付与する。さらに攻撃対象のスキルターンを2増加させる。現在の自身の生命力に応じてダメージがUPする。(魂力3獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 3,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "キセ",

@@ -101,40 +101,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "睡眠魔法",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与える。25%の確率で睡眠を1ターンの間付与する。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "浄化",
+			"tern": 2,
+			"desc": "味方全体の弱体効果を1つ解除し、弱体状態の対象の生命力を回復する。対象の最大生命力が高いほど回復量がUPする。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "水のカーテン",
+			"tern": 3,
+			"desc": "味方対象の生命力を回復して、2ターンの間弱体効果免疫を付与し、自身のアクションゲージを50%UPする。対象の最大生命力が高いほど回復量がUPする。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "効果対象が味方全体になる。(魂力20消費)",
+				"usesoul": 20
 			},
-			"level": []
+			"level": [
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "モンモランシー",

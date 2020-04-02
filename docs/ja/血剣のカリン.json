@@ -91,40 +91,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "連撃斬",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与える。与えたダメージに応じて自身の生命力を回復する。このスキルで対象を気絶させた場合、自身のアクションゲージが50%UPする。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
+			"name": "呪われし血剣",
 			"tern": 0,
-			"desc": "",
+			"desc": "生命力が低いほど攻撃力・防御力・スピードがUPする。",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "追加ステータス",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "追加ステータス",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "追加ステータス",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "追加ステータス",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "追加ステータス",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "居合:炎龍",
+			"tern": 5,
+			"desc": "自身の現在の生命力を20%消費し、敵全体にダメージを与える。敵を気絶させた場合、追加ターンが発生する。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "ダメージがUPする。(魂力10消費)",
+				"usesoul": 10
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "血剣のカリン",

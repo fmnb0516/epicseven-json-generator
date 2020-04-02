@@ -91,40 +91,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "ハードレッスン",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与え、35%の確率で防御力DOWNを2ターンの間付与する。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
+			"name": "狂気",
 			"tern": 0,
-			"desc": "",
+			"desc": "【ハードレッスン】【ヒステリッククラッシュ】で敵を気絶させた場合、3ターンの間狂気状態になり、敵全体に追加攻撃が発生する。",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "追加スキルダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "追加スキルダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "追加スキルダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "追加スキルダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "追加スキルダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "ヒステリッククラッシュ",
+			"tern": 4,
+			"desc": "敵全体にダメージを与え、2つの出血を2ターンの間付与し、50%の確率で防御力DOWNを2ターンの間付与する。自身が狂気状態の時ダメージがUPする。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "ダメージがUPする。(魂力10消費)",
+				"usesoul": 10
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "クラリッサ",

@@ -101,40 +101,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "盾突",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与え、50%の確率で強化効果を2つ解除する。自身の最大生命力が高いほどダメージがUPする。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
+			"name": "護衛",
 			"tern": 0,
-			"desc": "",
+			"desc": "バトル開始時・自身のターン開始時、生命力が最も低い味方にシールドを2ターン付与する。自身の最大生命力が高いほどシールド効果がUPする。",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "シールド効果",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "シールド効果",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "シールド効果",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "防御態勢",
+			"tern": 4,
+			"desc": "敵単体にダメージを与え、75%の確率でスタンを1ターンの間付与し、アクションゲージを30%DOWNさせる。自身の最大生命力が高いほどダメージがUPする。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "効果抵抗を無視する。(魂力20消費)",
+				"usesoul": 20
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "アロウェル",

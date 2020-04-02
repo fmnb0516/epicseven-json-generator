@@ -91,40 +91,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "盾撃",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与え、50%の確率で弱体効果を1つ転移させる。自身が憤怒状態の場合はダメージがUPし、スタンを1ターンの間付与する。自身の防御力が高いほどダメージがUPする。(魂力1獲得/闘志10獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "攻城鎚",
+			"tern": 4,
+			"desc": "敵全体にダメージを与え、アクションゲージを20%DOWNさせる。対象のアクションゲージが0になった時、スタンを1ターンの間付与する。自身が憤怒状態の時、アクションゲージのDOWN効果が2倍になる。自身の防御力が高いほどダメージがUPする。(魂力2獲得/闘志30獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 2,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 3,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
+			"name": "炎神降臨",
 			"tern": 0,
-			"desc": "",
+			"desc": "3ターンの間、憤怒状態になる。自身の生命力を回復し、追加ターンが発生する。初回のバトル開始時、闘志が50UPする。攻撃を受けた時、闘志が10UPする。(魂力2獲得/闘志100消費)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "生命力回復量が2倍になる。(魂力20消費)",
+				"usesoul": 20
 			},
-			"level": []
+			"level": [
+				{
+					"label": "獲得魂力",
+					"value": 2,
+					"type": "UP",
+					"num": "fix"
+				},
+				{
+					"label": "回復力",
+					"value": 20,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "コルヴス ",

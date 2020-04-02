@@ -101,40 +101,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "魔力放出",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与え、25%の確率でスタンを1ターンの間付与する。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
+			"name": "ヒーローハート",
 			"tern": 0,
-			"desc": "",
+			"desc": "自身以外の味方が攻撃を受けた時、自身のアクションゲージを9%UPさせる。自身以外の味方が気絶した時、スキルターンが0になる。",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "アクションゲージ",
+					"value": 0,
+					"type": ".",
+					"num": "fix"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 0,
+					"type": ".",
+					"num": "fix"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 0,
+					"type": ".",
+					"num": "fix"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 0,
+					"type": ".",
+					"num": "fix"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 1,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "魔力封印",
+			"tern": 5,
+			"desc": "敵単体にダメージを与え、50%の確率でスキルターンを1増加させる。(魂力3獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 3,
+				"soulbern": true,
+				"bern_desc": "ダメージがUPする。(魂力10消費)",
+				"usesoul": 10
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "アドレー",

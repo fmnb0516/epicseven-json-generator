@@ -91,40 +91,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "戒め",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与え、ダメージに応じて生命力状態が最も悪い味方の生命力を回復する。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "神聖なる戒め",
+			"tern": 3,
+			"desc": "敵全体にダメージを与え、ダメージに応じて生命力状態が最も悪い味方の生命力を回復する。クリティカル発生時、【戒め】を発動する。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 2,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "聖なる力",
+			"tern": 5,
+			"desc": "対象と自身の生命力を回復し、無敵を1ターンの間、攻撃力UPを2ターンの間付与する。自身の攻撃力が高いほど回復量がUPする。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "自身に付与される【聖なる力】の強化効果が1ターン延長し、追加ターンが発生する。(魂力20消費)",
+				"usesoul": 20
 			},
-			"level": []
+			"level": [
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "焼尽のディンゴ",

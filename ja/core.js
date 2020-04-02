@@ -1,12 +1,16 @@
 
 
-const findHeaderElement = ($, text) => {
+const findHeaderElement = ($, text, mode) => {
+
+    const check = mode === true
+        ? (t1, t2) => t1 === t2 
+        : (t1, t2) => t1.indexOf(t2) !== -1;
+
     const entries = $(".archive-style-wrapper h3");
 
     for(let i=0; i<entries.length; i++) {
         const h3 = $(entries.get(i));
-
-        if(h3.text().indexOf(text) !== -1) {
+        if(check(h3.text(), text)) {
             return h3;
         }
     }
@@ -122,7 +126,7 @@ module.exports = (builder, plugin) => {
                 builder.stampCollect(entry[0].trim(), parseFloat(t === "percent" ? entry[1].trim().substring(-1) : entry[1].trim()), t);
             });
 
-            const skillHeader = findHeaderElement($, "スキル");
+            const skillHeader = findHeaderElement($, "スキル" ,true);
             const skills = [skillHeader.next(), skillHeader.next().next(), skillHeader.next().next().next()];
 
             for(let i=0; i<skills.length; i++) {

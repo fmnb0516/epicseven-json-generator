@@ -101,40 +101,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "流血攻撃",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与え、35%の確率でスピードDOWNを2ターンの間付与する。自身のスピードが高いほどダメージがUPする。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "破風斬",
+			"tern": 3,
+			"desc": "敵単体にダメージを与え、35%の確率で攻撃力DOWNを2ターンの間付与する。自身のスピードが高いほどダメージがUPする。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "効果発生率",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "感応",
+			"tern": 4,
+			"desc": "味方全体のアクションゲージ15%UPさせ、スピードUPを2ターンの間付与する。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "追加ターンが発生する。(魂力20消費)",
+				"usesoul": 20
 			},
-			"level": []
+			"level": [
+				{
+					"label": "アクションゲージ",
+					"value": 1,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 1,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 1,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "ルージット",

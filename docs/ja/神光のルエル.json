@@ -81,40 +81,127 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "誓いの鍵",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与え、最も生命力が低い味方の生命力を回復する。自身の最大生命力に応じてダメージがUPし、回復量は対象の最大生命力に応じてUPする。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "攻撃後、味方全体の生命力を大きく回復する。連携攻撃が発生しない。(魂力20消費)",
+				"usesoul": 20
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "光の柱",
+			"tern": 3,
+			"desc": "対象の弱体効果をすべて解除し、生命力を回復させ、シールドを2ターンの間付与する。回復量とシールド効果は自身の最大生命力に応じてUPする。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 2,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "光の奇蹟",
+			"tern": 5,
+			"desc": "気絶した味方単体を生命力を全回復状態で復活させ、無敵を1ターンの間付与する。対象が気絶していない場合、弱体効果をすべて解除し、同じ効果が適用される。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 2,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "獲得魂力",
+					"value": 2,
+					"type": "UP",
+					"num": "fix"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				}
+			]
 		}
 	],
 	"name": "神光のルエル",

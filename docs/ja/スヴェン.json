@@ -101,40 +101,133 @@
 	},
 	"skill": [
 		{
-			"name": "",
+			"name": "邪悪な一撃",
 			"tern": 0,
-			"desc": "",
+			"desc": "敵単体にダメージを与え、自身の現在生命力が50%未満の場合、追加攻撃が発動する。追加攻撃は自身の現在生命力が低いほどダメージがUPし、自身のターンに1回まで発生する。(魂力1獲得)",
 			"soul": {
-				"soul": 0,
+				"soul": 1,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		},
 		{
-			"name": "",
+			"name": "底力",
 			"tern": 0,
-			"desc": "",
+			"desc": "気絶するダメージを受けた時、不死・攻撃力UPを1ターンの間付与する。この効果は8ターンに1回まで発動する。",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
 				"bern_desc": "",
 				"usesoul": 0
 			},
-			"level": []
+			"level": [
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "ターンDOWN",
+					"num": "fix"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "ターンDOWN",
+					"num": "fix"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "ターンDOWN",
+					"num": "fix"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "ターンDOWN",
+					"num": "fix"
+				}
+			]
 		},
 		{
-			"name": "",
-			"tern": 0,
-			"desc": "",
+			"name": "死の宣告",
+			"tern": 4,
+			"desc": "敵全体にダメージを与える。自身の現在生命力が低いほどダメージがUPする。(魂力2獲得)",
 			"soul": {
-				"soul": 0,
-				"soulbern": false,
-				"bern_desc": "",
-				"usesoul": 0
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "ダメージがUPする。(魂力10消費)",
+				"usesoul": 10
 			},
-			"level": []
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			]
 		}
 	],
 	"name": "スヴェン",
