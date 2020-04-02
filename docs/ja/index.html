@@ -31,11 +31,180 @@
             </div>
         </div>
         <div class="row" id="content">
-
         </div>
     </div>
 
+    <footer class="container">
+        <hr/>
+        <p>COPYRIGHT &#169; <a href="https://github.com/fmnb0516/epicseven-json-generator">fmnb0516</a> ALL RIGHTS RESERVED. </p>
+    </footer>
+
     <script type="text/x-handlebars" id="template">
+        <div class="col-lg-6">
+            <a download="{{name}}.json" href="./{{name}}.json" class="btn btn-info" style="position: absolute;right: 50px;top: 20px;">DL</a>
+            <img style="width: 100%;" class="img-thumbnail" src="{{thumbnail}}"/>
+
+            <br/><br/>
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tbody>
+                        <tr>
+                            <td class="table-dark">名前</td>
+                            <td colspan="5"><strong>{{name}}</strong></td>
+                        <tr>
+                        <tr>
+                            <td class="table-dark">レア</td>
+                            <td><span class="badge badge-pill badge-info">{{rare}}</span></td>
+                            <td class="table-dark">クラス</td>
+                            <td><span class="badge badge-pill badge-info">{{clazz}}</span></td>
+                            <td class="table-dark">属性</td>
+                            <td><span class="badge badge-pill badge-info">{{type}}</span></td>
+                        <tr>
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+        <div class="col-lg-6">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th></th>
+                            <th style="width: 140px;text-align: center;vertical-align: middle;">初期</th>
+                            <th style="width: 140px;text-align: center;vertical-align: middle;">覚醒後<br/>【★6済み】</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>攻撃力</td>
+                            <td><span class="badge badge-info">{{status.init.attack}}</span></td>
+                            <td><span class="badge badge-info">{{status.max.attack}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>生命力</td>
+                            <td><span class="badge badge-info">{{status.init.health}}</span></td>
+                            <td><span class="badge badge-info">{{status.max.health}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>スピード</td>
+                            <td><span class="badge badge-info">{{status.init.speed}}</span></td>
+                            <td><span class="badge badge-info">{{status.max.speed}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>防御力</td>
+                            <td><span class="badge badge-info">{{status.init.defense}}</span></td>
+                            <td><span class="badge badge-info">{{status.max.defense}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>クリティカル発生率</td>
+                            <td><span class="badge badge-info">{{status.init.critical_hit}}%</span></td>
+                            <td><span class="badge badge-info">{{status.max.critical_hit}}%</span></td>
+                        </tr>
+                        <tr>
+                            <td>クリティカルダメージ</td>
+                            <td><span class="badge badge-info">{{status.init.critical_damage}}%</span></td>
+                            <td><span class="badge badge-info">{{status.max.critical_damage}}%</span></td>
+                        </tr>
+                        <tr>
+                            <td>連続攻撃発生率</td>
+                            <td><span class="badge badge-info">{{status.init.unity_chance}}%</span></td>
+                            <td><span class="badge badge-info">{{status.max.unity_chance}}%</span></td>
+                        </tr>
+                        <tr>
+                            <td>効果命中率</td>
+                            <td><span class="badge badge-info">{{status.init.debuff_hit}}%</span></td>
+                            <td><span class="badge badge-info">{{status.max.debuff_hit}}%</span></td>
+                        </tr>
+                        <tr>
+                            <td>効果命中率DOWN</td>
+                            <td><span class="badge badge-info">{{status.init.debuff_resist}}%</span></td>
+                            <td><span class="badge badge-info">{{status.max.debuff_resist}}%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            {{#each skill}}
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td style="width: 200px;" class="table-dark" rowspan="{{ifval soul.soulbern 3 2}}">
+                            {{name}}
+                            <span class="badge badge-info">CT:{{tern}}</span>
+                        </td>
+                        <td>
+                            <strong>【スキル効果】</strong><br/>
+                            <small class="form-text text-muted">
+                            {{desc}}
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>【スキル強化】</strong><br/>
+                            <small class="form-text text-muted">
+                            {{#each level}}
+                            +{{index @index}} {{label}} {{value}} {{typelabel num}} {{type}}<br/>
+                            {{/each}}
+                            </small>
+                        </td>
+                    </tr>
+                    {{#if soul.soulbern}}
+                    <tr>
+                        <td>
+                            <strong>【魂力解放効果】</strong><br/>
+                            <small class="form-text text-muted">
+                            {{soul.bern_desc}}
+                            </small>
+                        </td>
+                    </tr>
+                    {{/if}}
+                </tbody>
+            </table>
+            {{/each}}
+        </div>
+
+        <div class="col-lg-6">
+            <table class="table" style="width: 50%;float: left;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="width: 140px;text-align: center;vertical-align: middle;">刻印展開</th>
+                    </tr>
+                    {{#each stamp.expansion}}
+                    <tr>
+                        <td>
+                            <span class="badge badge-info">{{label}}</span>
+                            +
+                            <span class="badge badge-info">{{value}} {{typelabel type}}</span>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <table class="table" style="width: 50%;float: left;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="width: 140px;text-align: center;vertical-align: middle;">刻印集中</th>
+                    </tr>
+                    {{#each stamp.collect}}
+                    <tr>
+                        <td>
+                            <span class="badge badge-info">{{label}}</span>
+                            +
+                            <span class="badge badge-info">{{value}} {{typelabel type}}</span>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -71,6 +240,18 @@
             window.addEventListener('hashchange', () => {
                 const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
                 loadPage(id);
+            });
+
+            Handlebars.registerHelper('typelabel', (text) => {
+                return text === "percent" ? "%" : "";
+            });
+
+            Handlebars.registerHelper("index", (v) => {
+                return parseInt(v) + 1;
+            });
+
+            Handlebars.registerHelper("ifval", (v, t, f) => {
+                return v ? t : f;
             });
 
             const template = Handlebars.compile($("#template").html());
