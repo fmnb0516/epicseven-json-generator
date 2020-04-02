@@ -233,7 +233,7 @@ const runner = (() => {
             heros.push(heroName + ".json");
         }
 
-        await fs.writeFile("./docs/"+lang+"/_heros.json", JSON.stringify(heros, null, "\t"), "utf8");
+        await fs.writeFile("./docs/"+lang+"/heros.json", JSON.stringify(heros, null, "\t"), "utf8");
     };
 })();
 

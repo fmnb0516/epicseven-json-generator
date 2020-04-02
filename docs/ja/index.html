@@ -226,7 +226,7 @@
 
     <script>
         $(() => {
-            fetch('./_heros.json')
+            fetch('./heros.json')
                 .then((response) => response.text())
                 .then(text => JSON.parse(text))
                 .then(json => {
