@@ -169,7 +169,24 @@ module.exports = (builder, plugin) => {
             }
         }).registerArtifactListUrl("https://game8.jp/epic-seven/301576")
             .registeArtifactListPageParser($ => {
-                return [];
+                const result = [];
+
+                const entries = $("table.a-table.a-table.a-table.tablesorter tbody tr");
+    
+                entries.each((i, elem) => {
+                    const td = $(elem).find("td").get(0);
+                    const url = $(td).find("a.a-link").attr("href");
+                    const name = $(td).text().trim();
+    
+                    result.push({
+                        name : name,
+                        url : url
+                    });
+                });
+                return result;
+            }).registerArtifactDataPageParser( async ($, builder) => {
+
+                
             });
         
 };

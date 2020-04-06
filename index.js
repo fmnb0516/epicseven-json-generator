@@ -26,6 +26,17 @@ const loadHeroData = async (path) => {
     }
 };
 
+const loadArtifactData = async (path) => {
+    try {
+        return JSON.parse(await fs.readFile(path, "utf8"));
+    } catch(e) {
+        return {
+            effect : [],
+            status : {}
+        }
+    }
+};
+
 const requestWithCache = (() => {
     const cache = (url) => {
         const md5 = crypto.createHash('md5')
@@ -120,10 +131,25 @@ const generator = (() => {
 })();
 
 const runner = (() => {
-    class HeroDataBuilder {
-
+    class ArtifactDataBuilder {
         constructor(data) {
             this.json = data
+        };
+
+    };
+
+    class HeroDataBuilder {
+        constructor(data) {
+            this.json = data
+        };
+
+        clearEffect() {
+            this.json.effect = [];
+            return this;
+        };
+
+        toJsonString() {
+            return JSON.stringify(this.json, null, "\t");
         };
 
         baseData(name, rare, type, clazz) {
@@ -208,7 +234,7 @@ const runner = (() => {
         clearStampCollect() {
             this.json.stamp.collect = [];
             return this;
-        }
+        };
 
         clearStampExpansion() {
             this.json.stamp.expansion = [];
@@ -226,14 +252,13 @@ const runner = (() => {
     };
 
     return async () => {
-        const response = await requestWithCache(generator["characterListUrl"]);
-        const $ = cheerio.load(response);
-        const pages = await generator["caharacterListPageParser"]($);
 
+        /* start hero data */
+        const heroPages = await generator["caharacterListPageParser"](cheerio.load(await requestWithCache(generator["characterListUrl"])));
         const heros = [];
-    
-        for(let i =0; i<pages.length; i++) {
-            const page = pages[i];
+
+        for(let i =0; i<heroPages.length; i++) {
+            const page = heroPages[i];
             const heroName = page.name;
 
             const jsonPath = "./docs/"+lang+"/hero/"+heroName + ".json";
@@ -249,6 +274,30 @@ const runner = (() => {
         }
 
         await fs.writeFile("./docs/"+lang+"/hero/heros.json", JSON.stringify(heros, null, "\t"), "utf8");
+        /* end hero data */
+
+        /* start artifact data */
+        const artifactPages = await generator["artifactListPageParser"](cheerio.load(await requestWithCache(generator["artifactListUrl"])));
+        const artifacts = [];
+
+        for(let i =0; i<artifactPages.length; i++) {
+            const page = artifactPages[i];
+            const artifactName = page.name;
+
+            const jsonPath = "./docs/"+lang+"/artifact/"+artifactName + ".json";
+
+            const r = await requestWithCache(page.url);
+
+            const $$ = cheerio.load(r);
+            const dataBuilder = new ArtifactDataBuilder(await loadArtifactData(jsonPath));
+            await generator["artifactDataPageParser"]($$, dataBuilder);
+
+            await fs.writeFile(jsonPath, dataBuilder.toJsonString(), "utf8");
+            artifacts.push(artifactName + ".json");
+        }
+
+        await fs.writeFile("./docs/"+lang+"/artifact/artifacts.json", JSON.stringify(artifacts, null, "\t"), "utf8");
+        /* end artifact data */
     };
 })();
 
