@@ -42,8 +42,8 @@ const loadMaterialData = async (path) => {
         return JSON.parse(await fs.readFile(path, "utf8"));
     } catch(e) {
         return {
-            normal : [],
-            hard : []
+            normal : {},
+            hard : {}
         };
     }
 };
@@ -172,17 +172,22 @@ const runner = (() => {
         baseData(name, type, normal_shop, hard_shop) {
             this.json.name = name;
             this.json.type = type;
+            
 
-            this.json.shop = {
-                normal : {
-                    area_id : normal_shop[0],
-                    area_label : normal_shop[1]
-                },
-                hard : {
-                    area_id : hard_shop[0],
-                    area_label : hard_shop[1]
-                }
-            };
+            this.json.normal_shop = normal_shop.map(e => {
+                return {
+                    area_id : e[0],
+                    area_label : e[1]
+                };
+            });
+            
+            this.json.hard_shop = hard_shop.map(e => {
+                return {
+                    area_id : e[0],
+                    area_label : e[1]
+                };
+            });
+
             return this;
         };
 

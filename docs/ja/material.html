@@ -44,6 +44,18 @@
     </div>
 
     <div class="container" style="padding-top: 60px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="material-select">特殊素材選択</label>
+                    <input type="text" class="form-control" id="material-select" autocomplete="on" list="materiallist" placeholder="名前を入力...">
+                </div>
+                <datalist id="materiallist">
+                </datalist>
+            </div>
+        </div>
+        <div class="row" id="content">
+        </div>
     </div>
 
     <footer class="container">
@@ -58,6 +70,34 @@
     </footer>
 
     <script type="text/x-handlebars" id="template">
+        <div class="col-lg-12">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" width="25%" style="vertical-align: middle;text-align: center;">
+                                <img class="img-thumbnail" src="{{thumbnail}}"/>
+                            </td>
+                            <td width="25%" class="table-dark">特殊素材名</td>
+                            <td width="50%">{{name}}</td>
+                        </tr>
+                        <tr>
+                            <td width="25%" class="table-dark">素材部類</td>
+                            <td width="50%">{{type}}</td>
+                        </tr>
+                        <tr>
+                            <td width="25%" class="table-dark">ショップ(ノーマル)</td>
+                            <td width="50%"></td>
+                        </tr>
+                        <tr>
+                            <td width="25%" class="table-dark">ショップ(ハード)</td>
+                            <td width="50%"></td>
+                        </tr>
+                    </tbody>
+                </thead>
+            </table>
+
+        </div>
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -72,8 +112,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
         integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
 
-    <script>
-    </script>
+        <script>
+            $(() => {
+                fetch('./material/materials.json')
+                    .then((response) => response.text())
+                    .then(text => JSON.parse(text))
+                    .then(json => {
+                        json.forEach((e) => {
+                            $("#materiallist").append($("<option>").attr("value", e.substring(0, e.length - 5)).text(e.substring(0, e.length - 5)));
+                        });
+    
+                        
+                        const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
+                        $("#material-select").val(id);
+                        loadPage(id);
+                    });
+    
+                $("#material-select").change((e) => {
+                    location.hash = $(e.target).val();
+                    $("#material-select").blur();
+                });
+    
+                window.addEventListener('hashchange', () => {
+                    const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
+                    loadPage(id);
+                });
+    
+                const template = Handlebars.compile($("#template").html());
+    
+                const loadPage = (id) => {
+                    if (id === "") {
+                        $("#content").empty();
+                        return;
+                    }
+    
+                    fetch('./material/' + id + ".json")
+                        .then((response) => response.text())
+                        .then(text => JSON.parse(text))
+                        .then(json => template(json))
+                        .then(html => $("#content").html(html));
+                };
+            });
+        </script>
 </body>
 
 </html>
