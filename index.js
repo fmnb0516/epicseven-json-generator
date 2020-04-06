@@ -236,7 +236,7 @@ const runner = (() => {
             const page = pages[i];
             const heroName = page.name;
 
-            const jsonPath = "./docs/"+lang+"/"+heroName + ".json";
+            const jsonPath = "./docs/"+lang+"/hero/"+heroName + ".json";
 
             const r = await requestWithCache(page.url);
 
@@ -248,7 +248,7 @@ const runner = (() => {
             heros.push(heroName + ".json");
         }
 
-        await fs.writeFile("./docs/"+lang+"/heros.json", JSON.stringify(heros, null, "\t"), "utf8");
+        await fs.writeFile("./docs/"+lang+"/hero/heros.json", JSON.stringify(heros, null, "\t"), "utf8");
     };
 })();
 
