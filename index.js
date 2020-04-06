@@ -81,6 +81,11 @@ const generator = (() => {
             this.context = context;
         };
 
+        registerArtifactListUrl(url) {
+            this.context["artifactListUrl"] = url;
+            return this;
+        };
+
         registerCharacterListUrl(url) {
             this.context["characterListUrl"] = url;
             return this;
@@ -92,8 +97,18 @@ const generator = (() => {
             return this;
         };
 
+        registeArtifactListPageParser(parser) {
+            this.context["artifactListPageParser"] = parser;
+            return this;
+        };
+
         registerCaharacterDataPageParser(parser) {
-            this.context["CaharacterDataPageParser"] = parser;
+            this.context["caharacterDataPageParser"] = parser;
+            return this;
+        };
+
+        registerArtifactDataPageParser(parser) {
+            this.context["artifactDataPageParser"] = parser;
             return this;
         };
     };
@@ -227,7 +242,7 @@ const runner = (() => {
 
             const $$ = cheerio.load(r);
             const dataBuilder = new HeroDataBuilder(await loadHeroData(jsonPath));
-            await generator["CaharacterDataPageParser"]($$, dataBuilder);
+            await generator["caharacterDataPageParser"]($$, dataBuilder);
 
             await fs.writeFile(jsonPath, dataBuilder.toJsonString(), "utf8");
             heros.push(heroName + ".json");

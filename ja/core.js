@@ -167,5 +167,9 @@ module.exports = (builder, plugin) => {
                     usesoul : usesoul
                 }, level);
             }
-        });
+        }).registerArtifactListUrl("https://game8.jp/epic-seven/301576")
+            .registeArtifactListPageParser($ => {
+                return [];
+            });
+        
 };
