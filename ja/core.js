@@ -1,12 +1,12 @@
 
 
-const findHeaderElement = ($, text, mode) => {
+const findHeaderElement = ($, tag, text, mode) => {
 
     const check = mode === true
         ? (t1, t2) => t1 === t2 
         : (t1, t2) => t1.indexOf(t2) !== -1;
 
-    const entries = $(".archive-style-wrapper h3");
+    const entries = $(".archive-style-wrapper " + tag);
 
     for(let i=0; i<entries.length; i++) {
         const h3 = $(entries.get(i));
@@ -70,13 +70,13 @@ module.exports = (builder, plugin) => {
             });
 
             const name = $("#hm_1").text().substring(0, $("#hm_1").text().indexOf("の基本情報"));
-            const base = findHeaderElement($, "の基本情報").next();
+            const base = findHeaderElement($, "h3", "の基本情報").next();
             const rare = parseInt($(base.find("tr").get(3)).find("td").text().trim().substring(1));
             const type = $(base.find("tr").get(4)).find("td").text().trim();
             const clazz = $(base.find("tr").get(5)).find("td").text().trim();
             builder.baseData(name, rare, type, clazz);
 
-            const status = findHeaderElement($, "最大ステータス【入手時 / 覚醒後】").next();
+            const status = findHeaderElement($, "h3", "最大ステータス【入手時 / 覚醒後】").next();
 
             const max_attack = parseInt($($(status.find("tr").get(1)).find("td").get(1)).text().trim());
             const max_health = parseInt($($(status.find("tr").get(2)).find("td").get(1)).text().trim());
@@ -102,7 +102,7 @@ module.exports = (builder, plugin) => {
 
             builder.initStatus(init_attack, init_health, init_speed, init_defense, init_critical_hit, init_critical_damage, init_unity_chance, init_debuff_hit, init_debuff_resist);
             
-            const jinkei = findHeaderElement($, "陣形効果").next();
+            const jinkei = findHeaderElement($, "h3", "陣形効果").next();
 
             jinkei.find("tr").each((i, elm) => {
                 const text = $($(elm).find("td").get(0)).text().trim();
@@ -126,7 +126,7 @@ module.exports = (builder, plugin) => {
                 builder.stampCollect(entry[0].trim(), parseFloat(t === "percent" ? entry[1].trim().substring(-1) : entry[1].trim()), t);
             });
 
-            const skillHeader = findHeaderElement($, "スキル" ,true);
+            const skillHeader = findHeaderElement($, "h3", "スキル" ,true);
             const skills = [skillHeader.next(), skillHeader.next().next(), skillHeader.next().next().next()];
 
             for(let i=0; i<skills.length; i++) {
@@ -186,6 +186,22 @@ module.exports = (builder, plugin) => {
                 return result;
             }).registerArtifactDataPageParser( async ($, builder) => {
 
+                const name = $("#hl_1").text().substring(0, $("#hl_1").text().indexOf("の評価・基本情報"));
+                const base = findHeaderElement($, "h2", "の評価・基本情報").next();
+
+                const rare = parseInt($(base.find("tr").get(0)).find("td").text().trim().substring(1));
+                const target = $(base.find("tr").get(1)).find("td").text().trim();
+                builder.baseData(name, rare, target);
+                
+                const initialStatus = $(base.find("tr").get(3)).find("td").text().trim().match(/攻撃力:(\d*)生命力:(\d*)/);
+                const init_attack = parseInt(initialStatus[2]);
+                const init_health = parseInt(initialStatus[1]);
+                builder.initStatus(init_attack, init_health);
+
+                const maxStatus = $(base.find("tr").get(4)).find("td").text().trim().match(/攻撃力:(\d*)生命力:(\d*)/);
+                const max_attack = parseInt(maxStatus[2]);
+                const max_health = parseInt(maxStatus[1]);
+                builder.maxStatus(max_attack, max_health);
                 
             });
         

@@ -141,6 +141,29 @@ const runner = (() => {
             return this;
         };
 
+        baseData(name, rare, target) {
+            this.json["name"] = name;
+            this.json["rare"] = rare;
+            this.json["target"] = target;
+            return this;
+        };
+
+        maxStatus(attack, health) {
+            this.json.status["max"] = {
+                attack : attack,
+                health : health
+            };
+            return this;
+        };
+
+        initStatus(attack, health) {
+            this.json.status["init"] = {
+                attack : attack,
+                health : health
+            };
+            return this;
+        };
+
         toJsonString() {
             return JSON.stringify(this.json, null, "\t");
         };
