@@ -50,11 +50,13 @@
                 <h4>英雄データ</h4>
                 <div class="row">
                     <div class="form-group col-md-6 col-sm-12">
-                        <input type="text" class="form-control" id="hero" autocomplete="on" list="herolist" placeholder="英雄名を入力...">
+                        <input type="text" class="form-control" id="hero" autocomplete="on" list="herolist"
+                            placeholder="英雄名を入力...">
                         <datalist id="herolist"></datalist>
                     </div>
                     <div class="form-group col-md-6 col-sm-12">
-                        <input type="text" class="form-control" id="artifact-select" autocomplete="on" list="artifactlist" placeholder="遺物を入力...">
+                        <input type="text" class="form-control" id="artifact" autocomplete="on" list="artifactlist"
+                            placeholder="遺物を入力...">
                         <datalist id="artifactlist">
                         </datalist>
                     </div>
@@ -104,12 +106,12 @@
                                 <div class="input-group input-group-sm col-md-3">
                                     <div class="input-group-prepend">
                                         <button class="btn btn-outline-secondary" type="button"
-                                            id="acrit-minus">&minus;</button>
+                                            id="crit-minus">&minus;</button>
                                     </div>
                                     <input type="number" class="form-control text-center" id="crit" value="250">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button"
-                                            id="acrit-plus">&plus;</button>
+                                            id="crit-plus">&plus;</button>
                                     </div>
                                 </div>
                             </div>
@@ -125,8 +127,7 @@
                 <div class="row">
                     <div class="form-group col-md-12 col-sm-12">
                         <div class="custom-control custom-checkbox custom-control-inline buff-block">
-                            <input class="custom-control-input" type="checkbox" id="elem-adv" value="1.1"
-                                onchange="resolve()">
+                            <input class="custom-control-input" type="checkbox" id="elem-adv" value="1.1">
                             <label class="custom-control-label" for="elem-adv"><span id="elem-adv-icon"></span>
                                 有利属性</label>
                         </div>
@@ -160,62 +161,69 @@
                             style="padding: 15px 5px;background-color: whitesmoke;margin-bottom: 7px;border-radius: 8px;">
                             <div class="row form-group">
                                 <label for="skill-s1"
-                                    class="col-sm-12 col-md-1 col-form-label form-control-sm text-center mola-skill-label">
-                                    <h5>S1</h5>
+                                    class="col-sm-12 col-md-2 col-form-label form-control-sm text-center mola-skill-label">
+                                    <h5 id="s1-label" style="text-align: left;padding-left: 20px;"></h5>
                                 </label>
 
                                 <div class="input-group input-group-sm col-md-2 col-sm-12">
                                     <div class="input-group-prepend">
                                         <button class="btn btn-outline-secondary" type="button" id="s1-minus">−</button>
                                     </div>
-                                    <input type="number" class="form-control text-center" id="s1" min="0" max="5"
+                                    <input type="number" class="form-control text-center" id="s1" min="0" max="0"
                                         value="0" readonly="">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" id="s1-plus">+</button>
                                     </div>
                                 </div>
-                                <input id="s1-slide" type="range" min="0" max="0"
-                                    class="custom-range col-md-5 col-sm-12 mt-3 mt-md-0 ml-2 ml-md-0" value="0">
+
+                                <div class="col-md-5 col-sm-12" style="padding-top: 10px">
+                                    <input id="s1-slide" type="range" min="0" max="0" class="custom-range " value="0">
+                                </div>
+
                             </div>
 
                             <div class="row form-group">
                                 <label for="skill-s2"
-                                    class="col-sm-12 col-md-1 col-form-label form-control-sm text-center mola-skill-label">
-                                    <h5>S2</h5>
+                                    class="col-sm-12 col-md-2 col-form-label form-control-sm text-center mola-skill-label">
+                                    <h5 id="s2-label" style="text-align: left;padding-left: 20px;"></h5>
                                 </label>
 
                                 <div class="input-group input-group-sm col-md-2 col-sm-12">
                                     <div class="input-group-prepend">
                                         <button class="btn btn-outline-secondary" type="button" id="s2-minus">−</button>
                                     </div>
-                                    <input type="number" class="form-control text-center" id="s2" min="0" max="5"
+                                    <input type="number" class="form-control text-center" id="s2" min="0" max="0"
                                         value="0" readonly="">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" id="s2-plus">+</button>
                                     </div>
                                 </div>
-                                <input id="s2-slide" type="range" min="0" max="0"
-                                    class="custom-range col-md-5 col-sm-12 mt-3 mt-md-0 ml-2 ml-md-0" value="0">
+
+                                <div class="col-md-5 col-sm-12" style="padding-top: 10px">
+                                    <input id="s2-slide" type="range" min="0" max="0" class="custom-range" value="0">
+                                </div>
                             </div>
 
                             <div class="row form-group">
                                 <label for="skill-s3"
-                                    class="col-sm-12 col-md-1 col-form-label form-control-sm text-center mola-skill-label">
-                                    <h5>S3</h5>
+                                    class="col-sm-12 col-md-2 col-form-label form-control-sm text-center mola-skill-label">
+                                    <h5 id="s3-label" style="text-align: left;padding-left: 20px;"></h5>
                                 </label>
 
                                 <div class="input-group input-group-sm col-md-2 col-sm-12">
                                     <div class="input-group-prepend">
                                         <button class="btn btn-outline-secondary" type="button" id="s3-minus">−</button>
                                     </div>
-                                    <input type="number" class="form-control text-center" id="s3" min="0" max="5"
+                                    <input type="number" class="form-control text-center" id="s3" min="0" max="0"
                                         value="0" readonly="">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" id="s3-plus">+</button>
                                     </div>
                                 </div>
-                                <input id="s3-slide" type="range" min="0" max="0"
-                                    class="custom-range col-md-5 col-sm-12 mt-3 mt-md-0 ml-2 ml-md-0" value="0">
+
+                                <div class="col-md-5 col-sm-12" style="padding-top: 10px">
+                                    <input id="s3-slide" type="range" min="0" max="0" class="custom-range" value="0">
+                                </div>
                             </div>
 
                         </div>
@@ -526,9 +534,35 @@
 
         const init = (master) => {
             const loadPage = (id) => {
+                $("#artifact").val("");
                 const heroData = master.hero[id];
 
-                console.log(heroData);
+                $("#artifactlist option").each(function () {
+                    const selector = $(this);
+                    const val = master.artifact[selector.val()];
+                    const enable = val.target === "全職共用" || val.target === heroData.clazz;
+                    selector.prop("disabled", enable === false);
+                });
+
+                $("#elem-adv").prop('checked', false);
+                $("#atk-up").prop('checked', false);
+                $("#atk-up-great").prop('checked', false);
+                $("#rage-set").prop('checked', false);
+
+                $("#atk").val(heroData.status.max.attack);
+                $("#atk-slide").val(heroData.status.max.attack);
+
+                $("#crit").val(heroData.status.max.critical_damage);
+                $("#crit-slide").val(heroData.status.max.critical_damage);
+
+                heroData.skill.forEach((e, i) => {
+                    const slide = $("#s" + (i + 1) + "-slide");
+                    slide.attr("max", e.level.length);
+                    $("#s" + (i + 1)).val("0").attr("max", e.level.length);
+                    $("#s" + (i + 1) + "-label").text("S" + (i + 1) + ". " + e.name);
+                });
+
+                $("#hero-block").show();
             };
 
 
@@ -545,12 +579,131 @@
                 loadPage(id);
             });
 
+            /* for atk input ui - start */
+            (() => {
+                $("#atk-plus").click((e) => {
+                    const val = parseInt($("#atk").val()) + 1;
+                    $("#atk").val(val);
+                    $("#atk-slide").val(val);
+                });
+                $("#atk-minus").click((e) => {
+                    const val = parseInt($("#atk").val()) - 1;
+                    $("#atk").val(val);
+                    $("#atk-slide").val(val);
+                });
+                $("#atk").change((e) => {
+                    const val = $(e.target).val();
+                    $("#atk-slide").val(val);
+                });
+                $("#atk-slide").change((e) => {
+                    const val = $(e.target).val();
+                    $("#atk").val(val);
+                });
+            })();
+            /* for atk input ui - end */
+
+            /* for crit input ui - start */
+            (() => {
+                $("#crit-plus").click((e) => {
+                    const val = parseInt($("#crit").val()) + 1;
+                    $("#crit").val(val);
+                    $("#crit-slide").val(val);
+                });
+                $("#crit-minus").click((e) => {
+                    const val = parseInt($("#crit").val()) - 1;
+                    $("#crit").val(val);
+                    $("#crit-slide").val(val);
+                });
+                $("#crit").change((e) => {
+                    const val = $(e.target).val();
+                    $("#crit-slide").val(val);
+                });
+                $("#crit-slide").change((e) => {
+                    const val = $(e.target).val();
+                    $("#crit").val(val);
+                });
+            })();
+            /* for crit input ui - end */
+
+            /* for skill input ui - start */
+            (() => {
+                $("#s1-plus").click((e) => {
+                    const val = parseInt($("#s1").val()) + 1;
+                    if(parseInt($("#s1").attr("max")) >= val) {
+                        $("#s1").val(val);
+                        $("#s1-slide").val(val);
+                    }
+                });
+                $("#s1-minus").click((e) => {
+                    const val = parseInt($("#s1").val()) - 1;
+                    if(parseInt($("#s1").attr("min")) <= val) {
+                        $("#s1").val(val);
+                        $("#s1-slide").val(val);
+                    }
+                });
+                $("#s1").change((e) => {
+                    const val = $(e.target).val();
+                    $("#s1-slide").val(val);
+                });
+                $("#s1-slide").change((e) => {
+                    const val = $(e.target).val();
+                    $("#s1").val(val);
+                });
+
+                $("#s2-plus").click((e) => {
+                    const val = parseInt($("#s2").val()) + 1;
+                    if(parseInt($("#s2").attr("max")) >= val) {
+                        $("#s2").val(val);
+                        $("#s2-slide").val(val);
+                    }
+                });
+                $("#s2-minus").click((e) => {
+                    const val = parseInt($("#s2").val()) - 1;
+                    if(parseInt($("#s2").attr("min")) <= val) {
+                        $("#s2").val(val);
+                        $("#s2-slide").val(val);
+                    }
+                });
+                $("#s2").change((e) => {
+                    const val = $(e.target).val();
+                    $("#s2-slide").val(val);
+                });
+                $("#s2-slide").change((e) => {
+                    const val = $(e.target).val();
+                    $("#s2").val(val);
+                });
+
+                $("#s3-plus").click((e) => {
+                    const val = parseInt($("#s3").val()) + 1;
+                    if(parseInt($("#s3").attr("max")) >= val) {
+                        $("#s3").val(val);
+                        $("#s3-slide").val(val);
+                    }
+                });
+                $("#s3-minus").click((e) => {
+                    const val = parseInt($("#s3").val()) - 1;
+                    if(parseInt($("#s3").attr("min")) <= val) {
+                        $("#s3").val(val);
+                        $("#s3-slide").val(val);
+                    }
+                });
+                $("#s3").change((e) => {
+                    const val = $(e.target).val();
+                    $("#s3-slide").val(val);
+                });
+                $("#s3-slide").change((e) => {
+                    const val = $(e.target).val();
+                    $("#s3").val(val);
+                });
+            })();
+            /* for skill input ui - end */
+
             loadPage(id);
         };
-        
+
         $(() => {
             const master = {
-                hero : {},
+                hero: {},
                 artifact: {}
             };
 
@@ -573,7 +726,7 @@
                 .then(json => {
                     const futures = json.map((e) => {
                         $("#artifactlist").append($("<option>").attr("value", e.substring(0, e.length - 5))
-                            .attr("disabled","disabled")
+                            .attr("disabled", "disabled")
                             .text(e.substring(0, e.length - 5)));
                         return fetch("./artifact/" + e).then(r => r.text())
                             .then(j => JSON.parse(j))
