@@ -50,14 +50,13 @@
                 <h4>英雄データ</h4>
                 <div class="row">
                     <div class="form-group col-md-6 col-sm-12">
-                        <select id="hero" name="hero" class="form-control custom-select selectpicker"
-                            data-live-search="true" data-size="12">
-                        </select>
+                        <input type="text" class="form-control" id="hero" autocomplete="on" list="herolist" placeholder="英雄名を入力...">
+                        <datalist id="herolist"></datalist>
                     </div>
                     <div class="form-group col-md-6 col-sm-12">
-                        <select id="artifact" name="artifact" class="form-control custom-select selectpicker"
-                            data-live-search="true" data-size="12" data-none-selected-text="Artifact">
-                        </select>
+                        <input type="text" class="form-control" id="artifact-select" autocomplete="on" list="artifactlist" placeholder="遺物を入力...">
+                        <datalist id="artifactlist">
+                        </datalist>
                     </div>
                 </div>
             </div>
@@ -522,6 +521,74 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.12/dist/js/bootstrap-select.min.js"></script>
+
+    <script>
+
+        const init = (master) => {
+            const loadPage = (id) => {
+                const heroData = master.hero[id];
+
+                console.log(heroData);
+            };
+
+
+            const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
+            $("#hero").val(id);
+
+            $("#hero").change((e) => {
+                location.hash = $(e.target).val();
+                $("#hero").blur();
+            });
+
+            window.addEventListener('hashchange', () => {
+                const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
+                loadPage(id);
+            });
+
+            loadPage(id);
+        };
+        
+        $(() => {
+            const master = {
+                hero : {},
+                artifact: {}
+            };
+
+            const f1 = fetch('./hero/heros.json')
+                .then((response) => response.text())
+                .then(text => JSON.parse(text))
+                .then(json => {
+                    const futures = json.map((e) => {
+                        $("#herolist").append($("<option>").attr("value", e.substring(0, e.length - 5)).text(e.substring(0, e.length - 5)));
+                        return fetch("./hero/" + e).then(r => r.text())
+                            .then(j => JSON.parse(j))
+                            .then(j => master.hero[j.name] = j);
+                    });
+
+                    return Promise.all(futures);
+                });
+            const f2 = fetch('./artifact/artifacts.json')
+                .then((response) => response.text())
+                .then(text => JSON.parse(text))
+                .then(json => {
+                    const futures = json.map((e) => {
+                        $("#artifactlist").append($("<option>").attr("value", e.substring(0, e.length - 5))
+                            .attr("disabled","disabled")
+                            .text(e.substring(0, e.length - 5)));
+                        return fetch("./artifact/" + e).then(r => r.text())
+                            .then(j => JSON.parse(j))
+                            .then(j => master.artifact[j.name] = j);
+                    });
+
+                    return Promise.all(futures);
+                });
+
+            Promise.all([f1, f2]).then(() => {
+                init(master);
+            });
+        });
+    </script>
+
 </body>
 
 </html>
