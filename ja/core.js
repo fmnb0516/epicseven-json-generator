@@ -272,6 +272,12 @@ module.exports = (builder, plugin) => {
 
             const base = findHeaderElement($, "h2", "の基本情報").next();
 
+            await builder.thumbnail(async () => {
+                const image = $(base.find("tr").get(0)).find("td img").attr("src");
+                const thumbnail = await getImageSrc(image);
+                return thumbnail;
+            });
+
             const name = $(base.find("tr").get(1)).find("td").text().trim();
             const type = $(base.find("tr").get(2)).find("td").text().trim();
 
