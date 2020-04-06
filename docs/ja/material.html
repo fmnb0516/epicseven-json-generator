@@ -75,30 +75,50 @@
                 <thead class="thead-dark">
                     <tbody>
                         <tr>
-                            <td rowspan="4" width="25%" style="vertical-align: middle;text-align: center;">
+                            <td width="25%" style="vertical-align: middle;text-align: center" class="table-dark">
                                 <img class="img-thumbnail" src="{{thumbnail}}"/>
+                                <a download="{{name}}.json" href="./material/{{name}}.json" class="btn btn-info" style="position: absolute;right: 15px;top: -10px;">DL</a>
                             </td>
-                            <td width="25%" class="table-dark">特殊素材名</td>
-                            <td width="50%">{{name}}</td>
-                        </tr>
-                        <tr>
-                            <td width="25%" class="table-dark">素材部類</td>
-                            <td width="50%">{{type}}</td>
-                        </tr>
-                        <tr>
-                            <td width="25%" class="table-dark">ショップ(ノーマル)</td>
-                            <td width="50%">
-                                {{#each normal_shop}}
-                                {{area_id}}.{{area_label}}<br/>
-                                {{/each}}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="25%" class="table-dark">ショップ(ハード)</td>
-                            <td width="50%">
-                                {{#each hard_shop}}
-                                {{area_id}}.{{area_label}}<br/>
-                                {{/each}}
+                            <td>
+                                <div style="padding-bottom: 10px;">
+                                    <div style="float: left;">
+                                        <span class="badge badge-info">特殊素材名</span>
+                                    </div>
+                                    <div style="padding-left: 120px;">
+                                        {{name}}
+                                    </div>
+                                </div>
+
+                                <div style="padding-bottom: 10px;">
+                                    <div style="float: left;">
+                                        <span class="badge badge-info">素材部類</span>
+                                    </div>
+                                    <div style="padding-left: 120px;">
+                                        {{type}}
+                                    </div>
+                                </div>
+
+                                <div style="padding-bottom: 10px;">
+                                    <div style="float: left;">
+                                        <span class="badge badge-info">ショップ(ノーマル)</span>
+                                    </div>
+                                    <div style="padding-left: 120px;">
+                                        {{#each normal_shop}}
+                                        {{area_id}}.{{area_label}}<br/>
+                                        {{/each}}
+                                    </div>
+                                </div>
+
+                                <div style="padding-bottom: 10px;">
+                                    <div style="float: left;">
+                                        <span class="badge badge-info">ショップ(ハード)</span>
+                                    </div>
+                                    <div style="padding-left: 120px;">
+                                        {{#each hard_shop}}
+                                        {{area_id}}.{{area_label}}<br/>
+                                        {{/each}}
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
