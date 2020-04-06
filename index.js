@@ -33,7 +33,18 @@ const loadArtifactData = async (path) => {
         return {
             effect : [],
             status : {}
-        }
+        };
+    }
+};
+
+const loadMaterialData = async (path) => {
+    try {
+        return JSON.parse(await fs.readFile(path, "utf8"));
+    } catch(e) {
+        return {
+            normal : [],
+            hard : []
+        };
     }
 };
 
@@ -102,6 +113,11 @@ const generator = (() => {
             return this;
         };
 
+        registerMaterialListUrl(url) {
+            this.context["materialListUrl"] = url;
+            return this;
+        };
+
 
         registerCaharacterListPageParser(parser) {
             this.context["caharacterListPageParser"] = parser;
@@ -110,6 +126,11 @@ const generator = (() => {
 
         registeArtifactListPageParser(parser) {
             this.context["artifactListPageParser"] = parser;
+            return this;
+        };
+
+        registeMaterialListPageParser(parser) {
+            this.context["materialListPageParser"] = parser;
             return this;
         };
 
@@ -122,6 +143,11 @@ const generator = (() => {
             this.context["artifactDataPageParser"] = parser;
             return this;
         };
+
+        registerMaterialDataPageParser(parser) {
+            this.context["materialDataPageParser"] = parser;
+            return this;
+        };
     };
 
     
@@ -131,6 +157,23 @@ const generator = (() => {
 })();
 
 const runner = (() => {
+    class MaterialDataBuilder {
+
+        constructor(data) {
+            this.json = data
+        };
+
+        clearDrop() {
+            this.json.normal = [];
+            this.json.hard = [];
+            return this;
+        };
+
+        toJsonString() {
+            return JSON.stringify(this.json, null, "\t");
+        };
+    };
+
     class ArtifactDataBuilder {
         constructor(data) {
             this.json = data
@@ -336,6 +379,28 @@ const runner = (() => {
 
         await fs.writeFile("./docs/"+lang+"/artifact/artifacts.json", JSON.stringify(artifacts, null, "\t"), "utf8");
         /* end artifact data */
+
+        /* start materials data */
+        const materialPages = await generator["materialListPageParser"](cheerio.load(await requestWithCache(generator["materialListUrl"])));
+        const materials = [];
+        for(let i =0; i<materialPages.length; i++) {
+            const page = materialPages[i];
+            const materialName = page.name;
+
+            const jsonPath = "./docs/"+lang+"/material/"+materialName + ".json";
+
+            const r = await requestWithCache(page.url);
+
+            const $$ = cheerio.load(r);
+            const dataBuilder = new MaterialDataBuilder(await loadMaterialData(jsonPath));
+            await generator["materialDataPageParser"]($$, dataBuilder);
+
+            await fs.writeFile(jsonPath, dataBuilder.toJsonString(), "utf8");
+            materials.push(materialName + ".json");
+        }
+
+        await fs.writeFile("./docs/"+lang+"/material/materials.json", JSON.stringify(materials, null, "\t"), "utf8");
+        /* end materials data */
     };
 })();
 
