@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 7,
+			"health": 18
+		},
+		"max": {
+			"attack": 91,
+			"health": 234
+		}
+	},
+	"name": "蒼天の斧",
+	"rare": 3,
+	"target": "全職共用"
 }

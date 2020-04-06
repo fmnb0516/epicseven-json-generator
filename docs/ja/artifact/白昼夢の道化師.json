@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 14,
+			"health": 16
+		},
+		"max": {
+			"attack": 182,
+			"health": 208
+		}
+	},
+	"name": "白昼夢の道化師",
+	"rare": 3,
+	"target": "全職共用"
 }

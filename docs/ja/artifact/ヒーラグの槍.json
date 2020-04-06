@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 55,
+			"health": 10
+		},
+		"max": {
+			"attack": 715,
+			"health": 130
+		}
+	},
+	"name": "ヒーラグの槍",
+	"rare": 4,
+	"target": "ナイト"
 }

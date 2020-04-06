@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 58,
+			"health": 4
+		},
+		"max": {
+			"attack": 754,
+			"health": 52
+		}
+	},
+	"name": "アルセイスの槍",
+	"rare": 3,
+	"target": "全職共用"
 }

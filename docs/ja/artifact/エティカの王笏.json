@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 43,
+			"health": 18
+		},
+		"max": {
+			"attack": 559,
+			"health": 234
+		}
+	},
+	"name": "エティカの王笏",
+	"rare": 5,
+	"target": "メイジ"
 }

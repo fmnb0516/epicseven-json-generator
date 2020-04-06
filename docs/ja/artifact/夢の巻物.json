@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 39,
+			"health": 2
+		},
+		"max": {
+			"attack": 507,
+			"health": 26
+		}
+	},
+	"name": "夢の巻物",
+	"rare": 1,
+	"target": "全職共用"
 }

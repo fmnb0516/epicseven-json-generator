@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 43,
+			"health": 18
+		},
+		"max": {
+			"attack": 559,
+			"health": 234
+		}
+	},
+	"name": "デュランダル",
+	"rare": 5,
+	"target": "ウォリアー"
 }

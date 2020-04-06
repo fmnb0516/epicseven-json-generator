@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 45,
+			"health": 12
+		},
+		"max": {
+			"attack": 585,
+			"health": 156
+		}
+	},
+	"name": "エルの拳",
+	"rare": 4,
+	"target": "ウォリアー"
 }

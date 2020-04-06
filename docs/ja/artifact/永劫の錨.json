@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 44,
+			"health": 8
+		},
+		"max": {
+			"attack": 572,
+			"health": 104
+		}
+	},
+	"name": "永劫の錨",
+	"rare": 3,
+	"target": "全職共用"
 }

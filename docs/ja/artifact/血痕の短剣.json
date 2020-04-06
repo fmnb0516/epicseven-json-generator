@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 6,
+			"health": 16
+		},
+		"max": {
+			"attack": 78,
+			"health": 208
+		}
+	},
+	"name": "血痕の短剣",
+	"rare": 2,
+	"target": "全職共用"
 }

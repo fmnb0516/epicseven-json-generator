@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 32,
+			"health": 9
+		},
+		"max": {
+			"attack": 416,
+			"health": 117
+		}
+	},
+	"name": "知恵の杖",
+	"rare": 2,
+	"target": "全職共用"
 }

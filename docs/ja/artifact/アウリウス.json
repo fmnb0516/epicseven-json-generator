@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 63,
+			"health": 7
+		},
+		"max": {
+			"attack": 819,
+			"health": 91
+		}
+	},
+	"name": "アウリウス",
+	"rare": 4,
+	"target": "ナイト"
 }

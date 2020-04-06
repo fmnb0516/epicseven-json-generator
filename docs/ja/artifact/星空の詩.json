@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 54,
+			"health": 15
+		},
+		"max": {
+			"attack": 702,
+			"health": 195
+		}
+	},
+	"name": "星空の詩",
+	"rare": 5,
+	"target": "アーチャー"
 }

@@ -164,6 +164,13 @@ const runner = (() => {
             return this;
         };
 
+        async thumbnail(callback) {
+            if(this.json.thumbnail === undefined || this.json.thumbnail === null || this.json.thumbnail === "") {
+                this.json.thumbnail = await callback();
+            }
+            return this;
+        };
+
         toJsonString() {
             return JSON.stringify(this.json, null, "\t");
         };

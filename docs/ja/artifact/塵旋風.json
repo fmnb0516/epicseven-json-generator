@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 27,
+			"health": 18
+		},
+		"max": {
+			"attack": 351,
+			"health": 234
+		}
+	},
+	"name": "塵旋風",
+	"rare": 4,
+	"target": "アサシン"
 }

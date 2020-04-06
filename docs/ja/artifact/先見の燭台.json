@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 21,
+			"health": 14
+		},
+		"max": {
+			"attack": 273,
+			"health": 182
+		}
+	},
+	"name": "先見の燭台",
+	"rare": 3,
+	"target": "全職共用"
 }

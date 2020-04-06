@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 65,
+			"health": 1
+		},
+		"max": {
+			"attack": 845,
+			"health": 13
+		}
+	},
+	"name": "森林のトーテム",
+	"rare": 3,
+	"target": "全職共用"
 }

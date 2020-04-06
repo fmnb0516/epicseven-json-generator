@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 41,
+			"health": 2
+		},
+		"max": {
+			"attack": 533,
+			"health": 26
+		}
+	},
+	"name": "強固な盾",
+	"rare": 2,
+	"target": "全職共用"
 }

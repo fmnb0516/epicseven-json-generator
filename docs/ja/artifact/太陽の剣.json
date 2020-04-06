@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 15,
+			"health": 9
+		},
+		"max": {
+			"attack": 195,
+			"health": 117
+		}
+	},
+	"name": "太陽の剣",
+	"rare": 1,
+	"target": "全職共用"
 }

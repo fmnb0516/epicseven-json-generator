@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 65,
+			"health": 1
+		},
+		"max": {
+			"attack": 845,
+			"health": 13
+		}
+	},
+	"name": "深海の薔薇",
+	"rare": 3,
+	"target": "全職共用"
 }

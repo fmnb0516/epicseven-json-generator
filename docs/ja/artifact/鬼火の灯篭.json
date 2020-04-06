@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 36,
+			"health": 9
+		},
+		"max": {
+			"attack": 468,
+			"health": 117
+		}
+	},
+	"name": "鬼火の灯篭",
+	"rare": 3,
+	"target": "全職共用"
 }

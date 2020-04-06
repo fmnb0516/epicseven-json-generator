@@ -189,6 +189,12 @@ module.exports = (builder, plugin) => {
                 const name = $("#hl_1").text().substring(0, $("#hl_1").text().indexOf("の評価・基本情報"));
                 const base = findHeaderElement($, "h2", "の評価・基本情報").next();
 
+                await builder.thumbnail(async() => {
+                    const image = base.find("img.a-img").attr("src"); 
+                    const thumbnail = await getImageSrc(image);
+                    return thumbnail;
+                });
+
                 const rare = parseInt($(base.find("tr").get(0)).find("td").text().trim().substring(1));
                 const target = $(base.find("tr").get(1)).find("td").text().trim();
                 builder.baseData(name, rare, target);

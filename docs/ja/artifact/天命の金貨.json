@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 32,
+			"health": 21
+		},
+		"max": {
+			"attack": 416,
+			"health": 273
+		}
+	},
+	"name": "天命の金貨",
+	"rare": 5,
+	"target": "ウォリアー"
 }

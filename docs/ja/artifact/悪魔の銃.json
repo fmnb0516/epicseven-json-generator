@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 4,
+			"health": 12
+		},
+		"max": {
+			"attack": 52,
+			"health": 156
+		}
+	},
+	"name": "悪魔の銃",
+	"rare": 1,
+	"target": "全職共用"
 }

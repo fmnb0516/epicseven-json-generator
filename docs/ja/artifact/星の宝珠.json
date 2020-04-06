@@ -1,4 +1,16 @@
 {
 	"effect": [],
-	"status": {}
+	"status": {
+		"init": {
+			"attack": 24,
+			"health": 7
+		},
+		"max": {
+			"attack": 312,
+			"health": 91
+		}
+	},
+	"name": "星の宝珠",
+	"rare": 1,
+	"target": "全職共用"
 }
