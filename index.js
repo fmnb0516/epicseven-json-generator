@@ -169,10 +169,11 @@ const runner = (() => {
             return this;
         };
 
-        baseData(name, type, normal_shop, hard_shop) {
+        baseData(name, type, normal_shop, hard_shop, epic) {
             this.json.name = name;
             this.json.type = type;
-            
+            this.json.epic_material = epic;
+            this.json.normal_material = epic === false;
 
             this.json.normal_shop = normal_shop.map(e => {
                 return {

@@ -61,5 +61,8 @@
 			"area_id": "5",
 			"area_label": "ダン・ブライア"
 		}
-	]
+	],
+	"epic": true,
+	"epic_material": true,
+	"normal_material": false
 }

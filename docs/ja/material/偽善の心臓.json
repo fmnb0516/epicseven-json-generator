@@ -45,5 +45,8 @@
 			"area_id": "9-1",
 			"area_label": "タラノル西部"
 		}
-	]
+	],
+	"epic": true,
+	"epic_material": true,
+	"normal_material": false
 }

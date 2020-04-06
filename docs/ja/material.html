@@ -87,17 +87,67 @@
                         </tr>
                         <tr>
                             <td width="25%" class="table-dark">ショップ(ノーマル)</td>
-                            <td width="50%"></td>
+                            <td width="50%">
+                                {{#each normal_shop}}
+                                {{area_id}}.{{area_label}}<br/>
+                                {{/each}}
+                            </td>
                         </tr>
                         <tr>
                             <td width="25%" class="table-dark">ショップ(ハード)</td>
-                            <td width="50%"></td>
+                            <td width="50%">
+                                {{#each hard_shop}}
+                                {{area_id}}.{{area_label}}<br/>
+                                {{/each}}
+                            </td>
                         </tr>
                     </tbody>
                 </thead>
             </table>
-
         </div>
+
+        <div class="col-lg-12">
+            <h4>高難易度ドロップ</h4>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tbody>
+                        {{#each hard}}
+                        <tr>
+                            <td width="200px;" class="table-dark">{{id}}.{{label}}</td>
+                            <td>
+                                {{#each stage}}
+                                {{id}}.{{label}}<br/>
+                                {{/each}}
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+
+        {{#if normal_material}}
+        <div class="col-lg-12">
+            <h4>ノーマルドロップ</h4>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tbody>
+                        {{#each normal}}
+                        <tr>
+                            <td width="200px;" class="table-dark">{{id}}.{{label}}</td>
+                            <td>
+                                {{#each stage}}
+                                {{id}}.{{label}}<br/>
+                                {{/each}}
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+        {{/if}}
+        
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

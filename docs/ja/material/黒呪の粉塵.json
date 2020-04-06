@@ -51,5 +51,8 @@
 			"area_id": "10",
 			"area_label": "タラノル東部"
 		}
-	]
+	],
+	"epic": true,
+	"epic_material": true,
+	"normal_material": false
 }

@@ -52,5 +52,8 @@
 			"area_id": "7",
 			"area_label": "北ヴェドレーム"
 		}
-	]
+	],
+	"epic": true,
+	"epic_material": true,
+	"normal_material": false
 }

@@ -56,5 +56,8 @@
 			"area_id": "8",
 			"area_label": "デュセルノクト"
 		}
-	]
+	],
+	"epic": true,
+	"epic_material": true,
+	"normal_material": false
 }

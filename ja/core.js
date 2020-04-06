@@ -284,7 +284,7 @@ module.exports = (builder, plugin) => {
             const normal_shop = type === "エピック特殊素材" ? [] : getTextContents($(base.find("tr").get(3)).find("td"));
             const hard_shop = type === "エピック特殊素材" ? getTextContents($(base.find("tr").get(3)).find("td")) : getTextContents($(base.find("tr").get(4)).find("td"));
             
-            builder.baseData(name, type, normal_shop.map(e => e.split(".")), hard_shop.map(e => e.split(".")));
+            builder.baseData(name, type, normal_shop.map(e => e.split(".")), hard_shop.map(e => e.split(".")), type === "エピック特殊素材");
 
             const hard_drop = findHeaderElement($, "h3", "ハード", true).next();
 

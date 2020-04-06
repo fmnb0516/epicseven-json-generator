@@ -21,5 +21,8 @@
 			"area_id": "3",
 			"area_label": "サブワラ"
 		}
-	]
+	],
+	"epic": true,
+	"epic_material": true,
+	"normal_material": false
 }

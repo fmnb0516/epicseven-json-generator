@@ -43,5 +43,8 @@
 			"area_id": "2",
 			"area_label": "レインガル"
 		}
-	]
+	],
+	"epic": true,
+	"epic_material": true,
+	"normal_material": false
 }
