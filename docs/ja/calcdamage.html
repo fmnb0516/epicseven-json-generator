@@ -563,6 +563,11 @@
                 });
 
                 $("#hero-block").show();
+
+                $("#def").val("1000");
+                $("#def-slide").val("1000");
+
+                $("#target-block").show();
             };
 
 
@@ -573,6 +578,7 @@
                 location.hash = $(e.target).val();
                 $("#hero").blur();
             });
+            
 
             window.addEventListener('hashchange', () => {
                 const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
