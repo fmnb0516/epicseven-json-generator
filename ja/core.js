@@ -18,6 +18,18 @@ const findHeaderElement = ($, tag, text, mode) => {
     return null;
 };
 
+const getArtifactLevel = (text) => {
+    const entry = text.split("(");
+
+    const slevel = parseInt(entry[0].trim());
+    const alevel = parseInt(entry[1].trim().replace("+", "").replace("初期", "0").replace("最大", 30));
+
+    return {
+        slevel : slevel,
+        alevel : alevel
+    };
+};
+
 const getSoulBern = (text) => {
     const match = text.match(/魂力(\d*)獲得/)
     return match === null ? 0 : parseInt(match[1]);
@@ -185,6 +197,7 @@ module.exports = (builder, plugin) => {
                 });
                 return result;
             }).registerArtifactDataPageParser( async ($, builder) => {
+                builder.clearEffect();
 
                 const name = $("#hl_1").text().substring(0, $("#hl_1").text().indexOf("の評価・基本情報"));
                 const base = findHeaderElement($, "h2", "の評価・基本情報").next();
@@ -209,6 +222,17 @@ module.exports = (builder, plugin) => {
                 const max_health = parseInt(maxStatus[1]);
                 builder.maxStatus(max_attack, max_health);
                 
+                const skills = findHeaderElement($, "h2", "の古代遺物スキル情報").next().find("tr");
+
+                for(let i=1; i<skills.length; i++) {
+                    const skill = $(skills.get(i));
+
+                    const level_text = $(skill.find("th").get(0)).text().trim();
+                    const level = getArtifactLevel(level_text);
+                    const desc = $(skill.find("td").get(0)).text().trim();
+
+                    builder.effect(level.slevel, level.alevel, desc);
+                }
             });
         
 };

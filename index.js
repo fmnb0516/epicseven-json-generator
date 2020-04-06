@@ -148,6 +148,15 @@ const runner = (() => {
             return this;
         };
 
+        effect(skill_level, artifact_level, desc) {
+            this.json.effect.push({
+                skill_level : skill_level,
+                artifact_level : artifact_level,
+                desc : desc
+            });
+            return this;
+        }
+
         maxStatus(attack, health) {
             this.json.status["max"] = {
                 attack : attack,
