@@ -164,9 +164,56 @@ const runner = (() => {
         };
 
         clearDrop() {
-            this.json.normal = [];
-            this.json.hard = [];
+            this.json.normal = {};
+            this.json.hard = {};
             return this;
+        };
+
+        baseData(name, type, normal_shop, hard_shop) {
+            this.json.name = name;
+            this.json.type = type;
+
+            this.json.shop = {
+                normal : {
+                    area_id : normal_shop[0],
+                    area_label : normal_shop[1]
+                },
+                hard : {
+                    area_id : hard_shop[0],
+                    area_label : hard_shop[1]
+                }
+            };
+            return this;
+        };
+
+        hardDrop(area_id, area_name, stage_id, stage_name) {
+            if(this.json.hard[area_id] === undefined) {
+                this.json.hard[area_id] = {
+                    label : area_name,
+                    id : area_id,
+                    stage : []
+                };
+            }
+
+            this.json.hard[area_id].stage.push({
+                label : stage_name,
+                id : stage_id
+            });
+        };
+
+        normalDrop(area_id, area_name, stage_id, stage_name) {
+            if(this.json.normal[area_id] === undefined) {
+                this.json.normal[area_id] = {
+                    label : area_name,
+                    id : area_id,
+                    stage : []
+                };
+            }
+
+            this.json.normal[area_id].stage.push({
+                label : stage_name,
+                id : stage_id
+            });
         };
 
         toJsonString() {

@@ -18,6 +18,21 @@ const findHeaderElement = ($, tag, text, mode) => {
     return null;
 };
 
+const getTextContents = (node) => {
+    const contents = node.contents();
+
+    const texts = [];
+
+    for(let i=0; i<contents.length; i++) {
+        const tag = contents[i];
+        if(tag.type === "text" && tag.data.trim() !== "") {
+            texts.push(tag.data.trim());
+        }
+    }
+
+    return texts;
+};
+
 const getArtifactLevel = (text) => {
     const entry = text.split("(");
 
@@ -253,7 +268,40 @@ module.exports = (builder, plugin) => {
             });
             return result;
         }).registerMaterialDataPageParser(async ($, builder) => {
+            builder.clearDrop();
 
+            const base = findHeaderElement($, "h2", "の基本情報").next();
+
+            const name = $(base.find("tr").get(1)).find("td").text().trim();
+            const type = $(base.find("tr").get(2)).find("td").text().trim();
+
+            const normal_shop = type === "エピック特殊素材" ? [] : getTextContents($(base.find("tr").get(3)).find("td"));
+            const hard_shop = type === "エピック特殊素材" ? getTextContents($(base.find("tr").get(3)).find("td")) : getTextContents($(base.find("tr").get(4)).find("td"));
+            builder.baseData(name, type, normal_shop.map(e => e.split(".")), hard_shop.map(e => e.split(".")));
+
+            const hard_drop = findHeaderElement($, "h3", "ハード", true).next();
+
+            hard_drop.find("tr").each((i, elm) => {
+                const area = $(elm).find("th").text().trim().split(".");
+
+                const stage = getTextContents($(elm).find("td"));
+
+                stage.map(s => s.split(".")).forEach(s => {
+                    builder.hardDrop(area[0], area[1], s[0], s[1]);
+                });
+            });
+
+            if(type === "レア特殊素材") {
+                const normal_drop = findHeaderElement($, "h3", "ノーマル", true).next();
+                normal_drop.find("tr").each((i, elm) => {
+                    const area = $(elm).find("th").text().trim().split(".");
+    
+                    const stage = getTextContents($(elm).find("td"));
+                    stage.map(s => s.split(".")).forEach(s => {
+                        builder.normalDrop(area[0], area[1], s[0], s[1]);
+                    });
+                });
+            }
 
         });
 
