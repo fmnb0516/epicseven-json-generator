@@ -9,6 +9,14 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>EPIC SEVEN - JSON GENERATOR</title>
+
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+         }
+    </style>
 </head>
 
 <body>
@@ -84,7 +92,7 @@
                                     <div style="float: left;">
                                         <span class="badge badge-info">特殊素材名</span>
                                     </div>
-                                    <div style="padding-left: 120px;">
+                                    <div style="padding-left: 130px;">
                                         {{name}}
                                     </div>
                                 </div>
@@ -93,7 +101,7 @@
                                     <div style="float: left;">
                                         <span class="badge badge-info">素材部類</span>
                                     </div>
-                                    <div style="padding-left: 120px;">
+                                    <div style="padding-left: 130px;">
                                         {{type}}
                                     </div>
                                 </div>
@@ -102,22 +110,24 @@
                                     <div style="float: left;">
                                         <span class="badge badge-info">ショップ(ノーマル)</span>
                                     </div>
-                                    <div style="padding-left: 120px;">
+                                    <div style="padding-left: 130px;">
                                         {{#each normal_shop}}
                                         {{area_id}}.{{area_label}}<br/>
                                         {{/each}}
                                     </div>
+                                    <div class="clearfix">
                                 </div>
 
                                 <div style="padding-bottom: 10px;">
                                     <div style="float: left;">
                                         <span class="badge badge-info">ショップ(ハード)</span>
                                     </div>
-                                    <div style="padding-left: 120px;">
+                                    <div style="padding-left: 130px;">
                                         {{#each hard_shop}}
                                         {{area_id}}.{{area_label}}<br/>
                                         {{/each}}
                                     </div>
+                                    <div class="clearfix">
                                 </div>
                             </td>
                         </tr>
