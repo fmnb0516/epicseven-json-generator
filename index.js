@@ -136,13 +136,6 @@ const runner = (() => {
             this.json = data
         };
 
-    };
-
-    class HeroDataBuilder {
-        constructor(data) {
-            this.json = data
-        };
-
         clearEffect() {
             this.json.effect = [];
             return this;
@@ -150,6 +143,12 @@ const runner = (() => {
 
         toJsonString() {
             return JSON.stringify(this.json, null, "\t");
+        };
+    };
+
+    class HeroDataBuilder {
+        constructor(data) {
+            this.json = data
         };
 
         baseData(name, rare, type, clazz) {
