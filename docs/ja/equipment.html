@@ -230,7 +230,7 @@
                     {{equipment-form "head" equipmentData.head}}
                 </div>
                 <div class="tab-pane fade" id="pos-body" style="padding: 20px 5px;">
-                    {{equipment-form "head" equipmentData.body}}
+                    {{equipment-form "body" equipmentData.body}}
                 </div>
                 <div class="tab-pane fade" id="pos-reg" style="padding: 20px 5px;">
                     {{equipment-form "reg" equipmentData.reg}}
@@ -417,57 +417,97 @@
                 $("#unity-sum").val(calc.unity.sum);
             };
 
-            const calculateData = (heroData, equipmentData) => {
-                const result = {
-                    attack : {},
-                    health : {},
-                    defense : {},
-                    speed : {},
-                    critical_hit : {},
-                    critical_damage : {},
-                    debuff_hit : {},
-                    debuff_resist : {},
-                    unity : {},
+            const calculateData = (() => {
+
+                const parcentToFloat = (num) => {
+                    return num === 0 ? 0 : num /100;
                 };
 
-                result.attack.base = heroData.status["max"].attack;
-                result.attack.add = 0;
-                result.attack.sum = result.attack.base + result.attack.add;
+                const countSet = (set, req, data) => {
+                    const target = [data.weapon.set,data.head.set,data.body.set,data.reg.set,data.neck.set,data.ring.set];
+                    return Math.floor(target.filter(k => k === set).length / req);
+                };
 
-                result.health.base = heroData.status["max"].health;
-                result.health.add = 0;
-                result.health.sum = result.health.base + result.health.add;
+                const resolveValue = (key, data) => {
+                    const target = [
+                        data.weapon.main, data.weapon.sub1, data.weapon.sub2, data.weapon.sub3, data.weapon.sub4,
+                        data.head.main, data.head.sub1, data.head.sub2, data.head.sub3, data.head.sub4,
+                        data.body.main, data.body.sub1, data.body.sub2, data.body.sub3, data.body.sub4,
+                        data.reg.main, data.reg.sub1, data.reg.sub2, data.reg.sub3, data.reg.sub4,
+                        data.neck.main, data.neck.sub1, data.neck.sub2, data.neck.sub3, data.neck.sub4,
+                        data.ring.main, data.ring.sub1, data.ring.sub2, data.ring.sub3, data.ring.sub4,
+                    ];
 
-                result.defense.base = heroData.status["max"].defense;
-                result.defense.add = 0;
-                result.defense.sum = result.defense.base + result.defense.add;
+                    const ary = target.filter(d => d.opt === key).map(d => d.val);
+                    return ary.length === 0 ? 0 : ary.reduce( (prev, current) => prev+current );
+                };
 
-                result.speed.base = heroData.status["max"].speed;
-                result.speed.add = 0;
-                result.speed.sum = result.speed.base + result.speed.add;
+                const artifactVal = (key, data) => {
+                    const artifact = master.artifact[data.artifact.name];
+                    return artifact !== undefined ? artifact.status.max[key] : 0
+                };  
 
-                result.critical_hit.base = heroData.status["max"].critical_hit;
-                result.critical_hit.add = 0;
-                result.critical_hit.sum = result.critical_hit.base + result.critical_hit.add;
+                return (heroData, equipmentData) => {
+                    const result = {
+                        attack : {},
+                        health : {},
+                        defense : {},
+                        speed : {},
+                        critical_hit : {},
+                        critical_damage : {},
+                        debuff_hit : {},
+                        debuff_resist : {},
+                        unity : {},
+                    };
 
-                result.critical_damage.base = heroData.status["max"].critical_damage;
-                result.critical_damage.add = 0;
-                result.critical_damage.sum = result.critical_damage.base + result.critical_damage.add;
-
-                result.unity.base = heroData.status["max"].unity_chance;
-                result.unity.add = 0;
-                result.unity.sum = result.unity.base + result.unity.add;
-
-                result.debuff_hit.base = heroData.status["max"].debuff_hit;
-                result.debuff_hit.add = 0;
-                result.debuff_hit.sum = result.debuff_hit.base + result.debuff_hit.add;
-
-                result.debuff_resist.base = heroData.status["max"].debuff_resist;
-                result.debuff_resist.add = 0;
-                result.debuff_resist.sum = result.debuff_hit.base + result.debuff_resist.add;
-
-                return result;
-            };
+                    result.attack.base = heroData.status["max"].attack;
+                    result.attack.add = Math.floor(resolveValue("attack-fix", equipmentData)
+                        + (result.attack.base * parcentToFloat(resolveValue("attack-percent", equipmentData)))
+                        + (countSet("attack-set", 4, equipmentData) * result.attack.base * 0.35)
+                        + artifactVal("attack", equipmentData));
+                    result.attack.sum = result.attack.base + result.attack.add;
+    
+                    result.health.base = heroData.status["max"].health;
+                    result.health.add =  Math.floor(resolveValue("health-fix", equipmentData)
+                        + (result.health.base * parcentToFloat(resolveValue("health-percent", equipmentData)))
+                        + (countSet("health-set", 2, equipmentData) * result.health.base * 0.15)
+                        + artifactVal("health", equipmentData));
+                    result.health.sum = result.health.base + result.health.add;
+    
+                    result.defense.base = heroData.status["max"].defense;
+                    result.defense.add = Math.floor(resolveValue("defense-fix", equipmentData)
+                        + (result.defense.base * parcentToFloat(resolveValue("defense-percent", equipmentData)))
+                        + (countSet("defense-set", 2, equipmentData) * result.defense.base * 0.15));
+                    result.defense.sum = result.defense.base + result.defense.add;
+    
+                    result.speed.base = heroData.status["max"].speed;
+                    result.speed.add = Math.floor(resolveValue("speed-fix", equipmentData)
+                        + (countSet("speed-set", 4, equipmentData) * result.speed.base * 0.25));
+                    result.speed.sum = result.speed.base + result.speed.add;
+    
+                    result.critical_hit.base = heroData.status["max"].critical_hit;
+                    result.critical_hit.add = resolveValue("crit-hit-percent", equipmentData) + (countSet("critical-set", 2, equipmentData) * 12);
+                    result.critical_hit.sum = result.critical_hit.base + result.critical_hit.add;
+    
+                    result.critical_damage.base = heroData.status["max"].critical_damage;
+                    result.critical_damage.add = resolveValue("crit-damage-percent", equipmentData) + (countSet("ruin-set", 4, equipmentData) * 40);
+                    result.critical_damage.sum = result.critical_damage.base + result.critical_damage.add;
+    
+                    result.unity.base = heroData.status["max"].unity_chance;
+                    result.unity.add = (countSet("unity-set", 2, equipmentData) * 4)
+                    result.unity.sum = result.unity.base + result.unity.add;
+    
+                    result.debuff_hit.base = heroData.status["max"].debuff_hit;
+                    result.debuff_hit.add = resolveValue("effect-percent", equipmentData) + (countSet("effect-set", 2, equipmentData) * 20);
+                    result.debuff_hit.sum = result.debuff_hit.base + result.debuff_hit.add;
+    
+                    result.debuff_resist.base = heroData.status["max"].debuff_resist;
+                    result.debuff_resist.add = resolveValue("resist-percent", equipmentData) + (countSet("resist-set", 2, equipmentData) * 20);
+                    result.debuff_resist.sum = result.debuff_hit.base + result.debuff_resist.add;
+    
+                    return result;
+                };
+            })();
 
             (() => {
                 const equipmentSet = [
