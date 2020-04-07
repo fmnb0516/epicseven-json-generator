@@ -71,8 +71,129 @@
     </footer>
 
     <script type="text/x-handlebars" id="template">
+
         <div class="col-md-6 col-sm-12" data-hero="{{heroData.name}}" id="equipment-container">
             <img class="img-thumbnail" src="{{heroData.thumbnail}}"/>
+
+            <table class="table table-sm" style="margin-top: 10px;">
+                <thead class="thead-dark">
+                    <tbody>
+                        <tr>
+                            <td class="table-dark">名前</td>
+                            <td colspan="5"><strong>{{heroData.name}}</strong></td>
+                        <tr>
+                        <tr>
+                            <td class="table-dark">レア</td>
+                            <td><span class="badge badge-pill badge-info">{{heroData.rare}}</span></td>
+                            <td class="table-dark">クラス</td>
+                            <td><span class="badge badge-pill badge-info">{{heroData.clazz}}</span></td>
+                            <td class="table-dark">属性</td>
+                            <td><span class="badge badge-pill badge-info">{{heroData.type}}</span></td>
+                        </tr>
+                    </tbody>
+                </thead>
+            </table>
+
+            <div class="alert alert-dismissible alert-primary">
+                <div>
+                    <span class="badge badge-dark" style="width: 100px;">攻撃力</span>
+                    <div style="display: inline-block;padding-left: 20px;">
+                        <span class="badge badge-pill badge-success" id="attack-base">{{calc.attack.base}}</span>
+                        &nbsp;+&nbsp;
+                        <span class="badge badge-pill badge-info" id="attack-add">{{calc.attack.add}}</span>
+                        &nbsp;=&nbsp;
+                        <span class="badge badge-pill badge-danger" id="attack-sum">{{calc.attack.sum}}</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="badge badge-dark" style="width: 100px;">生命力</span>
+                    <div style="display: inline-block;padding-left: 20px;">
+                        <span class="badge badge-pill badge-success" id="health-base">{{calc.health.base}}</span>
+                        &nbsp;+&nbsp;
+                        <span class="badge badge-pill badge-info" id="health-add">{{calc.health.add}}</span>
+                        &nbsp;=&nbsp;
+                        <span class="badge badge-pill badge-danger" id="health-sum">{{calc.health.sum}}</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="badge badge-dark" style="width: 100px;">防御力</span>
+                    <div style="display: inline-block;padding-left: 20px;">
+                        <span class="badge badge-pill badge-success" id="defense-base">{{calc.defense.base}}</span>
+                        &nbsp;+&nbsp;
+                        <span class="badge badge-pill badge-info" id="defense-add">{{calc.defense.add}}</span>
+                        &nbsp;=&nbsp;
+                        <span class="badge badge-pill badge-danger" id="defense-sum">{{calc.defense.sum}}</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="badge badge-dark" style="width: 100px;">スピード</span>
+                    <div style="display: inline-block;padding-left: 20px;">
+                        <span class="badge badge-pill badge-success" id="speed-base">{{calc.speed.base}}</span>
+                        &nbsp;+&nbsp;
+                        <span class="badge badge-pill badge-info" id="speed-add">{{calc.speed.add}}</span>
+                        &nbsp;=&nbsp;
+                        <span class="badge badge-pill badge-danger" id="speed-sum">{{calc.speed.sum}}</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="badge badge-dark" style="width: 100px;">クリ率</span>
+                    <div style="display: inline-block;padding-left: 20px;">
+                        <span class="badge badge-pill badge-success" id="critical_hit-base">{{calc.critical_hit.base}}</span>
+                        &nbsp;+&nbsp;
+                        <span class="badge badge-pill badge-info" id="critical_hit-add">{{calc.critical_hit.add}}</span>
+                        &nbsp;=&nbsp;
+                        <span class="badge badge-pill badge-danger" id="critical_hit-sum">{{calc.critical_hit.sum}}</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="badge badge-dark" style="width: 100px;">クリダメ</span>
+                    <div style="display: inline-block;padding-left: 20px;">
+                        <span class="badge badge-pill badge-success" id="critical_damage-base">{{calc.critical_damage.base}}</span>
+                        &nbsp;+&nbsp;
+                        <span class="badge badge-pill badge-info" id="critical_damage-add">{{calc.critical_damage.add}}</span>
+                        &nbsp;=&nbsp;
+                        <span class="badge badge-pill badge-danger" id="critical_damage-sum">{{calc.critical_damage.sum}}</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="badge badge-dark" style="width: 100px;">命中率</span>
+                    <div style="display: inline-block;padding-left: 20px;">
+                        <span class="badge badge-pill badge-success" id="debuff_hit-base">{{calc.debuff_hit.base}}</span>
+                        &nbsp;+&nbsp;
+                        <span class="badge badge-pill badge-info" id="debuff_hit-add">{{calc.debuff_hit.add}}</span>
+                        &nbsp;=&nbsp;
+                        <span class="badge badge-pill badge-danger" id="debuff_hit-sum">{{calc.debuff_hit.sum}}</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="badge badge-dark" style="width: 100px;">抵抗</span>
+                    <div style="display: inline-block;padding-left: 20px;">
+                        <span class="badge badge-pill badge-success" id="debuff_resist-base">{{calc.debuff_resist.base}}</span>
+                        &nbsp;+&nbsp;
+                        <span class="badge badge-pill badge-info" id="debuff_resist-add">{{calc.debuff_resist.add}}</span>
+                        &nbsp;=&nbsp;
+                        <span class="badge badge-pill badge-danger" id="debuff_resist-sum">{{calc.debuff_resist.sum}}</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="badge badge-dark" style="width: 100px;">連携</span>
+                    <div style="display: inline-block;padding-left: 20px;">
+                        <span class="badge badge-pill badge-success" id="unity-base">{{calc.unity.base}}</span>
+                        &nbsp;+&nbsp;
+                        <span class="badge badge-pill badge-info" id="unity-add">{{calc.unity.add}}</span>
+                        &nbsp;=&nbsp;
+                        <span class="badge badge-pill badge-danger" id="unity-sum">{{calc.unity.sum}}</span>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="col-md-6 col-sm-12">
@@ -254,6 +375,97 @@
     <script>
 
         const init = (master) => {
+
+            const updateCalcResult = (calc) => {
+                $("#attack-base").val(calc.attack.base);
+                $("#attack-add").val(calc.attack.add);
+                $("#attack-sum").val(calc.attack.sum);
+
+                $("#health-base").val(calc.health.base);
+                $("#health-add").val(calc.health.add);
+                $("#health-sum").val(calc.health.sum);
+
+                $("#defense-base").val(calc.defense.base);
+                $("#defense-add").val(calc.defense.add);
+                $("#defense-sum").val(calc.defense.sum);
+
+                $("#speed-base").val(calc.speed.base);
+                $("#speed-add").val(calc.speed.add);
+                $("#speed-sum").val(calc.speed.sum);
+
+                $("#critical_hit-base").val(calc.critical_hit.base);
+                $("#critical_hit-add").val(calc.critical_hit.add);
+                $("#critical_hit-sum").val(calc.critical_hit.sum);
+
+                $("#critical_damage-base").val(calc.critical_damage.base);
+                $("#critical_damage-add").val(calc.critical_damage.add);
+                $("#critical_damage-sum").val(calc.critical_damage.sum);
+
+                $("#debuff_hit-base").val(calc.debuff_hit.base);
+                $("#debuff_hit-add").val(calc.debuff_hit.add);
+                $("#debuff_hit-sum").val(calc.debuff_hit.sum);
+
+                $("#debuff_resist-base").val(calc.debuff_resist.base);
+                $("#debuff_resist-add").val(calc.debuff_resist.add);
+                $("#debuff_resist-sum").val(calc.debuff_resist.sum);
+
+                $("#unity-base").val(calc.unity.base);
+                $("#unity-add").val(calc.unity.add);
+                $("#unity-sum").val(calc.unity.sum);
+            };
+
+            const calculateData = (heroData, equipmentData) => {
+                const result = {
+                    attack : {},
+                    health : {},
+                    defense : {},
+                    speed : {},
+                    critical_hit : {},
+                    critical_damage : {},
+                    debuff_hit : {},
+                    debuff_resist : {},
+                    unity : {},
+                };
+
+                result.attack.base = heroData.status["max"].attack;
+                result.attack.add = 0;
+                result.attack.sum = result.attack.base + result.attack.add;
+
+                result.health.base = heroData.status["max"].health;
+                result.health.add = 0;
+                result.health.sum = result.health.base + result.health.add;
+
+                result.defense.base = heroData.status["max"].defense;
+                result.defense.add = 0;
+                result.defense.sum = result.defense.base + result.defense.add;
+
+                result.speed.base = heroData.status["max"].speed;
+                result.speed.add = 0;
+                result.speed.sum = result.speed.base + result.speed.add;
+
+                result.critical_hit.base = heroData.status["max"].critical_hit;
+                result.critical_hit.add = 0;
+                result.critical_hit.sum = result.critical_hit.base + result.critical_hit.add;
+
+                result.critical_damage.base = heroData.status["max"].critical_damage;
+                result.critical_damage.add = 0;
+                result.critical_damage.sum = result.critical_damage.base + result.critical_damage.add;
+
+                result.unity.base = heroData.status["max"].unity_chance;
+                result.unity.add = 0;
+                result.unity.sum = result.unity.base + result.unity.add;
+
+                result.debuff_hit.base = heroData.status["max"].debuff_hit;
+                result.debuff_hit.add = 0;
+                result.debuff_hit.sum = result.debuff_hit.base + result.debuff_hit.add;
+
+                result.debuff_resist.base = heroData.status["max"].debuff_resist;
+                result.debuff_resist.add = 0;
+                result.debuff_resist.sum = result.debuff_hit.base + result.debuff_resist.add;
+
+                return result;
+            };
+
             (() => {
                 const equipmentSet = [
                     { name: "", label: "-" },
@@ -398,13 +610,19 @@
             })();
 
             const loadPage = (id) => {
+                if(id === "") {
+                    $("#content").html("");
+                    return;
+                }
+
                 $("#artifact-select").val("");
                 const heroData = master.hero[id];
                 const equipmentData = storage.get(id);
 
                 $("#content").html(template({
                     heroData: heroData,
-                    equipmentData: equipmentData
+                    equipmentData: equipmentData,
+                    calc : calculateData(heroData, equipmentData)
                 }));
             };
 
@@ -415,7 +633,7 @@
                 location.hash = $(e.target).val();
                 $("#hero-select").blur();
             });
-            
+
             $("body").on("change", ".equipment-input", (e) => {
                 const selector = $(e.target);
 
@@ -423,18 +641,23 @@
                 const type = selector.attr("data-type");
                 const val = selector.val();
 
-                storage.attribute(storage.current(), path, type === "num" ? parseInt(val) : val);
+                const id = storage.current();
+
+                storage.attribute(id, path, type === "num" ? parseInt(val) : val);
 
                 const clear = selector.attr("data-clear-for");
                 if (val === "" && clear !== "") {
                     $("#" + clear).val("").change();
                 }
+                calc = calculateData(master.hero[id], storage.get(id));
+                updateCalcResult(calc);
             });
 
             window.addEventListener('hashchange', () => {
                 const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
                 loadPage(id);
             });
+            
             loadPage(id);
         };
 
