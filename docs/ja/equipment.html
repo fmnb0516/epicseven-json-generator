@@ -45,7 +45,7 @@
 
     <div class="container" style="padding-top: 60px;">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="form-group">
                     <label for="hero-select">英雄選択</label>
                     <input type="text" class="form-control" id="hero-select" autocomplete="on" list="herolist"
@@ -54,16 +54,6 @@
                 <datalist id="herolist">
                 </datalist>
             </div>
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <label for="hero-select">遺物選択</label>
-                    <input type="text" class="form-control" id="artifact-select" autocomplete="on" list="artifactlist"
-                        placeholder="名前を入力...">
-                </div>
-                <datalist id="artifactlist">
-                </datalist>
-            </div>
-
         </div>
         <div class="row" id="content">
         </div>
@@ -81,7 +71,11 @@
     </footer>
 
     <script type="text/x-handlebars" id="template">
-        <div class="col-md-6 col-sm-6" data-hero="{{heroData.name}}" id="equipment-container">
+        <div class="col-md-6 col-sm-12" data-hero="{{heroData.name}}" id="equipment-container">
+            <img class="img-thumbnail" src="{{heroData.thumbnail}}"/>
+        </div>
+        
+        <div class="col-md-6 col-sm-12">
 
             <ul class="nav nav-tabs">
                 <li class="nav-item">
@@ -101,6 +95,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#pos-ring">指輪</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pos-artifact">遺物</a>
                 </li>
             </ul>
 
@@ -123,56 +120,49 @@
                 <div class="tab-pane fade" id="pos-ring" style="padding: 20px 5px;">
                     {{equipment-form "ring" equipmentData.ring}}
                 </div>
+                <div class="tab-pane fade" id="pos-artifact" style="padding: 20px 5px;">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="hero-select">遺物選択</label>
+                                <input type="text" class="form-control equipment-input" id="artifact-select" autocomplete="on" list="artifactlist"
+                                    placeholder="名前を入力..." value="{{equipmentData.artifact.name}}" data-path="artifact.name" data-type="str" />
+                            </div>
+                            <datalist id="artifactlist">
+                                {{aritfact-options heroData.clazz equipmentData.artifact.name}}
+                            </datalist>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label>遺物レベル</label>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="btn btn-info calc-input" data-calc="plus" data-target="artifact-level-input">+</button>
+                                            </div>
+                                            <input id="artifact-level-input" type="number" class="form-control calc-input" readonly min="0" max="30" value="{{equipmentData.artifact.level}}" data-set="set" data-target="artifact-level-input">
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-info calc-input" data-calc="minus" data-target="artifact-level-input">-</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <fieldset class="form-group">
+                                        <input id="artifact-level-input-slide" type="range" class="custom-range calc-input" min="0" max="30" value="{{equipmentData.artifact.level}}" data-set="set" data-target="artifact-level-input">
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
-
-        <div class="col-md-6 col-sm-6">
-            <label>ステータス</label>
-            <div class="table-responsive">
-                <table class="table table-sm">
-                    <tbody>
-                        <tr>
-                            <td width="200px" class="table-dark">攻撃力</td>
-                            <td><span class="badge badge-info"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="table-dark">生命力</td>
-                            <td><span class="badge badge-info"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="table-dark">スピード</td>
-                            <td><span class="badge badge-info"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="table-dark">防御力</td>
-                            <td><span class="badge badge-info"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="table-dark">クリティカル発生率</td>
-                            <td><span class="badge badge-info"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="table-dark">クリティカルダメージ</td>
-                            <td><span class="badge badge-info"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="table-dark">連続攻撃発生率</td>
-                            <td><span class="badge badge-info"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="table-dark">効果命中率</td>
-                            <td><span class="badge badge-info"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="table-dark">効果命中率DOWN</td>
-                            <td><span class="badge badge-info"></span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
     </script>
 
     <script type="text/x-handlebars" id="template-equipment-form">
@@ -266,66 +256,77 @@
         const init = (master) => {
             (() => {
                 const equipmentSet = [
-                    {name : "", label : "-"},
-                    {name : "attack-set", label : "攻撃"},
-                    {name : "health-set", label : "生命"},
-                    {name : "defense-set", label : "防御"},
-                    {name : "ruin-set", label : "破滅"},
-                    {name : "critical-set", label : "会心"},
-                    {name : "speed-set", label : "速度"},
-                    {name : "effect-set", label : "命中"},
-                    {name : "drain-set", label : "吸収"},
-                    {name : "counter-set", label : "反撃"},
-                    {name : "resist-set", label : "抵抗"},
-                    {name : "rage-set", label : "憤怒"},
-                    {name : "immunity-set", label : "免疫"},
-                    {name : "unity-set", label : "連携"},
+                    { name: "", label: "-" },
+                    { name: "attack-set", label: "攻撃" },
+                    { name: "health-set", label: "生命" },
+                    { name: "defense-set", label: "防御" },
+                    { name: "ruin-set", label: "破滅" },
+                    { name: "critical-set", label: "会心" },
+                    { name: "speed-set", label: "速度" },
+                    { name: "effect-set", label: "命中" },
+                    { name: "drain-set", label: "吸収" },
+                    { name: "counter-set", label: "反撃" },
+                    { name: "resist-set", label: "抵抗" },
+                    { name: "rage-set", label: "憤怒" },
+                    { name: "immunity-set", label: "免疫" },
+                    { name: "unity-set", label: "連携" },
                 ];
 
                 const equipmentOpt = [
-                    {name : "", label : "-"},
-                    {name : "attack-fix", label : "攻撃(固)"},
-                    {name : "attack-percent", label : "攻撃(%)"},
-                    {name : "health-fix", label : "生命(固)"},
-                    {name : "health-percent", label : "生命(%)"},
-                    {name : "defense-fix", label : "防御(固)"},
-                    {name : "defense-percent", label : "防御(%)"},
-                    {name : "speed-fix", label : "速度(固)"},
-                    {name : "crit-hit-percent", label : "クリ率(%)"},
-                    {name : "crit-damage-percent", label : "クリダメ(%)"},
-                    {name : "effect-percent", label : "命中(%)"},
-                    {name : "resist-percent", label : "抵抗(%)"},
+                    { name: "", label: "-" },
+                    { name: "attack-fix", label: "攻撃(固)" },
+                    { name: "attack-percent", label: "攻撃(%)" },
+                    { name: "health-fix", label: "生命(固)" },
+                    { name: "health-percent", label: "生命(%)" },
+                    { name: "defense-fix", label: "防御(固)" },
+                    { name: "defense-percent", label: "防御(%)" },
+                    { name: "speed-fix", label: "速度(固)" },
+                    { name: "crit-hit-percent", label: "クリ率(%)" },
+                    { name: "crit-damage-percent", label: "クリダメ(%)" },
+                    { name: "effect-percent", label: "命中(%)" },
+                    { name: "resist-percent", label: "抵抗(%)" },
                 ];
+
+                Handlebars.registerHelper('aritfact-options', (clazz) => {
+
+                    const htmls = Object.keys(master.artifact).map(k => master.artifact[k])
+                        .map(a => {
+
+                            const disabled = a.target === "全職共用" || a.target === clazz ? "" : "disabled";
+                            return "<option " + disabled + " value=\"" + a.name + "\">" + a.name + "</option>";
+                        });
+                    return new Handlebars.SafeString(htmls.join(""));
+                });
 
                 const generateOption = (selected, filter) => {
                     const html = equipmentOpt.filter(filter).map(e => {
                         const selectedText = e.name === selected ? "selected" : "";
-                        return "<option "+selectedText+ " value=\""+e.name+"\">"+e.label+"</option>";
+                        return "<option " + selectedText + " value=\"" + e.name + "\">" + e.label + "</option>";
                     });
                     return new Handlebars.SafeString(html);
                 };
 
                 const formTpl = Handlebars.compile($("#template-equipment-form").html());
                 Handlebars.registerHelper('equipment-form', (pos, data) => {
-                    return new Handlebars.SafeString(formTpl({pos:pos, equipmentData:data}));
+                    return new Handlebars.SafeString(formTpl({ pos: pos, equipmentData: data }));
                 });
 
                 Handlebars.registerHelper('gen-option-sets', (val) => {
                     const html = equipmentSet.map(e => {
                         const selected = e.name === val ? "selected" : "";
-                        return "<option "+selected+ " value=\""+e.name+"\">"+e.label+"</option>";
+                        return "<option " + selected + " value=\"" + e.name + "\">" + e.label + "</option>";
                     });
                     return new Handlebars.SafeString(html);
                 });
 
                 Handlebars.registerHelper('gen-main-option', (pos, val) => {
                     const mainOpFilter = {
-                        weapon : (e) => e.name === "" || e.name === "attack-fix",
-                        head : (e) => e.name === "" || e.name === "health-fix",
-                        body : (e) => e.name === "" || e.name === "defense-fix",
-                        reg : (e) => e.name === "" || ["attack-fix", "attack-percent", "speed-fix", "defense-fix", "defense-percent", "health-fix", "health-percent"].indexOf(e.name) !== -1,
-                        neck : (e) => e.name === "" || ["attack-fix", "attack-percent", "defense-fix", "defense-percent", "health-fix", "health-percent", "crit-hit-percent", "crit-damage-percent"].indexOf(e.name) !== -1,
-                        ring : (e) => e.name === "" || ["attack-fix", "attack-percent", "defense-fix", "defense-percent", "health-fix", "health-percent", "effect-percent", "resist-percent"].indexOf(e.name) !== -1,
+                        weapon: (e) => e.name === "" || e.name === "attack-fix",
+                        head: (e) => e.name === "" || e.name === "health-fix",
+                        body: (e) => e.name === "" || e.name === "defense-fix",
+                        reg: (e) => e.name === "" || ["attack-fix", "attack-percent", "speed-fix", "defense-fix", "defense-percent", "health-fix", "health-percent"].indexOf(e.name) !== -1,
+                        neck: (e) => e.name === "" || ["attack-fix", "attack-percent", "defense-fix", "defense-percent", "health-fix", "health-percent", "crit-hit-percent", "crit-damage-percent"].indexOf(e.name) !== -1,
+                        ring: (e) => e.name === "" || ["attack-fix", "attack-percent", "defense-fix", "defense-percent", "health-fix", "health-percent", "effect-percent", "resist-percent"].indexOf(e.name) !== -1,
                     };
 
                     return generateOption(val, mainOpFilter[pos]);
@@ -333,12 +334,12 @@
 
                 Handlebars.registerHelper('gen-sub-option', (pos, val) => {
                     const subOpFilter = {
-                        weapon : (e) => ["attack-fix", "defense-fix", "defense-percent"].indexOf(e.name) === -1,
-                        head : (e) => e.name !== "health-fix",
-                        body : (e) => ["attack-fix", "defense-fix", "attack-percent"].indexOf(e.name) === -1,
-                        reg : (e) => true,
-                        neck : (e) => true,
-                        ring : (e) => true,
+                        weapon: (e) => ["attack-fix", "defense-fix", "defense-percent"].indexOf(e.name) === -1,
+                        head: (e) => e.name !== "health-fix",
+                        body: (e) => ["attack-fix", "defense-fix", "attack-percent"].indexOf(e.name) === -1,
+                        reg: (e) => true,
+                        neck: (e) => true,
+                        ring: (e) => true,
                     };
                     return generateOption(val, subOpFilter[pos]);
                 });
@@ -348,12 +349,12 @@
 
             const storage = (() => {
                 const inital = JSON.stringify({
-                    set  : "",
-                    main : {opt: "", val:""},
-                    sub1 : {opt: "", val:""},
-                    sub2 : {opt: "", val:""},
-                    sub3 : {opt: "", val:""},
-                    sub4 : {opt: "", val:""},
+                    set: "",
+                    main: { opt: "", val: "" },
+                    sub1: { opt: "", val: "" },
+                    sub2: { opt: "", val: "" },
+                    sub3: { opt: "", val: "" },
+                    sub4: { opt: "", val: "" },
                 });
 
                 const current = () => {
@@ -373,7 +374,7 @@
                 };
 
                 const put = (id, data) => {
-                    if(data === null || data === undefined) {
+                    if (data === null || data === undefined) {
                         localStorage.removeItem(id);
                     } else {
                         localStorage.setItem(id, JSON.stringify(data));
@@ -383,16 +384,17 @@
                 const get = (id) => {
                     const data = localStorage.getItem(id);
                     return data !== undefined && data !== null ? JSON.parse(data) : {
-                        weapon : JSON.parse(inital),
-                        head : JSON.parse(inital),
-                        body : JSON.parse(inital),
-                        reg : JSON.parse(inital),
-                        neck : JSON.parse(inital),
-                        ring : JSON.parse(inital),
+                        weapon: JSON.parse(inital),
+                        head: JSON.parse(inital),
+                        body: JSON.parse(inital),
+                        reg: JSON.parse(inital),
+                        neck: JSON.parse(inital),
+                        ring: JSON.parse(inital),
+                        artifact: { name: "", level: 0 },
                     };
                 };
 
-                return {get:get, put:put, current:current, attribute:attribute};
+                return { get: get, put: put, current: current, attribute: attribute };
             })();
 
             const loadPage = (id) => {
@@ -400,16 +402,9 @@
                 const heroData = master.hero[id];
                 const equipmentData = storage.get(id);
 
-                $("#artifactlist option").each(function () {
-                    const selector = $(this);
-                    const val = master.artifact[selector.val()];
-                    const enable = val.target === "全職共用" || val.target === heroData.clazz;
-                    selector.prop("disabled", enable === false);
-                });
-
                 $("#content").html(template({
                     heroData: heroData,
-                    equipmentData : equipmentData
+                    equipmentData: equipmentData
                 }));
             };
 
@@ -420,7 +415,7 @@
                 location.hash = $(e.target).val();
                 $("#hero-select").blur();
             });
-
+            
             $("body").on("change", ".equipment-input", (e) => {
                 const selector = $(e.target);
 
@@ -431,8 +426,8 @@
                 storage.attribute(storage.current(), path, type === "num" ? parseInt(val) : val);
 
                 const clear = selector.attr("data-clear-for");
-                if(val === "" && clear !== "") {
-                    $("#"+clear).val("").change();
+                if (val === "" && clear !== "") {
+                    $("#" + clear).val("").change();
                 }
             });
 
@@ -467,14 +462,10 @@
                 .then(text => JSON.parse(text))
                 .then(json => {
                     const futures = json.map((e) => {
-                        $("#artifactlist").append($("<option>").attr("value", e.substring(0, e.length - 5))
-                            .attr("disabled", "disabled")
-                            .text(e.substring(0, e.length - 5)));
                         return fetch("./artifact/" + e).then(r => r.text())
                             .then(j => JSON.parse(j))
                             .then(j => master.artifact[j.name] = j);
                     });
-
                     return Promise.all(futures);
                 });
 
