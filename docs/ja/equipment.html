@@ -265,7 +265,10 @@
                                             <div class="input-group-prepend">
                                                 <button type="button" class="btn btn-info calc-input" data-calc="plus" data-target="artifact-level-input">+</button>
                                             </div>
-                                            <input id="artifact-level-input" type="number" class="form-control calc-input" readonly min="0" max="30" value="{{equipmentData.artifact.level}}" data-set="set" data-target="artifact-level-input">
+                                            <input style="text-align: center;" id="artifact-level-input" type="number" class="form-control calc-input equipment-input"
+                                                readonly min="0" max="30" value="{{equipmentData.artifact.level}}" data-calc="set" data-target="artifact-level-input-slide"
+                                                data-path="artifact.level" data-type="num"/>
+
                                             <div class="input-group-append">
                                                 <button type="button" class="btn btn-info calc-input" data-calc="minus" data-target="artifact-level-input">-</button>
                                             </div>
@@ -274,7 +277,7 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <fieldset class="form-group">
-                                        <input id="artifact-level-input-slide" type="range" class="custom-range calc-input" min="0" max="30" value="{{equipmentData.artifact.level}}" data-set="set" data-target="artifact-level-input">
+                                        <input id="artifact-level-input-slide" type="range" class="custom-range calc-input" min="0" max="30" value="{{equipmentData.artifact.level}}" data-calc="set" data-target="artifact-level-input">
                                     </fieldset>
                                 </div>
                             </div>
@@ -651,6 +654,33 @@
                 }
                 calc = calculateData(master.hero[id], storage.get(id));
                 updateCalcResult(calc);
+            });
+
+            $("body").on("click", ".calc-input", (e) => {
+                const selector = $(e.target);
+                const type = selector.attr("data-calc");
+                const target = $("#"+(selector.attr("data-target")));
+
+                const min = parseInt(target.attr("min"));
+                const max = parseInt(target.attr("max"));
+                const val = parseInt(target.val());
+
+                if(type === "plus" && (val+1) <= max) {
+                    target.val((val+1)).change();
+                } else if(type === "minus" && (val-1) >= min) {
+                    target.val((val-1)).change();
+                }
+            });
+
+            $("body").on("change", ".calc-input", (e) => {
+                const selector = $(e.target);
+                const type = selector.attr("data-calc");
+                const target = $("#"+(selector.attr("data-target")));
+
+                if(selector.val() === target.val() || type !== "set") {
+                    return;
+                }
+                target.val(selector.val()).change();
             });
 
             window.addEventListener('hashchange', () => {
