@@ -44,6 +44,29 @@
     </div>
 
     <div class="container" style="padding-top: 60px;">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="hero-select">英雄選択</label>
+                    <input type="text" class="form-control" id="hero-select" autocomplete="on" list="herolist"
+                        placeholder="名前を入力...">
+                </div>
+                <datalist id="herolist">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="hero-select">遺物選択</label>
+                    <input type="text" class="form-control" id="artifact-select" autocomplete="on" list="artifactlist"
+                        placeholder="名前を入力...">
+                </div>
+                <datalist id="artifactlist">
+                </datalist>
+            </div>
+
+        </div>
+        <div class="row" id="content">
+        </div>
     </div>
 
     <footer class="container">
@@ -58,6 +81,512 @@
     </footer>
 
     <script type="text/x-handlebars" id="template">
+        <div class="col-md-6 col-sm-6">
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#pos-weapon">武具</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pos-head">頭具</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pos-body">胴具</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pos-reg">脚具</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pos-neck">首具</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pos-ring">指輪</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="pos-weapon" style="padding: 20px 5px;">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">Set</span>
+                        </div>
+                        <div class="form-group col-md-10 col-sm-10">
+                            <select class="form-control form-control-sm" id="weapon-set">
+                                {{gen-option-sets}}
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="weapon-main-op">
+                                {{gen-weapon-main-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="weapon-main-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub1</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="weapon-sub1-op">
+                                {{gen-weapon-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="weapon-sub1-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub2</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="weapon-sub2-op">
+                                {{gen-weapon-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="weapon-sub2-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="weapon-sub3-op">
+                                {{gen-weapon-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="weapon-sub3-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="weapon-sub4-op">
+                                {{gen-weapon-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="weapon-sub4-val" placeholder="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pos-head" style="padding: 20px 5px;">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">Set</span>
+                        </div>
+                        <div class="form-group col-md-10 col-sm-10">
+                            <select class="form-control form-control-sm" id="head-set">
+                                {{gen-option-sets}}
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="head-main-op">
+                                {{gen-head-main-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="head-main-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub1</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="head-sub1-op">
+                                {{gen-head-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="head-sub1-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub2</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="head-sub2-op">
+                                {{gen-head-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="head-sub2-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="head-sub3-op">
+                                {{gen-head-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="head-sub3-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="head-sub4-op">
+                                {{gen-head-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="head-sub4-val" placeholder="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pos-body" style="padding: 20px 5px;">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">Set</span>
+                        </div>
+                        <div class="form-group col-md-10 col-sm-10">
+                            <select class="form-control form-control-sm" id="body-set">
+                                {{gen-option-sets}}
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="body-main-op">
+                                {{gen-body-main-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="body-main-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub1</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="body-sub1-op">
+                                {{gen-body-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="body-sub1-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub2</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="body-sub2-op">
+                                {{gen-body-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="body-sub2-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="body-sub3-op">
+                                {{gen-body-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="body-sub3-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="body-sub4-op">
+                                {{gen-body-sub-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="body-sub4-val" placeholder="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pos-reg" style="padding: 20px 5px;">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">Set</span>
+                        </div>
+                        <div class="form-group col-md-10 col-sm-10">
+                            <select class="form-control form-control-sm" id="reg-set">
+                                {{gen-option-sets}}
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="reg-main-op">
+                                {{gen-reg-main-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="reg-main-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub1</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="reg-sub1-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="reg-sub1-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub2</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="reg-sub2-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="reg-sub2-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="reg-sub3-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="reg-sub3-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="reg-sub4-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="reg-sub4-val" placeholder="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pos-neck" style="padding: 20px 5px;">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">Set</span>
+                        </div>
+                        <div class="form-group col-md-10 col-sm-10">
+                            <select class="form-control form-control-sm" id="neck-set">
+                                {{gen-option-sets}}
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="neck-main-op">
+                                {{gen-neck-main-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="neck-main-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub1</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="neck-sub1-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="neck-sub1-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub2</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="neck-sub2-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="neck-sub2-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="neck-sub3-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="neck-sub3-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="neck-sub4-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="neck-sub4-val" placeholder="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pos-ring" style="padding: 20px 5px;">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">Set</span>
+                        </div>
+                        <div class="form-group col-md-10 col-sm-10">
+                            <select class="form-control form-control-sm" id="ring-set">
+                                {{gen-option-sets}}
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="ring-main-op">
+                                {{gen-ring-main-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="ring-main-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub1</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="ring-sub1-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="ring-sub1-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">sub2</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="ring-sub2-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="ring-sub2-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="ring-sub3-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="ring-sub3-val" placeholder="...">
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <span class="badge badge-info">main</span>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <select class="form-control form-control-sm" id="ring-sub4-op">
+                                {{gen-all-option}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="number" class="form-control  form-control-sm" id="ring-sub4-val" placeholder="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 col-sm-6">
+            <label>ステータス</label>
+            <div class="table-responsive">
+                <table class="table table-sm">
+                    <tbody>
+                        <tr>
+                            <td width="200px" class="table-dark">攻撃力</td>
+                            <td><span class="badge badge-info"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-dark">生命力</td>
+                            <td><span class="badge badge-info"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-dark">スピード</td>
+                            <td><span class="badge badge-info"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-dark">防御力</td>
+                            <td><span class="badge badge-info"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-dark">クリティカル発生率</td>
+                            <td><span class="badge badge-info"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-dark">クリティカルダメージ</td>
+                            <td><span class="badge badge-info"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-dark">連続攻撃発生率</td>
+                            <td><span class="badge badge-info"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-dark">効果命中率</td>
+                            <td><span class="badge badge-info"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-dark">効果命中率DOWN</td>
+                            <td><span class="badge badge-info"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -73,6 +602,194 @@
         integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
 
     <script>
+
+        const init = (master) => {
+            (() => {
+                const equipmentSet = [
+                    {name : "", label : "-"},
+                    {name : "attack-set", label : "攻撃"},
+                    {name : "health-set", label : "生命"},
+                    {name : "defense-set", label : "防御"},
+                    {name : "ruin-set", label : "破滅"},
+                    {name : "critical-set", label : "会心"},
+                    {name : "speed-set", label : "速度"},
+                    {name : "effect-set", label : "命中"},
+                    {name : "drain-set", label : "吸収"},
+                    {name : "counter-set", label : "反撃"},
+                    {name : "resist-set", label : "抵抗"},
+                    {name : "rage-set", label : "憤怒"},
+                    {name : "immunity-set", label : "免疫"},
+                    {name : "unity-set", label : "連携"},
+                ];
+
+                const equipmentOpt = [
+                    {name : "", label : "-"},
+                    {name : "attack-fix", label : "攻撃(固)"},
+                    {name : "attack-percent", label : "攻撃(%)"},
+                    {name : "health-fix", label : "生命(固)"},
+                    {name : "health-percent", label : "生命(%)"},
+                    {name : "defense-fix", label : "防御(固)"},
+                    {name : "defense-percent", label : "防御(%)"},
+                    {name : "speed-fix", label : "速度(固)"},
+                    {name : "crit-hit-percent", label : "クリ率(%)"},
+                    {name : "crit-damage-percent", label : "クリダメ(%)"},
+                    {name : "effect-percent", label : "命中(%)"},
+                    {name : "resist-percent", label : "抵抗(%)"},
+                ];
+
+                const generateOption = (selected, filter) => {
+                    const html = equipmentOpt.filter(filter).map(e => {
+                        const selected = e.name === "";
+                        return "<option "+selected+ " value=\""+e.name+"\">"+e.label+"</option>";
+                    });
+                    return new Handlebars.SafeString(html);
+                };
+
+                Handlebars.registerHelper('gen-option-sets', () => {
+                    const html = equipmentSet.map(e => {
+                        const selected = e.name === "";
+                        return "<option "+selected+ " value=\""+e.name+"\">"+e.label+"</option>";
+                    });
+                    return new Handlebars.SafeString(html);
+                });
+
+                Handlebars.registerHelper('gen-weapon-main-option', () => {
+                    return generateOption("", (e) => {
+                        return e.name === "" || e.name === "attack-fix";
+                    })
+                });
+
+                Handlebars.registerHelper('gen-weapon-sub-option', () => {
+                    const nots = ["attack-fix", "defense-fix", "defense-percent"];
+                    return generateOption("", (e) => {
+                        return nots.indexOf(e.name) === -1; 
+                    })
+                });
+
+                Handlebars.registerHelper('gen-head-main-option', () => {
+                    return generateOption("", (e) => {
+                        return e.name === "" || e.name === "health-fix";
+                    })
+                });
+
+                Handlebars.registerHelper('gen-head-sub-option', () => {
+                    return generateOption("", (e) => {
+                        return e.name !== "health-fix"; 
+                    });
+                });
+
+                Handlebars.registerHelper('gen-body-main-option', () => {
+                    return generateOption("", (e) => {
+                        return e.name === "" || e.name === "defense-fix";
+                    })
+                });
+
+                Handlebars.registerHelper('gen-body-sub-option', () => {
+                    const nots = ["attack-fix", "defense-fix", "attack-percent"];
+                    return generateOption("", (e) => {
+                        return nots.indexOf(e.name) === -1; 
+                    })
+                });
+
+                Handlebars.registerHelper('gen-reg-main-option', () => {
+                    const support = ["attack-fix", "attack-percent", "speed-fix", "defense-fix", "defense-percent", "health-fix", "health-percent"];
+                    return generateOption("", (e) => {
+                        return e.name === "" || support.indexOf(e.name) !== -1;
+                    })
+                });
+
+                Handlebars.registerHelper('gen-neck-main-option', () => {
+                    const support = ["attack-fix", "attack-percent", "defense-fix", "defense-percent", "health-fix", "health-percent", "crit-hit-percent", "crit-damage-percent"];
+                    return generateOption("", (e) => {
+                        return e.name === "" || support.indexOf(e.name) !== -1;
+                    })
+                });
+
+                Handlebars.registerHelper('gen-ring-main-option', () => {
+                    const support = ["attack-fix", "attack-percent", "defense-fix", "defense-percent", "health-fix", "health-percent", "effect-percent", "resist-percent"];
+                    return generateOption("", (e) => {
+                        return e.name === "" || support.indexOf(e.name) !== -1;
+                    })
+                });
+
+                Handlebars.registerHelper('gen-all-option', () => {
+                    return generateOption("", e => true)
+                });
+            })();
+
+            const template = Handlebars.compile($("#template").html());
+
+            const loadPage = (id) => {
+                $("#artifact-select").val("");
+                const heroData = master.hero[id];
+
+                $("#artifactlist option").each(function () {
+                    const selector = $(this);
+                    const val = master.artifact[selector.val()];
+                    const enable = val.target === "全職共用" || val.target === heroData.clazz;
+                    selector.prop("disabled", enable === false);
+                });
+
+                $("#content").html(template({
+                    heroData: heroData
+                }));
+            };
+
+            const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
+            $("#hero-select").val(id);
+
+            $("#hero-select").change((e) => {
+                location.hash = $(e.target).val();
+                $("#hero-select").blur();
+            });
+
+            window.addEventListener('hashchange', () => {
+                const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
+                loadPage(id);
+            });
+            loadPage(id);
+        };
+
+        $(() => {
+            const master = {
+                hero: {},
+                artifact: {}
+            };
+
+            const f1 = fetch('./hero/heros.json')
+                .then((response) => response.text())
+                .then(text => JSON.parse(text))
+                .then(json => {
+                    const futures = json.map((e) => {
+                        $("#herolist").append($("<option>").attr("value", e.substring(0, e.length - 5)).text(e.substring(0, e.length - 5)));
+                        return fetch("./hero/" + e).then(r => r.text())
+                            .then(j => JSON.parse(j))
+                            .then(j => master.hero[j.name] = j);
+                    });
+
+                    return Promise.all(futures);
+                });
+            const f2 = fetch('./artifact/artifacts.json')
+                .then((response) => response.text())
+                .then(text => JSON.parse(text))
+                .then(json => {
+                    const futures = json.map((e) => {
+                        $("#artifactlist").append($("<option>").attr("value", e.substring(0, e.length - 5))
+                            .attr("disabled", "disabled")
+                            .text(e.substring(0, e.length - 5)));
+                        return fetch("./artifact/" + e).then(r => r.text())
+                            .then(j => JSON.parse(j))
+                            .then(j => master.artifact[j.name] = j);
+                    });
+
+                    return Promise.all(futures);
+                });
+
+            Promise.all([f1, f2]).then(() => {
+                init(master);
+            });
+        });
+
     </script>
 </body>
 
