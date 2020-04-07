@@ -73,7 +73,10 @@
     <script type="text/x-handlebars" id="template">
 
         <div class="col-md-6 col-sm-12" data-hero="{{heroData.name}}" id="equipment-container">
-            <img class="img-thumbnail" src="{{heroData.thumbnail}}"/>
+            <div style="position: relative;">
+                <img class="img-thumbnail" src="{{heroData.thumbnail}}"/>
+                <button id="clear-btn" style="position: absolute;top: 20px;left: 10px;" class="btn btn-info">削除</button>
+            </div>
 
             <table class="table table-sm" style="margin-top: 10px;">
                 <thead class="thead-dark">
@@ -380,41 +383,43 @@
         const init = (master) => {
 
             const updateCalcResult = (calc) => {
-                $("#attack-base").val(calc.attack.base);
-                $("#attack-add").val(calc.attack.add);
-                $("#attack-sum").val(calc.attack.sum);
+                console.log(calc);
 
-                $("#health-base").val(calc.health.base);
-                $("#health-add").val(calc.health.add);
-                $("#health-sum").val(calc.health.sum);
+                $("#attack-base").text(calc.attack.base);
+                $("#attack-add").text(calc.attack.add);
+                $("#attack-sum").text(calc.attack.sum);
 
-                $("#defense-base").val(calc.defense.base);
-                $("#defense-add").val(calc.defense.add);
-                $("#defense-sum").val(calc.defense.sum);
+                $("#health-base").text(calc.health.base);
+                $("#health-add").text(calc.health.add);
+                $("#health-sum").text(calc.health.sum);
 
-                $("#speed-base").val(calc.speed.base);
-                $("#speed-add").val(calc.speed.add);
-                $("#speed-sum").val(calc.speed.sum);
+                $("#defense-base").text(calc.defense.base);
+                $("#defense-add").text(calc.defense.add);
+                $("#defense-sum").text(calc.defense.sum);
 
-                $("#critical_hit-base").val(calc.critical_hit.base);
-                $("#critical_hit-add").val(calc.critical_hit.add);
-                $("#critical_hit-sum").val(calc.critical_hit.sum);
+                $("#speed-base").text(calc.speed.base);
+                $("#speed-add").text(calc.speed.add);
+                $("#speed-sum").text(calc.speed.sum);
 
-                $("#critical_damage-base").val(calc.critical_damage.base);
-                $("#critical_damage-add").val(calc.critical_damage.add);
-                $("#critical_damage-sum").val(calc.critical_damage.sum);
+                $("#critical_hit-base").text(calc.critical_hit.base);
+                $("#critical_hit-add").text(calc.critical_hit.add);
+                $("#critical_hit-sum").text(calc.critical_hit.sum);
 
-                $("#debuff_hit-base").val(calc.debuff_hit.base);
-                $("#debuff_hit-add").val(calc.debuff_hit.add);
-                $("#debuff_hit-sum").val(calc.debuff_hit.sum);
+                $("#critical_damage-base").text(calc.critical_damage.base);
+                $("#critical_damage-add").text(calc.critical_damage.add);
+                $("#critical_damage-sum").text(calc.critical_damage.sum);
 
-                $("#debuff_resist-base").val(calc.debuff_resist.base);
-                $("#debuff_resist-add").val(calc.debuff_resist.add);
-                $("#debuff_resist-sum").val(calc.debuff_resist.sum);
+                $("#debuff_hit-base").text(calc.debuff_hit.base);
+                $("#debuff_hit-add").text(calc.debuff_hit.add);
+                $("#debuff_hit-sum").text(calc.debuff_hit.sum);
 
-                $("#unity-base").val(calc.unity.base);
-                $("#unity-add").val(calc.unity.add);
-                $("#unity-sum").val(calc.unity.sum);
+                $("#debuff_resist-base").text(calc.debuff_resist.base);
+                $("#debuff_resist-add").text(calc.debuff_resist.add);
+                $("#debuff_resist-sum").text(calc.debuff_resist.sum);
+
+                $("#unity-base").text(calc.unity.base);
+                $("#unity-add").text(calc.unity.add);
+                $("#unity-sum").text(calc.unity.sum);
             };
 
             const calculateData = (() => {
@@ -692,6 +697,7 @@
                 if (val === "" && clear !== "") {
                     $("#" + clear).val("").change();
                 }
+
                 calc = calculateData(master.hero[id], storage.get(id));
                 updateCalcResult(calc);
             });
@@ -722,6 +728,12 @@
                 }
                 target.val(selector.val()).change();
             });
+
+            $("body").on("click", "#clear-btn", (e) => {
+                storage.put(storage.current());
+                $("#hero-select").val("").change();
+            });
+            
 
             window.addEventListener('hashchange', () => {
                 const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
