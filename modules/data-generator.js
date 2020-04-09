@@ -18,6 +18,13 @@ class Builder {
             .setArtifactDataPageParser(dparser);
         return this;
     };
+
+    material(url, lparser, dparser) {
+        this.gen.setMaterialListUrl(url)
+            .setMaterialListPageParser(lparser)
+            .setMaterialDataPageParser(dparser);
+        return this;
+    };
 };
 
 class Generator {

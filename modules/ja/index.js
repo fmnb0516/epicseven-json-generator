@@ -43,7 +43,9 @@ module.exports = async(builder, docDir, common) => {
 
     const hero = require("./hero.js")(context);
     const artifact = require("./artifact.js")(context);
+    const material = require("./material.js")(context);
 
     builder.hero(hero.url, hero.listPage, hero.dataPage);
     builder.artifact(artifact.url, artifact.listPage, artifact.dataPage);
+    builder.artifact(material.url, material.listPage, material.dataPage);
 };
