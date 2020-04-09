@@ -1,10 +1,3 @@
-const request = require('request-promise');
-const cheerio = require('cheerio');
-const crypto = require('crypto');
-const fs = require('fs').promises;
-const util = require('util');
-const express = require('express');
-
 const future = (async (modules) => {
     const DataBuilder = require("./modules/data-builder.js");
     const DataGenerator = require("./modules/data-generator.js");
@@ -12,7 +5,7 @@ const future = (async (modules) => {
     const lang = process.argv[2] !== undefined && process.argv[2] !== null ? process.argv[2] : "ja";
 
     const generateCachePath = (url) => {
-        const md5 = crypto.createHash('md5')
+        const md5 = modules.crypto.createHash('md5')
         const hash = md5.update(url, 'binary').digest('hex');
         return "./modules/" + lang + "/cache/" + hash + ".html";
     };
@@ -49,6 +42,21 @@ const future = (async (modules) => {
        return response;
     };
 
+    const imageToBase64 = async (imageUrl) => {
+        const { statusCode, headers, error, body } =
+            await modules.util.promisify(modules.request.defaults({ encoding: null }))(imageUrl);
+
+        if (error || statusCode !== 200) {
+            return null;
+        }
+
+        const contentType = headers['content-type'];
+        const base64Str = new Buffer.from(body).toString('base64');
+
+        return `data:${contentType};base64,${base64Str}`;
+    };
+
+
     const dom = (html) => {
         return modules.cheerio.load(html);
     };
@@ -75,11 +83,9 @@ const future = (async (modules) => {
         dom : dom,
         toTextFile : toTextFile,
         createDataBuilder : createDataBuilder,
+        imageToBase64 : imageToBase64,
         _ : modules
     };
-    
-
-   
 
     return {
         mockserver : () => {
@@ -90,10 +96,8 @@ const future = (async (modules) => {
 
         generate : async () => {
             const gen = new DataGenerator.Generator();
-            
-            gen.toBuilder();
-
-            gen.generate("./docs/"+lang, common);
+            await require("./modules/" + lang + "/index.js")(gen.toBuilder(), "./docs/"+lang, common);
+            await gen.generate("./docs/"+lang, common);
             return this;
         }
     };

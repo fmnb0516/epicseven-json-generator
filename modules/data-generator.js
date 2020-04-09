@@ -1,6 +1,16 @@
 
 class Builder {
 
+    constructor(gen) {
+        this.gen = gen;
+    };
+
+    hero(url, lparser, dparser) {
+        this.gen.setCharacterListUrl(url)
+            .setCaharacterListPageParser(lparser)
+            .setCaharacterDataPageParser(dparser);
+        return this;
+    };
 };
 
 class Generator {
@@ -13,9 +23,50 @@ class Generator {
         this.artifactListPageParser = null
         this.caharacterListPageParser = null;
         this.materialListPageParser = null;
+
         this.caharacterDataPageParser = null; 
         this.artifactDataPageParser = null;
         this.materialDataPageParser = null;
+    };
+
+    setArtifactListUrl(url) {
+        this.artifactListUrl = url;
+        return this;
+    };
+    setCharacterListUrl(url) {
+        this.characterListUrl = url;
+        return this;
+    };
+    setMaterialListUrl(url) {
+        this.materialListUrl = url;
+        return this;
+    };
+
+
+    setArtifactListPageParser(parser) {
+        this.artifactListPageParser = parser;
+        return this;
+    };
+    setCaharacterListPageParser(parser) {
+        this.caharacterListPageParser = parser;
+        return this;
+    };
+    setMaterialListPageParser(parser) {
+        this.materialListPageParser = parser;
+        return this;
+    };
+
+    setCaharacterDataPageParser(parser) {
+        this.caharacterDataPageParser = parser;
+        return this;
+    };
+    setArtifactDataPageParser(parser) {
+        this.artifactDataPageParser = parser;
+        return this;
+    };
+    setMaterialDataPageParser(parser) {
+        this.materialDataPageParser = parser;
+        return this;
     };
 
     toBuilder() {
