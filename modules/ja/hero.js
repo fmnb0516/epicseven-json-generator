@@ -30,14 +30,12 @@ module.exports = (context) => {
     const dataPage = async ($, builder) => {
     
         builder.clearSkill().clearStampCollect().clearStampExpansion();
-    
-        /*
+
         await builder.thumbnail(async () => {
             const image = $(".archive-style-wrapper .a-paragraph .a-img").attr("src");
-            const thumbnail = await getImageSrc(image);
+            const thumbnail = await context.common.imageToBase64(image);
             return thumbnail;
         });
-        */
     
         const name = $("#hm_1").text().substring(0, $("#hm_1").text().indexOf("の基本情報"));
         const base = context.helper.findHeaderElement($, "h3", "の基本情報").next();

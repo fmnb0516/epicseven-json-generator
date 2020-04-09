@@ -11,6 +11,13 @@ class Builder {
             .setCaharacterDataPageParser(dparser);
         return this;
     };
+
+    artifact(url, lparser, dparser) {
+        this.gen.setArtifactListUrl(url)
+            .setArtifactListPageParser(lparser)
+            .setArtifactDataPageParser(dparser);
+        return this;
+    };
 };
 
 class Generator {
@@ -94,8 +101,31 @@ class Generator {
             heros.push(heroName + ".json");
         }
 
-        await common.toTextFile(docsDir + "/hero/heros.json", JSON.stringify(heros, null, "\t"), "utf8");
+        await common.toTextFile(docsDir + "/hero/heros.json", JSON.stringify(heros, null, "\t"));
         /* end hero data */
+
+        /* start artifact data */
+        const artifactPages = await this.artifactListPageParser(common.dom(await common.requestWithCache(this.artifactListUrl)));
+        const artifacts = [];
+
+        for(let i =0; i<artifactPages.length; i++) {
+            const page = artifactPages[i];
+            const artifactName = page.name;
+
+            const jsonPath = docsDir+"/artifact/"+artifactName + ".json";
+
+            const r = await common.requestWithCache(page.url);
+
+            const $$ = common.dom(r);
+            const dataBuilder = common.createDataBuilder("artifact" ,await common.readJson(jsonPath));
+            await this.artifactDataPageParser($$, dataBuilder);
+
+            await common.toTextFile(jsonPath, dataBuilder.toJsonString());
+            artifacts.push(artifactName + ".json");
+        }
+
+        await common.toTextFile(docsDir+"/artifact/artifacts.json", JSON.stringify(artifacts, null, "\t"));
+        /* end artifact data */
     };
 
 };

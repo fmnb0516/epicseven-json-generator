@@ -33,11 +33,17 @@ const getTextContents = (node) => {
 };
 
 module.exports = async(builder, docDir, common) => {
-    const hero = require("./hero.js")({
+    const context = {
         helper : {
             getTextContents : getTextContents,
             findHeaderElement : findHeaderElement
         },
-    });
+        common : common
+    };
+
+    const hero = require("./hero.js")(context);
+    const artifact = require("./artifact.js")(context);
+
     builder.hero(hero.url, hero.listPage, hero.dataPage);
+    builder.artifact(artifact.url, artifact.listPage, artifact.dataPage);
 };
