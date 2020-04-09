@@ -215,7 +215,7 @@
             const condition = {
                 rare: [],
                 type: [],
-                clazz: ["全職共用"],
+                clazz: [],
                 mode : [],
             };
 
@@ -236,7 +236,7 @@
                 const mode = selector.attr("data-mode");
 
                 const vis = (condition.rare.length === 0 || rare === "" || condition.rare.indexOf(rare) !== -1)
-                    && (condition.type.length === 0 || type==="" || condition.type.indexOf(type) !== -1)
+                    && (condition.type.length === 0 || type==="" || (mode === "artifact" && type === "全職共用") || condition.type.indexOf(type) !== -1)
                     && (condition.clazz.length === 0 || clazz === "" || condition.clazz.indexOf(clazz) !== -1)
                     && (condition.mode.length === 0 || mode === "" || condition.mode.indexOf(mode) !== -1);;
 
