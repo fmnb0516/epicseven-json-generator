@@ -55,9 +55,8 @@ module.exports = async(builder, docDir, common) => {
 
         return result;
     })(common.dom(await common.readFileNoErr("./modules/ja/skillmultipliers.html")));
-
-    console.log(skillmultipliers);
-
+    common.toTextFile("./modules/ja/skillmultipliers.json", JSON.stringify(skillmultipliers, null, "\t"));
+    
     const context = {
         helper : {
             getTextContents : getTextContents,

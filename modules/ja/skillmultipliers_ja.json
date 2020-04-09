@@ -1,0 +1,2452 @@
+{
+	"Achates": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 15% self max Health",
+			"note": ""
+		},
+		"s3": {
+			"text": "Heal strength: 30% self max Health (50% soulburn)",
+			"note": ""
+		}
+	},
+	"Adlay": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1*1*1.871 (1.25 soul burn)",
+			"note": ""
+		}
+	},
+	"Ains": {
+		"s1": {
+			"text": "ATK*0.7*1*1.871",
+			"note": "ATK*1*1*1.871 (Satisfying Strike)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*1*1.871 (1.8 soul burn)",
+			"note": ""
+		}
+	},
+	"Aither": {
+		"s1": {
+			"text": "ATK*1*1.05*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 45% self Attack + 15% target max Health",
+			"note": "76.5% and 26% soulburn"
+		},
+		"s3": {
+			"text": "Heal strength: 35% self Attack + 15% target max Health",
+			"note": "Barrier strength: 100% self Attack"
+		}
+	},
+	"Alencia": {
+		"s1": {
+			"text": "(ATK*0.5+Hp*0.10)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "(ATK*0.5+Hp*0.12)*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*0.5+Hp*0.15)*1.871",
+			"note": ""
+		}
+	},
+	"Alexa": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": "Proc on crit is ATK*0.75*1*1.871"
+		},
+		"s2": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.9*1.871",
+			"note": "15% increased damage per target debuff"
+		}
+	},
+	"All-Rounder Wanda": {
+		"s1": {
+			"text": "ATK*0.9*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.8*0.9*1.871",
+			"note": ""
+		}
+	},
+	"Ambitious Tywin": {
+		"s1": {
+			"text": "(ATK*0.6+Hp*0.10)*1.77745",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*0.5+Hp*0.12)*1.77745",
+			"note": ""
+		}
+	},
+	"Angelic Montmorancy": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 7% target max Health",
+			"note": ""
+		},
+		"s3": {
+			"text": "Heal strength: 35% target max Health",
+			"note": ""
+		}
+	},
+	"Angelica": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 20% self max Health",
+			"note": ""
+		},
+		"s3": {
+			"text": "Heal strength: 15% self max Health",
+			"note": "Barrier strength: 15% self max Health"
+		}
+	},
+	"Apocalypse Ravi": {
+		"s1": {
+			"text": "(ATK*1*0.95+HP*0.12)*1.871 (1.8 soul burn)",
+			"note": "12% self max Health (20% soulburn)"
+		},
+		"s2": {
+			"text": "Heal strength: 6-8% self max Health ",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*1.3*0.95+HP*0.20)*1.871",
+			"note": "20% self max Health"
+		}
+	},
+	"Aramintha": {
+		"s1": {
+			"text": "ATK*1*1.05*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.8*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.85*1*1.871",
+			"note": ""
+		}
+	},
+	"Arbiter Vildred": {
+		"s1": {
+			"text": "ATK*0.975*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.04*0.85*1.871 (1.29 soulburn)",
+			"note": "1.23 attack rate with focus spent, 1.55 attack rate with focus and soul burn"
+		}
+	},
+	"Armin": {
+		"s1": {
+			"text": "(ATK*0.8+DEF*0.6)*1.6839",
+			"note": ""
+		},
+		"s2": {
+			"text": "(ATK*0.3+DEF*0.5)*1.6839",
+			"note": ""
+		},
+		"s3": {
+			"text": "Heal strength: 15% target max Health",
+			"note": "Barrier strength: 100% self Defense"
+		}
+	},
+	"Arowell": {
+		"s1": {
+			"text": "(ATK*0.7+Def*0.02)*1.77745",
+			"note": "2% self max Health (0.02 * Health)"
+		},
+		"s2": {
+			"text": "2% Defense increase per stack, scales up to 3% with molagora",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*1.5+Def*0.05)*1.77745",
+			"note": "70% self Defense (0.7 * Defense), Barrier strength: 60% self Defense"
+		}
+	},
+	"Assassin Cartuja": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.95*1.871",
+			"note": ""
+		}
+	},
+	"Assassin Cidd": {
+		"s1": {
+			"text": "(ATK*1.6839) * (1+Speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*2.666175) * (1+Speed*0.001) [2 soul burn]",
+			"note": "0.10% self Speed (0.001 * Speed), 0.30% target Speed (0.003 * Speed)"
+		}
+	},
+	"Assassin Coli": {
+		"s1": {
+			"text": "(ATK*1.4968) * (1+Speed*0.00075) [1.1 Stealth]",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*2.2452) * (1+Speed*0.001125) [3 soul burn]",
+			"note": "0.1125% self Speed (0.001125 * Speed)"
+		}
+	},
+	"Auxiliary Lots": {
+		"s1": {
+			"text": "ATK*1*0.8*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.8*1*1.871 (1 soul burn)",
+			"note": ""
+		}
+	},
+	"Azalea": {
+		"s1": {
+			"text": "ATK*1*1.05*1.871",
+			"note": "Heal strength: 11% self max Health"
+		},
+		"s2": {
+			"text": "ATK*1.5*1.05*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.7*1*1.871",
+			"note": ""
+		}
+	},
+	"Baal and Sezan": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.85*0.9*1.871 (1.1 soul burn)",
+			"note": "10% increased damage per debuff on target"
+		},
+		"s3": {
+			"text": "ATK*0.8*1*1.871",
+			"note": ""
+		}
+	},
+	"Baiken": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": "2 separate chances to apply a bleed at said %"
+		},
+		"s2": {
+			"text": "ATK*1.2*1*1.871",
+			"note": "3 separate chances to apply a bleed at said %"
+		},
+		"s3": {
+			"text": "ATK*1.6*1*1.871 (1.85 soulburn)",
+			"note": "Detonate damage is seperate from initial damage. 30% increased damage on bleed portion."
+		}
+	},
+	"Basar": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.9*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.9*0.9*1.871",
+			"note": ""
+		}
+	},
+	"Bask": {
+		"s1": {
+			"text": "(ATK*0.7+HP*0.07)*1.6839",
+			"note": "7% self max Health (0.07 * Health)"
+		},
+		"s2": {
+			"text": "(ATK*0.8+HP*0.12)*1.871",
+			"note": "12% self max Health (0.12 * Health)"
+		},
+		"s3": {
+			"text": "Barrier strength: 30% self max Health",
+			"note": ""
+		}
+	},
+	"Batisse": {
+		"s1": {
+			"text": "ATK*0.8*0.95*1.871",
+			"note": "ATK*0.5*0.95*1.871 (Rock Smash)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*1*1.871",
+			"note": ""
+		}
+	},
+	"Bellona": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": "4% target max Health"
+		},
+		"s2": {
+			"text": "ATK*0.8*0.95*1.871",
+			"note": "10% increased damage per target beyond 1"
+		},
+		"s3": {
+			"text": "ATK*0.95*1*1.871 (1.2 soul burn)",
+			"note": ""
+		}
+	},
+	"Benevolent Romann": {
+		"s1": {
+			"text": "ATK*0.8*0.9*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.9*1.1*1.871",
+			"note": ""
+		}
+	},
+	"Blaze Dingo": {
+		"s1": {
+			"text": "ATK*1.5*0.95*1.871",
+			"note": "Heal strength: 50% of damage done"
+		},
+		"s2": {
+			"text": "ATK*1.2*0.95*1.871",
+			"note": "Heal strength: 30% of damage done"
+		},
+		"s3": {
+			"text": "Heal strength: 200% self attack",
+			"note": ""
+		}
+	},
+	"Blood Blade Karin": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": "50% of damage gained as life"
+		},
+		"s2": {
+			"text": "Per 25% hp missing: 16.7% to atk/def/spd",
+			"note": "25% each stat at max molagora"
+		},
+		"s3": {
+			"text": "ATK*1.2*0.95*1.871 (1.45 soul burn)",
+			"note": ""
+		}
+	},
+	"Butcher Corps Inquisitor": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.85*1.871",
+			"note": "0.5% increased damage per 1% self Health missing"
+		}
+	},
+	"Captain Rikoris": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.6*1*1.871",
+			"note": "Heal strength: 5% self max Health. (15% with speciality upgrades)"
+		}
+	},
+	"Carmainerose": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": "25% of damage gained as life"
+		},
+		"s2": {
+			"text": "ATK*1.5*1.05*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.95*1.871",
+			"note": ""
+		}
+	},
+	"Carrot": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Barrier strength: 60-78% self Attack",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		}
+	},
+	"Cartuja": {
+		"s1": {
+			"text": "(ATK*0.5+HP*0.06)*1.871",
+			"note": "6% self max Health (0.06 * Health)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*0.6+HP*0.05)*1.871  (+0.2 soulburn)",
+			"note": "Attack rate is 1.0 instead of 0.6 <50% hp, 5% self max Health (8% soulburn) (6.25% < 50% hp), (10% <50% hp and soulburn)"
+		}
+	},
+	"Cecilia": {
+		"s1": {
+			"text": "(ATK*0.7*1+HP*0.07)*1.871",
+			"note": "7% self max Health (0.07 * Health)"
+		},
+		"s2": {
+			"text": "(ATK*0.4*1+HP*0.06)*1.871",
+			"note": "6% self max Health (0.06 * Health)"
+		},
+		"s3": {
+			"text": "(ATK*0.6+HP*0.12)*1.96455",
+			"note": "12% self max Health (0.12 * Health)"
+		}
+	},
+	"Celeste": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.85*0.9*1.871 (1.1 soul burn)",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Celestial Mercedes": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.9*0.9*1.871",
+			"note": "4% target max Health"
+		},
+		"s3": {
+			"text": "ATK*1.2*0.8*1.871",
+			"note": ""
+		}
+	},
+	"Cerise": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.9*1.1*1.871",
+			"note": ""
+		}
+	},
+	"Cermia": {
+		"s1": {
+			"text": "ATK*1.2*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.15*0.9*1.871 (1.65 Soulburn)",
+			"note": ""
+		}
+	},
+	"Challenger Dominiel": {
+		"s1": {
+			"text": "ATK*1*0.9*1.871 (2.5 and 1 soul burn)",
+			"note": "20% increased damage on Critical Hit"
+		},
+		"s2": {
+			"text": "5.4% increased damage per crit, up to 7.02% at max molagora",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Champion Zerato": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		}
+	},
+	"Chaos Inquisitor": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.85*1.871",
+			"note": "0.5% increased damage per 1% self Health missing"
+		}
+	},
+	"Chaos Sect Axe": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": "0.2% increased damage per 1% target Health missing"
+		},
+		"s2": {
+			"text": "ATK*0.8*0.95*1.871 (1 soul burn)",
+			"note": "0.5% increased damage per 1% target Health missing"
+		},
+		"s3": {
+			"text": "(ATK*1.8+HP*0.05)*1.6839",
+			"note": "20% heal on hit, 30% heal on kill, 5% self max Health (0.05 * Health)"
+		}
+	},
+	"Charles": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*1*1.871 ",
+			"note": "Att_rate increases by 0.07 per buff beyond 1 (0.07 at 2 buffs, 0.14 at 3 buffs, etc)"
+		},
+		"s3": {
+			"text": "ATK*1.2*1*1.871",
+			"note": "53.4%/80.1%/106.8% more damage vs 3/2/1 target respectively"
+		}
+	},
+	"Charlotte": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Chloe": {
+		"s1": {
+			"text": "ATK*1*0.9*1.871",
+			"note": "30% bonus dmg if target is Magic Nail'd"
+		},
+		"s2": {
+			"text": "ATK*0.9*0.9*1.871",
+			"note": "Nail adds damage equal to 2% target max Health, ignores defense, not improved by attacker's crit, etc"
+		},
+		"s3": {
+			"text": "ATK*2*0.8*1.871 (3.5 soul burn)",
+			"note": "35% bonus dmg if target is Magic Nail'd"
+		}
+	},
+	"Church of Ilryos Axe": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": "0.2% increased damage per 1% target Health missing"
+		},
+		"s2": {
+			"text": "ATK*0.8*0.95*1.871 (1 soul burn)",
+			"note": "0.5% increased damage per 1% target Health missing"
+		},
+		"s3": {
+			"text": "ATK*1.8*0.9*1.871",
+			"note": ""
+		}
+	},
+	"Cidd": {
+		"s1": {
+			"text": "(ATK*1.599705)*(1+Speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed), Skill 2 fully upgraded increases power from 0.95 to 1.35"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*2.9936)*(1+Speed*0.0021) [2.2 soul burn]",
+			"note": "0.21% self Speed (0.0021 * Speed)"
+		}
+	},
+	"Clarissa": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.7*1*1.871",
+			"note": "Enrage increases attack and speed by 10%"
+		},
+		"s3": {
+			"text": "ATK*0.8*1*1.871 (1.05 soul burn)",
+			"note": "30% increased damage when Enraged"
+		}
+	},
+	"Coli": {
+		"s1": {
+			"text": "(ATK*1.34712)*(1+Speed*0.00075)",
+			"note": ""
+		},
+		"s2": {
+			"text": "(ATK*2.02068)(1+Speed*0.00075)",
+			"note": "Barrier strength: 100% self Attack"
+		},
+		"s3": {
+			"text": "(ATK*3.03102)(1+Speed*0.001125) ",
+			"note": ""
+		}
+	},
+	"Commander Lorina": {
+		"s1": {
+			"text": "ATK*1*0.9*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.95*1.871",
+			"note": "0.5% increased damage per 1% target Health missing"
+		}
+	},
+	"Corvus": {
+		"s1": {
+			"text": "(ATK*0.7+Def*0.9)*1.871 ",
+			"note": ""
+		},
+		"s2": {
+			"text": "(ATK*0.3+Def*0.7)*1.6839",
+			"note": "70% self Defense (0.7 * Defense)"
+		},
+		"s3": {
+			"text": "Heal strength: 50% self max Health",
+			"note": ""
+		}
+	},
+	"Crescent Moon Rin": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.1*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.6*1*1.871",
+			"note": ""
+		}
+	},
+	"Crimson Armin": {
+		"s1": {
+			"text": "(ATK*0.8+Def*0.6)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Crozet": {
+		"s1": {
+			"text": "(ATK*0.6+Def*0.7)*1.96455",
+			"note": ""
+		},
+		"s2": {
+			"text": "Barrier strength: 15% target max Health",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*0.5+Def*0.6)*1.77745 [0.75 soul burn]",
+			"note": ""
+		}
+	},
+	"Dark Corvus": {
+		"s1": {
+			"text": "(ATK*0.7+Hp*0.07)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "0.95!",
+			"note": " 20% self max Health (34% soulburn), 50% of damage gained as life, penetrates defense"
+		}
+	},
+	"Desert Jewel Basar": {
+		"s1": {
+			"text": "ATK*1.2*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal Strength: 15-18% of self Attack and 6-7.2% of target's max Health.",
+			"note": "36% self Attack and 14.2% target's max Health soulburn."
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Destina": {
+		"s1": {
+			"text": "Heal strength: 7% target max Health (35% self max Health soul burn)",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 30% self max Health",
+			"note": ""
+		},
+		"s3": {
+			"text": "Heal strength: 35% self max Health",
+			"note": ""
+		}
+	},
+	"Diene": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Barrier strength: 20% target max Health (30% Molagora)",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Dingo": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.8*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Dizzy": {
+		"s1": {
+			"text": "ATK*0.7*1*1.871",
+			"note": "30% increased damage if target has a debuff."
+		},
+		"s2": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*2.5*1*1.871",
+			"note": "Always misses (75% damage dealt)"
+		}
+	},
+	"Dominiel": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Barrier strength: 100% self Attack",
+			"note": "Reflects 30% damage taken"
+		},
+		"s3": {
+			"text": "ATK*0.75*0.95*1.871",
+			"note": ""
+		}
+	},
+	"Doris": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 15% target max Health",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Eaton": {
+		"s1": {
+			"text": "(ATK*1.2*1+HP*0.05)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "Barrier strength: 25%-36.1% self Max Health",
+			"note": ""
+		}
+	},
+	"Elena": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.9*1*1.871",
+			"note": ""
+		}
+	},
+	"Elson": {
+		"s1": {
+			"text": "ATK*0.9*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.7*0.9*1.871",
+			"note": "Heal strength: 15% target max Health"
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Enott": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": "0.5% increased damage per 1% target Health missing"
+		},
+		"s2": {
+			"text": "ATK*1.5*1.05*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Faithless Lidica": {
+		"s1": {
+			"text": "ATK*1*1.1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.7*1.1*1.871 ",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.4*0.95*1.871",
+			"note": ""
+		}
+	},
+	"Falconer Kluri": {
+		"s1": {
+			"text": "(ATK*0.5+Def*0.7)*1.6839",
+			"note": "70% self Defense (0.7 * Defense)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Fallen Cecilia": {
+		"s1": {
+			"text": "(ATK*0.7*1+HP*0.07)*1.871 ",
+			"note": ""
+		},
+		"s2": {
+			"text": "Barrier Strength: 10-15% self Max Health (based on mola)",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*0.65*1+HP*0.12)*1.77745",
+			"note": ""
+		}
+	},
+	"Fighter Maya": {
+		"s1": {
+			"text": "(ATK*0.5+Def*0.75)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*1+Def*1.5)*1.871 [1.7 soul burn]",
+			"note": ""
+		}
+	},
+	"Furious": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.65*1*1.871 (1.95 soul burn)",
+			"note": ""
+		}
+	},
+	"General Purrgis": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.8*1*1.871",
+			"note": ""
+		}
+	},
+	"Gloomyrain": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "25% atk up -> 40% atk up with max molagora",
+			"note": "10% speed up -> 30% speed up with max molagora"
+		},
+		"s3": {
+			"text": "ATK*0.7*1*1.871 (0.95 soul burn)",
+			"note": ""
+		}
+	},
+	"Guider Aither": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*0.9*1.871",
+			"note": "Barrier strength: 100% self Attack"
+		},
+		"s3": {
+			"text": "ATK*1.8*0.95*1.871 (2.3 soul burn)",
+			"note": "25% of damage as healing"
+		}
+	},
+	"Gunther": {
+		"s1": {
+			"text": "ATK*1*0.85*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*2.2*0.95*1.871 (2.9 soul burn)",
+			"note": "30% increased damage if target is bleeding"
+		}
+	},
+	"Haste": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*1*1.871 (2 soul burn)",
+			"note": "9% of damage as healing, 18% if target Bleeding"
+		},
+		"s3": {
+			"text": "ATK*1*1*1.871",
+			"note": "200% damage vs 2 targets, 250% damage vs 1 target"
+		}
+	},
+	"Hataan": {
+		"s1": {
+			"text": "(ATK*1.6885)*(1+Speed*0.00075)",
+			"note": ""
+		},
+		"s2": {
+			"text": "(ATK*2.0674)*(1+Speed*0.00125)",
+			"note": "repeat skill is same ratios"
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Hazel": {
+		"s1": {
+			"text": "ATK*1*1.05*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 15% self Attack + 7% target max Health",
+			"note": "target <50% Health: +30%, +15%"
+		},
+		"s3": {
+			"text": "Heal strength: 30% self Attack + 12% target max Health",
+			"note": ""
+		}
+	},
+	"Helga": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*0.95*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Hurado": {
+		"s1": {
+			"text": "ATK*1*0.9*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.9*1*1.871",
+			"note": ""
+		}
+	},
+	"Iseria": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871 (2 soul burn)",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*2*0.9*1.871",
+			"note": ""
+		}
+	},
+	"Jecht": {
+		"s1": {
+			"text": "ATK*1*1.05*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.9*0.9*1.871",
+			"note": ""
+		}
+	},
+	"Jena": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": "10% increased damage per debuff on target"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.85*0.95*1.871 (1.1 soul burn)",
+			"note": ""
+		}
+	},
+	"Judge Kise": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.9*1*1.871 (1.15 soul burn)",
+			"note": "10% increased damage per extra target (12.5% soulburn)"
+		},
+		"s3": {
+			"text": "ATK*1*0.9*1.871",
+			"note": ""
+		}
+	},
+	"Judith": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Karin": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1*0.9*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.6*0.85*1.871 (2.3 soul burn)",
+			"note": "50% increase to critical damage multiplier"
+		}
+	},
+	"Kawerik": {
+		"s1": {
+			"text": "(ATK*0.9*1) * (1+Speed*0.00075)",
+			"note": ""
+		},
+		"s2": {
+			"text": "(ATK*1.4*1*1.871) * (1+Speed*0.003)",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*1.4*1*1.871) * (1+Speed*0.003)",
+			"note": ""
+		}
+	},
+	"Kayron": {
+		"s1": {
+			"text": "ATK*0.85*1*1.871 (1.35 soul burn)",
+			"note": "0.15% increased damage per 1% self Health missing"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.7*0.9*1.871",
+			"note": "0.3% increased damage per 1% self Health missing"
+		}
+	},
+	"Ken": {
+		"s1": {
+			"text": "(ATK*1+Hp*0.10)*1.871",
+			"note": "10% self max Health (0.10 * Health)"
+		},
+		"s2": {
+			"text": "(ATK*1.2+Hp*0.10)*1.871",
+			"note": "10% self max Health (0.10 * Health)"
+		},
+		"s3": {
+			"text": "(ATK*1.5+Hp*0.30)*1.6839",
+			"note": "30% self max Health (0.30 * Health)"
+		}
+	},
+	"Khawana": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.9*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*1*1.871 (2 soul burn)",
+			"note": ""
+		}
+	},
+	"Khawazu": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.9*1.871",
+			"note": ""
+		}
+	},
+	"Kikirat V2": {
+		"s1": {
+			"text": "(ATK*0.5+Def*0.7)*1.871",
+			"note": "70% self Defense (0.7 * Defense)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*0.4+Def*0.5)*1.871 (0.5 soul burn)",
+			"note": "50% self Defense (60% soulburn)"
+		}
+	},
+	"Kiris": {
+		"s1": {
+			"text": "ATK*1*0.9*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.7*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Kise": {
+		"s1": {
+			"text": "ATK*1.1*1*1.871 (1.4 soul burn)",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.8*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.6*1*1.871",
+			"note": "0.35% increased damage per 1% current self Health"
+		}
+	},
+	"Kitty Clarissa": {
+		"s1": {
+			"text": "ATK*0.9*0.8*1.871",
+			"note": "6% self max health (0.06 * health)"
+		},
+		"s2": {
+			"text": "ATK*0.8*0.95*1.871 (1.05 soul burn)",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Kluri": {
+		"s1": {
+			"text": "(ATK*0.5+Def*0.07)*1.6839",
+			"note": "70% self Defense (0.7 * Defense)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Krau": {
+		"s1": {
+			"text": "(ATK*0.7+Hp*0.085)*1.871",
+			"note": "8.5% self max Health (0.085 * Health)"
+		},
+		"s2": {
+			"text": "(ATK*0.8+HP*0.13)*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.3*1*1.871",
+			"note": "0.53571 flat per 1 hp missing"
+		}
+	},
+	"Lena": {
+		"s1": {
+			"text": "ATK*1.15*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1*1*1.871 (1.2 soul burn)",
+			"note": "Gains 0.2% damage per 1% enemy Health missing"
+		}
+	},
+	"Leo": {
+		"s1": {
+			"text": "ATK*0.9*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.2*1.05*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.8*0.8*1.871",
+			"note": ""
+		}
+	},
+	"Lidica": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.7*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.6*1*1.871",
+			"note": ""
+		}
+	},
+	"Lilias": {
+		"s1": {
+			"text": "(ATK*0.8*0.95+HP*0.12)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "90% of highest attack allies' attack",
+			"note": ""
+		}
+	},
+	"Lilibet": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*2*0.95*1.871 (2.6 soul burn)",
+			"note": ""
+		}
+	},
+	"Little Queen Charlotte": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*1*1.871",
+			"note": "0.3 (Health recovered)"
+		}
+	},
+	"Lorina": {
+		"s1": {
+			"text": "ATK*1*0.9*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.95*1.871",
+			"note": "0.5% increased damage per 1% target Health missing"
+		}
+	},
+	"Lots": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 15% target max Health",
+			"note": ""
+		},
+		"s3": {
+			"text": "Heal strength: 10% target max Health",
+			"note": ""
+		}
+	},
+	"Ludwig": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.65*1.05*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.85*0.95*1.871 (1.1 soul burn)",
+			"note": ""
+		}
+	},
+	"Luluca": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": "Increased damage equal to 20% of enemies missing health percent (ie 50% hp enemy = 10% damage boost)"
+		},
+		"s2": {
+			"text": "ATK*1*1*1.871",
+			"note": "Barrier Strength: 37.5% self Attack"
+		},
+		"s3": {
+			"text": "ATK*0.95*1.05*1.871",
+			"note": "20% increased self Attack per stack (for all skills)"
+		}
+	},
+	"Luna": {
+		"s1": {
+			"text": "ATK*0.7*0.95*1.871",
+			"note": "0.7 = 1 Hit, 1.4 = 2 Hits, 2.1 = 3 Hits"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*1.05*1.871 (2.2 soul burn)",
+			"note": ""
+		}
+	},
+	"Maid Chloe": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 8% self max Health (12% full Molgora)",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Martial Artist Ken": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.2*0.95*1.871",
+			"note": "0.4% increased damage per 1% self Health missing"
+		},
+		"s3": {
+			"text": "ATK*0.9*1*1.871 (1.1 soul burn)",
+			"note": ""
+		}
+	},
+	"Mascot Hazel": {
+		"s1": {
+			"text": "ATK*1*1.05*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 15% self attack + 7% target max health",
+			"note": "If target at <50% health: 30%, 15%"
+		},
+		"s3": {
+			"text": "Heal strength: 30% self attack + 12% target max health",
+			"note": ""
+		}
+	},
+	"Maya": {
+		"s1": {
+			"text": "(ATK*0.5+Def*0.75)*1.77745",
+			"note": "75% self Defense (0.75 * Defense)"
+		},
+		"s2": {
+			"text": "(ATK*0.8+Def*0.8)*1.871",
+			"note": "80% self Defense (0.8 * Defense)"
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Melissa": {
+		"s1": {
+			"text": "ATK*1*1.1*1.871 (1.5 soul burn)",
+			"note": "0.35 per hp rate lost."
+		},
+		"s2": {
+			"text": "ATK*1.5*0.95*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.2*1*1.871",
+			"note": ""
+		}
+	},
+	"Mercedes": {
+		"s1": {
+			"text": "ATK*0.7*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.7*0.9*1.871 (0.9 soul burn)",
+			"note": "160% damage 2 targets, 190% damage 1 target."
+		},
+		"s3": {
+			"text": "ATK*1.2*0.8*1.871",
+			"note": "Gains 0.3% damage per 1% enemy Health missing"
+		}
+	},
+	"Mercenary Helga": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*0.95*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Mirsa": {
+		"s1": {
+			"text": "(ATK*1.6839) * (1+Speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*2.9421475) * (1+Speed*0.0015) [2.5 soul burn]",
+			"note": "0.15% self Speed (0.0015 * Speed)"
+		}
+	},
+	"Mistychain": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": "7% of damage gained as life"
+		},
+		"s2": {
+			"text": "ATK*1.3*1.05*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*1*1.871 (2.2 soul burn)",
+			"note": "15% of damage gained as life"
+		}
+	},
+	"Montmorancy": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 7% target max Health",
+			"note": ""
+		},
+		"s3": {
+			"text": "Heal strength: 35% target max Health",
+			"note": ""
+		}
+	},
+	"Mucacha": {
+		"s1": {
+			"text": "(ATK*1.6839) * (1+Speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*3.3678) * (1+Speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		}
+	},
+	"Nemunas": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1*0.8*1.871 (1.7 soul burn)",
+			"note": "5% target max Health, 8.5% soul burn"
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Otillie": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.8*1*1.871",
+			"note": ""
+		}
+	},
+	"Pavel": {
+		"s1": {
+			"text": "(ATK*0.9*1.1*1.871) * (1+Speed*0.00075) ",
+			"note": ""
+		},
+		"s2": {
+			"text": "(ATK*0.8*1*1.871) * (1+Speed*0.001125) ",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*1.3*1*1.871) * (1+Speed*0.0015) ",
+			"note": ""
+		}
+	},
+	"Pearlhorizon": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.6*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.9*1.871 (2.2 soul burn)",
+			"note": "20% target max Health as extra damage when they're asleep"
+		}
+	},
+	"Purrgis": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.8*1*1.871 (1.05 soul burn)",
+			"note": ""
+		}
+	},
+	"Pyllis": {
+		"s1": {
+			"text": "(ATK*0.7+Def*0.4)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "2% Defense increase per stack, scales up to 3% with molagora",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*1.3+Def*0.7)*1.77745",
+			"note": "Barrier strength: 60% self Defense"
+		}
+	},
+	"Ras": {
+		"s1": {
+			"text": "(ATK*0.9+HP*0.07)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*0.9+HP*0.12)*1.96455",
+			"note": ""
+		}
+	},
+	"Ravi": {
+		"s1": {
+			"text": "ATK*1*1*1.871 (2.5 soul burn)",
+			"note": "38% of damage as healing"
+		},
+		"s2": {
+			"text": "15% Attack per stack (up to 5 stacks)",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.2*0.95*1.871",
+			"note": ""
+		}
+	},
+	"Requiemroar": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.8*1*1.871 (2.7 soul burn)",
+			"note": ""
+		}
+	},
+	"Researcher Carrot": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Barrier strength: 60-78% self Attack",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		}
+	},
+	"Righteous Thief Roozid": {
+		"s1": {
+			"text": "(ATK*0.8*1*1.871)*(1+speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		},
+		"s2": {
+			"text": "(ATK*1.2*1*1.871)*(1+speed*0.0015)",
+			"note": "0.1125% self Speed (0.001125 * Speed)"
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Rikoris": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.6*1*1.871",
+			"note": "Heal strength: 5% self max Health , 15% with the specialty upgrades"
+		}
+	},
+	"Rima": {
+		"s1": {
+			"text": "ATK*1*0.8*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.3*0.95*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Rin": {
+		"s1": {
+			"text": "(ATK*0.7+Hp*0.05)*1.6839",
+			"note": "5% self max Health (0.05 * Health)"
+		},
+		"s2": {
+			"text": "(ATK*0.7+Hp*0.07)*1.871",
+			"note": "Two separate sets of unique buffs it pulls one from:\n1. atk up, speed up, crit up, crit dmg up, continuous heal\n2. def up, evasion, debuff immunity"
+		},
+		"s3": {
+			"text": "Heal strength: 20% target max Health",
+			"note": ""
+		}
+	},
+	"Roaming Warrior Leo": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": "10% increased Attack if enemy has at least 1 buff"
+		},
+		"s2": {
+			"text": "ATK*1.2*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.8*1.1*1.871",
+			"note": ""
+		}
+	},
+	"Roana": {
+		"s1": {
+			"text": "",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Romann": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.7*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.9*0.85*1.871",
+			"note": "30% increased damage if target buffed"
+		}
+	},
+	"Roozid": {
+		"s1": {
+			"text": "(ATK*1.4968) * (1+Speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		},
+		"s2": {
+			"text": "(ATK*2.2452) * (1+Speed*0.001125)",
+			"note": "0.1125% self Speed (0.001125 * Speed)"
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Rose": {
+		"s1": {
+			"text": "(ATK*0.5+Def*0.7)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Barrier strength: 100% self Defense (1 * Defense)",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Ruele of Light": {
+		"s1": {
+			"text": "(ATK*0.81+HP*0.07)*1.77745",
+			"note": "Heal strength: 7% target max Health (35% self max Health soulburn)"
+		},
+		"s2": {
+			"text": "Heal strength: 35% self max Health",
+			"note": "Barrier strength: 20% self max Health"
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Sage Baal and Sezan": {
+		"s1": {
+			"text": "ATK*1*1.1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.85*1.3*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.2*1*1.871",
+			"note": "30% self missing Health (0.3 * missing Health)"
+		}
+	},
+	"Schuri": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		}
+	},
+	"Seaside Bellona": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.7*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1*1*1.871",
+			"note": "20% increased critical strike damage"
+		}
+	},
+	"Serila": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*1.05*1.871 (2 soul burn)",
+			"note": "30% of damage as healing"
+		},
+		"s3": {
+			"text": "ATK*1.8*1.05*1.871",
+			"note": ""
+		}
+	},
+	"Sez": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": "0.2% increased damage per 1% target missing Health"
+		},
+		"s2": {
+			"text": "ATK*0.5*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.8*0.95*1.871 (3.2 soul burn)",
+			"note": "0.3% (0.7% soulburn) increased damage per 1% target missing Health, explosion on kill does 150% of self Attack"
+		}
+	},
+	"Shadow Rose": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*0.9*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.8*0.8*1.871 (1.05 soul burn)",
+			"note": ""
+		}
+	},
+	"Shooting Star Achates": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "15% further target max Health healed on top",
+			"note": ""
+		}
+	},
+	"Sigret": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.25*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.7*0.8*1.871",
+			"note": ""
+		}
+	},
+	"Silk": {
+		"s1": {
+			"text": "(ATK*1.51551) * (1+ Speed*0.00075) ",
+			"note": "Soul burn is ATK*2.104875"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*1.6698675) * (1+ Speed*0.00075) ",
+			"note": ""
+		}
+	},
+	"Silver Blade Aramintha": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.5*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.9*1*1.871",
+			"note": ""
+		}
+	},
+	"Sinful Angelica": {
+		"s1": {
+			"text": "",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Sol Badguy": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": "20% increased damage if target has no buffs"
+		},
+		"s2": {
+			"text": "ATK*1*1*1.871",
+			"note": "4% target max Health"
+		},
+		"s3": {
+			"text": "ATK*1.6*1*1.871",
+			"note": "5% target max Health"
+		}
+	},
+	"Specimen Sez": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.8*1*1.871 (1.05 soul burn)",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*1*1.871",
+			"note": ""
+		}
+	},
+	"Specter Tenebria": {
+		"s1": {
+			"text": "ATK*1.2*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.8*0.95*1.871",
+			"note": "20% increased damage per target debuff"
+		}
+	},
+	"Straze": {
+		"s1": {
+			"text": "",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Surin": {
+		"s1": {
+			"text": "ATK*1*0.9*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.4*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.8*0.8*1.871",
+			"note": "If one bleed, +40% damage. +15% damage for each additional up to 5."
+		}
+	},
+	"Sven": {
+		"s1": {
+			"text": "ATK*1*0.95*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.8*0.8*1.871",
+			"note": "0.5% increased damage per 1% self Health missing, 0.15% increased damage per 1% target health missing.\nExtra attack -> (ATK*0.7*1*1.871), 0.3% increased  damage per 1% self Health missing"
+		}
+	},
+	"Tamarinne": {
+		"s1": {
+			"text": "[Basic Form] ATK*1*0.75*1.871 (Heal strength 7%, 35% soul burn)",
+			"note": "[Idol Mode] Heal strength: 35% self max health. (Soul burn)"
+		},
+		"s2": {
+			"text": "Heal strength: 25% self max health. ",
+			"note": ""
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Taranor Guard": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.8*1*1.871",
+			"note": ""
+		}
+	},
+	"Taranor Royal Guard": {
+		"s1": {
+			"text": "(ATK*0.8+HP*0.025)*1.871",
+			"note": "2.5% self max Health (0.025 * Health)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*1.5+HP*0.05)*1.77745 (2.3 soul burn)",
+			"note": "5% self max Health (0.05 * Health)"
+		}
+	},
+	"Tempest Surin": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.05*1*1.871 (1.25 soul burn)",
+			"note": ""
+		}
+	},
+	"Tenebria": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.8*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.1*1.05*1.871 (1.35 soul burn)",
+			"note": ""
+		}
+	},
+	"Tieria": {
+		"s1": {
+			"text": "ATK*1*1.05*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.2*0.9*1.871 (1.8 soul burn)",
+			"note": "4% target max Health, 6% soul burn"
+		}
+	},
+	"Troublemaker Crozet": {
+		"s1": {
+			"text": "(ATK*1*0.95+HP*0.04)*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "Barrier strength: 20% self Max Health",
+			"note": ""
+		}
+	},
+	"Tywin": {
+		"s1": {
+			"text": "(ATK*0.8+Hp*0.04)*1.77745",
+			"note": "4% self max Health (0.04 * Health)"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*0.5+Hp*0.10)*1.77745",
+			"note": ""
+		}
+	},
+	"Vildred": {
+		"s1": {
+			"text": "(ATK*1.5108325) * (1+Speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		},
+		"s2": {
+			"text": "ATK*0.5*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*1.59035) * (1+Speed*0.00075) [1.1 soul burn]",
+			"note": "0.075% self Speed  (0.090% soulburn)"
+		}
+	},
+	"Violet": {
+		"s1": {
+			"text": "ATK*1*0.9*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "Heal strength: 15% self max health",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.9*1.871",
+			"note": "15% increased damage per Focus"
+		}
+	},
+	"Vivian": {
+		"s1": {
+			"text": "ATK*1.2*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.05*1*1.871 (1.3 soulburn)",
+			"note": "first trigger on kill is 0.55 attack rate, second trigger is 0.3 attack rate"
+		},
+		"s3": {
+			"text": "",
+			"note": ""
+		}
+	},
+	"Wanda": {
+		"s1": {
+			"text": "ATK*0.9*0.95*1.871",
+			"note": "35% increased damage if enemy has Targeted debuff"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.8*0.9*1.871",
+			"note": ""
+		}
+	},
+	"Wanderer Silk": {
+		"s1": {
+			"text": "(ATK*1.871) * (1+Speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		},
+		"s2": {
+			"text": "(ATK*1.6839) * (1+Speed*0.00075)",
+			"note": "0.075% self Speed (0.00075 * Speed)"
+		},
+		"s3": {
+			"text": "(ATK*3.3012) * (1+Speed*0.001125)",
+			"note": "0.1125% self Speed (0.001125 * Speed)"
+		}
+	},
+	"Watcher Schuri": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.7*1.05*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*0.8*0.95*1.871",
+			"note": ""
+		}
+	},
+	"Yufine": {
+		"s1": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*0.9*1*1.871",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*2*0.95*1.871",
+			"note": "50% increased damage if target is buffed"
+		}
+	},
+	"Yuna": {
+		"s1": {
+			"text": "ATK*0.6*0.8*1.871",
+			"note": "140% damage vs 2 targets, 160% vs 1 target"
+		},
+		"s2": {
+			"text": "",
+			"note": ""
+		},
+		"s3": {
+			"text": "ATK*1.5*0.8*1.871",
+			"note": "140% damage vs 2 targets, 160% vs 1 target"
+		}
+	},
+	"Zeno": {
+		"s1": {
+			"text": "(ATK*0.5*1+HP*0.10)*1.871",
+			"note": "10% self max Health (0.10 * Health)"
+		},
+		"s2": {
+			"text": "5% def and 5% to skill 3 damage per stack, up to 8% with molagora",
+			"note": ""
+		},
+		"s3": {
+			"text": "(ATK*0.5*1+HP*0.12)*1.871",
+			"note": "12% self max Health (0.12 * Health)"
+		}
+	},
+	"Zerato": {
+		"s1": {
+			"text": "ATK*1.05*1*1.871",
+			"note": ""
+		},
+		"s2": {
+			"text": "ATK*1.5*0.95*1.871 (2 soul burn)",
+			"note": "30% increased damage if target is debuffed"
+		},
+		"s3": {
+			"text": "ATK*1*1*1.871",
+			"note": ""
+		}
+	}
+}
