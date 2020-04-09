@@ -62,7 +62,7 @@ const future = (async (modules) => {
     };
 
     const toTextFile = async (path, text) => {
-        await fs.writeFile(path, text, "utf8");
+        await modules.fs.writeFile(path, text, "utf8");
     };
 
     const createDataBuilder = (type , json) => {

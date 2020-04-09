@@ -84,7 +84,7 @@ class Generator {
             const heroName = page.name;
             const jsonPath = docsDir + "/hero/"+heroName + ".json";
 
-            const r = await modules.requestWithCache(page.url);
+            const r = await common.requestWithCache(page.url);
 
             const $$ = common.dom(r);
             const dataBuilder = common.createDataBuilder("hero" ,await common.readJson(jsonPath));
