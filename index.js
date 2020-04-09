@@ -12,25 +12,25 @@ const future = (async (modules) => {
 
     const readFileNoErr = async (path, enc) => {
         try {
-            return await fs.readFile(path, enc);
+            return await modules.fs.readFile(path, enc);
         } catch(e) {
             return null;
         }
     };
 
     const readJson = async(path, enc) => {
-        const json = await readFileNoErr(cachePath, "utf8");
+        const json = await readFileNoErr(path, "utf8");
         return json !== null ? JSON.parse(json) : null;
     };
     
     const requestWithCache = async (url) => {
         const cachePath = generateCachePath(url);
-        
         const html = await readFileNoErr(cachePath, "utf8");
         if(html !== null) {
             return html;
         }
-    
+
+        /*
         const response = await modules.request({
             url : url,
             method: "GET",
@@ -40,6 +40,7 @@ const future = (async (modules) => {
         });
        await modules.fs.writeFile(cachePath, response, "utf8");
        return response;
+       */
     };
 
     const imageToBase64 = async (imageUrl) => {
