@@ -126,6 +126,28 @@ class Generator {
 
         await common.toTextFile(docsDir+"/artifact/artifacts.json", JSON.stringify(artifacts, null, "\t"));
         /* end artifact data */
+
+        /* start materials data */
+        const materialPages = await this.materialListPageParser(common.dom(await common.requestWithCache(this.materialListUrl)));
+        const materials = [];
+        for(let i =0; i<materialPages.length; i++) {
+            const page = materialPages[i];
+            const materialName = page.name;
+
+            const jsonPath = docsDir+"/material/"+materialName + ".json";
+
+            const r = await common.requestWithCache(page.url);
+
+            const $$ = common.dom(r);
+            const dataBuilder = common.createDataBuilder("material" ,await common.readJson(jsonPath));
+            await this.materialDataPageParser($$, dataBuilder);
+
+            await common.toTextFile(jsonPath, dataBuilder.toJsonString());
+            materials.push(materialName + ".json");
+        }
+
+        await common.toTextFile(docsDir+"/material/materials.json", JSON.stringify(materials, null, "\t"));
+        /* end materials data */
     };
 
 };
