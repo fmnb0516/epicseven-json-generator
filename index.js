@@ -30,7 +30,6 @@ const future = (async (modules) => {
             return html;
         }
 
-        /*
         const response = await modules.request({
             url : url,
             method: "GET",
@@ -40,7 +39,6 @@ const future = (async (modules) => {
         });
        await modules.fs.writeFile(cachePath, response, "utf8");
        return response;
-       */
     };
 
     const imageToBase64 = async (imageUrl) => {
@@ -85,6 +83,7 @@ const future = (async (modules) => {
         toTextFile : toTextFile,
         createDataBuilder : createDataBuilder,
         imageToBase64 : imageToBase64,
+        readFileNoErr : readFileNoErr,
         _ : modules
     };
 

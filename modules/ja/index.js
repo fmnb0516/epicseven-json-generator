@@ -33,6 +33,14 @@ const getTextContents = (node) => {
 };
 
 module.exports = async(builder, docDir, common) => {
+    (($) => {
+        $("table.skill-multiplier tbody tr").each((i,e) => {
+            const name = $(e).find(".char-name").text().trim();
+            console.log(name);
+
+        });
+    })(common.dom(await common.readFileNoErr("./modules/ja/skillmultipliers.html")));
+
     const context = {
         helper : {
             getTextContents : getTextContents,
