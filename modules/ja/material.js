@@ -39,7 +39,7 @@ module.exports = (context) => {
 
         await builder.thumbnail(async () => {
             const image = $(base.find("tr").get(0)).find("td img").attr("src");
-            const thumbnail = await getImageSrc(image);
+            const thumbnail = await context.common.imageToBase64(image);
             return thumbnail;
         });
 
@@ -65,7 +65,7 @@ module.exports = (context) => {
         });
 
         if (type === "レア特殊素材") {
-            const normal_drop = findHeaderElement($, "h3", "ノーマル", true).next();
+            const normal_drop = context.helper.findHeaderElement($, "h3", "ノーマル", true).next();
             normal_drop.find("tr").each((i, elm) => {
                 const area = $(elm).find("th").text().trim().split(".");
 

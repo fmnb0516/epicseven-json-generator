@@ -47,5 +47,5 @@ module.exports = async(builder, docDir, common) => {
 
     builder.hero(hero.url, hero.listPage, hero.dataPage);
     builder.artifact(artifact.url, artifact.listPage, artifact.dataPage);
-    builder.artifact(material.url, material.listPage, material.dataPage);
+    builder.material(material.url, material.listPage, material.dataPage);
 };
