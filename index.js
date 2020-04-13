@@ -18,9 +18,10 @@ const future = (async (modules) => {
         }
     };
 
-    const readJson = async(path, enc) => {
+    const readJson = async(path, def) => {
+        const def2 = def === undefined ? null : def;
         const json = await readFileNoErr(path, "utf8");
-        return json !== null ? JSON.parse(json) : null;
+        return json !== null ? JSON.parse(json) : def2;
     };
     
     const requestWithCache = async (url) => {
