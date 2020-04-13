@@ -44,9 +44,7 @@ module.exports = (context) => {
         const clazz = $(base.find("tr").get(5)).find("td").text().trim();
         builder.baseData(name, rare, type, clazz);
 
-        if(ctx[name] === undefined) {
-            console.log("["+name+"]");
-        }
+        builder.extention("camping",ctx[name]);
     
         const status = context.helper.findHeaderElement($, "h3", "最大ステータス【入手時 / 覚醒後】").next();
     

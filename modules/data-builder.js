@@ -147,6 +147,14 @@ class HeroDataBuilder {
         };
     };
 
+    extention(key, data) {
+        if(this.json["extention"] === undefined) {
+            this.json["extention"] = {};
+        }
+        this.json["extention"][key] = data;
+        return this;
+    };
+
     baseData(name, rare, type, clazz) {
         this.json["name"] = name;
         this.json["rare"] = rare;
