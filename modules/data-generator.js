@@ -102,7 +102,7 @@ class Generator {
         const context = await this.initializer();
 
         /* start hero data */
-        const heroPages = await this.caharacterListPageParser(common.dom(await common.requestWithCache(this.characterListUrl)));
+        const heroPages = await this.caharacterListPageParser(common.dom(await common.requestWithCache(this.characterListUrl)), context);
         const heros = [];
 
         for(let i =0; i<heroPages.length; i++) {
@@ -114,7 +114,7 @@ class Generator {
 
             const $$ = common.dom(r);
             const dataBuilder = common.createDataBuilder("hero" ,await common.readJson(jsonPath));
-            await this.caharacterDataPageParser($$, dataBuilder);
+            await this.caharacterDataPageParser($$, dataBuilder, context);
 
             await common.toTextFile(jsonPath, dataBuilder.toJsonString());
             heros.push(heroName + ".json");
@@ -124,7 +124,7 @@ class Generator {
         /* end hero data */
 
         /* start artifact data */
-        const artifactPages = await this.artifactListPageParser(common.dom(await common.requestWithCache(this.artifactListUrl)));
+        const artifactPages = await this.artifactListPageParser(common.dom(await common.requestWithCache(this.artifactListUrl)), context);
         const artifacts = [];
 
         for(let i =0; i<artifactPages.length; i++) {
@@ -137,7 +137,7 @@ class Generator {
 
             const $$ = common.dom(r);
             const dataBuilder = common.createDataBuilder("artifact" ,await common.readJson(jsonPath));
-            await this.artifactDataPageParser($$, dataBuilder);
+            await this.artifactDataPageParser($$, dataBuilder, context);
 
             await common.toTextFile(jsonPath, dataBuilder.toJsonString());
             artifacts.push(artifactName + ".json");
@@ -147,7 +147,7 @@ class Generator {
         /* end artifact data */
 
         /* start materials data */
-        const materialPages = await this.materialListPageParser(common.dom(await common.requestWithCache(this.materialListUrl)));
+        const materialPages = await this.materialListPageParser(common.dom(await common.requestWithCache(this.materialListUrl)), context);
         const materials = [];
         for(let i =0; i<materialPages.length; i++) {
             const page = materialPages[i];
@@ -159,7 +159,7 @@ class Generator {
 
             const $$ = common.dom(r);
             const dataBuilder = common.createDataBuilder("material" ,await common.readJson(jsonPath));
-            await this.materialDataPageParser($$, dataBuilder);
+            await this.materialDataPageParser($$, dataBuilder, context);
 
             await common.toTextFile(jsonPath, dataBuilder.toJsonString());
             materials.push(materialName + ".json");
