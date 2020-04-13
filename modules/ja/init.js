@@ -10,7 +10,30 @@ module.exports = (context) => {
         const hero_data = JSON.parse(res2);
 
         const mapping = await context.common.readJson("./modules/ja/cache/hero_name_mapping.json", {});
+
+        hero_data.map(e => e.title).filter(e => mapping[e] === undefined).forEach(e => {
+            mapping[e] = "";
+        });
         await context.common.toTextFile("./modules/ja/cache/hero_name_mapping.json", JSON.stringify(mapping, null, "\t"));
+
+        const data = {};
+
+        hero_data.forEach(e => {
+            const name = mapping[e.title] === "" ? e.title : mapping[e.title];
+
+            const topic_names = e.topic_names.split("##");
+            const topic_ids = e.topics.split("##");
+
+            data[name] = {
+                topic : [
+                    {id : topic_ids[0], name : topic_names[0]},
+                    {id : topic_ids[1], name : topic_names[1]},
+                ],
+                camping : camp_data[e.nid]
+            };
+        });
+
+        return data;
     };
 
 
