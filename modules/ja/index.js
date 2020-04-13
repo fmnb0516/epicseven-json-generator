@@ -33,7 +33,6 @@ const getTextContents = (node) => {
 };
 
 module.exports = async(builder, docDir, common) => {
-    
     const context = {
         helper : {
             getTextContents : getTextContents,
@@ -45,7 +44,9 @@ module.exports = async(builder, docDir, common) => {
     const hero = require("./hero.js")(context);
     const artifact = require("./artifact.js")(context);
     const material = require("./material.js")(context);
+    const init = require("./init.js")(context);
 
+    builder.initialize(init.initalized);
     builder.hero(hero.url, hero.listPage, hero.dataPage);
     builder.artifact(artifact.url, artifact.listPage, artifact.dataPage);
     builder.material(material.url, material.listPage, material.dataPage);

@@ -25,6 +25,11 @@ class Builder {
             .setMaterialDataPageParser(dparser);
         return this;
     };
+
+    initialize(func) {
+        this.gen.setInitializer(func);
+        return this;
+    };
 };
 
 class Generator {
@@ -41,6 +46,12 @@ class Generator {
         this.caharacterDataPageParser = null; 
         this.artifactDataPageParser = null;
         this.materialDataPageParser = null;
+        this.initializer = null;
+    };
+
+    setInitializer(func) {
+        this.initializer = func;
+        return this;
     };
 
     setArtifactListUrl(url) {
@@ -88,6 +99,7 @@ class Generator {
     };
 
     async generate(docsDir, common) {
+        const context = await this.initializer();
 
         /* start hero data */
         const heroPages = await this.caharacterListPageParser(common.dom(await common.requestWithCache(this.characterListUrl)));
