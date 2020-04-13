@@ -27,7 +27,7 @@ module.exports = (context) => {
         return result;
     };
     
-    const dataPage = async ($, builder) => {
+    const dataPage = async ($, builder,ctx) => {
     
         builder.clearSkill().clearStampCollect().clearStampExpansion();
 
@@ -37,12 +37,16 @@ module.exports = (context) => {
             return thumbnail;
         });
     
-        const name = $("#hm_1").text().substring(0, $("#hm_1").text().indexOf("の基本情報"));
+        const name = $("#hm_1").text().substring(0, $("#hm_1").text().indexOf("の基本情報")).trim();
         const base = context.helper.findHeaderElement($, "h3", "の基本情報").next();
         const rare = parseInt($(base.find("tr").get(3)).find("td").text().trim().substring(1));
         const type = $(base.find("tr").get(4)).find("td").text().trim();
         const clazz = $(base.find("tr").get(5)).find("td").text().trim();
         builder.baseData(name, rare, type, clazz);
+
+        if(ctx[name] === undefined) {
+            console.log("["+name+"]");
+        }
     
         const status = context.helper.findHeaderElement($, "h3", "最大ステータス【入手時 / 覚醒後】").next();
     
