@@ -33,29 +33,6 @@ const getTextContents = (node) => {
 };
 
 module.exports = async(builder, docDir, common) => {
-    const skillmultipliers = (($) => {
-        const result = {};
-
-        const parse = (e) => {
-            const text = e.find("span b").text();
-            const note = e.find("span.f-12").text();
-            return {text : text, note : note};
-        };
-
-        $("table.skill-multiplier tbody tr").each((i,e) => {
-            const name = $(e).find(".char-name").text().trim();
-            const tds = $(e).find("td");
-
-            result[name] = {
-                s1: parse($(tds.get(1))),
-                s2: parse($(tds.get(2))),
-                s3: parse($(tds.get(3))),
-            };
-        });
-
-        return result;
-    })(common.dom(await common.readFileNoErr("./modules/ja/skillmultipliers.html")));
-    common.toTextFile("./modules/ja/skillmultipliers.json", JSON.stringify(skillmultipliers, null, "\t"));
     
     const context = {
         helper : {
