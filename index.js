@@ -24,10 +24,11 @@ const future = (async (modules) => {
         return json !== null ? JSON.parse(json) : def2;
     };
     
-    const requestWithCache = async (url) => {
+    const requestWithCache = async (url, force) => {
         const cachePath = generateCachePath(url);
         const html = await readFileNoErr(cachePath, "utf8");
-        if(html !== null) {
+        
+        if(html !== null && force !== true) {
             return html;
         }
 

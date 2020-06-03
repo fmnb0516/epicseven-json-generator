@@ -80,7 +80,11 @@ module.exports = (context) => {
                 return;
             }
     
-            const entry = text.split("+");
+            const entry = text.indexOf("+") !== -1 ? text.split("+") : [
+                text.substring(0, text.search( /\d/)),
+                text.substring(text.search( /\d/)),
+            ];
+
             const t = entry[1].trim().indexOf("%") !== -1 ? "percent" : "fix";
             builder.stampExpansion(entry[0].trim(), parseFloat(t === "percent" ? entry[1].trim().substring(-1) : entry[1].trim()), t);
         });

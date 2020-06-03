@@ -102,7 +102,7 @@ class Generator {
         const context = await this.initializer();
 
         /* start hero data */
-        const heroPages = await this.caharacterListPageParser(common.dom(await common.requestWithCache(this.characterListUrl)), context);
+        const heroPages = await this.caharacterListPageParser(common.dom(await common.requestWithCache(this.characterListUrl, true)), context);
         const heros = [];
 
         for(let i =0; i<heroPages.length; i++) {
@@ -124,7 +124,7 @@ class Generator {
         /* end hero data */
 
         /* start artifact data */
-        const artifactPages = await this.artifactListPageParser(common.dom(await common.requestWithCache(this.artifactListUrl)), context);
+        const artifactPages = await this.artifactListPageParser(common.dom(await common.requestWithCache(this.artifactListUrl, true)), context);
         const artifacts = [];
 
         for(let i =0; i<artifactPages.length; i++) {
