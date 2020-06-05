@@ -45,7 +45,7 @@
         }
 
         .hero-register2 {
-            color: yellow;
+            color: teal;
         }
 
         .hero-register0 {
@@ -193,46 +193,35 @@
     <script type="text/x-handlebars" id="template">
         <div class="row">
             <div class="col-lg-12">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#hero-tab">英雄一覧</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#calc-tab">士気計算</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-12">
-                <div class="tab-pane fade show active" id="hero-tab">
-                    <div class="row">
-                        {{#each hero}}
-                        <div class="col-lg-3 col-md-3 col-6 col-sm-4 data-item" style="padding: 10px;" data-type="{{type}}" data-clazz="{{clazz}}" data-rare="{{rare}}" data-mode="hero">
-                            <div style="padding: .25rem;background-color: #fff;border: 1px solid #dee2e6;border-radius: .25rem;">
-                                <a href="./hero.html#{{name}}" target="_blank">
-                                    <div  class="adjust-box box-1x1" style="cursor: pointer;background-position: center;background-color: #000;background-repeat: no-repeat;background-size:contain;background-image:url({{thumbnail}});">
-                                        <div style="position: absolute;top: 5px;left:5px;">
-                                            <span class="badge badge-pill badge-info">{{name}}</span>
-                                            <span class="badge badge-pill badge-info">★{{rare}}</span>
-                                        </div>
-                                        <div style="position: absolute;bottom: 5px;left:5px;">
-                                            <span class="badge badge-pill badge-info">{{type}}</span>
-                                            <span class="badge badge-pill badge-info">{{clazz}}</span>
-                                        </div>
-                                        <div style="position: absolute;top: 5px;right:5px;">
-                                            <i data-register="1" data-hero-name="{{name}}" style="font-size: 70px;" class="hero-register1 toggle-register-hero fa fa-star" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        {{/each}}
-                    </div>
-                </div>
-                <div class="tab-pane fade show active" id="calc-tab">
-                </div>
+                <small id="fileHelp" class="form-text text-muted">
+                    士気の計算を行いたい英雄の★アイコンをクリックしてください<br/>
+                    <span style="color: teal;">★</span>は組み合わせの対象。 <span style="color: tomato;">★</span>は固定編成になります
+                </small>
             </div>
         </div>
-        
+        <div class="row">
+            {{#each hero}}
+            <div class="col-lg-3 col-md-3 col-6 col-sm-4 data-item" style="padding: 10px;" data-type="{{type}}" data-clazz="{{clazz}}" data-rare="{{rare}}" data-mode="hero">
+                <div style="padding: .25rem;background-color: #fff;border: 1px solid #dee2e6;border-radius: .25rem;">
+                    <a href="./hero.html#{{name}}" target="_blank">
+                        <div  class="adjust-box box-1x1" style="cursor: pointer;background-position: center;background-color: #000;background-repeat: no-repeat;background-size:contain;background-image:url({{thumbnail}});">
+                            <div style="position: absolute;top: 5px;left:5px;">
+                                <span class="badge badge-pill badge-info">{{name}}</span>
+                                <span class="badge badge-pill badge-info">★{{rare}}</span>
+                            </div>
+                            <div style="position: absolute;bottom: 5px;left:5px;">
+                                <span class="badge badge-pill badge-info">{{type}}</span>
+                                <span class="badge badge-pill badge-info">{{clazz}}</span>
+                            </div>
+                            <div style="position: absolute;top: 5px;right:5px;">
+                                <i data-register="1" data-hero-name="{{name}}" style="font-size: 70px;" class="hero-register1 toggle-register-hero fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -407,7 +396,8 @@
                 const seppos = 20 > ranking.length ? ranking.length-1 : 19;
                 const sepval = ranking[seppos].value;
                 const filterRanking = ranking.filter(d => d.value >= sepval);
-                console.log(filterRanking);
+                
+
             };
         };
 
