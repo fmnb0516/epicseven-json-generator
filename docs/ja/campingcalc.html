@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>EPIC SEVEN - JSON GENERATOR</title>
 
@@ -34,6 +35,18 @@
         .adjust-box p {
             line-height: 1.5em;
         }
+
+        .toggle-register-hero {
+            cursor: pointer;
+        }
+
+        .unregister-hero {
+            color: white;
+        }
+
+        .register-hero {
+            color: yellow;
+        }
     </style>
 </head>
 
@@ -48,7 +61,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="./datalist.html">データリスト</a>
                     </li>
                     <li class="nav-item">
@@ -63,7 +76,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./equipment.html">装備管理</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="./campingcalc.html">キャンプ士気計算</a>
                     </li>
                 </ul>
@@ -129,12 +142,6 @@
                     <li class="page-item disabled">
                         <span style="width: 10px;height:50px;    border-top: none;border-bottom: none;" class="page-link" >&nbsp;</span>
                     </li>
-                    <li class="page-item">
-                        <span style="width: 70px;height:50px;" class="page-link" data-filter="mode:hero">英雄</span>
-                    </li>
-                    <li class="page-item">
-                        <span style="width: 70px;height:50px;" class="page-link" data-filter="mode:artifact">遺物</span>
-                    </li>
                 <ul>
             </div>
         </div>
@@ -156,46 +163,47 @@
 
     <script type="text/x-handlebars" id="template">
         <div class="row">
-            {{#each hero}}
-            <div class="col-lg-3 col-md-3 col-6 col-sm-4 data-item" style="padding: 10px;" data-type="{{type}}" data-clazz="{{clazz}}" data-rare="{{rare}}" data-mode="hero">
-                <div style="padding: .25rem;background-color: #fff;border: 1px solid #dee2e6;border-radius: .25rem;">
-                    <a href="./hero.html#{{name}}" target="_blank">
-                        <div  class="adjust-box box-1x1" style="cursor: pointer;background-position: center;background-color: #000;background-repeat: no-repeat;background-size:contain;background-image:url({{thumbnail}});">
-                            <div style="position: absolute;top: 5px;left:5px;">
-                                <span class="badge badge-pill badge-info">{{name}}</span>
-                                <span class="badge badge-pill badge-info">★{{rare}}</span>
-                            </div>
-                            <div style="position: absolute;bottom: 5px;left:5px;">
-                                <span class="badge badge-pill badge-info">{{type}}</span>
-                                <span class="badge badge-pill badge-info">{{clazz}}</span>
+            <div class="col-lg-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#hero-tab">英雄一覧</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#calc-tab">士気計算</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <div class="tab-pane fade show active" id="hero-tab">
+                    <div class="row">
+                        {{#each hero}}
+                        <div class="col-lg-3 col-md-3 col-6 col-sm-4 data-item" style="padding: 10px;" data-type="{{type}}" data-clazz="{{clazz}}" data-rare="{{rare}}" data-mode="hero">
+                            <div style="padding: .25rem;background-color: #fff;border: 1px solid #dee2e6;border-radius: .25rem;">
+                                <a href="./hero.html#{{name}}" target="_blank">
+                                    <div  class="adjust-box box-1x1" style="cursor: pointer;background-position: center;background-color: #000;background-repeat: no-repeat;background-size:contain;background-image:url({{thumbnail}});">
+                                        <div style="position: absolute;top: 5px;left:5px;">
+                                            <span class="badge badge-pill badge-info">{{name}}</span>
+                                            <span class="badge badge-pill badge-info">★{{rare}}</span>
+                                        </div>
+                                        <div style="position: absolute;bottom: 5px;left:5px;">
+                                            <span class="badge badge-pill badge-info">{{type}}</span>
+                                            <span class="badge badge-pill badge-info">{{clazz}}</span>
+                                        </div>
+                                        <div style="position: absolute;top: 5px;right:5px;">
+                                            <i data-hero-name="{{name}}" style="font-size: 70px;" class="unregister-hero toggle-register-hero fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                    </a>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="tab-pane fade show active" id="calc-tab">
                 </div>
             </div>
-            {{/each}}
         </div>
-
-        <div class="row">
-            {{#each artifact}}
-            <div class="col-lg-3 col-md-3 col-6 col-sm-4 data-item" style="padding: 10px;" data-type="" data-clazz="{{target}}" data-rare="{{rare}}" data-mode="artifact">
-                <div style="padding: .25rem;background-color: #fff;border: 1px solid #dee2e6;border-radius: .25rem;">
-                    <a href="./artifact.html#{{name}}" target="_blank">
-                        <div  class="adjust-box box-1x1" style="cursor: pointer;background-position: center;background-color: #000;background-repeat: no-repeat;background-size:contain;background-image:url({{thumbnail}});">
-                            <div style="position: absolute;top: 5px;left:5px;">
-                                <span class="badge badge-pill badge-info">{{name}}</span>
-                                <span class="badge badge-pill badge-info">★{{rare}}</span>
-                            </div>
-                            <div style="position: absolute;bottom: 5px;left:5px;">
-                                <span class="badge badge-pill badge-info">{{type}}</span>
-                                <span class="badge badge-pill badge-info">{{target}}</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            {{/each}}
-        </div>
+        
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -265,6 +273,32 @@
                 }
                 update();
             });
+
+            $(".toggle-register-hero").click((e) => {
+                const selector = $(e.target);
+
+                if (selector.hasClass("register-hero")) {
+                    selector.removeClass("register-hero").addClass("unregister-hero");
+                } else {
+                    selector.removeClass("unregister-hero").addClass("register-hero");
+                }
+
+                updateCamping();
+
+                return false;
+            });
+
+            const updateCamping = () => {
+                const heros = [];
+
+                $(".register-hero").each((i,e) => {
+                    heros.push($(e).attr("data-hero-name"));
+                });
+
+                for(let i=0; i<i.length; i++) {
+                    
+                }
+            };
         };
 
         $(() => {
@@ -286,19 +320,8 @@
 
                     return Promise.all(futures);
                 });
-            const f2 = fetch('./artifact/artifacts.json')
-                .then((response) => response.text())
-                .then(text => JSON.parse(text))
-                .then(json => {
-                    const futures = json.map((e) => {
-                        return fetch("./artifact/" + e).then(r => r.text())
-                            .then(j => JSON.parse(j))
-                            .then(j => master.artifact[j.name] = j);
-                    });
-                    return Promise.all(futures);
-                });
 
-            Promise.all([f1, f2]).then(() => {
+            Promise.all([f1]).then(() => {
                 init(master);
             });
         });
