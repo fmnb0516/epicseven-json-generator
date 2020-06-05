@@ -215,5 +215,18 @@
 	"rare": 5,
 	"type": "火",
 	"clazz": "アーチャー",
-	"extention": {}
+	"extention": {
+		"camping": {
+			"topic": [
+				{
+					"id": "1266",
+					"name": "Dream"
+				},
+				{
+					"id": "1336",
+					"name": "Unique Comment"
+				}
+			]
+		}
+	}
 }
