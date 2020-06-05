@@ -12,6 +12,10 @@
     <title>EPIC SEVEN - JSON GENERATOR</title>
 
     <style>
+        div.spinner {
+            position: fixed !important;
+        }
+
         .adjust-box {
             position: relative;
             width: 100%;
@@ -181,6 +185,9 @@
     <div class="container" id="content">
     </div>
 
+    <div id="spin">
+    </div>
+
     <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -234,8 +241,8 @@
                                 <span class="badge badge-pill badge-info">{{type}}</span>
                                 <span class="badge badge-pill badge-info">{{clazz}}</span>
                             </div>
-                            <div style="position: absolute;top: 5px;right:5px;">
-                                <i data-register="1" data-hero-name="{{name}}" style="font-size: 70px;" class="hero-register1 toggle-register-hero fa fa-star" aria-hidden="true"></i>
+                            <div style="position: absolute;bottom:5px; right:5px;">
+                                <i data-register="1" data-hero-name="{{name}}" style="font-size: 150%;" class="hero-register1 toggle-register-hero fa fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                     </a>
@@ -260,9 +267,6 @@
                         <div style="background-color: #fff;border: 1px solid #dee2e6;border-radius: .25rem;">
                             <a>
                                 <div  class="adjust-box box-1x1" style="cursor: pointer;background-position: center;background-color: #000;background-repeat: no-repeat;background-size:contain;background-image:url({{hero-thumb this}});">
-                                    <div style="position: absolute;top: 5px;left:5px;">
-                                        <span class="badge badge-pill badge-info">{{this}}</span>
-                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -302,6 +306,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
         integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.1.1/spin.min.js"></script>
 
     <script>
 
@@ -474,6 +479,33 @@
         };
 
         $(() => {
+
+            const spin = (() => {
+                var opts = {
+                    lines: 13, //線の数
+                    length: 33, //線の長さ
+                    width: 11, //線の幅
+                    radius: 16, //スピナーの内側の広さ
+                    corners: 1, //角の丸み
+                    rotate: 74, //向き(あんまり意味が無い・・)
+                    direction: 1, //1：時計回り -1：反時計回り
+                    color: '#000', // 色
+                    speed: 1.5, // 一秒間に回転する回数
+                    trail: 71, //残像の長さ
+                    shadow: true, // 影
+                    hwaccel: true, // ？
+                    className: 'spinner', // クラス名
+                    zIndex: 2e9, // Z-index
+                    top: '50%', // relative TOP
+                    left: '50%', // relative LEFT
+                    opacity: .25, //透明度
+                    fps: 20 //fps
+                };
+                var spinner = new Spinner(opts);
+                return spinner;
+            })();
+
+            spin.spin(document.getElementById('spin'));
             const master = {
                 hero: {},
                 artifact: {}
@@ -495,6 +527,7 @@
 
             Promise.all([f1]).then(() => {
                 init(master);
+                spin.spin();
             });
         });
 
