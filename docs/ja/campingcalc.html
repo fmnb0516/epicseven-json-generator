@@ -344,6 +344,10 @@
                 };
             })();
 
+            const numval = (n) => {
+                return n === undefined ? 0 : parseInt(n);
+            };
+
             const updateCamping = () => {
                 const fixed = [];
                 const entries = [];
@@ -358,9 +362,52 @@
                     }
                 });
 
-                combination(fixed,entries, 4, (data) => {
-                    console.log(data);
+                const ranking = [];
+
+                combination(fixed,entries, 4, (collection) => {
+                    const jsons = collection.map(n => data.hero[n]).map(d => {
+                        return {
+                            name : d.name,
+                            camping : d.extention.camping
+                        };
+                    });
+
+                    const results = [];
+
+                    for(let i=0; i<jsons.length; i++) {
+                        const target = jsons[i];
+                        target.camping.topic.forEach(t => {
+                            let value = 0;
+                            jsons.filter(d => d.name !== target.name).forEach(d => {
+                                value += numval(d.camping.camping[t.id]);
+                            });
+
+                            results.push({
+                                hero : target.name,
+                                topicid : t.id,
+                                topicname : t.name,
+                                value : value
+                            });
+                        });
+                    }
+                    results.sort((r1, r2) => r2.value - r1.value);
+                    const top = results.slice(0,2);
+                    ranking.push({
+                        party : collection,
+                        camping : top,
+                        value : top[0].value + top[1].value
+                    });
                 });
+
+                if(ranking.length === 0) {
+                    return;
+                }
+
+                ranking.sort((r1, r2) => r2.value - r1.value);
+                const seppos = 20 > ranking.length ? ranking.length-1 : 19;
+                const sepval = ranking[seppos].value;
+                const filterRanking = ranking.filter(d => d.value >= sepval);
+                console.log(filterRanking);
             };
         };
 
