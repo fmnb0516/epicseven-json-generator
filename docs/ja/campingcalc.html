@@ -441,7 +441,7 @@
                         target.camping.topic.forEach(t => {
                             let value = 0;
                             jsons.filter(d => d.name !== target.name).forEach(d => {
-                                value += numval(d.camping.camping[t.id]);
+                                value += d.camping.camping　!== undefined ? numval(d.camping.camping[t.id]) : 0;
                             });
 
                             results.push({
