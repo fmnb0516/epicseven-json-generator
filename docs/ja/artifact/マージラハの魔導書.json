@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 63,
-			"health": 7
+			"attack": 7,
+			"health": 63
 		},
 		"max": {
-			"attack": 819,
-			"health": 91
+			"attack": 91,
+			"health": 819
 		}
 	},
 	"name": "マージラハの魔導書",

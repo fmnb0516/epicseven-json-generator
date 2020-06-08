@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 27,
-			"health": 18
+			"attack": 18,
+			"health": 27
 		},
 		"max": {
-			"attack": 351,
-			"health": 234
+			"attack": 234,
+			"health": 351
 		}
 	},
 	"name": "無限のバスケット",

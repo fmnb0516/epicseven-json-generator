@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 45,
-			"health": 12
+			"attack": 12,
+			"health": 45
 		},
 		"max": {
-			"attack": 585,
-			"health": 156
+			"attack": 156,
+			"health": 585
 		}
 	},
 	"name": "連作【決意に満ちし兵たち】",

@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 32,
-			"health": 21
+			"attack": 21,
+			"health": 32
 		},
 		"max": {
-			"attack": 416,
-			"health": 273
+			"attack": 273,
+			"health": 416
 		}
 	},
 	"name": "リアンナとルシエラ",

@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 65,
-			"health": 1
+			"attack": 1,
+			"health": 65
 		},
 		"max": {
-			"attack": 845,
-			"health": 13
+			"attack": 13,
+			"health": 845
 		}
 	},
 	"name": "森林のトーテム",

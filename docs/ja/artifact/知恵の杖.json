@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 32,
-			"health": 9
+			"attack": 9,
+			"health": 32
 		},
 		"max": {
-			"attack": 416,
-			"health": 117
+			"attack": 117,
+			"health": 416
 		}
 	},
 	"name": "知恵の杖",

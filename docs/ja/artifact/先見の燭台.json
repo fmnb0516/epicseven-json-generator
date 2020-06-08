@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 21,
-			"health": 14
+			"attack": 14,
+			"health": 21
 		},
 		"max": {
-			"attack": 273,
-			"health": 182
+			"attack": 182,
+			"health": 273
 		}
 	},
 	"name": "先見の燭台",

@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 41,
-			"health": 2
+			"attack": 2,
+			"health": 41
 		},
 		"max": {
-			"attack": 533,
-			"health": 26
+			"attack": 26,
+			"health": 533
 		}
 	},
 	"name": "強固な盾",

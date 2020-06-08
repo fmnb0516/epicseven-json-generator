@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 19,
-			"health": 12
+			"attack": 12,
+			"health": 19
 		},
 		"max": {
-			"attack": 247,
-			"health": 156
+			"attack": 156,
+			"health": 247
 		}
 	},
 	"name": "必殺の大剣",

@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 28,
-			"health": 12
+			"attack": 12,
+			"health": 28
 		},
 		"max": {
-			"attack": 364,
-			"health": 156
+			"attack": 156,
+			"health": 364
 		}
 	},
 	"name": "誓約の鍵",

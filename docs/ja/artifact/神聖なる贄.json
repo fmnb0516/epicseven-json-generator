@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 76,
-			"health": 9
+			"attack": 9,
+			"health": 76
 		},
 		"max": {
-			"attack": 988,
-			"health": 117
+			"attack": 117,
+			"health": 988
 		}
 	},
 	"name": "神聖なる贄",

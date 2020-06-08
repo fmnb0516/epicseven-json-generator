@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 36,
-			"health": 9
+			"attack": 9,
+			"health": 36
 		},
 		"max": {
-			"attack": 468,
-			"health": 117
+			"attack": 117,
+			"health": 468
 		}
 	},
 	"name": "迷宮の力体",

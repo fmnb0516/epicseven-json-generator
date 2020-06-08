@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 44,
-			"health": 8
+			"attack": 8,
+			"health": 44
 		},
 		"max": {
-			"attack": 572,
-			"health": 104
+			"attack": 104,
+			"health": 572
 		}
 	},
 	"name": "永劫の錨",

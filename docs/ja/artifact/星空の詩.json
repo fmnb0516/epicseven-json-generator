@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 54,
-			"health": 15
+			"attack": 15,
+			"health": 54
 		},
 		"max": {
-			"attack": 702,
-			"health": 195
+			"attack": 195,
+			"health": 702
 		}
 	},
 	"name": "星空の詩",

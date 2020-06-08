@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 51,
-			"health": 6
+			"attack": 6,
+			"health": 51
 		},
 		"max": {
-			"attack": 663,
-			"health": 78
+			"attack": 78,
+			"health": 663
 		}
 	},
 	"name": "ラノンの手帳",

@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 24,
-			"health": 7
+			"attack": 7,
+			"health": 24
 		},
 		"max": {
-			"attack": 312,
-			"health": 91
+			"attack": 91,
+			"health": 312
 		}
 	},
 	"name": "星の宝珠",

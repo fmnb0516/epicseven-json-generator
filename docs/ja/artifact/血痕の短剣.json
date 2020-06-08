@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 6,
-			"health": 16
+			"attack": 16,
+			"health": 6
 		},
 		"max": {
-			"attack": 78,
-			"health": 208
+			"attack": 208,
+			"health": 78
 		}
 	},
 	"name": "血痕の短剣",

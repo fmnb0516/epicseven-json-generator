@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 39,
-			"health": 2
+			"attack": 2,
+			"health": 39
 		},
 		"max": {
-			"attack": 507,
-			"health": 26
+			"attack": 26,
+			"health": 507
 		}
 	},
 	"name": "夢の巻物",

@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 55,
-			"health": 10
+			"attack": 10,
+			"health": 55
 		},
 		"max": {
-			"attack": 715,
-			"health": 130
+			"attack": 130,
+			"health": 715
 		}
 	},
 	"name": "ヒーラグの槍",

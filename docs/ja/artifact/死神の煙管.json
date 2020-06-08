@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 58,
-			"health": 4
+			"attack": 4,
+			"health": 58
 		},
 		"max": {
-			"attack": 754,
-			"health": 52
+			"attack": 52,
+			"health": 754
 		}
 	},
 	"name": "死神の煙管",

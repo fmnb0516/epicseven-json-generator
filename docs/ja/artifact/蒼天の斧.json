@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 7,
-			"health": 18
+			"attack": 18,
+			"health": 7
 		},
 		"max": {
-			"attack": 91,
-			"health": 234
+			"attack": 234,
+			"health": 91
 		}
 	},
 	"name": "蒼天の斧",

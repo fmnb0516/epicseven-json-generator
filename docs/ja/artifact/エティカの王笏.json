@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 43,
-			"health": 18
+			"attack": 18,
+			"health": 43
 		},
 		"max": {
-			"attack": 559,
-			"health": 234
+			"attack": 234,
+			"health": 559
 		}
 	},
 	"name": "エティカの王笏",

@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 51,
-			"health": 3
+			"attack": 3,
+			"health": 51
 		},
 		"max": {
-			"attack": 663,
-			"health": 39
+			"attack": 39,
+			"health": 663
 		}
 	},
 	"name": "妖精の魔導書",

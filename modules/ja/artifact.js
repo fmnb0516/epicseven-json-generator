@@ -48,13 +48,13 @@ module.exports = (context) => {
         builder.baseData(name, rare, target);
 
         const initialStatus = $(base.find("tr").get(3)).find("td").text().trim().match(/攻撃力:(\d*)生命力:(\d*)/);
-        const init_attack = parseInt(initialStatus[2]);
-        const init_health = parseInt(initialStatus[1]);
+        const init_attack = parseInt(initialStatus[1]);
+        const init_health = parseInt(initialStatus[2]);
         builder.initStatus(init_attack, init_health);
 
         const maxStatus = $(base.find("tr").get(4)).find("td").text().trim().match(/攻撃力:(\d*)生命力:(\d*)/);
-        const max_attack = parseInt(maxStatus[2]);
-        const max_health = parseInt(maxStatus[1]);
+        const max_attack = parseInt(maxStatus[1]);
+        const max_health = parseInt(maxStatus[2]);
         builder.maxStatus(max_attack, max_health);
 
         const skills = context.helper.findHeaderElement($, "h2", "の古代遺物スキル情報").next().find("tr");

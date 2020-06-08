@@ -58,12 +58,12 @@
 	],
 	"status": {
 		"init": {
-			"attack": 15,
-			"health": 9
+			"attack": 9,
+			"health": 15
 		},
 		"max": {
-			"attack": 195,
-			"health": 117
+			"attack": 117,
+			"health": 195
 		}
 	},
 	"name": "太陽の剣",
