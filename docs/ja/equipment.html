@@ -9,6 +9,17 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>EPIC SEVEN - JSON GENERATOR</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143765558-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143765558-2');
+    </script>
+
 </head>
 
 <body>
@@ -428,11 +439,11 @@
             const calculateData = (() => {
 
                 const parcentToFloat = (num) => {
-                    return num === 0 ? 0 : num /100;
+                    return num === 0 ? 0 : num / 100;
                 };
 
                 const countSet = (set, req, data) => {
-                    const target = [data.weapon.set,data.head.set,data.body.set,data.reg.set,data.neck.set,data.ring.set];
+                    const target = [data.weapon.set, data.head.set, data.body.set, data.reg.set, data.neck.set, data.ring.set];
                     return Math.floor(target.filter(k => k === set).length / req);
                 };
 
@@ -447,25 +458,25 @@
                     ];
 
                     const ary = target.filter(d => d.opt === key).map(d => d.val);
-                    return ary.length === 0 ? 0 : ary.reduce( (prev, current) => prev+current );
+                    return ary.length === 0 ? 0 : ary.reduce((prev, current) => prev + current);
                 };
 
                 const artifactVal = (key, data) => {
                     const artifact = master.artifact[data.artifact.name];
                     return artifact !== undefined ? artifact.status.max[key] : 0
-                };  
+                };
 
                 return (heroData, equipmentData) => {
                     const result = {
-                        attack : {},
-                        health : {},
-                        defense : {},
-                        speed : {},
-                        critical_hit : {},
-                        critical_damage : {},
-                        debuff_hit : {},
-                        debuff_resist : {},
-                        unity : {},
+                        attack: {},
+                        health: {},
+                        defense: {},
+                        speed: {},
+                        critical_hit: {},
+                        critical_damage: {},
+                        debuff_hit: {},
+                        debuff_resist: {},
+                        unity: {},
                     };
 
                     result.attack.base = heroData.status["max"].attack;
@@ -474,45 +485,45 @@
                         + (countSet("attack-set", 4, equipmentData) * result.attack.base * 0.35)
                         + artifactVal("attack", equipmentData));
                     result.attack.sum = result.attack.base + result.attack.add;
-    
+
                     result.health.base = heroData.status["max"].health;
-                    result.health.add =  Math.floor(resolveValue("health-fix", equipmentData)
+                    result.health.add = Math.floor(resolveValue("health-fix", equipmentData)
                         + (result.health.base * parcentToFloat(resolveValue("health-percent", equipmentData)))
                         + (countSet("health-set", 2, equipmentData) * result.health.base * 0.15)
                         + artifactVal("health", equipmentData));
                     result.health.sum = result.health.base + result.health.add;
-    
+
                     result.defense.base = heroData.status["max"].defense;
                     result.defense.add = Math.floor(resolveValue("defense-fix", equipmentData)
                         + (result.defense.base * parcentToFloat(resolveValue("defense-percent", equipmentData)))
                         + (countSet("defense-set", 2, equipmentData) * result.defense.base * 0.15));
                     result.defense.sum = result.defense.base + result.defense.add;
-    
+
                     result.speed.base = heroData.status["max"].speed;
                     result.speed.add = Math.floor(resolveValue("speed-fix", equipmentData)
                         + (countSet("speed-set", 4, equipmentData) * result.speed.base * 0.25));
                     result.speed.sum = result.speed.base + result.speed.add;
-    
+
                     result.critical_hit.base = heroData.status["max"].critical_hit;
                     result.critical_hit.add = resolveValue("crit-hit-percent", equipmentData) + (countSet("critical-set", 2, equipmentData) * 12);
                     result.critical_hit.sum = result.critical_hit.base + result.critical_hit.add;
-    
+
                     result.critical_damage.base = heroData.status["max"].critical_damage;
                     result.critical_damage.add = resolveValue("crit-damage-percent", equipmentData) + (countSet("ruin-set", 4, equipmentData) * 40);
                     result.critical_damage.sum = result.critical_damage.base + result.critical_damage.add;
-    
+
                     result.unity.base = heroData.status["max"].unity_chance;
                     result.unity.add = (countSet("unity-set", 2, equipmentData) * 4)
                     result.unity.sum = result.unity.base + result.unity.add;
-    
+
                     result.debuff_hit.base = heroData.status["max"].debuff_hit;
                     result.debuff_hit.add = resolveValue("effect-percent", equipmentData) + (countSet("effect-set", 2, equipmentData) * 20);
                     result.debuff_hit.sum = result.debuff_hit.base + result.debuff_hit.add;
-    
+
                     result.debuff_resist.base = heroData.status["max"].debuff_resist;
                     result.debuff_resist.add = resolveValue("resist-percent", equipmentData) + (countSet("resist-set", 2, equipmentData) * 20);
                     result.debuff_resist.sum = result.debuff_hit.base + result.debuff_resist.add;
-    
+
                     return result;
                 };
             })();
@@ -661,7 +672,7 @@
             })();
 
             const loadPage = (id) => {
-                if(id === "") {
+                if (id === "") {
                     $("#content").html("");
                     return;
                 }
@@ -673,7 +684,7 @@
                 $("#content").html(template({
                     heroData: heroData,
                     equipmentData: equipmentData,
-                    calc : calculateData(heroData, equipmentData)
+                    calc: calculateData(heroData, equipmentData)
                 }));
             };
 
@@ -708,25 +719,25 @@
             $("body").on("click", ".calc-input", (e) => {
                 const selector = $(e.target);
                 const type = selector.attr("data-calc");
-                const target = $("#"+(selector.attr("data-target")));
+                const target = $("#" + (selector.attr("data-target")));
 
                 const min = parseInt(target.attr("min"));
                 const max = parseInt(target.attr("max"));
                 const val = parseInt(target.val());
 
-                if(type === "plus" && (val+1) <= max) {
-                    target.val((val+1)).change();
-                } else if(type === "minus" && (val-1) >= min) {
-                    target.val((val-1)).change();
+                if (type === "plus" && (val + 1) <= max) {
+                    target.val((val + 1)).change();
+                } else if (type === "minus" && (val - 1) >= min) {
+                    target.val((val - 1)).change();
                 }
             });
 
             $("body").on("change", ".calc-input", (e) => {
                 const selector = $(e.target);
                 const type = selector.attr("data-calc");
-                const target = $("#"+(selector.attr("data-target")));
+                const target = $("#" + (selector.attr("data-target")));
 
-                if(selector.val() === target.val() || type !== "set") {
+                if (selector.val() === target.val() || type !== "set") {
                     return;
                 }
                 target.val(selector.val()).change();
@@ -736,13 +747,13 @@
                 storage.put(storage.current());
                 $("#hero-select").val("").change();
             });
-            
+
 
             window.addEventListener('hashchange', () => {
                 const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
                 loadPage(id);
             });
-            
+
             loadPage(id);
         };
 

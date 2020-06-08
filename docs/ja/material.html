@@ -15,8 +15,19 @@
             content: "";
             display: block;
             clear: both;
-         }
+        }
     </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143765558-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143765558-2');
+    </script>
+
 </head>
 
 <body>
@@ -59,7 +70,8 @@
             <div class="col-lg-12">
                 <div class="form-group">
                     <label for="material-select">特殊素材選択</label>
-                    <input type="text" class="form-control" id="material-select" autocomplete="on" list="materiallist" placeholder="名前を入力...">
+                    <input type="text" class="form-control" id="material-select" autocomplete="on" list="materiallist"
+                        placeholder="名前を入力...">
                 </div>
                 <datalist id="materiallist">
                 </datalist>
@@ -195,48 +207,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
         integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
 
-        <script>
-            $(() => {
-                fetch('./material/materials.json')
-                    .then((response) => response.text())
-                    .then(text => JSON.parse(text))
-                    .then(json => {
-                        json.forEach((e) => {
-                            $("#materiallist").append($("<option>").attr("value", e.substring(0, e.length - 5)).text(e.substring(0, e.length - 5)));
-                        });
-    
-                        
-                        const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
-                        $("#material-select").val(id);
-                        loadPage(id);
+    <script>
+        $(() => {
+            fetch('./material/materials.json')
+                .then((response) => response.text())
+                .then(text => JSON.parse(text))
+                .then(json => {
+                    json.forEach((e) => {
+                        $("#materiallist").append($("<option>").attr("value", e.substring(0, e.length - 5)).text(e.substring(0, e.length - 5)));
                     });
-    
-                $("#material-select").change((e) => {
-                    location.hash = $(e.target).val();
-                    $("#material-select").blur();
-                });
-    
-                window.addEventListener('hashchange', () => {
+
+
                     const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
+                    $("#material-select").val(id);
                     loadPage(id);
                 });
-    
-                const template = Handlebars.compile($("#template").html());
-    
-                const loadPage = (id) => {
-                    if (id === "") {
-                        $("#content").empty();
-                        return;
-                    }
-    
-                    fetch('./material/' + id + ".json")
-                        .then((response) => response.text())
-                        .then(text => JSON.parse(text))
-                        .then(json => template(json))
-                        .then(html => $("#content").html(html));
-                };
+
+            $("#material-select").change((e) => {
+                location.hash = $(e.target).val();
+                $("#material-select").blur();
             });
-        </script>
+
+            window.addEventListener('hashchange', () => {
+                const id = decodeURI((location.hash.startsWith("#") ? location.hash.substring(1) : location.hash).trim());
+                loadPage(id);
+            });
+
+            const template = Handlebars.compile($("#template").html());
+
+            const loadPage = (id) => {
+                if (id === "") {
+                    $("#content").empty();
+                    return;
+                }
+
+                fetch('./material/' + id + ".json")
+                    .then((response) => response.text())
+                    .then(text => JSON.parse(text))
+                    .then(json => template(json))
+                    .then(html => $("#content").html(html));
+            };
+        });
+    </script>
 </body>
 
 </html>
