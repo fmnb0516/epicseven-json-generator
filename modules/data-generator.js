@@ -121,31 +121,42 @@ class Generator {
     };
 
     async generate(docsDir, targetMode, targetUrl, factory, common) {
+        console.log("*** generate start, " + targetMode + "," + targetUrl);
+
         const context = await this.initializer();
 
         for (let i = 0; i < targetMode.length; i++) {
             const mode = targetMode[i];
+            console.log("  generate " + targetMode);
 
             const pageData = this.data(mode);
 
-            const pages = targetUrl !== "" ? targetUrl : await pageData.listPageParser(common.dom(await common.requestWithCache(pageData.listUrl, true)), context);
+            const pages = targetUrl !== "" ? [targetUrl] : await pageData.listPageParser(common.dom(await common.requestWithCache(pageData.listUrl)), context);
             const generates = [];
             
             for(let i =0; i<pages.length; i++) {
                 const page = pages[i];
+                console.log("    - page : " + page.name + ", " + page.url);
+                
                 const dName = page.name;
                 const jsonPath = docsDir + "/"+mode+"/"+dName + ".json";
                 
-                const r = await common.requestWithCache(page.url);
+                const r = await common.requestWithCache(page.url, targetUrl !== "");
                 const $$ = common.dom(r);
                 const dataBuilder = factory(mode, await common.readJson(jsonPath));
             
                 await pageData.dataPageParser($$, dataBuilder, context);
                 await common.toTextFile(jsonPath, dataBuilder.toJsonString());
                 generates.push(dName + ".json");
+
+                console.log("      write complete : " + jsonPath);
             }
-            await common.toTextFile(docsDir + "/"+mode+"/" + mode+ "s.json", JSON.stringify(generates, null, "\t"));
+            const listFilePath = docsDir + "/"+mode+"/" + mode+ "s.json";
+            await common.toTextFile(listFilePath, JSON.stringify(generates, null, "\t"));
+            console.log("    - list file write complete : " + mode + ", " + listFilePath);
         }
+
+        console.log("*** generate end");
     };
     
 };
