@@ -14,6 +14,10 @@ const modules = (() => {
 
 const common = (() => {
 
+    const nullToBlank = (str) => {
+        return str === undefined || str === null ? "" : str;
+    }
+
     const generateCachePath = (url) => {
         const md5 = modules.crypto.createHash('md5')
         const hash = md5.update(url, 'binary').digest('hex');
@@ -105,6 +109,7 @@ const common = (() => {
         imageToBase64 : imageToBase64,
         dom : dom,
         toTextFile : toTextFile,
+        nullToBlank : nullToBlank,
         _ : modules
     };
 
@@ -146,7 +151,7 @@ program.command('cachename <url>')
 
 program.command('generate <target> [url]')
     .description('generate json file, support target is [all, hero, artifact, material].')
-    .action(async (target, url) => {
+    .action(async (targetMode, targetUrl) => {
 
         const builderFactory = (type , json) => {
             if(type === "hero") {
@@ -168,12 +173,14 @@ program.command('generate <target> [url]')
             "material" : ["material"]
         };
 
+        const url = targetMode === "all" ? "" : common.nullToBlank(targetUrl);
+
         const DataBuilder = require("./modules/data-builder.js");
         const DataGenerator = require("./modules/data-generator.js");
 
         const gen = new DataGenerator.Generator();
         await require("./modules/" + lang + "/index.js")(gen.toBuilder(), "./docs/"+lang, common);
-        await gen.generate("./docs/"+lang, support[target], url, common);
+        await gen.generate("./docs/"+lang, support[targetMode], url, builderFactory, common);
 
     });
 

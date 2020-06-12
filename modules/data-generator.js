@@ -98,8 +98,8 @@ class Generator {
         return new Builder(this);
     };
 
-    async generate(docsDir, common) {
-        
+    async generate(docsDir, targetMode, targetUrl, factory, common) {
+        console.log("aaaaaaaaaaaaaaaaaaaaaaaa");
     };
 
 };
