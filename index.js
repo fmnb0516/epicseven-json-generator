@@ -104,6 +104,7 @@ const common = (() => {
     return {
         convertIntNum : convertIntNum,
         readJson : readJson,
+        readFileNoErr : readFileNoErr,
         trraversalJsonFiles : trraversalJsonFiles,
         requestWithCache : requestWithCache,
         imageToBase64 : imageToBase64,
@@ -147,6 +148,20 @@ program.command('cachename <url>')
         const md5 = modules.crypto.createHash('md5')
         const hash = md5.update(url, 'binary').digest('hex');
         console.log(url + " => " + hash);
+    });
+
+program.command('cacheupdate')
+    .description('update cache, target is [list page, campdata page]')
+    .action(async () => {
+
+        const text = await common.readFileNoErr("./modules/" + lang + "/cachelist.txt", "utf8");
+        const entries = text.split("\r\n");
+
+        for (let i = 0; i < entries.length; i++) {
+            const url = entries[i];
+            console.log("update cache : " + url);
+            await common.requestWithCache(url, true);
+        }
     });
 
 program.command('generate <target> [url]')
