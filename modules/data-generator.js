@@ -67,7 +67,6 @@ class Generator {
         return this;
     };
 
-
     setArtifactListPageParser(parser) {
         this.artifactListPageParser = parser;
         return this;
@@ -101,7 +100,7 @@ class Generator {
     data(name) {
         if(name === "hero") {
             return {
-                "listPageParser" : this.caharacterListPageParse,
+                "listPageParser" : this.caharacterListPageParser,
                 "dataPageParser" : this.caharacterDataPageParser,
                 "listUrl" : this.characterListUrl
             };
@@ -127,7 +126,8 @@ class Generator {
         for (let i = 0; i < targetMode.length; i++) {
             const mode = targetMode[i];
 
-            const pageData = this.data(targetMode);
+            const pageData = this.data(mode);
+
             const pages = targetUrl !== "" ? targetUrl : await pageData.listPageParser(common.dom(await common.requestWithCache(pageData.listUrl, true)), context);
             const generates = [];
             
@@ -138,13 +138,13 @@ class Generator {
                 
                 const r = await common.requestWithCache(page.url);
                 const $$ = common.dom(r);
-                const dataBuilder = factory(targetMode, await common.readJson(jsonPath));
+                const dataBuilder = factory(mode, await common.readJson(jsonPath));
             
                 await pageData.dataPageParser($$, dataBuilder, context);
                 await common.toTextFile(jsonPath, dataBuilder.toJsonString());
                 generates.push(dName + ".json");
             }
-            await common.toTextFile(docsDir + "/"+targetMode+"/+ " + targetMode+ "s.json", JSON.stringify(generates, null, "\t"));
+            await common.toTextFile(docsDir + "/"+mode+"/" + mode+ "s.json", JSON.stringify(generates, null, "\t"));
         }
     };
     
