@@ -147,7 +147,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "衝撃の矢",
@@ -202,7 +203,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "少女の決意",
@@ -227,7 +229,8 @@
 					"type": "減少",
 					"num": "fix"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "ネムナス",

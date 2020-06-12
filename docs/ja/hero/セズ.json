@@ -121,7 +121,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "蚕食",
@@ -164,7 +165,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "断罪",
@@ -207,7 +209,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "セズ",

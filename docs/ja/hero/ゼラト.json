@@ -125,7 +125,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "アイスピック",
@@ -162,7 +163,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "アイスバーグ",
@@ -217,7 +219,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "ゼラト",

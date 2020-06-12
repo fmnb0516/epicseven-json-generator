@@ -141,7 +141,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "血の饗宴",
@@ -184,7 +185,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "葬送曲",
@@ -227,7 +229,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "レクイエム・ロア",

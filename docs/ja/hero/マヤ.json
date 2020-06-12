@@ -137,7 +137,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "震盪撃",
@@ -186,7 +187,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "鼓舞激励",
@@ -217,7 +219,8 @@
 					"type": "",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "マヤ",

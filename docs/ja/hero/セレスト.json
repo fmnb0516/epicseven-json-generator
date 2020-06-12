@@ -147,7 +147,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "矢の雨",
@@ -202,7 +203,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "戦闘態勢",
@@ -227,7 +229,8 @@
 					"type": "減少",
 					"num": "fix"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "セレスト",

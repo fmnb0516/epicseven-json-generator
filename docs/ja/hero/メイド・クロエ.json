@@ -133,7 +133,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "メイドの声援",
@@ -188,7 +189,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "女王様のサービス！",
@@ -207,7 +209,8 @@
 					"type": "減少",
 					"num": "fix"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "メイド・クロエ",

@@ -137,7 +137,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "威嚇態勢",
@@ -168,7 +169,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "捕食者の咆哮",
@@ -217,7 +219,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "カルトゥハ",

@@ -133,7 +133,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "誓いの剣",
@@ -158,7 +159,8 @@
 					"type": "減少",
 					"num": "fix"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "満開",
@@ -207,7 +209,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "イセリア",

@@ -22,6 +22,24 @@ const resolveDesc = ($, elements, label) => {
     return "";
 };
 
+const parseUseMaterial = (texts) => {
+
+    return texts.map(t => {
+
+        const entry = t.substring(t.indexOf("：") + 1).split("/")
+            .map(e => {
+                const pair = e.split("×");
+                return {
+                    name : pair[0].trim(),
+                    count: parseInt(pair[1].trim())
+                }
+            });
+
+        return entry;
+    });
+
+};
+
 module.exports = (context) => {
 
     const listPage = ($) => {
@@ -132,7 +150,13 @@ module.exports = (context) => {
     
             const levelupText = resolveDesc($, skill.find("td"),"【スキル強化】")
                 .split("\n").filter(t => t !== "");
-    
+
+            const materialText = resolveDesc($, skill.find("td"),"【スキル強化素材】").split("+")
+                .map(t => t.trim())
+                .filter(t => t.indexOf("現在準備中") === -1)
+                .filter(t => t !== "");
+                
+            const levelUpMaterials = parseUseMaterial(materialText);
     
             const level = [];
             levelupText.forEach(t => {
@@ -153,7 +177,7 @@ module.exports = (context) => {
                 soulbern: soulbern !== "",
                 bern_desc: soulbern.split("\n").join(""),
                 usesoul: usesoul
-            }, level);
+            }, level, levelUpMaterials);
         }
     };
 

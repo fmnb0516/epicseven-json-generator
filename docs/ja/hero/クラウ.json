@@ -127,7 +127,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "シールドアサルト",
@@ -182,7 +183,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "ザイフリートの召喚",
@@ -207,7 +209,8 @@
 					"type": "減少",
 					"num": "fix"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "クラウ",

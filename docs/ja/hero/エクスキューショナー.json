@@ -147,7 +147,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "解体部隊の武装",
@@ -178,7 +179,8 @@
 					"type": "DOWN",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		},
 		{
 			"name": "滅多斬り",
@@ -227,7 +229,8 @@
 					"type": "UP",
 					"num": "percent"
 				}
-			]
+			],
+			"material": []
 		}
 	],
 	"name": "エクスキューショナー",

@@ -222,14 +222,15 @@ class HeroDataBuilder {
         return this;
     };
 
-    skill(name, skilltern, desc, soul, level) {
+    skill(name, skilltern, desc, soul, level, material) {
 
         this.json.skill.push({
             name : name,
             tern : skilltern,
             desc : desc,
             soul : soul,
-            level : level
+            level : level,
+            material: material
         });
         return this;
     };
