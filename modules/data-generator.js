@@ -98,10 +98,56 @@ class Generator {
         return new Builder(this);
     };
 
-    async generate(docsDir, targetMode, targetUrl, factory, common) {
-        console.log("aaaaaaaaaaaaaaaaaaaaaaaa");
+    data(name) {
+        if(name === "hero") {
+            return {
+                "listPageParser" : this.caharacterListPageParse,
+                "dataPageParser" : this.caharacterDataPageParser,
+                "listUrl" : this.characterListUrl
+            };
+
+        } else if(name === "artifact") {
+            return {
+                "listPageParser" : this.artifactListPageParser,
+                "dataPageParser" : this.artifactDataPageParser,
+                "listUrl" : this.artifactListUrl
+            };
+        } else if(name === "material") {
+            return {
+                "listPageParser" : this.materialListPageParser,
+                "dataPageParser" : this.materialDataPageParser,
+                "listUrl" : this.materialListUrl
+            };
+        }
     };
 
+    async generate(docsDir, targetMode, targetUrl, factory, common) {
+        const context = await this.initializer();
+
+        for (let i = 0; i < targetMode.length; i++) {
+            const mode = targetMode[i];
+
+            const pageData = this.data(targetMode);
+            const pages = targetUrl !== "" ? targetUrl : await pageData.listPageParser(common.dom(await common.requestWithCache(pageData.listUrl, true)), context);
+            const generates = [];
+            
+            for(let i =0; i<pages.length; i++) {
+                const page = pages[i];
+                const dName = page.name;
+                const jsonPath = docsDir + "/"+mode+"/"+dName + ".json";
+                
+                const r = await common.requestWithCache(page.url);
+                const $$ = common.dom(r);
+                const dataBuilder = factory(targetMode, await common.readJson(jsonPath));
+            
+                await pageData.dataPageParser($$, dataBuilder, context);
+                await common.toTextFile(jsonPath, dataBuilder.toJsonString());
+                generates.push(dName + ".json");
+            }
+            await common.toTextFile(docsDir + "/"+targetMode+"/+ " + targetMode+ "s.json", JSON.stringify(generates, null, "\t"));
+        }
+    };
+    
 };
 
 module.exports.Generator = Generator;
