@@ -99,74 +99,7 @@ class Generator {
     };
 
     async generate(docsDir, common) {
-        const context = await this.initializer();
-
-        /* start hero data */
-        const heroPages = await this.caharacterListPageParser(common.dom(await common.requestWithCache(this.characterListUrl, true)), context);
-        const heros = [];
-
-        for(let i =0; i<heroPages.length; i++) {
-            const page = heroPages[i];
-            const heroName = page.name;
-            const jsonPath = docsDir + "/hero/"+heroName + ".json";
-
-            const r = await common.requestWithCache(page.url);
-
-            const $$ = common.dom(r);
-            const dataBuilder = common.createDataBuilder("hero" ,await common.readJson(jsonPath));
-            await this.caharacterDataPageParser($$, dataBuilder, context);
-
-            await common.toTextFile(jsonPath, dataBuilder.toJsonString());
-            heros.push(heroName + ".json");
-        }
-
-        await common.toTextFile(docsDir + "/hero/heros.json", JSON.stringify(heros, null, "\t"));
-        /* end hero data */
-
-        /* start artifact data */
-        const artifactPages = await this.artifactListPageParser(common.dom(await common.requestWithCache(this.artifactListUrl, true)), context);
-        const artifacts = [];
-
-        for(let i =0; i<artifactPages.length; i++) {
-            const page = artifactPages[i];
-            const artifactName = page.name;
-
-            const jsonPath = docsDir+"/artifact/"+artifactName + ".json";
-
-            const r = await common.requestWithCache(page.url);
-
-            const $$ = common.dom(r);
-            const dataBuilder = common.createDataBuilder("artifact" ,await common.readJson(jsonPath));
-            await this.artifactDataPageParser($$, dataBuilder, context);
-
-            await common.toTextFile(jsonPath, dataBuilder.toJsonString());
-            artifacts.push(artifactName + ".json");
-        }
-
-        await common.toTextFile(docsDir+"/artifact/artifacts.json", JSON.stringify(artifacts, null, "\t"));
-        /* end artifact data */
-
-        /* start materials data */
-        const materialPages = await this.materialListPageParser(common.dom(await common.requestWithCache(this.materialListUrl)), context);
-        const materials = [];
-        for(let i =0; i<materialPages.length; i++) {
-            const page = materialPages[i];
-            const materialName = page.name;
-
-            const jsonPath = docsDir+"/material/"+materialName + ".json";
-
-            const r = await common.requestWithCache(page.url);
-
-            const $$ = common.dom(r);
-            const dataBuilder = common.createDataBuilder("material" ,await common.readJson(jsonPath));
-            await this.materialDataPageParser($$, dataBuilder, context);
-
-            await common.toTextFile(jsonPath, dataBuilder.toJsonString());
-            materials.push(materialName + ".json");
-        }
-
-        await common.toTextFile(docsDir+"/material/materials.json", JSON.stringify(materials, null, "\t"));
-        /* end materials data */
+        
     };
 
 };
