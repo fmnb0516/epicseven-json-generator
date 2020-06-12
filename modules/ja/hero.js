@@ -8,6 +8,20 @@ const useSoulBern = (text) => {
     return match === null ? 0 : parseInt(match[1]);
 };
 
+const resolveDesc = ($, elements, label) => {
+
+    for (let i = 0; i < elements.length; i++) {
+        const element = $(elements.get(i));
+        const text = element.text().trim();
+
+        if(text.indexOf(label) !== -1) {
+            return text.replace(label, "").trim();
+        }
+    }
+
+    return "";
+};
+
 module.exports = (context) => {
 
     const listPage = ($) => {
@@ -110,13 +124,13 @@ module.exports = (context) => {
             const sname = snames[0];
             const skilltern = parseInt(snames.length > 1 ? snames[1].substring(8, snames[1].length - 1) : 0);
     
-            const desc = $(skill.find("td").get(0)).text().replace("【スキル効果】", "").trim();
+            const desc = resolveDesc($, skill.find("td"), "【スキル効果】");
             const soul = getSoulBern(desc);
     
-            const soulbern = $(skill.find("td").get(2)).text().replace("【魂力解放効果】", "")
+            const soulbern = resolveDesc($, skill.find("td"),"【魂力解放効果】");
             const usesoul = useSoulBern(soulbern);
     
-            const levelupText = $(skill.find("td").get(1)).text().replace("【スキル強化】", "").trim()
+            const levelupText = resolveDesc($, skill.find("td"),"【スキル強化】")
                 .split("\n").filter(t => t !== "");
     
     

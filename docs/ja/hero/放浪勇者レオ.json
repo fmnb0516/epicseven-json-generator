@@ -96,8 +96,8 @@
 			"desc": "敵単体にダメージを与え、35%の確率で攻撃力DOWNを2ターンの間付与する。対象が弱体状態の場合、ダメージがUPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
-				"soulbern": true,
-				"bern_desc": "【スキル強化素材】現在準備中...",
+				"soulbern": false,
+				"bern_desc": "",
 				"usesoul": 0
 			},
 			"level": [
@@ -139,8 +139,8 @@
 			"desc": "敵単体にダメージを与え、80%の確率でスキルターンを1増加させる。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
-				"soulbern": true,
-				"bern_desc": "【スキル強化素材】現在準備中...",
+				"soulbern": false,
+				"bern_desc": "",
 				"usesoul": 0
 			},
 			"level": [
@@ -183,8 +183,8 @@
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
-				"bern_desc": "【スキル強化素材】現在準備中...",
-				"usesoul": 0
+				"bern_desc": "追加ターンが発生する。(魂力20消費)",
+				"usesoul": 20
 			},
 			"level": [
 				{

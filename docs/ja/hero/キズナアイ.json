@@ -97,8 +97,8 @@
 			"soul": {
 				"soul": 1,
 				"soulbern": true,
-				"bern_desc": "【スキル強化素材】現在準備中...",
-				"usesoul": 0
+				"bern_desc": "味方全体の弱体効果を1つ解除する。(魂力10消費)",
+				"usesoul": 10
 			},
 			"level": [
 				{
@@ -145,8 +145,8 @@
 			"desc": "自身のターン終了時、生命力状態が最も悪い味方の生命力を回復する。自身の最大生命力が高いほど回復量がUPする。",
 			"soul": {
 				"soul": 0,
-				"soulbern": true,
-				"bern_desc": "【スキル強化素材】現在準備中...",
+				"soulbern": false,
+				"bern_desc": "",
 				"usesoul": 0
 			},
 			"level": [
@@ -194,8 +194,8 @@
 			"desc": "味方全体に攻撃力UP・シールドを3ターンの間付与し、自身にスピードUPを2ターンの間付与する。自身の最大生命力が高いほどシールド効果がUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
-				"soulbern": true,
-				"bern_desc": "【スキル強化素材】現在準備中...",
+				"soulbern": false,
+				"bern_desc": "",
 				"usesoul": 0
 			},
 			"level": [
