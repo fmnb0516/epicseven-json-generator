@@ -210,7 +210,7 @@
                 <span class="badge badge-info">{{name}}</span>
             </td>
 
-            <td><button type="button" class="btn btn-danger">削除</button></td>
+            <td><button type="button" class="btn btn-danger row-delete" data-hero="{{name}}">削除</button></td>
             <td class="data-vis-speed">
                 <input value="{{calc.speed.goal}}" type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="goal"/>
             </td>
@@ -319,6 +319,10 @@
                 }
             };
 
+            data.remove = async (name) => {
+                localStorage.removeItem(name);
+            };
+
             data.update = async (name, target, key, value) => {
                 const d = JSON.parse(localStorage.getItem(name));
                 d[target][key] = value;
@@ -344,6 +348,13 @@
                         }
                     })
                     .then(d => addData(name, d, data[name]));
+            });
+
+            $("body").on("click", ".row-delete", (e) => {
+                const selector = $(e.target);
+                const heroname = selector.attr("data-hero");
+
+                storage.remove(heroname).then(() => selector.parents("tr").remove());
             });
 
             $("body").on("change", "table input, table select", (e) => {
