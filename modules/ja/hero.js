@@ -76,7 +76,7 @@ module.exports = (context) => {
         const clazz = $(base.find("tr").get(5)).find("td").text().trim();
         builder.baseData(name, rare, type, clazz);
 
-        builder.extention("camping",ctx[name]);
+        builder.extention("camping",ctx.campingData[name]);
     
         const status = context.helper.findHeaderElement($, "h3", "最大ステータス【入手時 / 覚醒後】").next();
     
@@ -135,6 +135,7 @@ module.exports = (context) => {
         const skillHeader = context.helper.findHeaderElement($, "h3", "スキル", true);
         const skills = [skillHeader.next(), skillHeader.next().next(), skillHeader.next().next().next()];
     
+        const skillMutiple = ctx.skillData[name];
         for (let i = 0; i < skills.length; i++) {
             const skill = skills[i];
             const snames = $(skill.find("th").get(0)).text().trim().split("\n");

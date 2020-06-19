@@ -1,5 +1,6 @@
 https://gamepress.gg/epicseven/camping-simulator
 https://gamepress.gg/sites/default/files/aggregatedjson/E7CampsiteSimulator.json
+https://epic7x.com/skill-multipliers/
 https://game8.jp/epic-seven/301575
 https://game8.jp/epic-seven/308171
 https://game8.jp/epic-seven/301576
