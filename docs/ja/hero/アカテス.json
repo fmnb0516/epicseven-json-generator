@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "急速回復",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 15% self max Health",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "治癒の祈り",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 30% self max Health (50% soulburn)",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "アカテス",

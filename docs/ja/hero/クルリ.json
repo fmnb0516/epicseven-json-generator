@@ -148,7 +148,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.5+Def*0.07)*1.6839",
+				"modifier": "70% self Defense (0.7 * Defense)"
+			}
 		},
 		{
 			"name": "魔法耐性",
@@ -198,7 +202,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "弱体化",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "クルリ",

@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "龍の叫び",
@@ -160,7 +164,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.9*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "開天闢地",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*2*0.95*1.871",
+				"modifier": "50% increased damage if target is buffed"
+			}
 		}
 	],
 	"name": "ユピネ",

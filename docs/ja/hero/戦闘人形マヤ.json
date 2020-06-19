@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.5+Def*0.75)*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "修繕",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "結束の一撃",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1+Def*1.5)*1.871 [1.7 soul burn]",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "戦闘人形マヤ",

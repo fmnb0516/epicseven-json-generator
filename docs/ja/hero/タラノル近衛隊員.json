@@ -142,7 +142,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "近衛兵の気合",
@@ -186,7 +190,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "穿ち抜く",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.8*1*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "タラノル近衛隊員",

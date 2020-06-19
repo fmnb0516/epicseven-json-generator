@@ -126,7 +126,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "居合：一閃",
@@ -164,7 +168,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.9*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "居合：雷神",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.6*0.85*1.871 (2.3 soul burn)",
+				"modifier": "50% increase to critical damage multiplier"
+			}
 		}
 	],
 	"name": "カリン",

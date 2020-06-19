@@ -138,7 +138,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "高速調理",
@@ -194,7 +198,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.8*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "大判振舞",
@@ -220,7 +228,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "ディンゴ",

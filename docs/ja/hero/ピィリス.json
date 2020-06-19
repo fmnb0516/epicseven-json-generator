@@ -142,7 +142,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.7+Def*0.4)*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "意志",
@@ -186,7 +190,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "2% Defense increase per stack, scales up to 3% with molagora",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "態勢維持",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.3+Def*0.7)*1.77745",
+				"modifier": "Barrier strength: 60% self Defense"
+			}
 		}
 	],
 	"name": "ピィリス",

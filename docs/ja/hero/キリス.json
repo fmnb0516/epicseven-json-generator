@@ -154,7 +154,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.9*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "腐食の矢雨",
@@ -204,7 +208,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.7*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "心構え",
@@ -230,7 +238,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "キリス",

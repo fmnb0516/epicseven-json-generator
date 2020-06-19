@@ -82,7 +82,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "継続攻撃",
@@ -132,7 +136,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.5*0.95*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "勝利の雄叫び",
@@ -158,7 +166,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "ヘルガ",

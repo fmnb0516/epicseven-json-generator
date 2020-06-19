@@ -122,7 +122,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "血の狂宴",
@@ -166,7 +170,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.5*1*1.871 (2 soul burn)",
+				"modifier": "9% of damage as healing, 18% if target Bleeding"
+			}
 		},
 		{
 			"name": "吸血鬼の刻印",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": "200% damage vs 2 targets, 250% damage vs 1 target"
+			}
 		}
 	],
 	"name": "ヘイスト",

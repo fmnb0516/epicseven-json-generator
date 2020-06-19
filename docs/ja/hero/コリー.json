@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.34712)*(1+Speed*0.00075)",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "急所突き",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*2.02068)(1+Speed*0.00075)",
+				"modifier": "Barrier strength: 100% self Attack"
+			}
 		},
 		{
 			"name": "爆弾の洗礼",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*3.03102)(1+Speed*0.001125) ",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "コリー",

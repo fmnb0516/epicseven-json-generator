@@ -138,7 +138,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.5+Def*0.75)*1.77745",
+				"modifier": "75% self Defense (0.75 * Defense)"
+			}
 		},
 		{
 			"name": "震盪撃",
@@ -188,7 +192,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.8+Def*0.8)*1.871",
+				"modifier": "80% self Defense (0.8 * Defense)"
+			}
 		},
 		{
 			"name": "鼓舞激励",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "マヤ",

@@ -134,7 +134,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871 (2 soul burn)",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "誓いの剣",
@@ -160,7 +164,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "満開",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*2*0.9*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "イセリア",

@@ -138,7 +138,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.7+Def*0.9)*1.871 ",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "攻城鎚",
@@ -194,7 +198,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.3+Def*0.7)*1.6839",
+				"modifier": "70% self Defense (0.7 * Defense)"
+			}
 		},
 		{
 			"name": "炎神降臨",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 50% self max Health",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "コルヴス",

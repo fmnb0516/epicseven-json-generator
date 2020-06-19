@@ -142,7 +142,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "血の饗宴",
@@ -186,7 +190,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "葬送曲",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.8*1*1.871 (2.7 soul burn)",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "レクイエム・ロア",

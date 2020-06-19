@@ -142,7 +142,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.6839) * (1+Speed*0.00075)",
+				"modifier": "0.075% self Speed (0.00075 * Speed)"
+			}
 		},
 		{
 			"name": "野性",
@@ -186,7 +190,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "覚醒の一撃",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*3.3678) * (1+Speed*0.00075)",
+				"modifier": "0.075% self Speed (0.00075 * Speed)"
+			}
 		}
 	],
 	"name": "ムカチャ",

@@ -136,7 +136,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1.05*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "緊急回復",
@@ -174,7 +178,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 15% self attack + 7% target max health",
+				"modifier": "If target at <50% health: 30%, 15%"
+			}
 		},
 		{
 			"name": "マスコット･ヘイゼル",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 30% self attack + 12% target max health",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "生徒会広報ヘイゼル",

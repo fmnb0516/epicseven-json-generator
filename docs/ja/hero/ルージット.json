@@ -142,7 +142,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.4968) * (1+Speed*0.00075)",
+				"modifier": "0.075% self Speed (0.00075 * Speed)"
+			}
 		},
 		{
 			"name": "破風斬",
@@ -186,7 +190,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*2.2452) * (1+Speed*0.001125)",
+				"modifier": "0.1125% self Speed (0.001125 * Speed)"
+			}
 		},
 		{
 			"name": "感応",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "ルージット",

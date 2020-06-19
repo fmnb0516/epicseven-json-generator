@@ -142,7 +142,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.8+HP*0.025)*1.871",
+				"modifier": "2.5% self max Health (0.025 * Health)"
+			}
 		},
 		{
 			"name": "反射の盾",
@@ -186,7 +190,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "王宮衛兵の一撃",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.5+HP*0.05)*1.77745 (2.3 soul burn)",
+				"modifier": "5% self max Health (0.05 * Health)"
+			}
 		}
 	],
 	"name": "タラノル王宮衛兵",

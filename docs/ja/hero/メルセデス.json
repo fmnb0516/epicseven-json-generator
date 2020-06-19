@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.7*0.95*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "次元亀裂",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.7*0.9*1.871 (0.9 soul burn)",
+				"modifier": "160% damage 2 targets, 190% damage 1 target."
+			}
 		},
 		{
 			"name": "ブレイジングブラスト",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.2*0.8*1.871",
+				"modifier": "Gains 0.3% damage per 1% enemy Health missing"
+			}
 		}
 	],
 	"name": "メルセデス",

@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.85*1*1.871 (1.35 soul burn)",
+				"modifier": "0.15% increased damage per 1% self Health missing"
+			}
 		},
 		{
 			"name": "不死なる意思",
@@ -160,7 +164,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "黙示録",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.7*0.9*1.871",
+				"modifier": "0.3% increased damage per 1% self Health missing"
+			}
 		}
 	],
 	"name": "カイロン",

@@ -142,7 +142,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "浄化",
@@ -186,7 +190,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 7% target max Health",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "敬虔なる祈り",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 35% target max Health",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "守護天使モンモランシー",

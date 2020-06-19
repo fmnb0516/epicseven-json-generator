@@ -142,7 +142,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.85*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "百戦錬磨",
@@ -186,7 +190,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "強靭な一撃",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*2.2*0.95*1.871 (2.9 soul burn)",
+				"modifier": "30% increased damage if target is bleeding"
+			}
 		}
 	],
 	"name": "ギュンター",

@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1+Hp*0.10)*1.871",
+				"modifier": "10% self max Health (0.10 * Health)"
+			}
 		},
 		{
 			"name": "天舞脚",
@@ -160,7 +164,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.2+Hp*0.10)*1.871",
+				"modifier": "10% self max Health (0.10 * Health)"
+			}
 		},
 		{
 			"name": "炎邏覇凰拳",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.5+Hp*0.30)*1.6839",
+				"modifier": "30% self max Health (0.30 * Health)"
+			}
 		}
 	],
 	"name": "ケン",

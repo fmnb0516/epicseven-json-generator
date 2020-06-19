@@ -148,7 +148,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.7+HP*0.07)*1.6839",
+				"modifier": "7% self max Health (0.07 * Health)"
+			}
 		},
 		{
 			"name": "盾強撃",
@@ -204,7 +208,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.8+HP*0.12)*1.871",
+				"modifier": "12% self max Health (0.12 * Health)"
+			}
 		},
 		{
 			"name": "守護の意志",
@@ -230,7 +238,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Barrier strength: 30% self max Health",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "バスク",

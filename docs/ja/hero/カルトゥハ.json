@@ -138,7 +138,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.5+HP*0.06)*1.871",
+				"modifier": "6% self max Health (0.06 * Health)"
+			}
 		},
 		{
 			"name": "威嚇態勢",
@@ -170,7 +174,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "捕食者の咆哮",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.6+HP*0.05)*1.871  (+0.2 soulburn)",
+				"modifier": "Attack rate is 1.0 instead of 0.6 <50% hp, 5% self max Health (8% soulburn) (6.25% < 50% hp), (10% <50% hp and soulburn)"
+			}
 		}
 	],
 	"name": "カルトゥハ",

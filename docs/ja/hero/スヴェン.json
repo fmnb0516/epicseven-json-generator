@@ -136,7 +136,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "底力",
@@ -174,7 +178,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "死の宣告",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.8*0.8*1.871",
+				"modifier": "0.5% increased damage per 1% self Health missing, 0.15% increased damage per 1% target health missing.\r\nExtra attack -> (ATK*0.7*1*1.871), 0.3% increased  damage per 1% self Health missing"
+			}
 		}
 	],
 	"name": "スヴェン",

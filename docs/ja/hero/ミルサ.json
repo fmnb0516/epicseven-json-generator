@@ -148,7 +148,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.6839) * (1+Speed*0.00075)",
+				"modifier": "0.075% self Speed (0.00075 * Speed)"
+			}
 		},
 		{
 			"name": "見切り",
@@ -180,7 +184,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "急襲",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*2.9421475) * (1+Speed*0.0015) [2.5 soul burn]",
+				"modifier": "0.15% self Speed (0.0015 * Speed)"
+			}
 		}
 	],
 	"name": "ミルサ",

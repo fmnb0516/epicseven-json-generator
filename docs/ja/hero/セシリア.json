@@ -122,7 +122,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.7*1+HP*0.07)*1.871",
+				"modifier": "7% self max Health (0.07 * Health)"
+			}
 		},
 		{
 			"name": "鋼鉄の烙印",
@@ -166,7 +170,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.4*1+HP*0.06)*1.871",
+				"modifier": "6% self max Health (0.06 * Health)"
+			}
 		},
 		{
 			"name": "破壊の戒め",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.6+HP*0.12)*1.96455",
+				"modifier": "12% self max Health (0.12 * Health)"
+			}
 		}
 	],
 	"name": "セシリア",

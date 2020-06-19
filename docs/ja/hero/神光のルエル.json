@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.81+HP*0.07)*1.77745",
+				"modifier": "Heal strength: 7% target max Health (35% self max Health soulburn)"
+			}
 		},
 		{
 			"name": "光の柱",
@@ -178,7 +182,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 35% self max Health",
+				"modifier": "Barrier strength: 20% self max Health"
+			}
 		},
 		{
 			"name": "光の奇蹟",
@@ -204,7 +212,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "神光のルエル",

@@ -134,7 +134,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.9*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "準備万端",
@@ -154,7 +158,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 15% self max health",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "胡蝶斬",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.5*0.9*1.871",
+				"modifier": "15% increased damage per Focus"
+			}
 		}
 	],
 	"name": "ヴィオレタ",

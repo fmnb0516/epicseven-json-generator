@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.7+Hp*0.085)*1.871",
+				"modifier": "8.5% self max Health (0.085 * Health)"
+			}
 		},
 		{
 			"name": "シールドアサルト",
@@ -184,7 +188,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.8+HP*0.13)*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "ザイフリートの召喚",
@@ -210,7 +218,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.3*1*1.871",
+				"modifier": "0.53571 flat per 1 hp missing"
+			}
 		}
 	],
 	"name": "クラウ",

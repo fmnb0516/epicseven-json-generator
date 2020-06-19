@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": "50% of damage gained as life"
+			}
 		},
 		{
 			"name": "呪われし血剣",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Per 25% hp missing: 16.7% to atk/def/spd",
+				"modifier": "25% each stat at max molagora"
+			}
 		},
 		{
 			"name": "居合:炎龍",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.2*0.95*1.871 (1.45 soul burn)",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "血剣のカリン",

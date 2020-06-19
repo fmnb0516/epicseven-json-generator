@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.975*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "漆黒の契約",
@@ -160,7 +164,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "覇剣漆黒",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.04*0.85*1.871 (1.29 soulburn)",
+				"modifier": "1.23 attack rate with focus spent, 1.55 attack rate with focus and soul burn"
+			}
 		}
 	],
 	"name": "執行人ヴィルドレッド",

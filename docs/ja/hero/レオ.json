@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.9*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "キツネ狩り",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.2*1.05*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "飛べ、ラクゥ！",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.8*0.8*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "レオ",

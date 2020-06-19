@@ -122,7 +122,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.9*1.871",
+				"modifier": "30% bonus dmg if target is Magic Nail'd"
+			}
 		},
 		{
 			"name": "魔法釘",
@@ -166,7 +170,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.9*0.9*1.871",
+				"modifier": "Nail adds damage equal to 2% target max Health, ignores defense, not improved by attacker's crit, etc"
+			}
 		},
 		{
 			"name": "超強撃",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*2*0.8*1.871 (3.5 soul burn)",
+				"modifier": "35% bonus dmg if target is Magic Nail'd"
+			}
 		}
 	],
 	"name": "クロエ",

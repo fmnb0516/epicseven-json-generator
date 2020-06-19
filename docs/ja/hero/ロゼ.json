@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.5+Def*0.7)*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "光の盾",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Barrier strength: 100% self Defense (1 * Defense)",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "勝利の女神",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "ロゼ",

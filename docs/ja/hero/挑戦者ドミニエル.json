@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.9*1.871 (2.5 and 1 soul burn)",
+				"modifier": "20% increased damage on Critical Hit"
+			}
 		},
 		{
 			"name": "集電",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "5.4% increased damage per crit, up to 7.02% at max molagora",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "纏雷",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "挑戦者ドミニエル",

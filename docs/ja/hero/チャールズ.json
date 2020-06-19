@@ -122,7 +122,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "破砕",
@@ -166,7 +170,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.5*1*1.871 ",
+				"modifier": "Att_rate increases by 0.07 per buff beyond 1 (0.07 at 2 buffs, 0.14 at 3 buffs, etc)"
+			}
 		},
 		{
 			"name": "信念の一撃",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.2*1*1.871",
+				"modifier": "53.4%/80.1%/106.8% more damage vs 3/2/1 target respectively"
+			}
 		}
 	],
 	"name": "チャールズ",

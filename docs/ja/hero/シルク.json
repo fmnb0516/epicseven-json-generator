@@ -144,7 +144,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.51551) * (1+ Speed*0.00075) ",
+				"modifier": "Soul burn is ATK*2.104875"
+			}
 		},
 		{
 			"name": "クリアマインド",
@@ -182,7 +186,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "ストームアロー",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.6698675) * (1+ Speed*0.00075) ",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "シルク",

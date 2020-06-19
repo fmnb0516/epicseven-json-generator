@@ -178,7 +178,7 @@ module.exports = (context) => {
                 soulbern: soulbern !== "",
                 bern_desc: soulbern.split("\n").join(""),
                 usesoul: usesoul
-            }, level, levelUpMaterials);
+            }, level, levelUpMaterials , skillMutiple !== undefined ? skillMutiple[i] : {});
         }
     };
 

@@ -138,7 +138,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.6839) * (1+Speed*0.00075)",
+				"modifier": "0.075% self Speed (0.00075 * Speed)"
+			}
 		},
 		{
 			"name": "迅速果断",
@@ -170,7 +174,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "執行",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*2.666175) * (1+Speed*0.001) [2 soul burn]",
+				"modifier": "0.10% self Speed (0.001 * Speed), 0.30% target Speed (0.003 * Speed)"
+			}
 		}
 	],
 	"name": "暗殺者シダー",

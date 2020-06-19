@@ -122,7 +122,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871",
+				"modifier": "0.2% increased damage per 1% target missing Health"
+			}
 		},
 		{
 			"name": "蚕食",
@@ -166,7 +170,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.5*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "断罪",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.8*0.95*1.871 (3.2 soul burn)",
+				"modifier": "0.3% (0.7% soulburn) increased damage per 1% target missing Health, explosion on kill does 150% of self Attack"
+			}
 		}
 	],
 	"name": "セズ",

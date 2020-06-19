@@ -126,7 +126,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.6+Def*0.7)*1.96455",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "守りの紋章",
@@ -164,7 +168,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Barrier strength: 15% target max Health",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "正面突破",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.5+Def*0.6)*1.77745 [0.75 soul burn]",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "クロゼ",

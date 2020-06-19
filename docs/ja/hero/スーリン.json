@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.9*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "刀刃粉砕",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.4*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "桜花閃乱",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.8*0.8*1.871",
+				"modifier": "If one bleed, +40% damage. +15% damage for each additional up to 5."
+			}
 		}
 	],
 	"name": "スーリン",

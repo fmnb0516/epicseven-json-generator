@@ -138,7 +138,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.8*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "マジカルインジェクション",
@@ -170,7 +174,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "ボルテックブラスト",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.8*1*1.871 (1 soul burn)",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "戮力のラッツ",

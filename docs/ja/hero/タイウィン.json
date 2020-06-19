@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.8+Hp*0.04)*1.77745",
+				"modifier": "4% self max Health (0.04 * Health)"
+			}
 		},
 		{
 			"name": "叱咤激励",
@@ -154,7 +158,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "総攻撃",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.5+Hp*0.10)*1.77745",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "タイウィン",

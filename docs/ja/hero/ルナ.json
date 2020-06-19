@@ -122,7 +122,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.7*0.95*1.871",
+				"modifier": "0.7 = 1 Hit, 1.4 = 2 Hits, 2.1 = 3 Hits"
+			}
 		},
 		{
 			"name": "龍騎士の決意",
@@ -166,7 +170,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "ラグナの矛",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.5*1.05*1.871 (2.2 soul burn)",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "ルナ",

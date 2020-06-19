@@ -126,7 +126,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.4968) * (1+Speed*0.00075) [1.1 Stealth]",
+				"modifier": "0.075% self Speed (0.00075 * Speed)"
+			}
 		},
 		{
 			"name": "待ち伏せ",
@@ -164,7 +168,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "暗殺",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*2.2452) * (1+Speed*0.001125) [3 soul burn]",
+				"modifier": "0.1125% self Speed (0.001125 * Speed)"
+			}
 		}
 	],
 	"name": "静寂のコリー",

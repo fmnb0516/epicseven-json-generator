@@ -134,7 +134,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.2*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "不死鳥の加護",
@@ -154,7 +158,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "紅蓮爆炎斬",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.15*0.9*1.871 (1.65 Soulburn)",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "チェルミア",

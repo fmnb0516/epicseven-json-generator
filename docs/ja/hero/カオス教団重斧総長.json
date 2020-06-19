@@ -136,7 +136,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871",
+				"modifier": "0.2% increased damage per 1% target Health missing"
+			}
 		},
 		{
 			"name": "連鎖攻撃",
@@ -174,7 +178,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.8*0.95*1.871 (1 soul burn)",
+				"modifier": "0.5% increased damage per 1% target Health missing"
+			}
 		},
 		{
 			"name": "血気の一撃",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.8+HP*0.05)*1.6839",
+				"modifier": "20% heal on hit, 30% heal on kill, 5% self max Health (0.05 * Health)"
+			}
 		}
 	],
 	"name": "カオス教団重斧総長",

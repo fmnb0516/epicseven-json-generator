@@ -136,7 +136,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871",
+				"modifier": "10% increased damage per debuff on target"
+			}
 		},
 		{
 			"name": "冷圧",
@@ -174,7 +178,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "冷気炸裂",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.85*0.95*1.871 (1.1 soul burn)",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "ジェナ",

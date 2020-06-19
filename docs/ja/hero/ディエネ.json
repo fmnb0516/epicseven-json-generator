@@ -134,7 +134,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "女神の祝福",
@@ -184,7 +188,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Barrier strength: 20% target max Health (30% Molagora)",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "聖女の祈り",
@@ -210,7 +218,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "ディエネ",

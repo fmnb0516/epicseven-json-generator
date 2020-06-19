@@ -116,7 +116,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1.05*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "強化触媒",
@@ -154,7 +158,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.8*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "火柱",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.85*1*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "アラミンタ",

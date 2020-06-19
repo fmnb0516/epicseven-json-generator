@@ -138,7 +138,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.7+Hp*0.05)*1.6839",
+				"modifier": "5% self max Health (0.05 * Health)"
+			}
 		},
 		{
 			"name": "悪戯の舞",
@@ -188,7 +192,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.7+Hp*0.07)*1.871",
+				"modifier": "Two separate sets of unique buffs it pulls one from:\r\n1. atk up, speed up, crit up, crit dmg up, continuous heal\r\n2. def up, evasion, debuff immunity"
+			}
 		},
 		{
 			"name": "ショータイム",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 20% target max Health",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "リン",

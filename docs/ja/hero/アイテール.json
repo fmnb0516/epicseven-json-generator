@@ -136,7 +136,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1.05*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "守護",
@@ -174,7 +178,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 45% self Attack + 15% target max Health",
+				"modifier": "76.5% and 26% soulburn"
+			}
 		},
 		{
 			"name": "精霊の呼び声",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 35% self Attack + 15% target max Health",
+				"modifier": "Barrier strength: 100% self Attack"
+			}
 		}
 	],
 	"name": "アイテール",

@@ -148,7 +148,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.7+Def*0.02)*1.77745",
+				"modifier": "2% self max Health (0.02 * Health)"
+			}
 		},
 		{
 			"name": "護衛",
@@ -180,7 +184,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "2% Defense increase per stack, scales up to 3% with molagora",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "防御態勢",
@@ -230,7 +238,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.5+Def*0.05)*1.77745",
+				"modifier": "70% self Defense (0.7 * Defense), Barrier strength: 60% self Defense"
+			}
 		}
 	],
 	"name": "アロウェル",

@@ -132,7 +132,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*1.599705)*(1+Speed*0.00075)",
+				"modifier": "0.075% self Speed (0.00075 * Speed), Skill 2 fully upgraded increases power from 0.95 to 1.35"
+			}
 		},
 		{
 			"name": "風の心得",
@@ -176,7 +180,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "乱れ切り",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*2.9936)*(1+Speed*0.0021) [2.2 soul burn]",
+				"modifier": "0.21% self Speed (0.0021 * Speed)"
+			}
 		}
 	],
 	"name": "シダー",

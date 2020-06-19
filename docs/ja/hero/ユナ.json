@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.6*0.8*1.871",
+				"modifier": "140% damage vs 2 targets, 160% vs 1 target"
+			}
 		},
 		{
 			"name": "アップグレード",
@@ -154,7 +158,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "ミーティアキャノン",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.5*0.8*1.871",
+				"modifier": "140% damage vs 2 targets, 160% vs 1 target"
+			}
 		}
 	],
 	"name": "ユナ",

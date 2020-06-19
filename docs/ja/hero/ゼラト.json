@@ -126,7 +126,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.05*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "アイスピック",
@@ -164,7 +168,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.5*0.95*1.871 (2 soul burn)",
+				"modifier": "30% increased damage if target is debuffed"
+			}
 		},
 		{
 			"name": "アイスバーグ",
@@ -220,7 +228,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "ゼラト",

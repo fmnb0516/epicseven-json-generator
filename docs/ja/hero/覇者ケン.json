@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "龍炎覚",
@@ -160,7 +164,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*1.2*0.95*1.871",
+				"modifier": "0.4% increased damage per 1% self Health missing"
+			}
 		},
 		{
 			"name": "修羅降臨",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.9*1*1.871 (1.1 soul burn)",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "覇者ケン",

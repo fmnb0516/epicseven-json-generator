@@ -144,7 +144,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.8+DEF*0.6)*1.6839",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "ライトフラッシュ",
@@ -194,7 +198,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "(ATK*0.3+DEF*0.5)*1.6839",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "シールドブロック",
@@ -220,7 +228,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 15% target max Health",
+				"modifier": "Barrier strength: 100% self Defense"
+			}
 		}
 	],
 	"name": "アーミン",

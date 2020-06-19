@@ -128,7 +128,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 7% target max Health (35% self max Health soul burn)",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "再生成",
@@ -160,7 +164,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 30% self max Health",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "デスティーナの加護",
@@ -210,7 +218,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "Heal strength: 35% self max Health",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "デスティーナ",

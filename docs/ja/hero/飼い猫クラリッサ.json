@@ -144,7 +144,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.9*0.8*1.871",
+				"modifier": "6% self max health (0.06 * health)"
+			}
 		},
 		{
 			"name": "怒ったにゃ!",
@@ -200,7 +204,11 @@
 					"num": "percent"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "ATK*0.8*0.95*1.871 (1.05 soul burn)",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "かわいいにゃん?",
@@ -220,7 +228,11 @@
 					"num": "fix"
 				}
 			],
-			"material": []
+			"material": [],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"name": "飼い猫クラリッサ",
