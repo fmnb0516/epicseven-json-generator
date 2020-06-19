@@ -20,6 +20,11 @@
         gtag('config', 'UA-143765558-2');
     </script>
 
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,6 +63,133 @@
     </div>
 
     <div class="container" style="padding-top: 60px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="hero-select">英雄選択</label>
+                    <input type="text" class="form-control" id="hero-select" autocomplete="on" list="herolist"
+                        placeholder="名前を入力...">
+                </div>
+                <datalist id="herolist">
+                </datalist>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table text-nowrap table-sm">
+                        <thead class="thead-light">
+                            <tr>
+                                <th style="min-width: 100px;"><span style="font-size: 100%;margin-left: 15px;" class="badge badge-info">名称</span></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="speed" data-status="show">速度</button></th>
+                                <th class="data-vis-speed" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="attack" data-status="hide">攻撃</button></th>
+                                <th class="data-vis-attack hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="health" data-status="hide">生命</button></th>
+                                <th class="data-vis-health hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="defense" data-status="hide">防御</button></th>
+                                <th class="data-vis-defense hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="effect" data-status="hide">命中</button></th>
+                                <th class="data-vis-effect hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="resist" data-status="hide">抵抗</button></th>
+                                <th class="data-vis-resist hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="cri" data-status="hide">クリ率</button></th>
+                                <th class="data-vis-cri hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="cridamage" data-status="hide">クリダメ</button></th>
+                                <th class="data-vis-cridamage hide" colspan="7"></th>
+                            </tr>
+                            <tr>
+                                <th></th>
+
+                                <th></th>
+                                <th class="data-vis-speed">目標</th>
+                                <th class="data-vis-speed">セット</th>
+                                <th class="data-vis-speed">オプ数</th>
+                                <th class="data-vis-speed">素ステ</th>
+                                <th class="data-vis-speed">刻印+CC</th>
+                                <th class="data-vis-speed">基礎値</th>
+                                <th class="data-vis-speed">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-attack hide">目標</th>
+                                <th class="data-vis-attack hide">セット</th>
+                                <th class="data-vis-attack hide">オプ数</th>
+                                <th class="data-vis-attack hide">素ステ</th>
+                                <th class="data-vis-attack hide">刻印+CC</th>
+                                <th class="data-vis-attack hide">基礎値</th>
+                                <th class="data-vis-attack hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-health hide">目標</th>
+                                <th class="data-vis-health hide">セット</th>
+                                <th class="data-vis-health hide">オプ数</th>
+                                <th class="data-vis-health hide">素ステ</th>
+                                <th class="data-vis-health hide">刻印+CC</th>
+                                <th class="data-vis-health hide">基礎値</th>
+                                <th class="data-vis-health hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-defense hide">目標</th>
+                                <th class="data-vis-defense hide">セット</th>
+                                <th class="data-vis-defense hide">オプ数</th>
+                                <th class="data-vis-defense hide">素ステ</th>
+                                <th class="data-vis-defense hide">刻印+CC</th>
+                                <th class="data-vis-defense hide">基礎値</th>
+                                <th class="data-vis-defense hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-effect hide">目標</th>
+                                <th class="data-vis-effect hide">セット</th>
+                                <th class="data-vis-effect hide">オプ数</th>
+                                <th class="data-vis-effect hide">素ステ</th>
+                                <th class="data-vis-effect hide">刻印+CC</th>
+                                <th class="data-vis-effect hide">基礎値</th>
+                                <th class="data-vis-effect hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-resist hide">目標</th>
+                                <th class="data-vis-resist hide">セット</th>
+                                <th class="data-vis-resist hide">オプ数</th>
+                                <th class="data-vis-resist hide">素ステ</th>
+                                <th class="data-vis-resist hide">刻印+CC</th>
+                                <th class="data-vis-resist hide">基礎値</th>
+                                <th class="data-vis-resist hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-cri hide">目標</th>
+                                <th class="data-vis-cri hide">セット</th>
+                                <th class="data-vis-cri hide">オプ数</th>
+                                <th class="data-vis-cri hide">素ステ</th>
+                                <th class="data-vis-cri hide">刻印+CC</th>
+                                <th class="data-vis-cri hide">基礎値</th>
+                                <th class="data-vis-cri hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-cridamage hide">目標</th>
+                                <th class="data-vis-cridamage hide">セット</th>
+                                <th class="data-vis-cridamage hide">オプ数</th>
+                                <th class="data-vis-cridamage hide">素ステ</th>
+                                <th class="data-vis-cridamage hide">刻印+CC</th>
+                                <th class="data-vis-cridamage hide">基礎値</th>
+                                <th class="data-vis-cridamage hide">要求値</th>
+                            </tr>
+                        </thead>
+                        <tbody id="content">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>    
+        </div>
     </div>
 
     <footer class="container">
@@ -72,6 +204,275 @@
     </footer>
 
     <script type="text/x-handlebars" id="template">
+        <tr>
+            <td>
+                <img src="{{thumbnail}}" style="height: 50px;" alt="{{name}}"/>
+            </td>
+
+            <td></td>
+            <td class="data-vis-speed">
+                <input type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-speed">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-speed">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-speed">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-speed">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-speed">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-speed">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+
+            <td></td>
+            <td class="data-vis-attack hide">
+                <input type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-attack hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-attack hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-attack hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-attack hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-attack hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-attack hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+
+            <td></td>
+            <td class="data-vis-health hide">
+                <input type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-health hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-health hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-health hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-health hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-health hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-health hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+
+            <td></td>
+            <td class="data-vis-defense hide">
+                <input type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-defense hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-defense hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-defense hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-defense hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-defense hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-defense hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+
+            <td></td>
+            <td class="data-vis-effect hide">
+                <input type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-effect hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-effect hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-effect hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-effect hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-effect hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-effect hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+
+            <td></td>
+            <td class="data-vis-resist hide">
+                <input type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-resist hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-resist hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-resist hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-resist hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-resist hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-resist hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+
+            <td></td>
+            <td class="data-vis-cri hide">
+                <input type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-cri hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-cri hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-cri hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-cri hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-cri hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-cri hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+
+            <td></td>
+            <td class="data-vis-cridamage hide">
+                <input type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-cridamage hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-cridamage hide">
+                <select class="form-control" style="width:100px;">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td class="data-vis-cridamage hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-cridamage hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-cridamage hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+            <td class="data-vis-cridamage hide">
+                <input readonly type="text" class="form-control" style="width:100px;"/>
+            </td>
+        </tr>
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -88,6 +489,64 @@
 
     <script>
         $(() => {
+
+            $("body").on("click", ".visbtn", (e) => {
+                const selector = $(e.target);
+
+                const status = selector.attr("data-status");
+                const target = selector.attr("data-vis");
+
+                if(status === "hide") {
+                    selector.attr("data-status", "show");
+                    $(".data-vis-" + target).removeClass("hide");
+                } else {
+                    selector.attr("data-status", "hide");
+                    $(".data-vis-" + target).addClass("hide");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        const init = (data) => {
+            const template = Handlebars.compile($("#template").html());
+
+            $("#hero-select").change((e) => {
+                $("#hero-select").blur();
+                addData($("#hero-select").val());
+            });
+
+            const addData = (name) => {
+                const hero = data[name];
+
+                $("#content").append(template({
+                    name : hero.name,
+                    thumbnail : hero.thumbnail
+                }));
+            };
+        };
+
+        $(() => {
+
+            const master = {};
+
+            const f1 = fetch('./hero/heros.json')
+                .then((response) => response.text())
+                .then(text => JSON.parse(text))
+                .then(json => {
+                    const futures = json.map((e) => {
+                        $("#herolist").append($("<option>").attr("value", e.substring(0, e.length - 5)).text(e.substring(0, e.length - 5)));
+                        return fetch("./hero/" + e).then(r => r.text())
+                            .then(j => JSON.parse(j))
+                            .then(j => master[j.name] = j);
+                    });
+
+                    return Promise.all(futures);
+                });
+
+            Promise.all([f1]).then(() => {
+                init(master);
+            });
 
         });
     </script>
