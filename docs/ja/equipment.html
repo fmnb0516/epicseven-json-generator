@@ -204,274 +204,48 @@
     </footer>
 
     <script type="text/x-handlebars" id="template">
-        <tr>
+        <tr data-hero="{{name}}">
             <td>
-                <img src="{{thumbnail}}" style="height: 50px;" alt="{{name}}"/>
+                <!--<img src="{{thumbnail}}" style="height: 50px;" alt=""/>-->
+                <span class="badge badge-info">{{name}}</span>
             </td>
 
-            <td></td>
+            <td><button type="button" class="btn btn-danger">削除</button></td>
             <td class="data-vis-speed">
-                <input type="text" class="form-control" style="width:100px;"/>
+                <input type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="goal"/>
             </td>
             <td class="data-vis-speed">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-speed">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
+                <select class="form-control" style="width:100px;" data-target="speed" data-mode="set">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
                 </select>
             </td>
             <td class="data-vis-speed">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
+                <select class="form-control" style="width:100px;" data-target="speed" data-mode="opt">
+                    <option>0</option>
+                    <option>1</option>
+                </select>
             </td>
             <td class="data-vis-speed">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
+                <input readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="basicstatus"/>
             </td>
             <td class="data-vis-speed">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
+                <input readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="additional"/>
             </td>
             <td class="data-vis-speed">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
+                <input readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="cumulative"/>
+            </td>
+            <td class="data-vis-speed">
+                <input readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="average"/>
             </td>
 
             <td></td>
-            <td class="data-vis-attack hide">
-                <input type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-attack hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-attack hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-attack hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-attack hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-attack hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-attack hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-
             <td></td>
-            <td class="data-vis-health hide">
-                <input type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-health hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-health hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-health hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-health hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-health hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-health hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-
             <td></td>
-            <td class="data-vis-defense hide">
-                <input type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-defense hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-defense hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-defense hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-defense hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-defense hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-defense hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-
             <td></td>
-            <td class="data-vis-effect hide">
-                <input type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-effect hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-effect hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-effect hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-effect hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-effect hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-effect hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-
             <td></td>
-            <td class="data-vis-resist hide">
-                <input type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-resist hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-resist hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-resist hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-resist hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-resist hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-resist hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-
             <td></td>
-            <td class="data-vis-cri hide">
-                <input type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-cri hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-cri hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-cri hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-cri hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-cri hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-cri hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-
             <td></td>
-            <td class="data-vis-cridamage hide">
-                <input type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-cridamage hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-cridamage hide">
-                <select class="form-control" style="width:100px;">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            </td>
-            <td class="data-vis-cridamage hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-cridamage hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-cridamage hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
-            <td class="data-vis-cridamage hide">
-                <input readonly type="text" class="form-control" style="width:100px;"/>
-            </td>
         </tr>
     </script>
 
@@ -508,26 +282,70 @@
     </script>
 
     <script>
+        const storage = (() => {
+            const data = {};
+
+            data.exist = async (name) => {
+                return localStorage.getItem(name) !== undefined && localStorage.getItem(name) !== null;
+            };
+
+            data.get = async (name) => {
+                return JSON.parse(localStorage.getItem(name));
+            };
+
+            data.create = async (name) => {
+                const initial = {
+                    speed : {goal : 0,set : 0,opt : 0},
+                    attack : {goal : 0,set : 0,opt : 0},
+                    health : {goal : 0,set : 0,opt : 0},
+                    defense : {goal : 0,set : 0,opt : 0},
+                    effect : {goal : 0,set : 0,opt : 0},
+                    resist : {goal : 0,set : 0,opt : 0},
+                    cri : {goal : 0,set : 0,opt : 0},
+                    cridamage : {goal : 0,set : 0,opt : 0}
+                };
+                localStorage.setItem(name, JSON.stringify(initial));
+                return initial;
+            };
+
+            data.alldata = (callback) => {
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    callback(key, JSON.parse(localStorage.getItem(key)));
+                }
+            };
+            
+            return data;
+        })();
+
         const init = (data) => {
             const template = Handlebars.compile($("#template").html());
 
             $("#hero-select").change((e) => {
-                $("#hero-select").blur();
-                addData($("#hero-select").val());
+                const name = $("#hero-select").blur().val();
+
+                storage.exist(name)
+                    .then((exist) => {
+                        if(exist === false) {
+                            return storage.create(name);
+                        } else {
+                            return storage.get(name);
+                        }
+                    })
+                    .then(d => addData(name, d, data[name]));
             });
 
-            const addData = (name) => {
-                const hero = data[name];
-
+            
+            const addData = (name, value, hero) => {
                 $("#content").append(template({
                     name : hero.name,
                     thumbnail : hero.thumbnail
                 }));
             };
+            storage.alldata((k, d) => addData(k,d,data[k]));
         };
 
         $(() => {
-
             const master = {};
 
             const f1 = fetch('./hero/heros.json')
