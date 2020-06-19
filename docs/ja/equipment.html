@@ -212,31 +212,31 @@
 
             <td><button type="button" class="btn btn-danger">削除</button></td>
             <td class="data-vis-speed">
-                <input type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="goal"/>
+                <input value="{{calc.speed.goal}}" type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="goal"/>
             </td>
             <td class="data-vis-speed">
                 <select class="form-control" style="width:100px;" data-target="speed" data-mode="set">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
+                    <option value="0" {{option calc.speed.set "0"}}>0</option>
+                    <option value="1" {{option calc.speed.set "1"}}>1</option>
                 </select>
             </td>
             <td class="data-vis-speed">
                 <select class="form-control" style="width:100px;" data-target="speed" data-mode="opt">
-                    <option>0</option>
-                    <option>1</option>
+                    <option {{option calc.speed.opt "0"}}>0</option>
+                    <option {{option calc.speed.opt "1"}}>1</option>
                 </select>
             </td>
             <td class="data-vis-speed">
-                <input readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="basicstatus"/>
+                <input value="{{calc.speed.basicstatus}}" readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="basicstatus"/>
             </td>
             <td class="data-vis-speed">
-                <input readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="additional"/>
+                <input value="{{calc.speed.additional}}" readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="additional"/>
             </td>
             <td class="data-vis-speed">
-                <input readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="cumulative"/>
+                <input value="{{calc.speed.cumulative}}" readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="cumulative"/>
             </td>
             <td class="data-vis-speed">
-                <input readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="average"/>
+                <input value="{{calc.speed.average}}" readonly type="text" class="form-control" style="width:100px;" data-target="speed" data-mode="average"/>
             </td>
 
             <td></td>
@@ -263,6 +263,10 @@
 
     <script>
         $(() => {
+
+            Handlebars.registerHelper('option', (v1, v2) => {
+                return (v1 + "") === (v2 + "") ? "selected" : "";
+            });
 
             $("body").on("click", ".visbtn", (e) => {
                 const selector = $(e.target);
@@ -314,6 +318,13 @@
                     callback(key, JSON.parse(localStorage.getItem(key)));
                 }
             };
+
+            data.update = async (name, target, key, value) => {
+                const d = JSON.parse(localStorage.getItem(name));
+                d[target][key] = value;
+                localStorage.setItem(name, JSON.stringify(d));
+                return d;
+            };
             
             return data;
         })();
@@ -335,11 +346,50 @@
                     .then(d => addData(name, d, data[name]));
             });
 
+            $("body").on("change", "table input, table select", (e) => {
+                const selector = $(e.target);
+                const heroname = selector.parents("tr").attr("data-hero");
+
+                const target = selector.attr("data-target");
+                const key = selector.attr("data-mode");
+                const value = selector.val();
+
+                storage.update(heroname, target, key, value)
+                    .then(d => updateDom(selector.parents("tr"), target, d[target], data[heroname]));
+            });
+
+            const calculate = (target, context, hero) => {
+                if(target === "speed") {
+                    calcSpeed(context, hero);
+                }
+            };
+
+            const calcSpeed = (context, hero) => {
+                context.basicstatus = hero.status.max.speed;
+                context.additional = 0;
+                context.cumulative = hero.status.max.speed + (context.set * hero.status.max.speed * 0.25) + context.additional
+                    + (40 * context.opt);
+
+                context.average = Math.ceil((context.goal - context.cumulative) / (6 - context.set));
+            };
+
+            const updateDom = (selector, target, context, hero) => {
+                calculate(target, context, hero);
+
+                selector.find("input[data-target='speed']").each(function(e) {
+                    const s = $(this);
+                    const mode = s.attr("data-mode");
+                    s.val(context[mode]);
+                });
+            };
             
             const addData = (name, value, hero) => {
+                calcSpeed(value.speed, hero);
+
                 $("#content").append(template({
                     name : hero.name,
-                    thumbnail : hero.thumbnail
+                    thumbnail : hero.thumbnail,
+                    calc : value,
                 }));
             };
             storage.alldata((k, d) => addData(k,d,data[k]));
