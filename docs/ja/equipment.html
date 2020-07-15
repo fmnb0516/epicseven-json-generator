@@ -378,8 +378,8 @@
             const calcSpeed = (context, hero) => {
                 context.basicstatus = hero.status.max.speed;
                 context.additional = 0;
-                context.cumulative = hero.status.max.speed + (context.set * hero.status.max.speed * 0.25) + context.additional
-                    + (40 * context.opt);
+                context.cumulative = Math.floor(hero.status.max.speed + (context.set * hero.status.max.speed * 0.25) + context.additional
+                    + (40 * context.opt));
 
                 context.average = Math.ceil((context.goal - context.cumulative) / (6 - context.set));
             };

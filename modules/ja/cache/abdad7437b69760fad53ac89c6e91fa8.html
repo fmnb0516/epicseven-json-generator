@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
 <head>
-<meta charset="utf-8" /><script type="08a4b356a6f5e7190810f3d2-text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"48befe3114",applicationID:"56773492"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-78046902-13", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("set", "dimension1", "micah");ga("set", "dimension2", "Epic Seven Wiki - GamePress");ga("set", "dimension3", "7336");ga("set", "dimension4", "291");ga("set", "dimension5", "6");ga("send", "pageview");</script>
+<meta charset="utf-8" /><script type="f1d055f7271ffdce4c30ee65-text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"48befe3114",applicationID:"56773492"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-78046902-13", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("set", "dimension1", "micah");ga("set", "dimension2", "Epic Seven Wiki - GamePress");ga("set", "dimension3", "7336");ga("set", "dimension4", "291");ga("set", "dimension5", "6");ga("send", "pageview");</script>
 <meta name="title" content="Camping Simulator | Epic Seven Wiki - GamePress" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="og:site_name" content="Epic Seven Wiki - GamePress" />
@@ -27,24 +27,24 @@
 <link rel="revision" href="https://gamepress.gg/epicseven/camping-simulator" />
 <title>Camping Simulator | Epic Seven Wiki - GamePress</title>
 <link rel="stylesheet" media="all" href="/epicseven/sites/epicseven/files/css/css_JPNcNXBZMvG7hypKyjoylbbkNOurLXBeYmfOCGZTX8o.css" />
-<link rel="stylesheet" media="all" href="/epicseven/sites/epicseven/files/css/css_KJn_bcD6nJ0DI9FS8AvYd7K2r_gu4IPqBcfukHk7bUI.css" />
+<link rel="stylesheet" media="all" href="/epicseven/sites/epicseven/files/css/css_KUBmXlOz-qvMyEo8VeluWvAHrTRKqScEAs0TYK34t7Q.css" />
 <!--[if lte IE 8]>
 <script src="/epicseven/sites/epicseven/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
 <![endif]-->
-<script src="/epicseven/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1" type="08a4b356a6f5e7190810f3d2-text/javascript"></script>
-<script src="/epicseven/sites/epicseven/files/js/js_IfqzHiUTwZH2H0gSZOmiplXoH34uGUxDaNEYeime-xM.js" type="08a4b356a6f5e7190810f3d2-text/javascript"></script>
+<script src="/epicseven/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1" type="f1d055f7271ffdce4c30ee65-text/javascript"></script>
+<script src="/epicseven/sites/epicseven/files/js/js_IfqzHiUTwZH2H0gSZOmiplXoH34uGUxDaNEYeime-xM.js" type="f1d055f7271ffdce4c30ee65-text/javascript"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
-<script src="https://comment.gamepress.gg/js/count.js" type="08a4b356a6f5e7190810f3d2-text/javascript"></script>
+<script src="https://comment.gamepress.gg/js/count.js" type="f1d055f7271ffdce4c30ee65-text/javascript"></script>
 
-<script src="https://hb.vntsm.com/v3/live/ad-manager.min.js" type="08a4b356a6f5e7190810f3d2-text/javascript" data-site-id="5eb0219433ac7c678655e300" data-mode="scan" async></script>
+<script src="https://hb.vntsm.com/v3/live/ad-manager.min.js" type="f1d055f7271ffdce4c30ee65-text/javascript" data-site-id="5eb0219433ac7c678655e300" data-mode="scan" async></script>
 
 </head>
 <body class="one-sidebar sidebar-second site-gamepress path-node node--type-page">
 <div id="top-page"></div>
 <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-<div onclick="if (!window.__cfRLUnblockHandlers) return false; closeNav()" id="overlay" data-cf-modified-08a4b356a6f5e7190810f3d2-=""></div>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<div onclick="if (!window.__cfRLUnblockHandlers) return false; closeNav()" id="overlay" data-cf-modified-f1d055f7271ffdce4c30ee65-=""></div>
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
   (function () {
   window.aax = window.aax || {}; window.aax.initTime = new Date().getTime(); window.aax.deliverExchangeDemand = function () { };
   window.aax.pubId = 'AAXDDFXYK';
@@ -64,14 +64,14 @@
   writeSource(aaxEndpoint);
   })();
   </script>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 /* A9 Load Lib */
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function()
 {q("f",arguments)},setDisplayBids:function(){},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(
 A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 </script>
 
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
     var adsStart = (new Date()).getTime();
     function detectWidth() {
         return window.screen.width || window.innerWidth || window.document.documentElement.clientWidth || Math.min(window.innerWidth, window.document.documentElement.clientWidth) || window.innerWidth || window.document.documentElement.clientWidth || window.document.getElementsByTagName('body')[0].clientWidth;
@@ -191,14 +191,14 @@ A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js"
                 assignToVariableName: false // false if not in use
             });  
         
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        adUnits.push({
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              adUnits.push({
                 network: dfpNetwork,
                 adunit: 'EpicSeven_Mobile_300x250_BTF_1',
                 size: [[300, 250]],
                 code: 'div-ad-EpicSeven_Mobile_300x250_BTF_1',
                 assignToVariableName: false // false if not in use
             });  
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                      
     }
     // END: Defining Adunits
 
@@ -242,12 +242,12 @@ A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js"
         googletag.enableServices();
     });
 </script>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript" async="true" src="https://gamepress.gg/prebid/prebidglobal.js?2020-05-28T08:42:46"></script>
+<script type="f1d055f7271ffdce4c30ee65-text/javascript" async="true" src="https://gamepress.gg/prebid/prebidglobal.js?2020-05-28T08:42:46"></script>
 <div class="gamepress-boost-top-banner" style="display:none;">
 <a href="https://gamepress.gg/boost" class="boost-text">Consider Supporting us with GamePress Boost!<span class="read-more-boost">Read more</span></a>
-<i class="fa fa-times boost-close-icon" onclick="if (!window.__cfRLUnblockHandlers) return false; hideBoost()" data-cf-modified-08a4b356a6f5e7190810f3d2-=""></i>
+<i class="fa fa-times boost-close-icon" onclick="if (!window.__cfRLUnblockHandlers) return false; hideBoost()" data-cf-modified-f1d055f7271ffdce4c30ee65-=""></i>
 </div>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 
 $(document).ready(function(){
 	showBoost();
@@ -317,7 +317,7 @@ function getCookie(cname) {
 </ul>
 </div>
 </div>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
   var baseURL = "https://gamepress.gg";
 
   function enableDM() {
@@ -364,7 +364,7 @@ function getCookie(cname) {
 
 </script> </div>
 </div>
-<div onclick="if (!window.__cfRLUnblockHandlers) return false; closeNav()" id="menu-close" data-cf-modified-08a4b356a6f5e7190810f3d2-=""><i class="fa fa-times" aria-hidden="true"></i></div>
+<div onclick="if (!window.__cfRLUnblockHandlers) return false; closeNav()" id="menu-close" data-cf-modified-f1d055f7271ffdce4c30ee65-=""><i class="fa fa-times" aria-hidden="true"></i></div>
 <div id="sidenav">
 <div class="sidemenu-icon"><img src="/GamePressNewLogo.png"></div>
 <div class="menu-c-container">
@@ -564,7 +564,7 @@ function getCookie(cname) {
 </div>
 <div class="menu-container">
 <div class="menu--top-menu outer-wrapper">
-<div id="side-menu-button" onclick="if (!window.__cfRLUnblockHandlers) return false; openNav()" data-cf-modified-08a4b356a6f5e7190810f3d2-=""><div class="menu-bars"><i class="fa fa-bars" aria-hidden="true"></i></div><div class="menu-label">Menu</div></div>
+<div id="side-menu-button" onclick="if (!window.__cfRLUnblockHandlers) return false; openNav()" data-cf-modified-f1d055f7271ffdce4c30ee65-=""><div class="menu-bars"><i class="fa fa-bars" aria-hidden="true"></i></div><div class="menu-label">Menu</div></div>
 <div class="top-menu"><ul>
 <li>
 <a style="background-image: url( 
@@ -618,7 +618,7 @@ function getCookie(cname) {
 <div class="top-mobile-ad">
 
 <div id='div-ad-EpicSeven_Mobile_320x50_Top'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() <= 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Mobile_320x50_Top'); }); }
 </script>
 </div>
@@ -626,12 +626,12 @@ if(detectWidth() <= 980) { googletag.cmd.push(function() { googletag.display('di
 <div id="bottom-sticky-ad">
 
 <div id='div-ad-EpicSeven_Mobile_320x50_Floating'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() <= 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Mobile_320x50_Floating'); }); }
 </script>
 </div>
 </div>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 
 function decodeHtml(html) {
     var txt = document.createElement("textarea");
@@ -676,7 +676,7 @@ function closeNav() {
 <div class="top-ad-desktop">
 
 <div id='div-ad-EpicSeven_Desktop_Leaderboard_ATF'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Desktop_Leaderboard_ATF'); }); }
 </script>
 </div>
@@ -731,9 +731,9 @@ if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div
 </a>
 </div>
 <div class="content-2-group-item ">
-<a href="/epicseven/epicseven/epicseven/epicseven/camping-topics" hreflang="en"><img src="/epicseven/epicseven/epicseven/epicseven/sites/epicseven/files/2019-04/Epic-Seven-Banner_0.png" width="600" height="315" alt="" typeof="foaf:Image" />
+<a href="/epicseven/camping-topics" hreflang="en"><img src="/epicseven/sites/epicseven/files/2019-04/Epic-Seven-Banner_0.png" width="600" height="315" alt="" typeof="foaf:Image" />
 </a>
-<a class="featured-content-title" href="/epicseven/epicseven/epicseven/epicseven/camping-topics"><span property="schema:name" class="field field--name-title field--type-string field--label-hidden">Camping Topics</span>
+<a class="featured-content-title" href="/epicseven/camping-topics"><span property="schema:name" class="field field--name-title field--type-string field--label-hidden">Camping Topics</span>
 </a>
 </div>
 <div class="content-2-group-item ">
@@ -752,7 +752,7 @@ if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div
 <center>
 
 <div id='div-ad-EpicSeven_Desktop_728x90_Extra_1'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Desktop_728x90_Extra_1'); }); }
 </script>
 </div>
@@ -764,14 +764,14 @@ if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div
 <center>
 
 <div id='div-ad-EpicSeven_Mobile_300x250_BTF_1'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() <= 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Mobile_300x250_BTF_1'); }); }
 </script>
 </div>
 </center>
 </div>
 
-<script type="08a4b356a6f5e7190810f3d2-text/javascript" language="javascript" src="https://live.sekindo.com/live/liveView.php?s=102483&cbuster=%%CACHEBUSTER%%&pubUrl=%%REFERRER_URL_ESC%%&subId=[SUBID_ENCODED]&x=%%WIDTH%%&y=%%HEIGHT%%&vp_content=plembed1a88gmrlpxuh&vp_template=7480"></script>
+<script type="f1d055f7271ffdce4c30ee65-text/javascript" language="javascript" src="https://live.sekindo.com/live/liveView.php?s=102483&cbuster=%%CACHEBUSTER%%&pubUrl=%%REFERRER_URL_ESC%%&subId=[SUBID_ENCODED]&x=%%WIDTH%%&y=%%HEIGHT%%&vp_content=plembed1a88gmrlpxuh&vp_template=7480"></script>
 
 </div>
 </div>
@@ -967,100 +967,100 @@ i#loading-icon, i#loading-icon-fixed-child {
 <div id="campsite-simulator" style="display:none;">
 <input type="text" id="url-container">
 </input>
-<button id="generate-url-button" onclick="if (!window.__cfRLUnblockHandlers) return false; generateShareUrl(this)" data-cf-modified-08a4b356a6f5e7190810f3d2-="">Generate URL</button>
+<button id="generate-url-button" onclick="if (!window.__cfRLUnblockHandlers) return false; generateShareUrl(this)" data-cf-modified-f1d055f7271ffdce4c30ee65-="">Generate URL</button>
 <span style="color: red; font-size: 13px;"><center><p>Export and save your roster by clicking 'generate' and copying the URL.<br> To retrieve a roster, paste the URL into the search bar in your browser.</p></center></span>
 <center><p>The roster can also be saved with User Accounts. Go to My Account > Edit and scroll to the bottom to add heroes to a permanent roster.</p></center></span>
 
 <table class="filter-table">
 <tr>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'rarity', '3')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'rarity', '3')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/3-Stars-New.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'rarity', '4')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'rarity', '4')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/4-Stars-New.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'rarity', '5')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'rarity', '5')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/5-Stars-New.png" />
 </td>
 </tr>
 </table>
 <table class="filter-table">
 <tr>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'fire')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'fire')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Fire-New.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'earth')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'earth')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Earth-New.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'ice')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'ice')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Ice-New.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'dark')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'dark')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Dark-New.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'light')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'element', 'light')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Light-New.png" />
 </td>
 </tr>
 </table>
 <table class="filter-table">
 <tr>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Knight')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Knight')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Knight-New_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Mage')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Mage')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Mage-New_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Ranger')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Ranger')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Ranger-New_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Soul Weaver')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Soul Weaver')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Soul-Weaver-New_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Thief')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Thief')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Thief-New_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Warrior')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'class', 'Warrior')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Warrior-New_0.png" />
 </td>
 </tr>
 </table>
 <table class="filter-table" style="margin-bottom:8px;">
 <tr>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Aries')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Aries')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Aries_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Taurus')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Taurus')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Taurus.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Gemini')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Gemini')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Gemini_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Cancer')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Cancer')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Cancer_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Leo')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Leo')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Leo_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Virgo')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Virgo')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Virgo.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Libra')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Libra')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Libra.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Scorpio')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Scorpio')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Scorpio.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Sagittarius')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Sagittarius')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Sagittarius.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Capricorn')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Capricorn')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Capricorn_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Aquarius')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Aquarius')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Aquarius_0.png" />
 </td>
-<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Pisces')" data-cf-modified-08a4b356a6f5e7190810f3d2-="">
+<td class="inactive" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleFilter(this, 'zodiac', 'Pisces')" data-cf-modified-f1d055f7271ffdce4c30ee65-="">
 <img src="/sites/epicseven/files/2019-01/Pisces.png" />
 </td>
 </tr>
@@ -1070,17 +1070,17 @@ i#loading-icon, i#loading-icon-fixed-child {
 <th colspan="5" style="text-align:center !important;">Sort</th>
 </tr>
 <tr>
-<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'title')" class="header" data-cf-modified-08a4b356a6f5e7190810f3d2-="">Name</td>
-<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'hp')" class="header" data-cf-modified-08a4b356a6f5e7190810f3d2-="">HP</td>
-<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'atk')" class="header" data-cf-modified-08a4b356a6f5e7190810f3d2-="">ATK</td>
-<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'def')" class="header" data-cf-modified-08a4b356a6f5e7190810f3d2-="">DEF</td>
-<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'spd')" class="header" data-cf-modified-08a4b356a6f5e7190810f3d2-="">SPD</td>
+<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'title')" class="header" data-cf-modified-f1d055f7271ffdce4c30ee65-="">Name</td>
+<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'hp')" class="header" data-cf-modified-f1d055f7271ffdce4c30ee65-="">HP</td>
+<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'atk')" class="header" data-cf-modified-f1d055f7271ffdce4c30ee65-="">ATK</td>
+<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'def')" class="header" data-cf-modified-f1d055f7271ffdce4c30ee65-="">DEF</td>
+<td onclick="if (!window.__cfRLUnblockHandlers) return false; sort2(this, 'spd')" class="header" data-cf-modified-f1d055f7271ffdce4c30ee65-="">SPD</td>
 </tr>
 </table>
-<button onclick="if (!window.__cfRLUnblockHandlers) return false; addAllVisible()" style="width: 100%; margin-bottom: 10px;" data-cf-modified-08a4b356a6f5e7190810f3d2-="">Add All Shown</button>
-<input type="text" id="hero-search" class="awesomplete" placeholder="Search" onkeyup="if (!window.__cfRLUnblockHandlers) return false; filterText(this, false)" data-cf-modified-08a4b356a6f5e7190810f3d2-=""></input>
-<div class="camp-tabs-button selected-tab" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleHeroes(this)" data-cf-modified-08a4b356a6f5e7190810f3d2-="">All Heroes</div>
-<div class="camp-tabs-button unselected-tab" id="my-heroes-tab" style="margin-right:0px;" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleHeroes(this, true)" data-cf-modified-08a4b356a6f5e7190810f3d2-="">My Heroes <span id="my-heroes-count">0</span></div>
+<button onclick="if (!window.__cfRLUnblockHandlers) return false; addAllVisible()" style="width: 100%; margin-bottom: 10px;" data-cf-modified-f1d055f7271ffdce4c30ee65-="">Add All Shown</button>
+<input type="text" id="hero-search" class="awesomplete" placeholder="Search" onkeyup="if (!window.__cfRLUnblockHandlers) return false; filterText(this, false)" data-cf-modified-f1d055f7271ffdce4c30ee65-=""></input>
+<div class="camp-tabs-button selected-tab" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleHeroes(this)" data-cf-modified-f1d055f7271ffdce4c30ee65-="">All Heroes</div>
+<div class="camp-tabs-button unselected-tab" id="my-heroes-tab" style="margin-right:0px;" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleHeroes(this, true)" data-cf-modified-f1d055f7271ffdce4c30ee65-="">My Heroes <span id="my-heroes-count">0</span></div>
 <div id="hero-list-tab">
 <div id="hero-list" class="clearfix">
 <div id="hero-list-actual" class="unfiltered"></div>
@@ -1122,9 +1122,9 @@ i#loading-icon, i#loading-icon-fixed-child {
 </div>
 </div>
 </div>
-<script src="/sites/grandorder/calc-data/awesomplete.js" type="08a4b356a6f5e7190810f3d2-text/javascript"></script>
+<script src="/sites/grandorder/calc-data/awesomplete.js" type="f1d055f7271ffdce4c30ee65-text/javascript"></script>
 <link rel="stylesheet" href="sites/grandorder/calc-data/awesomplete.css">
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
     var campsite_data = [];
     var user_roster = {
       "roster": [], //maybe make this a dictionary that's like hero: hero OBJECT, value: <top two topic values if added to current team>, to make it easier to sort
@@ -2335,7 +2335,7 @@ function populateResultsHelperOld(resultsList, team, roster, variableLength){
 </div>
 </div>
 </article>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 var camp_data = {
             "126": {
                     "1256": 0,
@@ -6730,99 +6730,99 @@ var camp_data = {
                     "1301": 0,
                   },
               "98271": {
-                    "1256": 0,
-                    "1321": 2,
-                    "1291": 0,
-                    "1246": 1,
-                    "1261": 3,
-                    "1286": 0,
-                    "1326": 3,
-                    "1306": 3,
-                    "1281": 2,
-                    "1336": 4,
-                    "1331": -3,
-                    "1316": 0,
-                    "1311": 0,
-                    "1241": 0,
-                    "1271": 0,
+                    "1256": 5,
+                    "1321": 5,
+                    "1291": -2,
+                    "1246": 3,
+                    "1261": -3,
+                    "1286": -1,
+                    "1326": -2,
+                    "1306": 2,
+                    "1281": 1,
+                    "1336": 2,
+                    "1331": -2,
+                    "1316": 4,
+                    "1311": -3,
+                    "1241": 3,
+                    "1271": -2,
                     "1296": -2,
-                    "1276": 1,
-                    "1266": 2,
-                    "1231": 1,
-                    "1251": -1,
-                    "1236": 0,
+                    "1276": -3,
+                    "1266": 0,
+                    "1231": 0,
+                    "1251": -2,
+                    "1236": -3,
                     "1301": 2,
                   },
               "98276": {
-                    "1256": -8,
-                    "1321": -6,
-                    "1291": 0,
-                    "1246": 6,
+                    "1256": -7,
+                    "1321": -5,
+                    "1291": 6,
+                    "1246": 3,
                     "1261": 4,
-                    "1286": 5,
-                    "1326": 8,
-                    "1306": 6,
-                    "1281": 6,
-                    "1336": 2,
-                    "1331": -3,
-                    "1316": -1,
+                    "1286": 6,
+                    "1326": 4,
+                    "1306": 7,
+                    "1281": 5,
+                    "1336": 5,
+                    "1331": 0,
+                    "1316": 1,
                     "1311": 4,
-                    "1241": -3,
-                    "1271": 2,
-                    "1296": 0,
+                    "1241": -1,
+                    "1271": 5,
+                    "1296": 3,
                     "1276": -1,
-                    "1266": 5,
-                    "1231": 7,
+                    "1266": 4,
+                    "1231": 2,
                     "1251": -2,
-                    "1236": -4,
-                    "1301": 2,
+                    "1236": 1,
+                    "1301": 3,
                   },
               "98281": {
-                    "1256": 1,
-                    "1321": -1,
-                    "1291": 1,
-                    "1246": 4,
-                    "1261": 4,
-                    "1286": 4,
-                    "1326": 0,
-                    "1306": 2,
-                    "1281": 2,
-                    "1336": -3,
-                    "1331": 2,
-                    "1316": 3,
-                    "1311": 6,
-                    "1241": 2,
+                    "1256": -4,
+                    "1321": -6,
+                    "1291": -2,
+                    "1246": 6,
+                    "1261": 6,
+                    "1286": 5,
+                    "1326": 5,
+                    "1306": 5,
+                    "1281": 5,
+                    "1336": 0,
+                    "1331": -5,
+                    "1316": -1,
+                    "1311": 2,
+                    "1241": 1,
                     "1271": 0,
-                    "1296": -6,
-                    "1276": 5,
-                    "1266": 1,
-                    "1231": 4,
+                    "1296": -3,
+                    "1276": 4,
+                    "1266": 4,
+                    "1231": 8,
                     "1251": -2,
-                    "1236": 3,
-                    "1301": 4,
+                    "1236": 0,
+                    "1301": 3,
                   },
               "98286": {
-                    "1256": 7,
-                    "1321": -1,
-                    "1291": 5,
-                    "1246": 1,
-                    "1261": 4,
-                    "1286": -3,
+                    "1256": 8,
+                    "1321": 0,
+                    "1291": 8,
+                    "1246": 8,
+                    "1261": 9,
+                    "1286": 0,
                     "1326": 0,
-                    "1306": 1,
+                    "1306": 0,
                     "1281": 2,
-                    "1336": 3,
+                    "1336": 2,
                     "1331": -3,
-                    "1316": 3,
-                    "1311": 5,
-                    "1241": -3,
+                    "1316": 0,
+                    "1311": 7,
+                    "1241": -6,
                     "1271": 3,
-                    "1296": -2,
-                    "1276": -1,
-                    "1266": 0,
-                    "1231": 3,
-                    "1251": -2,
-                    "1236": -3,
+                    "1296": -5,
+                    "1276": 0,
+                    "1266": 2,
+                    "1231": 5,
+                    "1251": -4,
+                    "1236": 1,
                     "1301": 0,
                   },
               }
@@ -7992,7 +7992,7 @@ var camp_data = {
 <h2 class="top-content-brand">Latest Content</h2>
 <div class="latest-content-container">
 <p></p>
-<div class="views-element-container"><div class="field--name-field-featured-content-list view view-latest-featured-content view-id-latest_featured_content view-display-id-block_1 js-view-dom-id-c843fb6134bc2581f517c05f2cbf2b84a2ccbb762423adc73871ffe1901363f3">
+<div class="views-element-container"><div class="field--name-field-featured-content-list view view-latest-featured-content view-id-latest_featured_content view-display-id-block_1 js-view-dom-id-0adcb4c70dc5fa87078bd3f32ab93c9e77cf704e60be1759b755c48aeff32045">
 <div class="view-content">
 <div class="views-row"><div class="views-field views-field-view-node"><span class="field-content"><a href="/epicseven/epic-seven-official-livestream-december-5th">
 <div class="field__item ">
@@ -8030,11 +8030,11 @@ How to Efficiently Skill &amp; Level up Pets!
 </div>
 </div>
 </a></span></div></div>
-<div class="views-row"><div class="views-field views-field-view-node"><span class="field-content"><a href="/epicseven/epicseven/epicseven/pet-guide">
+<div class="views-row"><div class="views-field views-field-view-node"><span class="field-content"><a href="/epicseven/pet-guide">
 <div class="field__item ">
 <div class="featured-content-list-main ">
 <div class="featured-list-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/featured_content_list/public/2019-11/Pet-Guide.png?itok=7Dxddg5W" width="100" height="53" alt="" typeof="Image" class="image-style-featured-content-list" />
+<img src="/epicseven/sites/epicseven/files/styles/featured_content_list/public/2019-11/Pet-Guide.png?itok=7Dxddg5W" width="100" height="53" alt="" typeof="Image" class="image-style-featured-content-list" />
 </div>
 <div class="featured-list-link">
 Pet Guide
@@ -8054,11 +8054,11 @@ Pet Guide
 </div>
 </div>
 </a></span></div></div>
-<div class="views-row"><div class="views-field views-field-view-node"><span class="field-content"><a href="/epicseven/epicseven/major-rebalancing-walkthrough-and-thoughts-october-edition">
+<div class="views-row"><div class="views-field views-field-view-node"><span class="field-content"><a href="/epicseven/major-rebalancing-walkthrough-and-thoughts-october-edition">
 <div class="field__item ">
 <div class="featured-content-list-main ">
 <div class="featured-list-image">
-<img src="/epicseven/epicseven/sites/epicseven/files/styles/featured_content_list/public/2019-10/Glassbroken.png?itok=PvSQQmFd" width="100" height="53" alt="" typeof="Image" class="image-style-featured-content-list" />
+<img src="/epicseven/sites/epicseven/files/styles/featured_content_list/public/2019-10/Glassbroken.png?itok=PvSQQmFd" width="100" height="53" alt="" typeof="Image" class="image-style-featured-content-list" />
 </div>
 <div class="featured-list-link">
 Major Rebalancing Walkthrough and Thoughts (October Edition)
@@ -8098,7 +8098,7 @@ Epic 7 GamePress is Recruiting Writers!
 <div class="hide-desktop">
 <div class="bottom-ads-mobile-1">
 <div id='div-ad-EpicSeven_Mobile_300x250_Extra_3'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() <= 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Mobile_300x250_Extra_3'); }); }
 </script>
 </div>
@@ -8133,7 +8133,7 @@ if(detectWidth() <= 980) { googletag.cmd.push(function() { googletag.display('di
 
 <div class="sidebar-1-ad-desktop">
 <div style="margin:10px 0px;" id='div-ad-EpicSeven_Desktop_RightSidebar_A'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Desktop_RightSidebar_A'); }); }
 </script>
 </div>
@@ -8143,21 +8143,21 @@ if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div
 <h2>Popular Pages Today</h2>
 <ul>
 <li>
-<a href="/epicseven/epicseven/epicseven/camping-simulator">
+<a href="/epicseven/camping-simulator">
 <span class="pages-ranking-number ranking-number-1">1</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/CampSim.png?itok=a020_Ux3" />
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/CampSim.png?itok=a020_Ux3" />
 </span>
 <span class="pages-ranking-title">
 Camping Simulator
 </span>
- </a>
+</a>
 </li>
 <li>
-<a href="/epicseven/epicseven/epicseven/hero-list">
+<a href="/epicseven/hero-list">
 <span class="pages-ranking-number ranking-number-2">2</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/HeroList.png?itok=QdKqo2xS" />
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/HeroList.png?itok=QdKqo2xS" />
 </span>
 <span class="pages-ranking-title">
 Hero List
@@ -8165,10 +8165,10 @@ Hero List
 </a>
 </li>
 <li>
-<a href="/epicseven/epicseven/epicseven/tier-list">
+<a href="/epicseven/tier-list">
 <span class="pages-ranking-number ranking-number-3">3</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/Vildred_0.png?itok=lzd5hYuV" />
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/Vildred_0.png?itok=lzd5hYuV" />
 </span>
 <span class="pages-ranking-title">
 Tier List
@@ -8176,65 +8176,10 @@ Tier List
 </a>
 </li>
 <li>
-<a href="/epicseven/epicseven/epicseven/summon-simulator">
+<a href="/epicseven/epic-seven-reroll-guide">
 <span class="pages-ranking-number ranking-number-4">4</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/SummonSim_0.png?itok=GjzBFI9u" />
-</span>
-<span class="pages-ranking-title">
-Summon Simulator
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/pet-guide">
-<span class="pages-ranking-number ranking-number-5">5</span>
-<span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/Pet-Guide.png?itok=meGYNiGm" />
-</span>
-<span class="pages-ranking-title">
-Pet Guide
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/guild-wars-defense-meta">
-<span class="pages-ranking-number ranking-number-6">6</span>
-<span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/DefMEta.png?itok=WjS-S3cN" />
-</span>
-<span class="pages-ranking-title">
-Guild Wars Defense Meta
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/arena-offense-tier-list">
-<span class="pages-ranking-number ranking-number-7">7</span>
-<span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/80x40/public/2019-10/ArenaOffense.png?itok=VRizH-xm" />
-</span>
-<span class="pages-ranking-title">
-Arena Offense Tier List
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/wyvern-13-guide-expert">
-<span class="pages-ranking-number ranking-number-8">8</span>
-<span class="pages-ranking-image">
-<img src="/noog.png" />
-</span>
-<span class="pages-ranking-title">
-Wyvern 13 Guide (Expert)
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/epic-seven-reroll-guide">
-<span class="pages-ranking-number ranking-number-9">9</span>
-<span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/RerollGuide.png?itok=jGpafCRV" />
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/RerollGuide.png?itok=jGpafCRV" />
 </span>
 <span class="pages-ranking-title">
 Epic Seven Reroll Guide
@@ -8242,10 +8187,65 @@ Epic Seven Reroll Guide
 </a>
 </li>
 <li>
-<a href="/epicseven/epicseven/epicseven/guides">
+<a href="/epicseven/arena-offense-tier-list">
+<span class="pages-ranking-number ranking-number-5">5</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-10/ArenaOffense.png?itok=VRizH-xm" />
+</span>
+<span class="pages-ranking-title">
+Arena Offense Tier List
+</span>
+</a>
+</li>
+<li>
+<a href="/epicseven/guild-wars-defense-meta">
+<span class="pages-ranking-number ranking-number-6">6</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/DefMEta.png?itok=WjS-S3cN" />
+</span>
+<span class="pages-ranking-title">
+Guild Wars Defense Meta
+</span>
+</a>
+</li>
+<li>
+<a href="/epicseven/pet-guide">
+<span class="pages-ranking-number ranking-number-7">7</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/Pet-Guide.png?itok=meGYNiGm" />
+</span>
+<span class="pages-ranking-title">
+Pet Guide
+</span>
+</a>
+</li>
+ <li>
+<a href="/epicseven/summon-simulator">
+<span class="pages-ranking-number ranking-number-8">8</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/SummonSim_0.png?itok=GjzBFI9u" />
+</span>
+<span class="pages-ranking-title">
+Summon Simulator
+</span>
+</a>
+</li>
+<li>
+<a href="/epicseven/arena-defense-popularity-rankings">
+<span class="pages-ranking-number ranking-number-9">9</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-12/ArenaDefense.png?itok=MLKWjUhS" />
+</span>
+<span class="pages-ranking-title">
+Arena Defense Popularity Rankings
+</span>
+</a>
+</li>
+<li>
+<a href="/epicseven/guides">
 <span class="pages-ranking-number ranking-number-10">10</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/Student.png?itok=ddV9MFmy" />
+<img src="/epicseven/sites/epicseven/files/styles/80x40/public/2019-11/Student.png?itok=ddV9MFmy" />
 </span>
 <span class="pages-ranking-title">
 Guides
@@ -8253,11 +8253,11 @@ Guides
 </a>
 </li>
 </ul>
-<div> <div class="view view-popular-pages view-id-popular_pages view-display-id-block_1 js-view-dom-id-9c12123a5ee2eeb51c510f734115b87ab4f2ed992542c7c24750dc0680919289">
+<div> <div class="view view-popular-pages view-id-popular_pages view-display-id-block_1 js-view-dom-id-bf6581b1aca059b5930530442ce06470e89abffa5d6d67adce05afc0ddd6ee93">
 <div class="view-content">
 </div>
 <div class="view-footer">
-<a href="https://gamepress.gg/epicseven/epicseven/epicseven/popular-all">See All</a>
+<a href="https://gamepress.gg/epicseven/popular-all">See All</a>
 </div>
 </div>
 </div>
@@ -8266,14 +8266,14 @@ Guides
 <div class="hide-desktop">
 <div class="bottom-ads-mobile-2">
 <div id='div-ad-EpicSeven_Mobile_300x250_Extra_4'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() <= 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Mobile_300x250_Extra_4'); }); }
 </script>
 </div></div>
 </div>
 <div class="sidebar-2-ad-desktop">
 <div style="margin-bottom:10px;" id='div-ad-EpicSeven_Desktop_RightSidebar_B'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Desktop_RightSidebar_B'); }); }
 </script>
 </div></div>
@@ -8282,21 +8282,65 @@ if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div
 <h2>Popular Heroes Today</h2>
 <ul>
 <li>
-<a href="/epicseven/epicseven/epicseven/hero/celine">
+<a href="/epicseven/hero/arbiter-vildred">
 <span class="pages-ranking-number ranking-number-1">1</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2020-06/c1103_s.png?itok=_bvK5WkT" />
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Arbiter-Vildred-Icon.png?itok=G4eVuCE1" />
 </span>
 <span class="pages-ranking-title">
-Celine
+Arbiter Vildred
 </span>
 </a>
 </li>
 <li>
-<a href="/epicseven/epicseven/epicseven/hero/remnant-violet">
+<a href="/epicseven/hero/ravi">
 <span class="pages-ranking-number ranking-number-2">2</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2020-06/c2074_s.png?itok=k9nfmgUr" />
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Ravi-Icon.png?itok=_6zkXLUe" />
+</span>
+<span class="pages-ranking-title">
+Ravi
+</span>
+</a>
+</li>
+<li>
+<a href="/epicseven/hero/adventurer-ras">
+<span class="pages-ranking-number ranking-number-3">3</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2020-04/c5001_s.png?itok=tagSuK_x" />
+</span>
+<span class="pages-ranking-title">
+Adventurer Ras
+</span>
+</a>
+</li>
+<li>
+<a href="/epicseven/hero/sigret">
+<span class="pages-ranking-number ranking-number-4">4</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Sigret-Icon.png?itok=3Ll9NGrX" />
+ </span>
+<span class="pages-ranking-title">
+Sigret
+</span>
+</a>
+</li>
+<li>
+<a href="/epicseven/hero/seaside-bellona">
+<span class="pages-ranking-number ranking-number-5">5</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-07/BellonaSkin2.png?itok=SzrsXQmG" />
+</span>
+<span class="pages-ranking-title">
+Seaside Bellona
+</span>
+</a>
+</li>
+<li>
+<a href="/epicseven/hero/remnant-violet">
+<span class="pages-ranking-number ranking-number-6">6</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2020-06/c2074_s.png?itok=k9nfmgUr" />
 </span>
 <span class="pages-ranking-title">
 Remnant Violet
@@ -8304,65 +8348,10 @@ Remnant Violet
 </a>
 </li>
 <li>
-<a href="/epicseven/epicseven/epicseven/hero/assassin-cartuja">
-<span class="pages-ranking-number ranking-number-3">3</span>
-<span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Assassin-Cartuja-Icon.png?itok=dExufm4c" />
-</span>
-<span class="pages-ranking-title">
-Assassin Cartuja
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/hero/tamarinne">
-<span class="pages-ranking-number ranking-number-4">4</span>
-<span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Tamarinne-Icon.png?itok=dINzWlkS" />
-</span>
-<span class="pages-ranking-title">
-Tamarinne
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/hero/luna">
-<span class="pages-ranking-number ranking-number-5">5</span>
-<span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Luna-Icon.png?itok=hHClwaBN" />
-</span>
-<span class="pages-ranking-title">
-Luna
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/hero/sez">
-<span class="pages-ranking-number ranking-number-6">6</span>
-<span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Sez-Icon.png?itok=atIs4qXr" />
-</span>
-<span class="pages-ranking-title">
-Sez
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/hero/sigret">
+<a href="/epicseven/hero/angelic-montmorancy">
 <span class="pages-ranking-number ranking-number-7">7</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Sigret-Icon.png?itok=3Ll9NGrX" />
-</span>
-<span class="pages-ranking-title">
-Sigret
-</span>
-</a>
-</li>
-<li>
-<a href="/epicseven/epicseven/epicseven/hero/angelic-montmorancy">
-<span class="pages-ranking-number ranking-number-8">8</span>
-<span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-05/Montmo_0.png?itok=NqeW1lav" />
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-05/Montmo_0.png?itok=NqeW1lav" />
 </span>
 <span class="pages-ranking-title">
 Angelic Montmorancy
@@ -8370,33 +8359,44 @@ Angelic Montmorancy
 </a>
 </li>
 <li>
-<a href="/epicseven/epicseven/epicseven/hero/vildred">
-<span class="pages-ranking-number ranking-number-9">9</span>
+<a href="/epicseven/hero/lilias">
+<span class="pages-ranking-number ranking-number-8">8</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Vildred-Icon.png?itok=QeIiM0zM" />
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-09/Lilias_0.png?itok=28wzkNED" />
 </span>
 <span class="pages-ranking-title">
-Vildred
+Lilias
 </span>
 </a>
 </li>
 <li>
-<a href="/epicseven/epicseven/epicseven/hero/iseria">
-<span class="pages-ranking-number ranking-number-10">10</span>
+<a href="/epicseven/hero/cidd">
+<span class="pages-ranking-number ranking-number-9">9</span>
 <span class="pages-ranking-image">
-<img src="/epicseven/epicseven/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Iseria%20Icon.png?itok=ksOiDUxl" />
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-02/Cidd-Icon.png?itok=OI7W1Snh" />
 </span>
 <span class="pages-ranking-title">
-Iseria
+Cidd
+</span>
+</a>
+</li>
+<li>
+<a href="/epicseven/hero/champion-zerato">
+<span class="pages-ranking-number ranking-number-10">10</span>
+<span class="pages-ranking-image">
+<img src="/epicseven/sites/epicseven/files/styles/thumbnail/public/2019-06/ChampZerato.png?itok=BVmcut56" />
+</span>
+<span class="pages-ranking-title">
+Champion Zerato
 </span>
 </a>
 </li>
 </ul>
-<div> <div class="view view-popular-pages view-id-popular_pages view-display-id-block_3 js-view-dom-id-ab60ebf7f8d8965dd6c78e5bf9bbfacd7d48ad14e17a75175cae6d66096e2633">
+<div> <div class="view view-popular-pages view-id-popular_pages view-display-id-block_3 js-view-dom-id-5244b977cb49a0dcf5d559daf8fae2423871580f737e321117c8a0fd6bd36b1b">
 <div class="view-content">
 </div>
 <div class="view-footer">
-<a href="https://gamepress.gg/epicseven/epicseven/epicseven/popular-heroes-today">See All</a>
+<a href="https://gamepress.gg/epicseven/popular-heroes-today">See All</a>
 </div>
 </div>
 </div>
@@ -8404,7 +8404,7 @@ Iseria
 </div>
 <div class="sidebar-3-ad-desktop">
 <div id='div-ad-EpicSeven_Desktop_RightSidebar_C'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Desktop_RightSidebar_C'); }); }
 </script>
 </div></div>
@@ -8416,12 +8416,12 @@ if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div
 <div id="gp-tier-modal" class="modal">
 
 <div class="modal-content-gp-tier" id="modal-cont-gp-tier">
-<span class="remove" onclick="if (!window.__cfRLUnblockHandlers) return false; closeModalGP()" data-cf-modified-08a4b356a6f5e7190810f3d2-=""><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+<span class="remove" onclick="if (!window.__cfRLUnblockHandlers) return false; closeModalGP()" data-cf-modified-f1d055f7271ffdce4c30ee65-=""><i class="fa fa-times-circle" aria-hidden="true"></i></span>
 <div id="unit-expl-gp"></div>
 </div>
 </div>
 </span>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
   var gpLoaded = false;
     $(document).ready(function() {
           bindButtons();
@@ -8491,7 +8491,7 @@ if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div
 <section class="footer-top">
 
 <div id='div-ad-EpicSeven_Desktop_Leaderboard_BTF'>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">
 if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div-ad-EpicSeven_Desktop_Leaderboard_BTF'); }); }
 </script>
 </div>
@@ -8522,6 +8522,6 @@ if(detectWidth() > 980) { googletag.cmd.push(function() { googletag.display('div
 </div>
 </div>
 <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/epicseven\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/7336","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"classy\/base,classy\/messages,core\/drupal.collapse,core\/html5shiv,core\/normalize,gamepressbase\/global-scripts,gamepressbase\/global-styling,google_analytics\/google_analytics,main\/global-scripts,main\/global-styling,main\/js-header,node\/drupal.node,paragraphs\/drupal.paragraphs.unpublished,search_api_autocomplete\/search_api_autocomplete,system\/base,views\/views.module","theme":"gamepressbase","theme_token":null},"ajaxTrustedUrl":{"\/epicseven\/search":true},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"search_api_autocomplete":{"site_search":{"auto_submit":true}},"user":{"uid":0,"permissionsHash":"293e395381c800b593504bf74800e55debf8de41b57d73ee877badac5665171e"}}</script>
-<script src="/epicseven/sites/epicseven/files/js/js_d2ewvZyuY1BVsYCqxVcvaWcxxh6La8WYzaXNx4g9S74.js" type="08a4b356a6f5e7190810f3d2-text/javascript"></script>
-<script type="08a4b356a6f5e7190810f3d2-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"48befe3114","applicationID":"56773492","transactionName":"MQdVN0FSWRVSAhIKWghNdgBHWlgIHBEHBFA5AVYAW1Y=","queueTime":0,"applicationTime":32,"atts":"HUBWQQlIShs=","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="08a4b356a6f5e7190810f3d2-|49" defer=""></script></body>
+<script src="/epicseven/sites/epicseven/files/js/js_d2ewvZyuY1BVsYCqxVcvaWcxxh6La8WYzaXNx4g9S74.js" type="f1d055f7271ffdce4c30ee65-text/javascript"></script>
+<script type="f1d055f7271ffdce4c30ee65-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"48befe3114","applicationID":"56773492","transactionName":"MQdVN0FSWRVSAhIKWghNdgBHWlgIHBEHBFA5AVYAW1Y=","queueTime":0,"applicationTime":40,"atts":"HUBWQQlIShs=","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="f1d055f7271ffdce4c30ee65-|49" defer=""></script></body>
 </html>
