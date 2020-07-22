@@ -182,9 +182,117 @@ module.exports = (context) => {
         }
     };
 
-    const csvEntry = (key, json) => {
-        return "";  
-    };
+    const csvEntry = (() => {
+        const csvLevelText = (level) => {
+            return level === undefined ? "" : level.label + " " + level.value + (level.num === "percent" ? "%" : "") + " " + level.type;
+        };
+    
+        const stamp = {
+            "3" : {"D":0, "C":1, "B":2, "A":3, "S":4, "SS":5, "SSS":6},
+            "4" : {"D":-1, "C":0, "B":1, "A":2, "S":3, "SS":4, "SSS":4},
+            "5" : {"D":-1, "C":-1, "B":0, "A":1, "S":2, "SS":3, "SSS":4},
+        };
+
+        const csvStampValue = (rare, obj, rank) => {
+            const index = stamp[rare + ""][rank];
+            return index != -1 ? obj[index].value : "";
+        };
+
+        return (key, json) => {
+            if(key === "名称") return json.name;
+            if(key === "レアリティ") return "★" + json.rare;
+            if(key === "クラス") return json.clazz;
+            if(key === "属性") return json.type;
+    
+            if(key === "攻撃力(max)") return json.status.max.attack;
+            if(key === "生命力(max)") return json.status.max.health;
+            if(key === "防御力(max)") return json.status.max.defense;
+            if(key === "速度(max)") return json.status.max.speed;
+            if(key === "クリティカル発生率") return json.status.max.critical_hit;
+            if(key === "クリティカルダメージ") return json.status.max.critical_damage;
+            if(key === "効果命中率") return json.status.max.debuff_hit;
+            if(key === "効果抵抗率") return json.status.max.debuff_resist;
+            if(key === "連携攻撃発生率") return json.status.max.unity_chance;
+    
+            if(json.extention.camping !== undefined) {
+                if(key === "会話1 ID") return json.extention.camping.topic[0].id;
+                if(key === "会話1 名称") return json.extention.camping.topic[0].name;
+                if(key === "会話2 ID") return json.extention.camping.topic[1].id;
+                if(key === "会話2 名称") return json.extention.camping.topic[1].name;
+                if(key === "士気増減") return Object.keys(json.extention.camping.camping)
+                        .map(k => k + ":" + json.extention.camping.camping[k]).join("\r\n");
+            }
+    
+            if(key === "スキル1名称") return json.skill[0].name;
+            if(key === "ターン(S1)") return json.skill[0].tern;
+            if(key === "説明(S1)") return json.skill[0].desc;
+            if(key === "魂力開放 説明(S1)") return json.skill[0].soul.bern_desc;
+            if(key === "獲得魂力(S1)") return json.skill[0].soul.soul;
+            if(key === "消費魂力(S1)") return json.skill[0].soul.usesoul;
+            if(key === "魂力開放(S1)") return json.skill[0].soul.soulbern ? "TRUE" : "FALSE";
+            if(key === "+1(S1)") return csvLevelText(json.skill[0].level[0]);
+            if(key === "+2(S1)") return csvLevelText(json.skill[0].level[1]);
+            if(key === "+3(S1)") return csvLevelText(json.skill[0].level[2]);
+            if(key === "+4(S1)") return csvLevelText(json.skill[0].level[3]);
+            if(key === "+5(S1)") return csvLevelText(json.skill[0].level[4]);
+            if(key === "+6(S1)") return csvLevelText(json.skill[0].level[5]);
+            if(key === "+7(S1)") return csvLevelText(json.skill[0].level[6]);
+    
+            if(key === "スキル2名称") return json.skill[1].name;
+            if(key === "ターン(S2)") return json.skill[1].tern;
+            if(key === "説明(S2)") return json.skill[1].desc;
+            if(key === "魂力開放 説明(S2)") return json.skill[1].soul.bern_desc;
+            if(key === "獲得魂力(S2)") return json.skill[1].soul.soul;
+            if(key === "消費魂力(S2)") return json.skill[1].soul.usesoul;
+            if(key === "魂力開放(S2)") return json.skill[1].soul.soulbern ? "TRUE" : "FALSE";
+            if(key === "+1(S2)") return csvLevelText(json.skill[1].level[0]);
+            if(key === "+2(S2)") return csvLevelText(json.skill[1].level[1]);
+            if(key === "+3(S2)") return csvLevelText(json.skill[1].level[2]);
+            if(key === "+4(S2)") return csvLevelText(json.skill[1].level[3]);
+            if(key === "+5(S2)") return csvLevelText(json.skill[1].level[4]);
+            if(key === "+6(S2)") return csvLevelText(json.skill[1].level[5]);
+            if(key === "+7(S2)") return csvLevelText(json.skill[1].level[6]);
+    
+            if(key === "スキル3名称") return json.skill[2].name;
+            if(key === "ターン(S3)") return json.skill[2].tern;
+            if(key === "説明(S3)") return json.skill[2].desc;
+            if(key === "魂力開放 説明(S3)") return json.skill[2].soul.bern_desc;
+            if(key === "獲得魂力(S3)") return json.skill[2].soul.soul;
+            if(key === "消費魂力(S3)") return json.skill[2].soul.usesoul;
+            if(key === "魂力開放(S3)") return json.skill[2].soul.soulbern ? "TRUE" : "FALSE";
+            if(key === "+1(S3)") return csvLevelText(json.skill[2].level[0]);
+            if(key === "+2(S3)") return csvLevelText(json.skill[2].level[1]);
+            if(key === "+3(S3)") return csvLevelText(json.skill[2].level[2]);
+            if(key === "+4(S3)") return csvLevelText(json.skill[2].level[3]);
+            if(key === "+5(S3)") return csvLevelText(json.skill[2].level[4]);
+            if(key === "+6(S3)") return csvLevelText(json.skill[2].level[5]);
+            if(key === "+7(S3)") return csvLevelText(json.skill[2].level[6]);
+
+            if(json.stamp.expansion.length !== 0) {
+                if(key === "陣形効果") return json.stamp.expansion[0].label + (json.stamp.expansion[0].type === "fix" ? "(固定)" : "(%)");
+                if(key === "D(陣形)") return csvStampValue(json.rare, json.stamp.expansion, "D");
+                if(key === "C(陣形)") return csvStampValue(json.rare, json.stamp.expansion, "C");
+                if(key === "B(陣形)") return csvStampValue(json.rare, json.stamp.expansion, "B");
+                if(key === "A(陣形)") return csvStampValue(json.rare, json.stamp.expansion, "A");
+                if(key === "S(陣形)") return csvStampValue(json.rare, json.stamp.expansion, "S");
+                if(key === "SS(陣形)") return csvStampValue(json.rare, json.stamp.expansion, "SS");
+                if(key === "SSS(陣形)") return csvStampValue(json.rare, json.stamp.expansion, "SSS");
+            }
+
+            if(json.stamp.collect.length !== 0) {
+                if(key === "刻印集中") return json.stamp.collect[0].label + (json.stamp.collect[0].type === "fix" ? "(固定)" : "(%)");
+                if(key === "D(刻印)") return csvStampValue(json.rare, json.stamp.collect, "D");
+                if(key === "C(刻印)") return csvStampValue(json.rare, json.stamp.collect, "C");
+                if(key === "B(刻印)") return csvStampValue(json.rare, json.stamp.collect, "B");
+                if(key === "A(刻印)") return csvStampValue(json.rare, json.stamp.collect, "A");
+                if(key === "S(刻印)") return csvStampValue(json.rare, json.stamp.collect, "S");
+                if(key === "SS(刻印)") return csvStampValue(json.rare, json.stamp.collect, "SS");
+                if(key === "SSS(刻印)") return csvStampValue(json.rare, json.stamp.collect, "SSS");
+            }
+
+            return "";  
+        };
+    })();
 
     return {
         csvEntry : csvEntry,
