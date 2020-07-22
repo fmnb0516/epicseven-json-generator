@@ -164,9 +164,9 @@ program.command('cacheupdate')
         }
     });
 
-program.command('generate <target> [url]')
+program.command('generate <target> [name]')
     .description('generate json file, support target is [all, hero, artifact, material].')
-    .action(async (targetMode, targetUrl) => {
+    .action(async (targetMode, targetName) => {
 
         const builderFactory = (type , json) => {
             if(type === "hero") {
@@ -188,15 +188,41 @@ program.command('generate <target> [url]')
             "material" : ["material"]
         };
 
-        const url = targetMode === "all" ? "" : common.nullToBlank(targetUrl);
+        const name = targetMode === "all" ? "" : common.nullToBlank(targetName);
 
         const DataBuilder = require("./modules/data-builder.js");
         const DataGenerator = require("./modules/data-generator.js");
 
         const gen = new DataGenerator.Generator();
         await require("./modules/" + lang + "/index.js")(gen.toBuilder(), "./docs/"+lang, common);
-        await gen.generate("./docs/"+lang, support[targetMode], url, builderFactory, common);
+        await gen.generate("./docs/"+lang, support[targetMode], name, builderFactory, common);
 
     });
+
+program.command('csv <target>')
+    .description('generate csv file, support target is [hero, artifact, material].')
+    .action(async (targetMode) => {
+
+        const builderFactory = (type , json) => {
+            if(type === "hero") {
+                return new DataBuilder.HeroDataBuilder(json);
+            }
+            if(type === "artifact") {
+                return new DataBuilder.ArtifactDataBuilder(json);
+            }
+            if(type === "material") {
+                return new DataBuilder.MaterialDataBuilder(json);
+            }
+            return null;
+        };
+
+        const DataBuilder = require("./modules/data-builder.js");
+        const DataGenerator = require("./modules/data-generator.js");
+
+        const gen = new DataGenerator.Generator();
+        await require("./modules/" + lang + "/index.js")(gen.toBuilder(), "./docs/"+lang, common);
+        await gen.toCSV("./docs/"+lang, targetMode, builderFactory, common);
+    });
+
 
 program.parse(process.argv);

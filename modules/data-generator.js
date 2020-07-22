@@ -5,24 +5,33 @@ class Builder {
         this.gen = gen;
     };
 
-    hero(url, lparser, dparser) {
+    hero(url, lparser, dparser, csvExclued, csvHeader, cparser) {
         this.gen.setCharacterListUrl(url)
-            .setCaharacterListPageParser(lparser)
-            .setCaharacterDataPageParser(dparser);
+            .setCharacterListPageParser(lparser)
+            .setCharacterDataPageParser(dparser)
+            .setCharacterCsvExclude(csvExclued)
+            .setCharacterCsvHeader(csvHeader)
+            .setCharacterCvEntryParser(cparser);
         return this;
     };
 
-    artifact(url, lparser, dparser) {
+    artifact(url, lparser, dparser, csvExclued, csvHeader, cparser) {
         this.gen.setArtifactListUrl(url)
             .setArtifactListPageParser(lparser)
-            .setArtifactDataPageParser(dparser);
+            .setArtifactDataPageParser(dparser)
+            .setArtifactCsvExclude(csvExclued)
+            .setArtifactCsvHeader(csvHeader)
+            .setArtifactCvEntryParser(cparser);
         return this;
     };
 
-    material(url, lparser, dparser) {
+    material(url, lparser, dparser, csvExclued, csvHeader, cparser) {
         this.gen.setMaterialListUrl(url)
             .setMaterialListPageParser(lparser)
-            .setMaterialDataPageParser(dparser);
+            .setMaterialDataPageParser(dparser)
+            .setMaterialCsvExclude(csvExclued)
+            .setMaterialCsvHeader(csvHeader)
+            .setMaterialCvEntryParser(cparser);
         return this;
     };
 
@@ -40,17 +49,69 @@ class Generator {
         this.materialListUrl = null;
 
         this.artifactListPageParser = null
-        this.caharacterListPageParser = null;
+        this.characterListPageParser = null;
         this.materialListPageParser = null;
 
-        this.caharacterDataPageParser = null; 
+        this.characterDataPageParser = null; 
         this.artifactDataPageParser = null;
         this.materialDataPageParser = null;
+
         this.initializer = null;
+
+        this.artifactCsvExclude = [];
+        this.characterCsvExclude = [];
+        this.materialCsvExclude = [];
+
+        this.artifactCsvHeader = [];
+        this.characterCsvHeader = [];
+        this.materialCsvHeader = [];
+
+        this.characterCvEntryParser = null;
+        this.materialCvEntryParser = null;
+        this.artifactCvEntryParser = null;
     };
 
     setInitializer(func) {
         this.initializer = func;
+        return this;
+    };
+
+    setCharacterCvEntryParser(parser) {
+        this.characterCvEntryParser = parser;
+        return this;
+    };
+    setMaterialCvEntryParser(parser) {
+        this.materialCvEntryParser = parser;
+        return this;
+    };
+    setArtifactCvEntryParser(parser) {
+        this.artifactCvEntryParser = parser;
+        return this;
+    };
+
+    setArtifactCsvHeader(header) {
+        this.artifactCsvHeader = header;
+        return this;
+    };
+    setCharacterCsvHeader(header) {
+        this.characterCsvHeader = header;
+        return this;
+    };
+    setMaterialCsvHeader(header) {
+        this.materialCsvHeader = header;
+        return this;
+    };
+
+    setArtifactCsvExclude(exclueds) {
+        this.artifactCsvExclude = exclueds;
+        return this;
+    };
+    setCharacterCsvExclude(exclueds) {
+        this.characterCsvExclude = exclueds;
+        return this;
+    };
+    setMaterialCsvExclude(exclueds) {
+        this.materialCsvExclude = exclueds;
         return this;
     };
 
@@ -71,8 +132,8 @@ class Generator {
         this.artifactListPageParser = parser;
         return this;
     };
-    setCaharacterListPageParser(parser) {
-        this.caharacterListPageParser = parser;
+    setCharacterListPageParser(parser) {
+        this.characterListPageParser = parser;
         return this;
     };
     setMaterialListPageParser(parser) {
@@ -80,8 +141,8 @@ class Generator {
         return this;
     };
 
-    setCaharacterDataPageParser(parser) {
-        this.caharacterDataPageParser = parser;
+    setCharacterDataPageParser(parser) {
+        this.characterDataPageParser = parser;
         return this;
     };
     setArtifactDataPageParser(parser) {
@@ -100,28 +161,58 @@ class Generator {
     data(name) {
         if(name === "hero") {
             return {
-                "listPageParser" : this.caharacterListPageParser,
-                "dataPageParser" : this.caharacterDataPageParser,
-                "listUrl" : this.characterListUrl
+                "listPageParser" : this.characterListPageParser,
+                "dataPageParser" : this.characterDataPageParser,
+                "listUrl" : this.characterListUrl,
+                "csvExclueds" : this.characterCsvExclude,
+                "csvHeader" : this.characterCsvHeader,
+                "csvEntry" : this.characterCvEntryParser
+
             };
 
         } else if(name === "artifact") {
             return {
                 "listPageParser" : this.artifactListPageParser,
                 "dataPageParser" : this.artifactDataPageParser,
-                "listUrl" : this.artifactListUrl
+                "listUrl" : this.artifactListUrl,
+                "csvExclueds" : this.artifactCsvExclude,
+                "csvHeader" : this.artifactCsvHeader,
+                "csvEntry" : this.artifactCvEntryParser
             };
         } else if(name === "material") {
             return {
                 "listPageParser" : this.materialListPageParser,
                 "dataPageParser" : this.materialDataPageParser,
-                "listUrl" : this.materialListUrl
+                "listUrl" : this.materialListUrl,
+                "csvExclueds" : this.materialCsvExclude,
+                "csvHeader" : this.materialCsvHeader,
+                "csvEntry" : this.materialCvEntryParser
             };
         }
     };
 
-    async generate(docsDir, targetMode, targetUrl, factory, common) {
-        console.log("*** generate start, " + targetMode + "," + targetUrl);
+    async toCSV(docsDir, mode, factory, common) {
+
+        const context = await this.initializer();
+        const csvData = this.data(mode);
+
+        const exclueds = csvData.csvExclueds;
+        const files = (await common._.fs.readdir(docsDir + "/" + mode))
+            .filter(s => s.endsWith(".json"))
+            .filter(s => exclueds.indexOf(s) === -1);
+
+        console.log(csvData.csvHeader.map(s => '"' + s + '"').join(","));
+
+        for(let i=0; i<files.length; i++) {
+            const json = await common.readJson(docsDir + "/" + mode + "/" + files[i]);
+
+            const entries = csvData.csvHeader.map(h => csvData.csvEntry(h, json));
+            console.log(entries.map(s => '"' + s + '"').join(","));
+        }
+    };
+
+    async generate(docsDir, targetMode, targetName, factory, common) {
+        console.log("*** generate start, " + targetMode + "," + targetName);
 
         const context = await this.initializer();
 
@@ -137,12 +228,12 @@ class Generator {
             for(let i =0; i<pages.length; i++) {
                 const page = pages[i];
 
-                if(targetUrl === "" || page.url === targetUrl) {
+                if(targetName === "" || page.name === targetName) {
                     console.log("    - page : " + page.name + ", " + page.url);      
                     const dName = page.name;
                     const jsonPath = docsDir + "/"+mode+"/"+dName + ".json";
                     
-                    const r = await common.requestWithCache(page.url/*, targetUrl !== ""*/);
+                    const r = await common.requestWithCache(page.url, targetName !== "");
                     const $$ = common.dom(r);
                     const dataBuilder = factory(mode, await common.readJson(jsonPath));
                     

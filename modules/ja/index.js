@@ -47,7 +47,7 @@ module.exports = async(builder, docDir, common) => {
     const init = require("./init.js")(context);
 
     builder.initialize(init.initalized);
-    builder.hero(hero.url, hero.listPage, hero.dataPage);
-    builder.artifact(artifact.url, artifact.listPage, artifact.dataPage);
-    builder.material(material.url, material.listPage, material.dataPage);
+    builder.hero(hero.url, hero.listPage, hero.dataPage, ["heros.json"], hero.csvHeaders, hero.csvEntry);
+    builder.artifact(artifact.url, artifact.listPage, artifact.dataPage, ["artifacts.json"], artifact.csvHeaders, artifact.csvEntry);
+    builder.material(material.url, material.listPage, material.dataPage, ["materials.json"], material.csvHeaders, material.csvEntry);
 };

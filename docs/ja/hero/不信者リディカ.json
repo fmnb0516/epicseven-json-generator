@@ -1,26 +1,26 @@
 {
 	"status": {
 		"max": {
-			"attack": null,
-			"health": null,
-			"speed": null,
-			"defense": null,
-			"critical_hit": null,
-			"critical_damage": null,
-			"unity_chance": null,
-			"debuff_hit": null,
-			"debuff_resist": null
+			"attack": 1182,
+			"health": 5299,
+			"speed": 114,
+			"defense": 571,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 18,
+			"debuff_resist": 0
 		},
 		"init": {
-			"attack": null,
-			"health": null,
-			"speed": null,
-			"defense": null,
-			"critical_hit": null,
-			"critical_damage": null,
-			"unity_chance": null,
-			"debuff_hit": null,
-			"debuff_resist": null
+			"attack": 720,
+			"health": 3881,
+			"speed": 114,
+			"defense": 460,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
 		}
 	},
 	"stamp": {
@@ -122,7 +122,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*1.1*1.871",
 				"modifier": ""
@@ -170,7 +213,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.7*1.1*1.871 ",
 				"modifier": ""
@@ -218,7 +304,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.4*0.95*1.871",
 				"modifier": ""

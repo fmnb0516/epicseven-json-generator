@@ -1,26 +1,26 @@
 {
 	"status": {
 		"max": {
-			"attack": null,
-			"health": null,
-			"speed": null,
-			"defense": null,
-			"critical_hit": null,
-			"critical_damage": null,
-			"unity_chance": null,
-			"debuff_hit": null,
-			"debuff_resist": null
+			"attack": 957,
+			"health": 5016,
+			"speed": 112,
+			"defense": 645,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 18,
+			"debuff_resist": 18
 		},
 		"init": {
-			"attack": null,
-			"health": null,
-			"speed": null,
-			"defense": null,
-			"critical_hit": null,
-			"critical_damage": null,
-			"unity_chance": null,
-			"debuff_hit": null,
-			"debuff_resist": null
+			"attack": 501,
+			"health": 2795,
+			"speed": 108,
+			"defense": 405,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
 		}
 	},
 	"stamp": {
@@ -93,11 +93,11 @@
 		{
 			"name": "マナアロー",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、35%の確率で【マナバースト】を発動する。対象が沈黙状態の場合、発生率が2倍になる。マナバースト：敵全体にダメージを与え、アクションゲージを10〜50%DOWNさせる。(魂力1獲得)",
+			"desc": "敵単体にダメージを与え、35%の確率で【マナバースト】を発動する。対象が沈黙状態の場合、発動率が2倍になる。マナバースト：敵全体にダメージを与え、アクションゲージを10〜50%DOWNさせる。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": true,
-				"bern_desc": "【マナバースト】の発生率が100%になる。(魂力20消費)",
+				"bern_desc": "【マナバースト】の発動率が100%になる。(魂力20消費)",
 				"usesoul": 20
 			},
 			"level": [
@@ -132,7 +132,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "煌玉",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "レインガルの学生証",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.8*0.9*1.871",
 				"modifier": ""
@@ -180,7 +223,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "煌玉",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "レインガルの学生証",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""
@@ -228,7 +314,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "煌玉",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "レインガルの学生証",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.9*1.1*1.871",
 				"modifier": ""
