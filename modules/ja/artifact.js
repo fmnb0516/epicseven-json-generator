@@ -71,9 +71,33 @@ module.exports = (context) => {
 
     };
 
+    const csvEntry = (() => {
+
+        return (key, json) => {
+            if(key === "名称") return json.name;
+            if(key === "レアリティ") return "★" + json.rare;
+            if(key === "攻撃力(初期)") return json.status.init.attack;
+            if(key === "生命力(初期)") return json.status.init.health;
+            if(key === "攻撃力(最大)") return json.status.max.attack;
+            if(key === "生命力(最大)") return json.status.max.health;
+            if(key === "装備可能クラス") return json.target;
+
+            if(key === "遺物レベル(S1)") return json.effect[0].artifact_level;
+            if(key === "遺物効果(S1)") return json.effect[0].desc;
+
+            if(key === "遺物レベル(S11)") return json.effect[10].artifact_level;
+            if(key === "遺物効果(S11)") return json.effect[10].desc;
+
+            return "";
+        };
+    })();
+
     return {
+        csvEntry : csvEntry,
         listPage: listPage,
         dataPage: dataPage,
-        url: "https://game8.jp/epic-seven/301576"
+        url: "https://game8.jp/epic-seven/301576",
+        csvHeaders : ["名称", "レアリティ", "攻撃力(初期)",  "生命力(初期)", "攻撃力(最大)", "生命力(最大)", "装備可能クラス",
+                "遺物レベル(S1)", "遺物効果(S1)", "遺物レベル(S11)", "遺物効果(S11)"]
     };
 };
