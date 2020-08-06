@@ -240,7 +240,7 @@
 			],
 			"material": [],
 			"multiple": {
-				"multiplier": "(ATK*1.5+Def*0.05)*1.77745",
+				"multiplier": "(ATK*1.5+Def*0.07)*1.77745",
 				"modifier": "70% self Defense (0.7 * Defense), Barrier strength: 60% self Defense"
 			}
 		}
