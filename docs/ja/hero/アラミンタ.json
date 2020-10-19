@@ -160,7 +160,7 @@
 			],
 			"material": [],
 			"multiple": {
-				"multiplier": "ATK*0.8*1*1.871",
+				"multiplier": "ATK*0.9*1*1.871",
 				"modifier": ""
 			}
 		},
@@ -220,7 +220,7 @@
 			],
 			"material": [],
 			"multiple": {
-				"multiplier": "ATK*0.85*1*1.871",
+				"multiplier": "ATK*1*1*1.871",
 				"modifier": ""
 			}
 		}

@@ -241,7 +241,7 @@
 			"material": [],
 			"multiple": {
 				"multiplier": "ATK*0.6*1*1.871",
-				"modifier": "Heal strength: 5% self max Health. (15% with speciality upgrades)"
+				"modifier": "Heal strength: 10% Target max Health. (20% with the specialty upgrades)"
 			}
 		}
 	],
