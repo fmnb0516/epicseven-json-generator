@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>EPIC SEVEN - JSON GENERATOR</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143765558-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143765558-2');
+    </script>
+
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-info">
+        <div class="container">
+            <a href="./" class="navbar-brand">EPIC SEVEN - JSON GENERATO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./datalist.html">データリスト</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./hero.html">英雄データ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./artifact.html">遺物データ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./material.html">特殊素材データ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./equipment.html">装備管理1</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./equipmentlist.html">装備管理2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./campingcalc.html">キャンプ士気計算</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="hero-select">英雄選択</label>
+                    <input type="text" class="form-control" id="hero-select" autocomplete="on" list="herolist"
+                        placeholder="名前を入力...">
+                </div>
+                <datalist id="herolist">
+                </datalist>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table text-nowrap table-sm">
+                        <thead class="thead-light">
+                            <tr>
+                                <th style="min-width: 100px;"><span style="font-size: 100%;margin-left: 15px;" class="badge badge-info">名称</span></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="speed" data-status="show">速度</button></th>
+                                <th class="data-vis-speed" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="attack" data-status="hide">攻撃</button></th>
+                                <th class="data-vis-attack hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="health" data-status="hide">生命</button></th>
+                                <th class="data-vis-health hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="defense" data-status="hide">防御</button></th>
+                                <th class="data-vis-defense hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="effect" data-status="hide">命中</button></th>
+                                <th class="data-vis-effect hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="resist" data-status="hide">抵抗</button></th>
+                                <th class="data-vis-resist hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="cri" data-status="hide">クリ率</button></th>
+                                <th class="data-vis-cri hide" colspan="7"></th>
+
+                                <th colspan="1"><button type="button" class="btn btn-info visbtn" data-vis="cridamage" data-status="hide">クリダメ</button></th>
+                                <th class="data-vis-cridamage hide" colspan="7"></th>
+                            </tr>
+                            <tr>
+                                <th></th>
+
+                                <th></th>
+                                <th class="data-vis-speed">目標</th>
+                                <th class="data-vis-speed">セット</th>
+                                <th class="data-vis-speed">オプ数</th>
+                                <th class="data-vis-speed">素ステ</th>
+                                <th class="data-vis-speed">刻印+CC</th>
+                                <th class="data-vis-speed">基礎値</th>
+                                <th class="data-vis-speed">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-attack hide">目標</th>
+                                <th class="data-vis-attack hide">セット</th>
+                                <th class="data-vis-attack hide">オプ数</th>
+                                <th class="data-vis-attack hide">素ステ</th>
+                                <th class="data-vis-attack hide">刻印+CC</th>
+                                <th class="data-vis-attack hide">基礎値</th>
+                                <th class="data-vis-attack hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-health hide">目標</th>
+                                <th class="data-vis-health hide">セット</th>
+                                <th class="data-vis-health hide">オプ数</th>
+                                <th class="data-vis-health hide">素ステ</th>
+                                <th class="data-vis-health hide">刻印+CC</th>
+                                <th class="data-vis-health hide">基礎値</th>
+                                <th class="data-vis-health hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-defense hide">目標</th>
+                                <th class="data-vis-defense hide">セット</th>
+                                <th class="data-vis-defense hide">オプ数</th>
+                                <th class="data-vis-defense hide">素ステ</th>
+                                <th class="data-vis-defense hide">刻印+CC</th>
+                                <th class="data-vis-defense hide">基礎値</th>
+                                <th class="data-vis-defense hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-effect hide">目標</th>
+                                <th class="data-vis-effect hide">セット</th>
+                                <th class="data-vis-effect hide">オプ数</th>
+                                <th class="data-vis-effect hide">素ステ</th>
+                                <th class="data-vis-effect hide">刻印+CC</th>
+                                <th class="data-vis-effect hide">基礎値</th>
+                                <th class="data-vis-effect hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-resist hide">目標</th>
+                                <th class="data-vis-resist hide">セット</th>
+                                <th class="data-vis-resist hide">オプ数</th>
+                                <th class="data-vis-resist hide">素ステ</th>
+                                <th class="data-vis-resist hide">刻印+CC</th>
+                                <th class="data-vis-resist hide">基礎値</th>
+                                <th class="data-vis-resist hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-cri hide">目標</th>
+                                <th class="data-vis-cri hide">セット</th>
+                                <th class="data-vis-cri hide">オプ数</th>
+                                <th class="data-vis-cri hide">素ステ</th>
+                                <th class="data-vis-cri hide">刻印+CC</th>
+                                <th class="data-vis-cri hide">基礎値</th>
+                                <th class="data-vis-cri hide">要求値</th>
+
+                                <th></th>
+                                <th class="data-vis-cridamage hide">目標</th>
+                                <th class="data-vis-cridamage hide">セット</th>
+                                <th class="data-vis-cridamage hide">オプ数</th>
+                                <th class="data-vis-cridamage hide">素ステ</th>
+                                <th class="data-vis-cridamage hide">刻印+CC</th>
+                                <th class="data-vis-cridamage hide">基礎値</th>
+                                <th class="data-vis-cridamage hide">要求値</th>
+                            </tr>
+                        </thead>
+                        <tbody id="content">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    <footer class="container">
+        <hr />
+        <ul style="list-style: none;">
+            <li style="display: inline-block;margin-right: 10px;"><a
+                    href="https://maphe.github.io/e7-damage-calc/jp/">エピックセブン ダメージ 計算機</a></li>
+            <li style="display: inline-block;"><a href="https://game8.jp/epic-seven">エピックセブン攻略Wiki｜ゲームエイト</a></li>
+        </ul>
+        <p>COPYRIGHT &#169; <a href="https://github.com/fmnb0516/epicseven-json-generator">fmnb0516</a> ALL RIGHTS
+            RESERVED. </p>
+    </footer>
+
+    <script type="text/x-handlebars" id="template">
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+        integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>
