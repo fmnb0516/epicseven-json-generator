@@ -173,7 +173,7 @@
 			"material": [],
 			"multiple": {
 				"multiplier": "ATK*1.5*1*1.871 (2 soul burn)",
-				"modifier": "9% of damage as healing, 18% if target Bleeding"
+				"modifier": "18% of damage as healing"
 			}
 		},
 		{

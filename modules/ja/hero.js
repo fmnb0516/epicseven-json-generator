@@ -64,7 +64,7 @@ module.exports = (context) => {
         builder.clearSkill().clearStampCollect().clearStampExpansion();
 
         await builder.thumbnail(async () => {
-            const image = $(".archive-style-wrapper .a-paragraph .a-img").attr("src");
+            const image = $(".archive-style-wrapper .a-paragraph .a-img").attr("data-src");
             const thumbnail = await context.common.imageToBase64(image);
             return thumbnail;
         });

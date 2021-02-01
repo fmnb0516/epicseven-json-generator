@@ -38,7 +38,7 @@ module.exports = (context) => {
         const base = context.helper.findHeaderElement($, "h2", "の評価・基本情報").next();
 
         await builder.thumbnail(async () => {
-            const image = base.find("img.a-img").attr("src");
+            const image = base.find("img.a-img").attr("data-src");
             const thumbnail = await context.common.imageToBase64(image);
             return thumbnail;
         });
