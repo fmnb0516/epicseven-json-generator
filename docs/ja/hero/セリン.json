@@ -168,7 +168,7 @@
 			],
 			"multiple": {
 				"multiplier": "ATK*1*1*1.871",
-				"modifier": ""
+				"modifier": "20% increased damage on Critical Hit"
 			}
 		},
 		{

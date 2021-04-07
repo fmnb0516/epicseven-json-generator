@@ -131,7 +131,7 @@
 			"material": [],
 			"multiple": {
 				"multiplier": "(ATK*0.7+Hp*0.07)*1.871",
-				"modifier": ""
+				"modifier": "Heals 20% of damage dealt"
 			}
 		},
 		{
