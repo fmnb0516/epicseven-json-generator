@@ -183,6 +183,14 @@ module.exports = (context) => {
     };
 
     const csvEntry = (() => {
+        const splitText = (text, idx) => {
+            const len = 131072;
+            const start = idx * len;
+            const end = start + len;
+
+            return text.substring(start, end);
+        };
+
         const csvLevelText = (level) => {
             return level === undefined ? "" : level.label + " " + level.value + (level.num === "percent" ? "%" : "") + " " + level.type;
         };
@@ -290,7 +298,11 @@ module.exports = (context) => {
                 if(key === "SSS(刻印)") return csvStampValue(json.rare, json.stamp.collect, "SSS");
             }
 
-            if(key === "サムネイル") return json.thumbnail;
+            if(key === "サムネイル1") return splitText(json.thumbnail, 0);
+            if(key === "サムネイル2") return splitText(json.thumbnail, 1);
+            if(key === "サムネイル3") return splitText(json.thumbnail, 2);
+            if(key === "サムネイル4") return splitText(json.thumbnail, 3);
+            if(key === "サムネイル5") return splitText(json.thumbnail, 4);
 
             return "";  
         };
@@ -308,7 +320,7 @@ module.exports = (context) => {
                 "スキル3名称", "ターン(S3)", "説明(S3)", "魂力開放 説明(S3)", "獲得魂力(S3)", "消費魂力(S3)", "魂力開放(S3)", "+1(S3)", "+2(S3)", "+3(S3)", "+4(S3)", "+5(S3)", "+6(S3)", "+7(S3)",
                 "陣形効果", "D(陣形)", "C(陣形)", "B(陣形)", "A(陣形)", "S(陣形)", "SS(陣形)", "SSS(陣形)",
                 "刻印集中", "D(刻印)", "C(刻印)", "B(刻印)", "A(刻印)", "S(刻印)", "SS(刻印)", "SSS(刻印)",
-                "会話1 ID", "会話1 名称", "会話2 ID", "会話2 名称", "士気増減","サムネイル"
+                "会話1 ID", "会話1 名称", "会話2 ID", "会話2 名称", "士気増減","サムネイル1","サムネイル2","サムネイル3","サムネイル4","サムネイル5"
             ]
     };
 };
