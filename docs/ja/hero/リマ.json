@@ -148,7 +148,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 80
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 180
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 320
+					},
+					{
+						"name": "革の鞘",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 530
+					},
+					{
+						"name": "革の鞘",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 850
+					},
+					{
+						"name": "革の鞘",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1340
+					},
+					{
+						"name": "革の鞘",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*0.8*1.871",
 				"modifier": ""
@@ -208,7 +261,66 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 50
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 230
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 400
+					},
+					{
+						"name": "革の鞘",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "革の鞘",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1000
+					},
+					{
+						"name": "革の鞘",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1450
+					},
+					{
+						"name": "革の鞘",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.3*0.95*1.871",
 				"modifier": ""
@@ -238,7 +350,28 @@
 					"num": "fix"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 250
+					},
+					{
+						"name": "革の鞘",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "革の鞘",
+						"count": 3
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""

@@ -148,7 +148,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 80
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 180
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 320
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 530
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 850
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1340
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*0.7+HP*0.07)*1.6839",
 				"modifier": "7% self max Health (0.07 * Health)"
@@ -208,7 +261,66 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 50
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 230
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 400
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1000
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1450
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*0.8+HP*0.12)*1.871",
 				"modifier": "12% self max Health (0.12 * Health)"
@@ -238,7 +350,28 @@
 					"num": "fix"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 250
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 3
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "Barrier strength: 30% self max Health",
 				"modifier": ""

@@ -142,7 +142,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 270
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 470
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 740
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 5
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*0.9+HP*0.07)*1.871",
 				"modifier": ""
@@ -190,7 +233,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 270
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 470
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 740
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 5
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.5*1*1.871",
 				"modifier": ""
@@ -238,7 +324,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 270
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 470
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 740
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 5
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*0.9+HP*0.12)*1.96455",
 				"modifier": ""

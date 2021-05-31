@@ -138,7 +138,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "革の鞘",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "革の鞘",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "革の鞘",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "闘士の勲章",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*1.6839) * (1+Speed*0.00075)",
 				"modifier": "0.075% self Speed (0.00075 * Speed)"
@@ -174,7 +227,38 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "革の鞘",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "革の鞘",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "闘士の勲章",
+						"count": 1
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""
@@ -183,7 +267,7 @@
 		{
 			"name": "執行",
 			"tern": 4,
-			"desc": "敵単体にダメージを与え、沈黙を1ターンの間付与し、アクションゲージを50％DOWNさせる。自身に回避率UPを2ターンの間付与する。自身のスピードと対象のスピードが高いほどダメージがUPする。敵の魂力を20DOWNさせる。(魂力2獲得)",
+			"desc": "敵単体にダメージを与え、沈黙を1ターンの間付与し、アクションゲージを50％DOWNさせる。自身に回避率UPを2ターンの間付与する。自身のスピードと対象のスピードが高いほどダメージがUPする。敵の魂力を20除去する。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
@@ -228,7 +312,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "革の鞘",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "革の鞘",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "革の鞘",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "闘士の勲章",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*2.666175) * (1+Speed*0.001) [2 soul burn]",
 				"modifier": "0.10% self Speed (0.001 * Speed), 0.30% target Speed (0.003 * Speed)"

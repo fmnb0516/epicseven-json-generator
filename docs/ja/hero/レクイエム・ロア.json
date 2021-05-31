@@ -1,7 +1,7 @@
 {
 	"status": {
 		"max": {
-			"attack": 827,
+			"attack": 842,
 			"health": 4046,
 			"speed": 106,
 			"defense": 613,
@@ -9,7 +9,7 @@
 			"critical_damage": 150,
 			"unity_chance": 5,
 			"debuff_hit": 0,
-			"debuff_resist": 0
+			"debuff_resist": 18
 		},
 		"init": {
 			"attack": 269,
@@ -142,7 +142,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 270
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 470
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 740
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*1*1.871",
 				"modifier": ""
@@ -190,7 +233,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 270
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 470
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 740
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""
@@ -238,7 +324,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 270
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 470
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 740
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.8*1*1.871 (2.7 soul burn)",
 				"modifier": ""

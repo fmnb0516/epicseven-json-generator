@@ -144,21 +144,80 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "魂の炎",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "魂の炎",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "魂の炎",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "魔血の結晶",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.9*0.8*1.871",
 				"modifier": "6% self max health (0.06 * health)"
 			}
 		},
 		{
-			"name": "怒ったにゃ!",
+			"name": "怒ったにゃ！",
 			"tern": 3,
 			"desc": "敵全体にダメージを与え、60%の確率で強化効果を2ターン減少させ、回復不可を2ターンの間付与する。自身が可愛らしさ状態の時、効果発生率が20%UPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": true,
-				"bern_desc": "ダメージがUPする。(魂力10消費)",
-				"usesoul": 10
+				"bern_desc": "効果抵抗を無視する。(魂力20消費)",
+				"usesoul": 20
 			},
 			"level": [
 				{
@@ -204,7 +263,66 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "魂の炎",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "魂の炎",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "魂の炎",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "魔血の結晶",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.8*0.95*1.871 (1.05 soul burn)",
 				"modifier": ""
@@ -228,7 +346,18 @@
 					"num": "fix"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "魂の炎",
+						"count": 8
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""
