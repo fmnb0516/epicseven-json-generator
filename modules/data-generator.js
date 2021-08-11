@@ -226,23 +226,26 @@ class Generator {
             const generates = [];
             
             for(let i =0; i<pages.length; i++) {
-                const page = pages[i];
 
-                if(targetName === "" || page.name === targetName) {
-                    console.log("    - page : " + page.name + ", " + page.url);      
-                    const dName = page.name;
-                    const jsonPath = docsDir + "/"+mode+"/"+dName + ".json";
+                try {
+                    const page = pages[i];
+                    if(targetName === "" || page.name === targetName) {
+                        console.log("    - page : " + page.name + ", " + page.url);      
+                        const dName = page.name;
+                        const jsonPath = docsDir + "/"+mode+"/"+dName + ".json";
                     
-                    const r = await common.requestWithCache(page.url, targetName !== "");
-                    const $$ = common.dom(r);
-                    const dataBuilder = factory(mode, await common.readJson(jsonPath));
+                        const r = await common.requestWithCache(page.url, targetName !== "");
+                        const $$ = common.dom(r);
+                        const dataBuilder = factory(mode, await common.readJson(jsonPath));
                     
-                    await pageData.dataPageParser($$, dataBuilder, context);
-                    await common.toTextFile(jsonPath, dataBuilder.toJsonString());
-                    console.log("      write complete : " + jsonPath);
+                        await pageData.dataPageParser($$, dataBuilder, context);
+                        await common.toTextFile(jsonPath, dataBuilder.toJsonString());
+                        console.log("      write complete : " + jsonPath);
+                    }
+                    generates.push(page.name + ".json");
+                } catch (e) {
+                    console.log(e);
                 }
-
-                generates.push(page.name + ".json");
             }
             const listFilePath = docsDir + "/"+mode+"/" + mode+ "s.json";
             await common.toTextFile(listFilePath, JSON.stringify(generates, null, "\t"));

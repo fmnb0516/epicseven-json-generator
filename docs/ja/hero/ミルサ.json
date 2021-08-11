@@ -148,7 +148,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 80
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 180
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 320
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 530
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 850
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1340
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*1.6839) * (1+Speed*0.00075)",
 				"modifier": "0.075% self Speed (0.00075 * Speed)"
@@ -157,7 +210,7 @@
 		{
 			"name": "見切り",
 			"tern": 0,
-			"desc": "回避率が35%UPする。回避時、自身のスキルターンが1減少し、スピードUPを2ターンの間付与する。",
+			"desc": "回避率が35%UPする。攻撃を回避した時、その攻撃に伴う効果が発生する前に自身のスキルターンが1減少し、スピードUPを2ターンの間付与する。",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
@@ -184,7 +237,38 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 200
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 450
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 850
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 5
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""
@@ -238,7 +322,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 80
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 180
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 320
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 530
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 850
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1340
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*2.9421475) * (1+Speed*0.0015) [2.5 soul burn]",
 				"modifier": "0.15% self Speed (0.0015 * Speed)"

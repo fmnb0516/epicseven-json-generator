@@ -83,7 +83,7 @@
 		{
 			"name": "審判の光",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、自身のアクションゲージを10%UPさせる。自身が強化状態の場合、アクションゲージUP効果が2倍になる。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、自身のアクションゲージを10%UPさせる。自身が強化状態の場合、アクションゲージUP効果が2倍になる。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -134,7 +134,66 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "融合神経",
+						"count": 3
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*0.95*1.871",
 				"modifier": ""
@@ -143,7 +202,7 @@
 		{
 			"name": "女神の祝福",
 			"tern": 4,
-			"desc": "味方全体にシールドを2ターンの間付与し、弱体効果を1つ解除する。シールド効果は対象の最大生命力が高いほどUPする。(魂力2獲得)",
+			"desc": "味方全体にシールドを2ターンの間付与し、弱体効果を1つ解除する。対象の最大生命力が高いほどシールド効果がUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": false,
@@ -177,7 +236,7 @@
 				},
 				{
 					"label": "シールド効果",
-					"value": 10,
+					"value": 15,
 					"type": "UP",
 					"num": "percent"
 				},
@@ -188,7 +247,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "Barrier strength: 20% target max Health (30% Molagora)",
 				"modifier": ""
@@ -201,7 +313,7 @@
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
-				"bern_desc": "スキルターンが2減少する。(魂力20消費)",
+				"bern_desc": "本英雄の全スキルのスキルターンが2減少する。(魂力20消費)",
 				"usesoul": 20
 			},
 			"level": [
@@ -218,7 +330,28 @@
 					"num": "fix"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""

@@ -93,7 +93,7 @@
 		{
 			"name": "輪撃",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、75%の確率で強化効果を1つ解除する。更に自身のアクションゲージを15%UPする。自身の最大生命力が高いほどダメージがUPする。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、75%の確率で強化効果を1つ解除する。更に自身のアクションゲージを15%UPする。自身の最大生命力が高いほどダメージがUPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -138,7 +138,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "魂の炎",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "魂の炎",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "魂の炎",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "魔血の結晶",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*0.7+Hp*0.05)*1.6839",
 				"modifier": "5% self max Health (0.05 * Health)"
@@ -146,8 +199,8 @@
 		},
 		{
 			"name": "悪戯の舞",
-			"tern": 2,
-			"desc": "敵単体にダメージを与え、50%の確率で防御力DOWNを2ターンの間付与する。50%の確率で【輪撃】が発動する。自身の最大生命力が高いほどダメージがUPする。(魂力2獲得)",
+			"tern": null,
+			"desc": "敵単体に攻撃し、50%の確率で防御力DOWNを2ターンの間付与する。50%の確率で【輪撃】が発動する。自身の最大生命力が高いほどダメージがUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": false,
@@ -168,13 +221,13 @@
 					"num": "percent"
 				},
 				{
-					"label": "効果発生率",
+					"label": "防御力DOWNの効果発生率",
 					"value": 10,
 					"type": "UP",
 					"num": "percent"
 				},
 				{
-					"label": "効果発生率",
+					"label": "防御力DOWNの効果発生率",
 					"value": 15,
 					"type": "UP",
 					"num": "percent"
@@ -192,7 +245,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "魂の炎",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "魂の炎",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "魂の炎",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "魔血の結晶",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*0.7+Hp*0.07)*1.871",
 				"modifier": "Two separate sets of unique buffs it pulls one from:\r\n1. atk up, speed up, crit up, crit dmg up, continuous heal\r\n2. def up, evasion, debuff immunity"
@@ -200,12 +306,12 @@
 		},
 		{
 			"name": "ショータイム",
-			"tern": 5,
-			"desc": "味方全体の生命力を回復し、ランダム強化効果2つを3ターンの間付与する。対象の最大生命力が高いほど回復量がUPする。(魂力2獲得)",
+			"tern": null,
+			"desc": "味方全体の生命力を回復し、2つのランダム強化効果を3ターンの間付与する。対象の最大生命力が高いほど回復量がUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
-				"bern_desc": "強化効果の持続ターン数が1増加する。(魂力10消費)",
+				"bern_desc": "このスキルによる強化効果の持続ターンが1UPする。(魂力10消費)",
 				"usesoul": 10
 			},
 			"level": [
@@ -228,7 +334,38 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "魂の炎",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "魂の炎",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "魔血の結晶",
+						"count": 1
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "Heal strength: 20% target max Health",
 				"modifier": ""

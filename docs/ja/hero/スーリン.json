@@ -1,14 +1,14 @@
 {
 	"status": {
 		"max": {
-			"attack": 789,
-			"health": 4677,
+			"attack": 1010,
+			"health": 5097,
 			"speed": 117,
 			"defense": 497,
-			"critical_hit": 15,
+			"critical_hit": 27,
 			"critical_damage": 150,
 			"unity_chance": 5,
-			"debuff_hit": 0,
+			"debuff_hit": 12,
 			"debuff_resist": 0
 		},
 		"init": {
@@ -93,7 +93,7 @@
 		{
 			"name": "鎖手裏剣",
 			"tern": 0,
-			"desc": "敵単体にダメージを与える。敵が出血状態の場合、2つの出血を2ターンの間付与する。(魂力1獲得)",
+			"desc": "敵単体に攻撃する。敵が出血状態の場合、2つの出血を2ターンの間付与する。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -132,7 +132,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*0.9*1.871",
 				"modifier": ""
@@ -141,7 +184,7 @@
 		{
 			"name": "刀刃粉砕",
 			"tern": 3,
-			"desc": "敵単体にダメージを与え、2〜4つの出血を2ターンの間付与し、攻撃力DOWNを1ターンの間付与する。(魂力2獲得)",
+			"desc": "敵単体に攻撃し、2〜4つの出血を2ターンの間付与し、攻撃力DOWNを1ターンの間付与する。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
@@ -180,7 +223,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.4*1*1.871",
 				"modifier": ""
@@ -189,7 +275,7 @@
 		{
 			"name": "桜花閃乱",
 			"tern": 5,
-			"desc": "敵単体にダメージを与え、弱体効果を1ターンの間延長させる。対象の出血効果の数が多いほどダメージがUPする。対象の出血効果の数 x  15%自身のアクションゲージをUPさせる。この効果は最大5回まで発動する。(魂力2獲得)",
+			"desc": "敵単体に攻撃し、弱体効果を1ターン延長させる。対象の出血効果の数が多いほどダメージがUPする。対象の出血効果の数x15%自身のアクションゲージをUPさせる。この効果は最大5回まで発動する。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": false,
@@ -228,7 +314,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.8*0.8*1.871",
 				"modifier": "If one bleed, +40% damage. +15% damage for each additional up to 5."

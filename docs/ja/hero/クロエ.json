@@ -83,7 +83,7 @@
 		{
 			"name": "鎚強撃",
 			"tern": 0,
-			"desc": "敵単体にダメージを与える。対象が魔法釘状態の場合、ダメージがUPする。(魂力1獲得)",
+			"desc": "敵単体に攻撃する。対象が魔法釘状態の場合、ダメージがUPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -122,7 +122,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "傭兵の秘薬",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*0.9*1.871",
 				"modifier": "30% bonus dmg if target is Magic Nail'd"
@@ -130,8 +173,8 @@
 		},
 		{
 			"name": "魔法釘",
-			"tern": 3,
-			"desc": "敵単体にダメージを与え、魔法釘を3ターンの間付与する。この効果は抵抗されない。(魂力1獲得)",
+			"tern": null,
+			"desc": "敵単体に攻撃し、魔法釘を3ターンの間付与する。この効果は抵抗されない。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -170,7 +213,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "傭兵の秘薬",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.9*0.9*1.871",
 				"modifier": "Nail adds damage equal to 2% target max Health, ignores defense, not improved by attacker's crit, etc"
@@ -178,8 +264,8 @@
 		},
 		{
 			"name": "超強撃",
-			"tern": 5,
-			"desc": "敵単体にダメージを与え、スタンを1ターンの間付与する。攻撃対象が魔法釘状態の場合、ダメージがUPする。(魂力2獲得)",
+			"tern": null,
+			"desc": "敵単体に攻撃し、スタンを1ターンの間付与する。対象が魔法釘状態の場合、ダメージがUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
@@ -218,7 +304,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "傭兵の秘薬",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*2*0.8*1.871 (3.5 soul burn)",
 				"modifier": "35% bonus dmg if target is Magic Nail'd"

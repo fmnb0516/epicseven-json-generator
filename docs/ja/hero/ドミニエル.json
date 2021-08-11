@@ -93,7 +93,7 @@
 		{
 			"name": "氷霰",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、35%の確率でスピードDOWNを2ターンの間付与する。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、35%の確率でスピードDOWNを2ターンの間付与する。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -138,7 +138,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "煌玉",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "煌玉",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "欲望の角",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*1*1.871",
 				"modifier": ""
@@ -147,11 +200,11 @@
 		{
 			"name": "氷雪羽織",
 			"tern": 4,
-			"desc": "味方全体にシールド・反射を2ターンの間付与する。対象の最大生命力が高いほどシールド効果がUPする。(魂力1獲得)",
+			"desc": "味方全体にシールド・反射を2ターンの間付与する。自身の攻撃力が高いほどシールド効果がUPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": true,
-				"bern_desc": "スキルターンを2減少する。(魂力20消費)",
+				"bern_desc": "本英雄の全スキルのスキルターンが2減少する。(魂力20消費)",
 				"usesoul": 20
 			},
 			"level": [
@@ -168,7 +221,28 @@
 					"num": "fix"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "欲望の角",
+						"count": 1
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "Barrier strength: 100% self Attack",
 				"modifier": "Reflects 30% damage taken"
@@ -177,7 +251,7 @@
 		{
 			"name": "氷柱落とし",
 			"tern": 5,
-			"desc": "敵全体にダメージを与え、75%の確率でスタンを1ターンの間付与し、35%の確率でアクションゲージを30%DOWNさせる。(魂力2獲得)",
+			"desc": "敵全体に攻撃し、75%の確率でスタンを1ターンの間付与し、35%の確率でアクションゲージを30%DOWNさせる。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": false,
@@ -228,7 +302,66 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "煌玉",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "煌玉",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "欲望の角",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.75*0.95*1.871",
 				"modifier": ""

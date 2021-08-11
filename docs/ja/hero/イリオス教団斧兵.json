@@ -103,7 +103,7 @@
 		{
 			"name": "分断",
 			"tern": 0,
-			"desc": "敵単体にダメージを与える。この攻撃でクリティカルが発生した時、出血を1ターンの間付与する。対象の現在生命力が低いほどダメージがUPする。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、75%の確率で挑発を1ターンの間付与する。自身の最大生命力が高いほどダメージがUPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -136,20 +136,57 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 150
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 300
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 550
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 4
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*0.95*1.871",
-				"modifier": "0.2% increased damage per 1% target Health missing"
+				"modifier": ""
 			}
 		},
 		{
 			"name": "連鎖攻撃",
 			"tern": 3,
-			"desc": "敵全体にダメージを与え、このスキルで敵を気絶させた場合、追加ターンが発生する。対象の現在生命力が低いほどダメージがUPする。(魂力2獲得)",
+			"desc": "敵全体に攻撃し、自身に弱体効果免疫を1ターンの間付与する。自身の最大生命力が高いほどダメージがUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
-				"bern_desc": "ダメージがUPする。(魂力10消費)",
+				"bern_desc": "スキルターンが2減少する。(魂力10消費)",
 				"usesoul": 10
 			},
 			"level": [
@@ -178,16 +215,53 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 150
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 300
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 550
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 4
+					}
+				]
+			],
 			"multiple": {
-				"multiplier": "ATK*0.8*0.95*1.871 (1 soul burn)",
-				"modifier": "0.5% increased damage per 1% target Health missing"
+				"multiplier": "ATK*0.8*0.95*1.871",
+				"modifier": ""
 			}
 		},
 		{
 			"name": "斧兵の一撃",
 			"tern": 3,
-			"desc": "敵単体にダメージを与え、80%の確率で防御力DOWNを2ターンの間付与する。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、80%の確率で防御力DOWNを2ターンの間付与する。自身の最大生命力が高いほどダメージがUPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -238,7 +312,66 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 50
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 230
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 400
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1000
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1450
+					},
+					{
+						"name": "湾曲した牙",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.8*0.9*1.871",
 				"modifier": ""

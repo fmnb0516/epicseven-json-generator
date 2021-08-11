@@ -93,7 +93,7 @@
 		{
 			"name": "あいた〜んビーム！",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、味方単体の弱体効果を1つ解除する。自身の最大生命力が高いほどダメージがUPする。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、味方単体の弱体効果を1つ解除する。自身の最大生命力が高いほどダメージがUPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": true,
@@ -138,7 +138,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "偽善の心臓",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*0.45+Hp*0.12)*1.871",
 				"modifier": ""
@@ -192,7 +245,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "偽善の心臓",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "Healing rate: 10% - 14.5%",
 				"modifier": ""
@@ -228,7 +334,38 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "偽善の心臓",
+						"count": 1
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "Barrier strength: 14% of max hp",
 				"modifier": ""

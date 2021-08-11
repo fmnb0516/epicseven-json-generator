@@ -93,7 +93,7 @@
 		{
 			"name": "連撃",
 			"tern": 0,
-			"desc": "敵単体にダメージを与える。この攻撃でクリティカルが発生した時、自身にスピードUPを2ターンの間付与する。自身のスピードが高いほどダメージがUPする。(魂力1獲得)",
+			"desc": "敵単体に攻撃する。自身のスピードが高いほどダメージがUPする。自身がスピードUP状態の場合、【連撃】の代わりに【回転乱舞】を発動する。回転乱舞：敵単体に攻撃し、防御力DOWNを1ターンの間付与する。自身のスピードが高いほどダメージがUPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -132,7 +132,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "小型動力回路",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "悪夢の仮面",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*1.599705)*(1+Speed*0.00075)",
 				"modifier": "0.075% self Speed (0.00075 * Speed), Skill 2 fully upgraded increases power from 0.95 to 1.35"
@@ -141,7 +184,7 @@
 		{
 			"name": "風の心得",
 			"tern": 0,
-			"desc": "自身がスピードUP状態の場合、【連撃】のダメージがUPし、対象に防御力DOWNを1ターンの間付与する。",
+			"desc": "クリティカル発生時、自身にスピードUPを1ターンの間付与し、70%の確率でランダム強化効果を1ターンの間付与する。ランダム強化効果の付与は1ターンに1回まで発生する。ランダム強化効果：クリティカルダメージUP・効果命中率UP・回避率UP・弱体効果免疫",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
@@ -150,37 +193,80 @@
 			},
 			"level": [
 				{
-					"label": "強化された連撃ダメージ",
+					"label": "効果発生率",
 					"value": 5,
 					"type": "UP",
 					"num": "percent"
 				},
 				{
-					"label": "強化された連撃ダメージ",
+					"label": "効果発生率",
 					"value": 5,
 					"type": "UP",
 					"num": "percent"
 				},
 				{
-					"label": "強化された連撃ダメージ",
+					"label": "効果発生率",
 					"value": 5,
 					"type": "UP",
 					"num": "percent"
 				},
 				{
-					"label": "強化された連撃ダメージ",
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
 					"value": 10,
-					"type": "UP",
-					"num": "percent"
-				},
-				{
-					"label": "強化された連撃ダメージ",
-					"value": 15,
 					"type": "UP",
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "小型動力回路",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "悪夢の仮面",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""
@@ -189,7 +275,7 @@
 		{
 			"name": "乱れ切り",
 			"tern": 4,
-			"desc": "敵単体にダメージを与える。この攻撃で対象を気絶させた場合追加ターンが発生する。自身がスピードUP状態の場合、有利な属性で攻撃する。自身のスピードに応じてダメージがUPする。(魂力2獲得)",
+			"desc": "敵単体に攻撃する。このスキルで敵を気絶させた場合、追加ターンが発生する。自身がスピードUP状態の場合、このスキルは有利属性で攻撃する。自身のスピードが高いほどダメージがUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
@@ -228,7 +314,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "小型動力回路",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "悪夢の仮面",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "(ATK*2.9936)*(1+Speed*0.0021) [2.2 soul burn]",
 				"modifier": "0.21% self Speed (0.0021 * Speed)"

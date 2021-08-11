@@ -83,7 +83,7 @@
 		{
 			"name": "二段斬り",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、35％の確率で防御力DOWNを2ターンの間付与する。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、35％の確率で防御力DOWNを2ターンの間付与する。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -128,7 +128,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "煌玉",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "欲望の角",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*1*1.871",
 				"modifier": ""
@@ -136,8 +189,8 @@
 		},
 		{
 			"name": "龍の叫び",
-			"tern": 4,
-			"desc": "敵全体の強化効果を1つ解除し、75%の確率で1ターンの間沈黙を付与する。自身に攻撃力UP・スピードUPを2ターンの間付与する。(魂力2獲得)",
+			"tern": null,
+			"desc": "敵全体に攻撃し、強化効果を1つ解除し、75%の確率で沈黙を1ターンの間付与する。自身に攻撃力UP・スピードUPを2ターンの間付与する。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": false,
@@ -164,7 +217,38 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "煌玉",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "欲望の角",
+						"count": 3
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.9*1*1.871",
 				"modifier": ""
@@ -172,8 +256,8 @@
 		},
 		{
 			"name": "開天闢地",
-			"tern": 5,
-			"desc": "敵単体にダメージを与え、スタンを1ターンの間付与し、強化効果をすべて解除する。対象に強化状態の場合ダメージが50%UPする。(魂力2獲得)",
+			"tern": null,
+			"desc": "敵単体に攻撃し、スタンを1ターンの間付与し、強化効果をすべて解除する。対象が強化状態の場合、ダメージが50%UPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
@@ -218,7 +302,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "煌玉",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "煌玉",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "欲望の角",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*2*0.95*1.871",
 				"modifier": "50% increased damage if target is buffed"

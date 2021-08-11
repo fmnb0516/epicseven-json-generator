@@ -148,7 +148,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 80
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 180
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 320
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 530
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 850
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1340
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*0.9*1.871",
 				"modifier": ""
@@ -184,7 +237,38 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 200
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 450
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 850
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 5
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""
@@ -238,7 +322,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 80
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 180
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 320
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 530
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 850
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1340
+					},
+					{
+						"name": "異型ゼリー",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.9*1*1.871",
 				"modifier": ""

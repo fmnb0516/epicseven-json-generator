@@ -1,7 +1,7 @@
 {
 	"status": {
 		"max": {
-			"attack": 859,
+			"attack": 880,
 			"health": 4167,
 			"speed": 106,
 			"defense": 627,
@@ -9,7 +9,7 @@
 			"critical_damage": 150,
 			"unity_chance": 5,
 			"debuff_hit": 0,
-			"debuff_resist": 0
+			"debuff_resist": 18
 		},
 		"init": {
 			"attack": 383,
@@ -93,7 +93,7 @@
 		{
 			"name": "戒め",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、ダメージに応じて生命力状態が最も悪い味方の生命力を回復する。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、ダメージに応じて生命力状態が最も悪い味方の生命力を回復する。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -132,7 +132,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "傭兵の秘薬",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.5*0.95*1.871",
 				"modifier": "Heal strength: 50% of damage done"
@@ -140,8 +183,8 @@
 		},
 		{
 			"name": "神聖なる戒め",
-			"tern": 3,
-			"desc": "敵全体にダメージを与え、ダメージに応じて生命力状態が最も悪い味方の生命力を回復する。クリティカル発生時、【戒め】を発動する。(魂力2獲得)",
+			"tern": null,
+			"desc": "敵全体に攻撃し、ダメージに応じて生命力状態が最も悪い味方の生命力を回復する。クリティカル発生時、ランダムな対象に【戒め】を発動する。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": false,
@@ -180,7 +223,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "傭兵の秘薬",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.2*0.95*1.871",
 				"modifier": "Heal strength: 30% of damage done"
@@ -188,7 +274,7 @@
 		},
 		{
 			"name": "聖なる力",
-			"tern": 5,
+			"tern": null,
 			"desc": "対象と自身の生命力を回復し、無敵を1ターンの間、攻撃力UPを2ターンの間付与する。自身の攻撃力が高いほど回復量がUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
@@ -228,7 +314,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "傭兵の秘薬",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "Heal strength: 200% self attack",
 				"modifier": ""

@@ -93,7 +93,7 @@
 		{
 			"name": "アイスソーン",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、40%の確率でスピードDOWNを2ターンの間付与する。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、40%の確率でスピードDOWNを2ターンの間付与する。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -126,7 +126,44 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "悪夢の仮面",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.05*1*1.871",
 				"modifier": ""
@@ -135,7 +172,7 @@
 		{
 			"name": "アイスピック",
 			"tern": 3,
-			"desc": "敵単体にダメージを与え、自身のアクションゲージを50%UPさせる。対象が弱体状態の場合、ダメージがUPする。(魂力2獲得)",
+			"desc": "敵単体に攻撃し、自身のアクションゲージを50%UPさせる。対象が弱体状態の場合、ダメージがUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
@@ -168,7 +205,44 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "悪夢の仮面",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.5*0.95*1.871 (2 soul burn)",
 				"modifier": "30% increased damage if target is debuffed"
@@ -177,7 +251,7 @@
 		{
 			"name": "アイスバーグ",
 			"tern": 5,
-			"desc": "敵全体にダメージを与え、50%の確率でスタンを1ターンの間付与する。(魂力2獲得)",
+			"desc": "敵全体に攻撃し、50%の確率でスタンを1ターンの間付与する。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": false,
@@ -228,7 +302,66 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "小型動力回路",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "小型動力回路",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "悪夢の仮面",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*1*1.871",
 				"modifier": ""

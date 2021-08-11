@@ -103,7 +103,7 @@
 		{
 			"name": "牽制射撃",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、アクションゲージを10%DOWNさせる。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、アクションゲージを10%DOWNさせる。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -148,7 +148,60 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 80
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 180
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 320
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 530
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 850
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1340
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*0.95*1.871",
 				"modifier": ""
@@ -157,7 +210,7 @@
 		{
 			"name": "衝撃の矢",
 			"tern": 5,
-			"desc": "敵単体にダメージを与え、命中率DOWNを2ターンの間付与し、アクションゲージを30%DOWNさせる。対象の最大生命力に応じてダメージがUPする。(魂力2獲得)",
+			"desc": "敵単体に攻撃し、命中率DOWNを2ターンの間付与し、アクションゲージを30%DOWNさせる。対象の最大生命力に応じてダメージがUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
@@ -203,12 +256,71 @@
 				},
 				{
 					"label": "ダメージ",
-					"value": 5,
+					"value": 15,
 					"type": "UP",
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 50
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 230
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 400
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1000
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1450
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*0.8*1.871 (1.7 soul burn)",
 				"modifier": "5% target max Health, 8.5% soul burn"
@@ -238,7 +350,28 @@
 					"num": "fix"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 250
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "名もなき光彩",
+						"count": 3
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""

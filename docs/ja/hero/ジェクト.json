@@ -1,7 +1,7 @@
 {
 	"status": {
 		"max": {
-			"attack": 796,
+			"attack": 804,
 			"health": 3925,
 			"speed": 104,
 			"defense": 599,
@@ -9,7 +9,7 @@
 			"critical_damage": 150,
 			"unity_chance": 5,
 			"debuff_hit": 0,
-			"debuff_resist": 0
+			"debuff_resist": 18
 		},
 		"init": {
 			"attack": 256,
@@ -103,7 +103,7 @@
 		{
 			"name": "杖撃",
 			"tern": 0,
-			"desc": "敵単体にダメージを与え、50%の確率で命中率DOWNを1ターンの間付与する。(魂力1獲得)",
+			"desc": "敵単体に攻撃し、50%の確率で命中率DOWNを1ターンの間付与する。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -136,7 +136,44 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 150
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 300
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 550
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 4
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*1.05*1.871",
 				"modifier": ""
@@ -145,7 +182,7 @@
 		{
 			"name": "追い風",
 			"tern": 0,
-			"desc": "毎ターン開始時に80%の確率で味方の弱体効果を1回解除する。",
+			"desc": "毎ターン開始時、80%の確率で味方の弱体効果を1つ解除する。",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
@@ -178,7 +215,44 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 150
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 300
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 2
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 550
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 4
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""
@@ -187,11 +261,11 @@
 		{
 			"name": "強風",
 			"tern": 4,
-			"desc": "敵全体にダメージを与え、味方全体に持続回復・スピードUPを2ターンの間付与する。(魂力2獲得)",
+			"desc": "敵全体に攻撃し、味方全体に持続回復・スピードUPを2ターンの間付与する。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
-				"bern_desc": "強化効果の持続ターンが1UPする。(魂力10消費)",
+				"bern_desc": "このスキルによる強化効果の持続ターンが1UPする。(魂力10消費)",
 				"usesoul": 10
 			},
 			"level": [
@@ -238,7 +312,66 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 50
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 230
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 400
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1000
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1450
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 6
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.9*0.9*1.871",
 				"modifier": ""

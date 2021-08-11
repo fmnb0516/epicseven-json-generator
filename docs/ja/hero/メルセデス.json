@@ -93,7 +93,7 @@
 		{
 			"name": "天誅",
 			"tern": 0,
-			"desc": "選択中の敵を含む2体にダメージを与える。(魂力1獲得)",
+			"desc": "対象を含む敵2体に攻撃する。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": false,
@@ -132,7 +132,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "黒呪の粉塵",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.7*0.95*1.871",
 				"modifier": ""
@@ -141,7 +184,7 @@
 		{
 			"name": "次元亀裂",
 			"tern": 3,
-			"desc": "敵全体にダメージを与える。攻撃対象が3体以下の場合、対象の数が少ないほどダメージがUPする。(魂力2獲得)",
+			"desc": "敵全体を攻撃する。攻撃対象が3体以下の場合、同じスキルで追加攻撃を発動し、対象の数が少ないほどダメージがUPする。追加で発動した【次元亀裂】のダメージがDOWNする。【次元亀裂】は1回まで発動する。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": true,
@@ -180,7 +223,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "黒呪の粉塵",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*0.7*0.9*1.871 (0.9 soul burn)",
 				"modifier": "160% damage 2 targets, 190% damage 1 target."
@@ -189,7 +275,7 @@
 		{
 			"name": "ブレイジングブラスト",
 			"tern": 4,
-			"desc": "敵全体に大ダメージを与える。攻撃対象の生命力が低いほどダメージがUPする。(魂力2獲得)",
+			"desc": "敵全体に強力な攻撃し、自身に攻撃力UPを2ターンの間付与する。対象の生命力が低いほどダメージがUPする。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": false,
@@ -228,7 +314,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "黒呪の粉塵",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1.2*0.8*1.871",
 				"modifier": "Gains 0.3% damage per 1% enemy Health missing"

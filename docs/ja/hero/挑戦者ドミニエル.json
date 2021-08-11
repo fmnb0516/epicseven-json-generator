@@ -93,7 +93,7 @@
 		{
 			"name": "雷撃弾",
 			"tern": 0,
-			"desc": "敵単体にダメージを与える。クリティカル発生時、ダメージがUPする。(魂力1獲得)",
+			"desc": "敵単体に攻撃する。クリティカル発生時、ダメージがUPする。(魂力1獲得)",
 			"soul": {
 				"soul": 1,
 				"soulbern": true,
@@ -132,7 +132,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "黒呪の粉塵",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "ATK*1*0.9*1.871 (2.5 and 1 soul burn)",
 				"modifier": "20% increased damage on Critical Hit"
@@ -141,7 +184,7 @@
 		{
 			"name": "集電",
 			"tern": 0,
-			"desc": "味方の攻撃でクリティカルが発生すると、クリティカル発生回数だけ自身のアクションゲージが10％ずつUPし、次の自身の攻撃ダメージが重畳してUPする。",
+			"desc": "味方が攻撃でクリティカルが発生した時、クリティカルが発生した回数分だけ自身の攻撃力がUPし、クリティカルが発生した回数×10%、自身のアクションゲージをUPさせる。攻撃力UP効果は累積し、攻撃後に解除する。",
 			"soul": {
 				"soul": 0,
 				"soulbern": false,
@@ -150,37 +193,80 @@
 			},
 			"level": [
 				{
-					"label": "追加ダメージ",
+					"label": "攻撃力UP量",
 					"value": 5,
-					"type": "UP",
+					"type": "増加",
 					"num": "percent"
 				},
 				{
-					"label": "追加ダメージ",
+					"label": "攻撃力UP量",
 					"value": 5,
-					"type": "UP",
+					"type": "増加",
 					"num": "percent"
 				},
 				{
-					"label": "追加ダメージ",
+					"label": "攻撃力UP量",
 					"value": 5,
-					"type": "UP",
+					"type": "増加",
 					"num": "percent"
 				},
 				{
-					"label": "追加ダメージ",
+					"label": "攻撃力UP量",
 					"value": 5,
-					"type": "UP",
+					"type": "増加",
 					"num": "percent"
 				},
 				{
-					"label": "追加ダメージ",
+					"label": "攻撃力UP量",
 					"value": 10,
-					"type": "UP",
+					"type": "増加",
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "黒呪の粉塵",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "5.4% increased damage per crit, up to 7.02% at max molagora",
 				"modifier": ""
@@ -189,7 +275,7 @@
 		{
 			"name": "纏雷",
 			"tern": 5,
-			"desc": "すべての味方にクリティカル発生率UPを3ターンの間付与し、アクションゲージを10％UPする。自身に追加ターンが発生する。(魂力2獲得)",
+			"desc": "味方全体にクリティカル発生率UPを3ターンの間付与し、アクションゲージを10％UPする。自身に追加ターンが発生する。(魂力2獲得)",
 			"soul": {
 				"soul": 2,
 				"soulbern": false,
@@ -228,7 +314,50 @@
 					"num": "percent"
 				}
 			],
-			"material": [],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 2
+					},
+					{
+						"name": "鋭利な槍の穂",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラゴ",
+						"count": 1
+					},
+					{
+						"name": "黒呪の粉塵",
+						"count": 2
+					}
+				]
+			],
 			"multiple": {
 				"multiplier": "",
 				"modifier": ""

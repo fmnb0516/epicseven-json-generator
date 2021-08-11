@@ -56,6 +56,11 @@ module.exports = (context) => {
                 url: url
             });
         });
+
+        result.push({name:"レム" , url:"https://game8.jp/epic-seven/398357"});
+        result.push({name:"エミリア" , url:"https://game8.jp/epic-seven/398356"});
+        result.push({name:"ラム" , url:"https://game8.jp/epic-seven/398355"});
+
         return result;
     };
     
@@ -78,6 +83,9 @@ module.exports = (context) => {
 
         builder.extention("camping",ctx.campingData[name]);
     
+        if(context.helper.findHeaderElement($, "h3", "最大ステータス【入手時 / 覚醒後】") !== null) {
+            
+        }
         const status = context.helper.findHeaderElement($, "h3", "最大ステータス【入手時 / 覚醒後】").next();
     
         const max_attack = parseInt($($(status.find("tr").get(1)).find("td").get(1)).text().trim());
