@@ -45,17 +45,7 @@ const common = (() => {
     };
 
     const imageToBase64 = async (imageUrl) => {
-        const { statusCode, headers, error, body } =
-            await modules.util.promisify(modules.request.defaults({ encoding: null }))(imageUrl);
-
-        if (error || statusCode !== 200) {
-            return null;
-        }
-
-        const contentType = headers['content-type'];
-        const base64Str = new Buffer.from(body).toString('base64');
-
-        return `data:${contentType};base64,${base64Str}`;
+       return imageUrl;
     };
 
 

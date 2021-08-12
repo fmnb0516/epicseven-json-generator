@@ -82,10 +82,7 @@ module.exports = (context) => {
         builder.baseData(name, rare, type, clazz);
 
         builder.extention("camping",ctx.campingData[name]);
-    
-        if(context.helper.findHeaderElement($, "h3", "最大ステータス【入手時 / 覚醒後】") !== null) {
-            
-        }
+
         const status = context.helper.findHeaderElement($, "h3", "最大ステータス【入手時 / 覚醒後】").next();
     
         const max_attack = parseInt($($(status.find("tr").get(1)).find("td").get(1)).text().trim());
