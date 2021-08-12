@@ -67,10 +67,7 @@ class MaterialDataBuilder {
     };
 
     async thumbnail(callback) {
-        if(this.json.thumbnail === undefined || this.json.thumbnail === null || this.json.thumbnail === "") {
-            this.json.thumbnail = await callback();
-        }
-        return this;
+        return await callback();
     };
 
     toJsonString() {
@@ -124,10 +121,7 @@ class ArtifactDataBuilder {
     };
 
     async thumbnail(callback) {
-        if(this.json.thumbnail === undefined || this.json.thumbnail === null || this.json.thumbnail === "") {
-            this.json.thumbnail = await callback();
-        }
-        return this;
+        return await callback();
     };
 
     toJsonString() {
@@ -181,10 +175,7 @@ class HeroDataBuilder {
     };
 
     async thumbnail(callback) {
-        if(this.json.thumbnail === undefined || this.json.thumbnail === null || this.json.thumbnail === "") {
-            this.json.thumbnail = await callback();
-        }
-        return this;
+        return await callback();
     };
 
     initStatus(attack, health, speed, defense, critical_hit, critical_damage, unity_chance, debuff_hit, debuff_resist) {
