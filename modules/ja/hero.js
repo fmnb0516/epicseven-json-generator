@@ -65,6 +65,8 @@ module.exports = (context) => {
     };
     
     const dataPage = async ($, builder,ctx) => {
+
+        console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     
         builder.clearSkill().clearStampCollect().clearStampExpansion();
 
