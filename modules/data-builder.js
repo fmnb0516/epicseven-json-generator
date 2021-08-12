@@ -175,6 +175,7 @@ class HeroDataBuilder {
     };
 
     async thumbnail(callback) {
+        console.log("aaaaaaaaaaaaaaaaa");
         return await callback();
     };
 
