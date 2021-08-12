@@ -67,7 +67,8 @@ class MaterialDataBuilder {
     };
 
     async thumbnail(callback) {
-        return await callback();
+        this.json.thumbnail = await callback();
+        return this;
     };
 
     toJsonString() {
@@ -121,7 +122,8 @@ class ArtifactDataBuilder {
     };
 
     async thumbnail(callback) {
-        return await callback();
+        this.json.thumbnail = await callback();
+        return this;
     };
 
     toJsonString() {
@@ -175,8 +177,8 @@ class HeroDataBuilder {
     };
 
     async thumbnail(callback) {
-        console.log("aaaaaaaaaaaaaaaaa");
-        return await callback();
+        this.json.thumbnail = await callback();
+        return this;
     };
 
     initStatus(attack, health, speed, defense, critical_hit, critical_damage, unity_chance, debuff_hit, debuff_resist) {
