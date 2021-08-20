@@ -1,0 +1,400 @@
+{
+	"status": {
+		"max": {
+			"attack": 1182,
+			"health": 5299,
+			"speed": 114,
+			"defense": 571,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 18,
+			"debuff_resist": 0
+		},
+		"init": {
+			"attack": 720,
+			"health": 3881,
+			"speed": 114,
+			"defense": 460,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "クリティカル発生率",
+				"value": 4.8,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 7.2,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 9.6,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 12,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 14.4,
+				"type": "percent"
+			}
+		],
+		"collect": [
+			{
+				"label": "攻撃力",
+				"value": 6,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 9,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 12,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 15,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 18,
+				"type": "percent"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "クイックファイアー",
+			"tern": 0,
+			"desc": "対象を含む敵2体に攻撃する。自身のスピードが高いほどダメージがUPする。(魂力1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {
+				"multiplier": "(ATK*0.75*1)*(1+Speed*0.00075)",
+				"modifier": ""
+			}
+		},
+		{
+			"name": "モードチェンジ",
+			"tern": 0,
+			"desc": "自身のターン開始時に【フルファイアー！】が使用可能な状態の場合、自身が【砲撃態勢】になる。自身のターン終了時に【フルファイアー】が使用不可能な状態の場合、【強襲態勢】になる。【砲撃態勢】と【強襲態勢】は共存せず、片方になると同時にもう片方が解除される。砲撃態勢：効果命中率が40%UPする。強襲態勢：スピード・連携攻撃発生率が5%UPする。",
+			"soul": {
+				"soul": 0,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "各ステータス",
+					"value": 1,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "各ステータス",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "各ステータス",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "各ステータス",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "各ステータス",
+					"value": 3,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
+		},
+		{
+			"name": "フルファイアー！",
+			"tern": 4,
+			"desc": "敵全体に攻撃し、90%の確率で強化効果を1つ解除し、味方全体にスピードUPを2ターンの間付与し、自身に攻撃力UPを2ターンの間付与する。(魂力3獲得)",
+			"soul": {
+				"soul": 3,
+				"soulbern": true,
+				"bern_desc": "このスキルによる強化効果の持続ターンが1UPする。(魂力10消費)",
+				"usesoul": 10
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {
+				"multiplier": "ATK*1.0*1*1.871",
+				"modifier": ""
+			}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/5706694/2c2a69918e23994db0ce0e1e0dcd7f8b.png/show",
+	"name": "爆撃型カノン",
+	"rare": 5,
+	"type": "火",
+	"clazz": "アーチャー",
+	"extention": {
+		"camping": {
+			"topic": [
+				{
+					"id": "1261",
+					"name": "Cute Cheer"
+				},
+				{
+					"id": "1266",
+					"name": "Dream"
+				}
+			],
+			"camping": {
+				"1231": 3,
+				"1236": 6,
+				"1241": 5,
+				"1246": 3,
+				"1251": -2,
+				"1256": 6,
+				"1261": 1,
+				"1266": 2,
+				"1271": -3,
+				"1276": 0,
+				"1281": -2,
+				"1286": -3,
+				"1291": -3,
+				"1296": 8,
+				"1301": 1,
+				"1306": 2,
+				"1311": -3,
+				"1316": 3,
+				"1321": 2,
+				"1326": 4,
+				"1331": -1,
+				"1336": 5
+			}
+		}
+	}
+}
