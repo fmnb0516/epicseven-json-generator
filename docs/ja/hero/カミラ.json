@@ -1,0 +1,370 @@
+{
+	"status": {
+		"max": {
+			"attack": 885,
+			"health": 4733,
+			"speed": 110,
+			"defense": 571,
+			"critical_hit": 27,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 18,
+			"debuff_resist": 0
+		},
+		"init": {
+			"attack": null,
+			"health": null,
+			"speed": null,
+			"defense": null,
+			"critical_hit": null,
+			"critical_damage": null,
+			"unity_chance": null,
+			"debuff_hit": null,
+			"debuff_resist": null
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "スピード",
+				"value": 2,
+				"type": "fix"
+			},
+			{
+				"label": "スピード",
+				"value": 3,
+				"type": "fix"
+			},
+			{
+				"label": "スピード",
+				"value": 4,
+				"type": "fix"
+			},
+			{
+				"label": "スピード",
+				"value": 5,
+				"type": "fix"
+			},
+			{
+				"label": "スピード",
+				"value": 6,
+				"type": "fix"
+			},
+			{
+				"label": "スピード",
+				"value": 7,
+				"type": "fix"
+			},
+			{
+				"label": "スピード",
+				"value": 8,
+				"type": "fix"
+			}
+		],
+		"collect": [
+			{
+				"label": "クリティカル発生率",
+				"value": 2.8,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 4.2,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 5.6,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 7,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 8.4,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 9.8,
+				"type": "percent"
+			},
+			{
+				"label": "クリティカル発生率",
+				"value": 11.2,
+				"type": "percent"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "閃光の刃",
+			"tern": 0,
+			"desc": "敵単体に攻撃し、35%の確率で防御力DOWNを2ターンの間付与する。自身が攻撃力UP状態の場合、攻撃力が最も高い味方に連携攻撃を付与する。(魂力1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "効果発生率が100%になる。(魂力10消費)",
+				"usesoul": 10
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 50
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 230
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 400
+					},
+					{
+						"name": "魂の炎",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "魂の炎",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1000
+					},
+					{
+						"name": "魂の炎",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1450
+					},
+					{
+						"name": "魂の炎",
+						"count": 6
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "戦術展開",
+			"tern": 5,
+			"desc": "自身にスキルダメージ無効を1回・攻撃力UPを2ターンの間付与した後、自身以外の攻撃力が最も高い味方に攻撃力UPを2ターンの間付与する。自身のアクションゲージを50%UPさせる。(魂力2獲得)",
+			"soul": {
+				"soul": 2,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 300
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "迅速成敗",
+			"tern": 4,
+			"desc": "敵単体に攻撃し、対象を気絶させた場合、自身の生命力をすべて回復する。対象の現在生命力が低いほどダメージがUPする。このスキルが使用可能な状態の時、攻撃を受けた時に受けるダメージが30%DOWNする。ダメージDOWN効果が重複した場合、一番高い効果のみ適用される。(魂力2獲得)",
+			"soul": {
+				"soul": 2,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 50
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 230
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 400
+					},
+					{
+						"name": "魂の炎",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "魂の炎",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1000
+					},
+					{
+						"name": "魂の炎",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1450
+					},
+					{
+						"name": "魂の炎",
+						"count": 6
+					}
+				]
+			],
+			"multiple": {}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/6040950/f1c1cd21969ff57da21c9016ffa8b875.png/show",
+	"name": "カミラ",
+	"rare": 3,
+	"type": "光",
+	"clazz": "ウォリアー",
+	"extention": {}
+}

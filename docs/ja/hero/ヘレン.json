@@ -1,0 +1,370 @@
+{
+	"status": {
+		"max": {
+			"attack": 685,
+			"health": 6403,
+			"speed": 91,
+			"defense": 703,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		},
+		"init": {
+			"attack": null,
+			"health": null,
+			"speed": null,
+			"defense": null,
+			"critical_hit": null,
+			"critical_damage": null,
+			"unity_chance": null,
+			"debuff_hit": null,
+			"debuff_resist": null
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "生命力",
+				"value": 120,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 180,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 240,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 300,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 360,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 420,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 480,
+				"type": "fix"
+			}
+		],
+		"collect": [
+			{
+				"label": "防御力",
+				"value": 18,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 27,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 36,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 45,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 54,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 63,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 72,
+				"type": "fix"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "鈍い一撃",
+			"tern": 0,
+			"desc": "敵単体に攻撃した後、自身以外のランダムな味方のアクションゲージを10%UPさせる。自身の防御力が高いほどダメージがUPする。(魂力1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "味方全体にアクションゲージUP効果が適用される。(魂力10消費)",
+				"usesoul": 10
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 1,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "アクションゲージ",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 50
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 230
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 400
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1000
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1450
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 6
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "やぶれかぶれ",
+			"tern": 4,
+			"desc": "敵単体に攻撃した後、自身に防御力UPを2ターンの間付与し、生命力を回復する。自身の防御力が高いほどダメージがUPし、自身の最大生命力が高いほど回復量がUPする。(魂力2獲得)",
+			"soul": {
+				"soul": 2,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 50
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 230
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 400
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 650
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1000
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1450
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 6
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "恩恵の剣",
+			"tern": 8,
+			"desc": "自身に反撃を3ターンの間付与し、自身以外の味方全体にスピードUP・シールドを2ターンの間付与する。自身の防御力が高いほどシールド効果がUPする。全体攻撃を受けた時、このスキルのスキルターンが2減少する。(魂力3獲得)",
+			"soul": {
+				"soul": 3,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 300
+					}
+				]
+			],
+			"multiple": {}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/6040953/ab677db966f3c6f2ac8e47c7332ddb35.png/show",
+	"name": "ヘレン",
+	"rare": 3,
+	"type": "氷",
+	"clazz": "ナイト",
+	"extention": {}
+}
