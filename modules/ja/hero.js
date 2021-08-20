@@ -60,6 +60,14 @@ module.exports = (context) => {
         result.push({name:"レム" , url:"https://game8.jp/epic-seven/398357"});
         result.push({name:"エミリア" , url:"https://game8.jp/epic-seven/398356"});
         result.push({name:"ラム" , url:"https://game8.jp/epic-seven/398355"});
+        
+        result.push({name:"クリスティ" , url:"https://game8.jp/epic-seven/398352"});
+        result.push({name:"ヘレン" , url:"https://game8.jp/epic-seven/398353"});
+        result.push({name:"ペネロペ" , url:"https://game8.jp/epic-seven/398345"});
+        result.push({name:"カミラ" , url:"https://game8.jp/epic-seven/398350"});
+        result.push({name:"メラニー" , url:"https://game8.jp/epic-seven/398354"});
+
+        result.push({name:"終結者チャールズ" , url:"https://game8.jp/epic-seven/398343"});
 
         return result;
     };
