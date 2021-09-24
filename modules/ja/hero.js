@@ -72,6 +72,9 @@ module.exports = (context) => {
         result.push({name:"爆撃型カノン" , url:"https://game8.jp/epic-seven/380171"});
         result.push({name:"ミューズリマ" , url:"https://game8.jp/epic-seven/377613"});
 
+        result.push({name:"南国のイセリア" , url:"https://game8.jp/epic-seven/399646"});
+        result.push({name:"光の天使アンジェリカ" , url:"https://game8.jp/epic-seven/399647"});
+
         return result;
     };
     
