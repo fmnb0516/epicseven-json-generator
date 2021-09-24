@@ -1,0 +1,235 @@
+{
+	"status": {
+		"max": {
+			"attack": 957,
+			"health": 5016,
+			"speed": 112,
+			"defense": 645,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 18,
+			"debuff_resist": 18
+		},
+		"init": {
+			"attack": 501,
+			"health": 2795,
+			"speed": 108,
+			"defense": 405,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "防御力",
+				"value": 2.4,
+				"type": "percent"
+			},
+			{
+				"label": "防御力",
+				"value": 3.6,
+				"type": "percent"
+			},
+			{
+				"label": "防御力",
+				"value": 4.8,
+				"type": "percent"
+			},
+			{
+				"label": "防御力",
+				"value": 6,
+				"type": "percent"
+			},
+			{
+				"label": "防御力",
+				"value": 7.2,
+				"type": "percent"
+			},
+			{
+				"label": "防御力",
+				"value": 8.4,
+				"type": "percent"
+			}
+		],
+		"collect": [
+			{
+				"label": "効果命中率",
+				"value": 6.8,
+				"type": "percent"
+			},
+			{
+				"label": "効果命中率",
+				"value": 10.2,
+				"type": "percent"
+			},
+			{
+				"label": "効果命中率",
+				"value": 13.6,
+				"type": "percent"
+			},
+			{
+				"label": "効果命中率",
+				"value": 17,
+				"type": "percent"
+			},
+			{
+				"label": "効果命中率",
+				"value": 20.4,
+				"type": "percent"
+			},
+			{
+				"label": "効果命中率",
+				"value": 23.8,
+				"type": "percent"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "洗礼の手",
+			"tern": 0,
+			"desc": "敵単体に攻撃し、50%の確率で沈黙を1ターンの間付与する。攻撃後、対象が沈黙状態の場合、対象のアクションゲージを25%DOWNさせる。(魂力1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "効果発生率が100%になる。(魂力10消費)",
+				"usesoul": 10
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [],
+			"multiple": {}
+		},
+		{
+			"name": "光の守護者",
+			"tern": 0,
+			"desc": "スタン状態にならない。自身以外の味方が攻撃を受けた時、自身のアクションゲージを攻撃を受けた自身以外の味方の数×8%UPさせる。全体攻撃を受けた時、75%の確率で【守護天使】を発動する。【守護天使】は3ターンに1回まで発動する。守護天使：味方全体の弱体効果を1つ解除した後、スキルダメージ無効を1回付与する。",
+			"soul": {
+				"soul": 0,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "発動率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "発動率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "発動率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "発動率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "発動率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [],
+			"multiple": {}
+		},
+		{
+			"name": "天使の審判",
+			"tern": 5,
+			"desc": "敵全体の強化効果を2つ解除した後、70%の確率で強化不可を2ターン・沈黙を1ターンの間付与する。(魂力3獲得)",
+			"soul": {
+				"soul": 3,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [],
+			"multiple": {}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/6082046/12ea3ce4ae1af255ee6c8ca246e118c6.png/show",
+	"name": "光の天使アンジェリカ",
+	"rare": 4,
+	"type": "光",
+	"clazz": "メイジ",
+	"extention": {}
+}

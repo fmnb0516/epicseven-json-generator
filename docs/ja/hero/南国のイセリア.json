@@ -1,0 +1,354 @@
+{
+	"status": {
+		"max": {
+			"attack": 1203,
+			"health": 5704,
+			"speed": 115,
+			"defense": 585,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 30,
+			"debuff_resist": 0
+		},
+		"init": {
+			"attack": 923,
+			"health": 4202,
+			"speed": 109,
+			"defense": 472,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "攻撃力",
+				"value": 3.6,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 5.4,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 7.2,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 9,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 10.8,
+				"type": "percent"
+			}
+		],
+		"collect": [
+			{
+				"label": "効果命中率",
+				"value": 9,
+				"type": "percent"
+			},
+			{
+				"label": "効果命中率",
+				"value": 13.5,
+				"type": "percent"
+			},
+			{
+				"label": "効果命中率",
+				"value": 18,
+				"type": "percent"
+			},
+			{
+				"label": "効果命中率",
+				"value": 22.5,
+				"type": "percent"
+			},
+			{
+				"label": "効果命中率",
+				"value": 27,
+				"type": "percent"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "あなたが犯人ですか？",
+			"tern": 0,
+			"desc": "敵単体に攻撃し、それぞれ60%の確率で強化効果を2つ解除する。(魂力1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "追加ターンが発生する。(魂力20消費)",
+				"usesoul": 20
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "火龍の逆鱗",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "鎮圧を開始します",
+			"tern": 0,
+			"desc": "自身の初回の魂力解放で必要な魂力が0になる。クリティカルが発生しない。攻撃力が35%UPする。自身以外の味方が全体攻撃した後、【制圧！】を発動する。3ターンに1回まで発動する。制圧！：味方全体のアクションゲージを15%UPさせ、ランダムな敵2体に爆弾を2ターンの間付与する。",
+			"soul": {
+				"soul": 0,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "攻撃力",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "攻撃力",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "攻撃力",
+					"value": 3,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "攻撃力",
+					"value": 3,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "攻撃力",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "火龍の逆鱗",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "花の剣よ！",
+			"tern": 4,
+			"desc": "敵全体に攻撃し、攻撃力DOWNを2ターンの間付与し、自身にスピードUPを2ターンの間付与する。ターン終了時に対象の爆弾を激爆させる。(魂力2獲得)",
+			"soul": {
+				"soul": 2,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "火龍の逆鱗",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/6082044/7492a5e573c3e34b0cc5369232150b19.png/show",
+	"name": "南国のイセリア",
+	"rare": 5,
+	"type": "火",
+	"clazz": "アーチャー",
+	"extention": {}
+}
