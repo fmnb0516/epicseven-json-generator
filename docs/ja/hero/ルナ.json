@@ -349,7 +349,7 @@
 				]
 			],
 			"multiple": {
-				"multiplier": "ATK*1.5*1.05*1.871 (2.2 soul burn)",
+				"multiplier": "ATK*1.5*1.05*1.871",
 				"modifier": ""
 			}
 		}

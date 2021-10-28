@@ -360,7 +360,7 @@
 			],
 			"multiple": {
 				"multiplier": "ATK*1.2*0.8*1.871",
-				"modifier": "Gains 0.3% damage per 1% enemy Health missing"
+				"modifier": ""
 			}
 		}
 	],

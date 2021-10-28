@@ -370,7 +370,7 @@
 			],
 			"multiple": {
 				"multiplier": "ATK*2.2*0.95*1.871 (2.9 soul burn)",
-				"modifier": "30% increased damage if target is bleeding"
+				"modifier": ""
 			}
 		}
 	],
