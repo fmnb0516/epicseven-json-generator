@@ -1,0 +1,354 @@
+{
+	"status": {
+		"max": {
+			"attack": 821,
+			"health": 6751,
+			"speed": 110,
+			"defense": 648,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 18,
+			"debuff_resist": 0
+		},
+		"init": {
+			"attack": 538,
+			"health": 4620,
+			"speed": 106,
+			"defense": 523,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "効果抵抗率",
+				"value": 4.8,
+				"type": "percent"
+			},
+			{
+				"label": "効果抵抗率",
+				"value": 7.2,
+				"type": "percent"
+			},
+			{
+				"label": "効果抵抗率",
+				"value": 9.6,
+				"type": "percent"
+			},
+			{
+				"label": "効果抵抗率",
+				"value": 12,
+				"type": "percent"
+			},
+			{
+				"label": "効果抵抗率",
+				"value": 14.4,
+				"type": "percent"
+			}
+		],
+		"collect": [
+			{
+				"label": "生命力",
+				"value": 6,
+				"type": "percent"
+			},
+			{
+				"label": "生命力",
+				"value": 9,
+				"type": "percent"
+			},
+			{
+				"label": "生命力",
+				"value": 12,
+				"type": "percent"
+			},
+			{
+				"label": "生命力",
+				"value": 15,
+				"type": "percent"
+			},
+			{
+				"label": "生命力",
+				"value": 18,
+				"type": "percent"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "破滅の光",
+			"tern": 0,
+			"desc": "敵全体に攻撃し、50%の確率で強化効果を1つ解除する。自身のターンに発動時、35%の確率で追加で【奇襲】を発動する。自身の最大生命力が高いほどダメージがUPする。奇襲：敵全体に攻撃し、スピードDOWN・命中率DOWNを1ターンの間付与する。自身の最大生命力が高いほどダメージがUPする。(魂力1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "【奇襲】の発動率が100%になる。(魂力10消費)",
+				"usesoul": 10
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "強化効果解除率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "強化効果解除率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "強化効果解除率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "小型動力回路",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 4
+					},
+					{
+						"name": "小型動力回路",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 4
+					},
+					{
+						"name": "悪夢の仮面",
+						"count": 3
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "制圧の足かせ",
+			"tern": 0,
+			"desc": "敵の【魂力】獲得量を100%DOWNさせる。ターン開始時、自身に70%の確率でランダム強化効果を1ターンの間付与する。ランダム強化効果：効果命中率UP・クリティカル発生率UP・持続回復",
+			"soul": {
+				"soul": 0,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "効果発生率",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 2,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 3,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 3,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "小型動力回路",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "小型動力回路",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 4
+					},
+					{
+						"name": "小型動力回路",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 4
+					},
+					{
+						"name": "悪夢の仮面",
+						"count": 3
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "終末",
+			"tern": 5,
+			"desc": "敵全体に攻撃し、アクションゲージを20%〜40%DOWNさせ、挑発を1ターンの間付与する。自身に防御力UPを2ターンの間付与する。自身の最大生命力が高いほどダメージがUPする。(魂力3獲得)",
+			"soul": {
+				"soul": 3,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "小型動力回路",
+						"count": 8
+					}
+				]
+			],
+			"multiple": {}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/6162733/31db849481be5552a5d885456067ebed.png/show",
+	"name": "ヴェリアン",
+	"rare": 5,
+	"type": "光",
+	"clazz": "ナイト",
+	"extention": {}
+}

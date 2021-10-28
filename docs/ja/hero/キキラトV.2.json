@@ -1,0 +1,374 @@
+{
+	"status": {
+		"max": {
+			"attack": 667,
+			"health": 5704,
+			"speed": 90,
+			"defense": 749,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 18
+		},
+		"init": {
+			"attack": 235,
+			"health": 2314,
+			"speed": 90,
+			"defense": 304,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "生命力",
+				"value": 120,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 180,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 240,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 300,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 360,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 420,
+				"type": "fix"
+			},
+			{
+				"label": "生命力",
+				"value": 480,
+				"type": "fix"
+			}
+		],
+		"collect": [
+			{
+				"label": "防御力",
+				"value": 18,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 27,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 36,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 45,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 54,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 63,
+				"type": "fix"
+			},
+			{
+				"label": "防御力",
+				"value": 72,
+				"type": "fix"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "連射",
+			"tern": 0,
+			"desc": "敵単体に攻撃し、65%の確率で強化効果を1つ解除する。自身の防御力が高いほどダメージがUPする。(魂力1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 270
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 470
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 740
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 5
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "防御システム構築",
+			"tern": 0,
+			"desc": "攻撃後、自身の防御力が7.0%UPする。最大5回まで累積する。",
+			"soul": {
+				"soul": 0,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "防御力",
+					"value": 0,
+					"type": ".",
+					"num": "fix"
+				},
+				{
+					"label": "防御力",
+					"value": 0,
+					"type": ".",
+					"num": "fix"
+				},
+				{
+					"label": "防御力",
+					"value": 0,
+					"type": ".",
+					"num": "fix"
+				},
+				{
+					"label": "防御力",
+					"value": 0,
+					"type": ".",
+					"num": "fix"
+				},
+				{
+					"label": "防御力",
+					"value": 1,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 270
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 470
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 740
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 5
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "掃除モード起動",
+			"tern": 3,
+			"desc": "敵全体に攻撃し、60%の確率で命中率DOWNを1ターンの間付与した後、自身に反撃を2ターンの間付与する。自身の防御力が高いほどダメージがUPする。(魂力2獲得)",
+			"soul": {
+				"soul": 2,
+				"soulbern": true,
+				"bern_desc": "ダメージがUPする。(魂力10消費)",
+				"usesoul": 10
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 120
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 270
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 470
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 3
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 740
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 4
+					}
+				],
+				[
+					{
+						"name": "聖痕の葉",
+						"count": 1100
+					},
+					{
+						"name": "スライムゼリー",
+						"count": 5
+					}
+				]
+			],
+			"multiple": {}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/4637890/929fee00f24797a03ee7f0cb0dcdd4cc.png/show",
+	"name": "キキラトV.2",
+	"rare": 3,
+	"type": "光",
+	"clazz": "ナイト",
+	"extention": {}
+}
