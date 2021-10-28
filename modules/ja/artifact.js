@@ -96,7 +96,7 @@ module.exports = (context) => {
         csvEntry : csvEntry,
         listPage: listPage,
         dataPage: dataPage,
-        url: "https://game8.jp/epic-seven/301576",
+        url: ["https://game8.jp/epic-seven/319384", 'https://game8.jp/epic-seven/319385', "https://game8.jp/epic-seven/319386", 'https://game8.jp/epic-seven/319387', 'https://game8.jp/epic-seven/319388'],
         csvHeaders : ["名称", "レアリティ", "攻撃力(初期)",  "生命力(初期)", "攻撃力(最大)", "生命力(最大)", "装備可能クラス",
                 "遺物レベル(S1)", "遺物効果(S1)", "遺物レベル(S11)", "遺物効果(S11)"]
     };

@@ -221,12 +221,16 @@ class Generator {
             console.log("  generate " + targetMode);
 
             const pageData = this.data(mode);
-
-            const pages = await pageData.listPageParser(common.dom(await common.requestWithCache(pageData.listUrl)), context);
             const generates = [];
+            const urls = Array.isArray(pageData.listUrl) ? pageData.listUrl : [pageData.listUrl];
+
+            const pages = [];
+            for(let i=0; i<urls.length; i++) {
+                const entries = await pageData.listPageParser(common.dom(await common.requestWithCache(urls[i])), context)
+                entries.forEach(e => pages.push(e));   
+            }
             
             for(let i =0; i<pages.length; i++) {
-
                 try {
                     const page = pages[i];
                     if(targetName === "" || page.name === targetName) {

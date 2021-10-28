@@ -1,0 +1,73 @@
+{
+	"effect": [
+		{
+			"skill_level": 1,
+			"artifact_level": 0,
+			"desc": "全体攻撃時にダメージが8.0%UPする。"
+		},
+		{
+			"skill_level": 2,
+			"artifact_level": 3,
+			"desc": "全体攻撃時にダメージが8.8%UPする。"
+		},
+		{
+			"skill_level": 3,
+			"artifact_level": 6,
+			"desc": "全体攻撃時にダメージが9.6%UPする。"
+		},
+		{
+			"skill_level": 4,
+			"artifact_level": 9,
+			"desc": "全体攻撃時にダメージが10.4%UPする。"
+		},
+		{
+			"skill_level": 5,
+			"artifact_level": 12,
+			"desc": "全体攻撃時にダメージが11.2%UPする。"
+		},
+		{
+			"skill_level": 6,
+			"artifact_level": 15,
+			"desc": "全体攻撃時にダメージが12.0%UPする。"
+		},
+		{
+			"skill_level": 7,
+			"artifact_level": 18,
+			"desc": "全体攻撃時にダメージが12.8%UPする。"
+		},
+		{
+			"skill_level": 8,
+			"artifact_level": 21,
+			"desc": "全体攻撃時にダメージが13.6%UPする。"
+		},
+		{
+			"skill_level": 9,
+			"artifact_level": 24,
+			"desc": "全体攻撃時にダメージが14.4%UPする。"
+		},
+		{
+			"skill_level": 10,
+			"artifact_level": 27,
+			"desc": "全体攻撃時にダメージが15.2%UPする。"
+		},
+		{
+			"skill_level": 11,
+			"artifact_level": 30,
+			"desc": "全体攻撃時にダメージが16.0%UPする。"
+		}
+	],
+	"status": {
+		"init": {
+			"attack": 21,
+			"health": 32
+		},
+		"max": {
+			"attack": 273,
+			"health": 416
+		}
+	},
+	"thumbnail": "https://img.game8.jp/6183114/2a9e7c4eb60baf004cc85e13adeafbc1.png/show",
+	"name": "異世界の機械",
+	"rare": 5,
+	"target": "アーチャー"
+}
