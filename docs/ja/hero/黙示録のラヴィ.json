@@ -184,7 +184,7 @@
 			],
 			"multiple": {
 				"multiplier": "(ATK*1*0.95+HP*0.12)*1.871 (1.8 soul burn)",
-				"modifier": "12% self max Health (20% soulburn)"
+				"modifier": "Health leech 30% damage dealt and additional 12% self max Health (20% soulburn)"
 			}
 		},
 		{

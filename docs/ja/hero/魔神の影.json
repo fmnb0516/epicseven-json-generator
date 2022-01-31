@@ -167,7 +167,7 @@
 				]
 			],
 			"multiple": {
-				"multiplier": "",
+				"multiplier": "ATK*1*1*1.871",
 				"modifier": ""
 			}
 		},
@@ -258,7 +258,7 @@
 				]
 			],
 			"multiple": {
-				"multiplier": "",
+				"multiplier": "Burst: ATK*0.6*1.3*1.871",
 				"modifier": ""
 			}
 		},
@@ -349,7 +349,7 @@
 				]
 			],
 			"multiple": {
-				"multiplier": "",
+				"multiplier": "ATK*1*1*1.871",
 				"modifier": ""
 			}
 		}

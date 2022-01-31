@@ -290,8 +290,8 @@
 				]
 			],
 			"multiple": {
-				"multiplier": "ATK*1.5*1*1.871 (7% of his Max HP)",
-				"modifier": "Barrier strength is 17% of his Max HP"
+				"multiplier": "ATK*1.5*1*1.871 (9% of his Max HP)",
+				"modifier": "Barrier Strength: 21% the target's Max HP"
 			}
 		},
 		{

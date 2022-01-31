@@ -234,8 +234,8 @@
 				]
 			],
 			"multiple": {
-				"multiplier": "ATK*0.9*1*1.871 (1.15 soul burn)",
-				"modifier": "10% increased damage per extra target (12.5% soulburn)"
+				"multiplier": "ATK*0.9*1*1.871",
+				"modifier": ""
 			}
 		},
 		{
