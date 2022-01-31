@@ -166,7 +166,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "処刑の刃",
@@ -254,7 +257,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "集団狩り",
@@ -342,7 +348,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6482441/a848d13e20920d44d5254878850e960c.png/show",

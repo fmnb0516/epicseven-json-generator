@@ -166,7 +166,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871 (Demolition: ATK*1.2*1*1.871)",
+				"modifier": "Demolition modifier: 0.4% increased damage per 1% target missing Health"
+			}
 		},
 		{
 			"name": "終結者",
@@ -254,7 +257,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "空挺落下",
@@ -342,7 +348,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871 (Soul Burn: ATK*1.25*1*1.871)",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6040935/38fa6109447416c60a6f793b43b11ad0.png/show",

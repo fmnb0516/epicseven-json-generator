@@ -194,7 +194,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "一点集中",
@@ -226,7 +229,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "刹那の剣撃",
@@ -342,7 +348,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6225052/a5b440f123983a7824f3638cee2198df.png/show",

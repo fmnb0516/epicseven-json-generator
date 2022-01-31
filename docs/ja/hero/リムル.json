@@ -166,7 +166,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "おまえの能力、すべて把握した",
@@ -254,7 +257,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "飲み込め、黒炎！",
@@ -342,7 +348,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6260637/81896c4c86a1031872bbc6ac4f55f56c.jpeg/show",

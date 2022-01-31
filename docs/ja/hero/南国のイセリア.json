@@ -166,7 +166,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "鎮圧を開始します",
@@ -254,7 +257,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "Bomb Effect = 150% of caster's Attack as damage, ignores 70% of def",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "花の剣よ！",
@@ -342,7 +348,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1.2*1*1.871",
+				"modifier": "10% increased damage on detonate via s3"
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6082044/7492a5e573c3e34b0cc5369232150b19.png/show",

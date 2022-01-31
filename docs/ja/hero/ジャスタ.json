@@ -143,7 +143,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": "30% increased damage if enraged"
+			}
 		},
 		{
 			"name": "草原の支配者",
@@ -188,7 +191,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "木っ端微塵",
@@ -233,7 +239,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1.5*1*1.871",
+				"modifier": "ATK*2.2*1*1.871 (Soul Burn)"
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6451559/12f38bae2d420cdd8e07c0329bb864a6.png/show",

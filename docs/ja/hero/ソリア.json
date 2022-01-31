@@ -143,7 +143,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "(ATK*0.7*1+HP*0.05)*1.871",
+				"modifier": "5% self max Health (0.05 * Health)"
+			}
 		},
 		{
 			"name": "復讐の刃",
@@ -188,7 +191,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "制裁の一撃",
@@ -233,7 +239,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "(ATK*0.7*1+HP*0.10)*1.871",
+				"modifier": "10% self max Health (0.10 * Health)"
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6451558/0f7ae467a077dca4f64232b8fe7aef45.png/show",

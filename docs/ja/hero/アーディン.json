@@ -143,7 +143,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*0.95*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "逆風",
@@ -188,7 +191,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*0.8*1*1.871",
+				"modifier": "20% more dmg vs 3 targets, 40% more dmg vs 2 targets, 60% more dmg vs 1 target"
+			}
 		},
 		{
 			"name": "疾風怒涛",
@@ -233,7 +239,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1.8*1.05*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6300339/03db57ce9e9ac80b300212d6735211b0.png/show",

@@ -143,7 +143,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "(ATK*0.7+Def*0.5)*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "意志",
@@ -188,7 +191,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": "6.7% Defense increase per stack, (Max of 10%)"
+			}
 		},
 		{
 			"name": "洞察の斬撃",
@@ -233,7 +239,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "(ATK*1.3+Def*0.7)*0.95*1.77745",
+				"modifier": "80% Defense for Barrier Strength"
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6300337/22ee6bf43b856ca19db162ef7b53b1ae.png/show",

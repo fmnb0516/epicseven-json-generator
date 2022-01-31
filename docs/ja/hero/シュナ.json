@@ -166,7 +166,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*0.75*1*1.871 ",
+				"modifier": "Proportional to 9% of caster's Max Health"
+			}
 		},
 		{
 			"name": "蓮華開花",
@@ -254,7 +257,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": "Shield strength: 18% of caster's max HP"
+			}
 		},
 		{
 			"name": "昏睡の香り",
@@ -342,7 +348,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6260629/2c2e4692dcadd32c1fd941fccd7800cc.png/show",

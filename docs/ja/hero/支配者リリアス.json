@@ -182,7 +182,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1.2*0.95*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "掩護せよ！",
@@ -286,7 +289,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "Shield Strength: 25% of Max HP",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "栄光のために！",
@@ -350,7 +356,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6365362/4e2f4137e0e3387bdc1a9a96f8ec29ff.png/show",

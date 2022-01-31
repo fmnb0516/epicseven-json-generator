@@ -166,7 +166,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1.1*1*1.871",
+				"modifier": "20% of damage dealt as lifesteal"
+			}
 		},
 		{
 			"name": "竜眼(ミリムアイ)",
@@ -254,7 +257,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "ドラゴ・フィアー",
@@ -342,7 +348,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1.7*1*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6260631/19b8ce334811bc4c0a6d06545c4f43d3.png/show",

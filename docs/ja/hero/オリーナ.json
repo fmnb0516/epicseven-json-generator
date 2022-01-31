@@ -155,7 +155,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "(ATK*0.65*0.8*1.871)*(1+Speed*0.00075)",
+				"modifier": "0.075% self Speed (0.00075 * Speed)"
+			}
 		},
 		{
 			"name": "あふれる意欲",
@@ -176,7 +179,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "狩りの作法",
@@ -233,7 +239,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "(ATK*07*0.95*1.871)*(1+Speed*0.00075)",
+				"modifier": "0.075% self Speed (0.00075 * Speed)"
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6451560/b43aa36f3615c622ef3f1b709bf2797f.png/show",

@@ -155,7 +155,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*0.8*0.95*1.871",
+				"modifier": "Extra Attack -> ATK*0.5*1*1.871"
+			}
 		},
 		{
 			"name": "攻撃指揮",
@@ -212,7 +215,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "Barrier Strength: 16% of Target Max Health",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "戦場の叫び",
@@ -233,7 +239,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6451556/31331de9ceff5368c4c99ac1a4b6931d.png/show",

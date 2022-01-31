@@ -143,7 +143,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "冷静な管理",
@@ -188,7 +191,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*0.8*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "風斬",
@@ -233,7 +239,10 @@
 				}
 			],
 			"material": [],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1.1*1.871 ",
+				"modifier": "ATK*1.25*1.1*1.871  (Soul Burn)"
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6451557/644193e9f3d3065e06a41be9bac4dc02.png/show",

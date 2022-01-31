@@ -166,7 +166,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1.1*1*1.871 (Soul Burn: ATK*1.8*1*1.871)",
+				"modifier": "30% damage increase if the target is buffed"
+			}
 		},
 		{
 			"name": "緻密な計画",
@@ -254,7 +257,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": "Shield Strength: 20% of Target Max Health"
+			}
 		},
 		{
 			"name": "斬殺",
@@ -342,7 +348,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1.9*1*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6339196/761f5bcec50ff9e5c04092907797dd12.png/show",

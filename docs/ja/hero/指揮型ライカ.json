@@ -182,7 +182,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "攻撃命令",
@@ -246,7 +249,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "全弾一斉射撃",
@@ -350,7 +356,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1.1*1*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6411528/c9acca1243fe840e6722003681585d52.png/show",

@@ -186,7 +186,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "敏捷性",
@@ -274,7 +277,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "",
+				"modifier": ""
+			}
 		},
 		{
 			"name": "ぶっ飛んじゃえー！！",
@@ -362,7 +368,10 @@
 					}
 				]
 			],
-			"multiple": {}
+			"multiple": {
+				"multiplier": "ATK*1*1*1.871",
+				"modifier": ""
+			}
 		}
 	],
 	"thumbnail": "https://img.game8.jp/6040952/c8f93a4403998de42d25e8c2ffac4c5f.png/show",
