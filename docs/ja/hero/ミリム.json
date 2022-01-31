@@ -1,0 +1,354 @@
+{
+	"status": {
+		"max": {
+			"attack": 1359,
+			"health": 4895,
+			"speed": 110,
+			"defense": 652,
+			"critical_hit": 23,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		},
+		"init": {
+			"attack": 822,
+			"health": 3559,
+			"speed": 110,
+			"defense": 525,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "連携攻撃発生率",
+				"value": 1,
+				"type": "percent"
+			},
+			{
+				"label": "連携攻撃発生率",
+				"value": 1.5,
+				"type": "percent"
+			},
+			{
+				"label": "連携攻撃発生率",
+				"value": 2,
+				"type": "percent"
+			},
+			{
+				"label": "連携攻撃発生率",
+				"value": 2.5,
+				"type": "percent"
+			},
+			{
+				"label": "連携攻撃発生率",
+				"value": 3,
+				"type": "percent"
+			}
+		],
+		"collect": [
+			{
+				"label": "攻撃力",
+				"value": 6,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 9,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 12,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 15,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 18,
+				"type": "percent"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "ドラゴ・ダイブ",
+			"tern": 0,
+			"desc": "敵単体に攻撃し、与えたダメージに応じて自身の生命力を回復した後、自身に攻撃力UPを1ターンの間付与する。(魂力1獲得/集中1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "追加ターンが発生する。(魂力20消費)",
+				"usesoul": 20
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "偽善の心臓",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "竜眼(ミリムアイ)",
+			"tern": 0,
+			"desc": "バトル開始時・自身のターン終了時、70%の確率で自身に竜眼(ミリムアイ)を1ターンの間付与する。ターン開始時、自身が竜眼(ミリムアイ)状態の場合、敵全体の潜伏を解除する。効果抵抗を無視する。攻撃後に【集中】が最大の場合、【集中】をすべて消費して【竜星拡散爆(ドラゴ・バスター)】を発動する。竜星拡散爆(ドラゴ・バスター)：敵全体に攻撃し、敵の魂力を10除去する。",
+			"soul": {
+				"soul": 0,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "発動率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "発動率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "発動率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "発動率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "発動率",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "偽善の心臓",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "ドラゴ・フィアー",
+			"tern": 5,
+			"desc": "敵単体に攻撃し、このスキルで敵を気絶させた場合、対象を消滅させる。自身に回避率UPを3ターンの間付与する。対象が精鋭・ボスモンスターでない場合、ダメージ分配効果を無視する。(魂力3獲得/集中2獲得)",
+			"soul": {
+				"soul": 3,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "ベルマウスの徽章",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "偽善の心臓",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/6260631/19b8ce334811bc4c0a6d06545c4f43d3.png/show",
+	"name": "ミリム",
+	"rare": 5,
+	"type": "火",
+	"clazz": "メイジ",
+	"extention": {}
+}

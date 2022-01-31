@@ -1,0 +1,354 @@
+{
+	"status": {
+		"max": {
+			"attack": 649,
+			"health": 5254,
+			"speed": 103,
+			"defense": 694,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		},
+		"init": {
+			"attack": 400,
+			"health": 3527,
+			"speed": 99,
+			"defense": 559,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "生命力",
+				"value": 3.6,
+				"type": "percent"
+			},
+			{
+				"label": "生命力",
+				"value": 5.4,
+				"type": "percent"
+			},
+			{
+				"label": "生命力",
+				"value": 7.2,
+				"type": "percent"
+			},
+			{
+				"label": "生命力",
+				"value": 9,
+				"type": "percent"
+			},
+			{
+				"label": "生命力",
+				"value": 10.8,
+				"type": "percent"
+			}
+		],
+		"collect": [
+			{
+				"label": "効果抵抗率",
+				"value": 9,
+				"type": "percent"
+			},
+			{
+				"label": "効果抵抗率",
+				"value": 13.5,
+				"type": "percent"
+			},
+			{
+				"label": "効果抵抗率",
+				"value": 18,
+				"type": "percent"
+			},
+			{
+				"label": "効果抵抗率",
+				"value": 22.5,
+				"type": "percent"
+			},
+			{
+				"label": "効果抵抗率",
+				"value": 27,
+				"type": "percent"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "魔素爆発",
+			"tern": 0,
+			"desc": "敵単体に攻撃し、自身の生命力を回復する。自身の最大生命力が高いほどダメージと回復量がUPする。(魂力1獲得/集中1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "追加ターンが発生する。(魂力20消費)",
+				"usesoul": 20
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "回復量",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "蓮華開花",
+			"tern": 5,
+			"desc": "味方全体の弱体効果を2つ解除し、それぞれの味方の生命力の割合が同じになるように生命力を再分配した後、シールドを3ターンの間付与する。自身の最大生命力が高いほどシールド効果がUPする。(魂力2獲得/集中3獲得)",
+			"soul": {
+				"soul": 2,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "シールド効果",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "シールド効果",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "シールド効果",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "シールド効果",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "昏睡の香り",
+			"tern": 0,
+			"desc": "敵全体の強化効果を2つ解除した後、50%の確率で睡眠を2ターンの間付与する。(魂力2獲得/集中5消費)",
+			"soul": {
+				"soul": 2,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "効果発生率",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "栄光の指輪",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "融合神経",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/6260629/2c2e4692dcadd32c1fd941fccd7800cc.png/show",
+	"name": "シュナ",
+	"rare": 5,
+	"type": "火",
+	"clazz": "プリースト",
+	"extention": {}
+}

@@ -1,0 +1,73 @@
+{
+	"effect": [
+		{
+			"skill_level": 1,
+			"artifact_level": 0,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、15.0%の確率で反撃する。"
+		},
+		{
+			"skill_level": 2,
+			"artifact_level": 3,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、16.5%の確率で反撃する。"
+		},
+		{
+			"skill_level": 3,
+			"artifact_level": 6,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、18.0%の確率で反撃する。"
+		},
+		{
+			"skill_level": 4,
+			"artifact_level": 9,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、19.5%の確率で反撃する。"
+		},
+		{
+			"skill_level": 5,
+			"artifact_level": 12,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、21.0%の確率で反撃する。"
+		},
+		{
+			"skill_level": 6,
+			"artifact_level": 15,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、22.5%の確率で反撃する。"
+		},
+		{
+			"skill_level": 7,
+			"artifact_level": 18,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、24.0%の確率で反撃する。"
+		},
+		{
+			"skill_level": 8,
+			"artifact_level": 21,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、25.5%の確率で反撃する。"
+		},
+		{
+			"skill_level": 9,
+			"artifact_level": 24,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、27.0%の確率で反撃する。"
+		},
+		{
+			"skill_level": 10,
+			"artifact_level": 27,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、28.5%の確率で反撃する。"
+		},
+		{
+			"skill_level": 11,
+			"artifact_level": 30,
+			"desc": "攻撃を受けた時、クリティカルが発生しなかった場合、30.0%の確率で反撃する。"
+		}
+	],
+	"status": {
+		"init": {
+			"attack": 15,
+			"health": 54
+		},
+		"max": {
+			"attack": 195,
+			"health": 702
+		}
+	},
+	"thumbnail": "https://img.game8.jp/6280734/bec653d3d4964c532d0d380aa59130ec.png/show",
+	"name": "ドラゴンナックル改",
+	"rare": 5,
+	"target": "メイジ"
+}

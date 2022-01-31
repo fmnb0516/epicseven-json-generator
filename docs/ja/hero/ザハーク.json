@@ -1,0 +1,354 @@
+{
+	"status": {
+		"max": {
+			"attack": 1177,
+			"health": 5542,
+			"speed": 119,
+			"defense": 553,
+			"critical_hit": 27,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		},
+		"init": {
+			"attack": 757,
+			"health": 4074,
+			"speed": 115,
+			"defense": 446,
+			"critical_hit": 15,
+			"critical_damage": 150,
+			"unity_chance": 5,
+			"debuff_hit": 0,
+			"debuff_resist": 0
+		}
+	},
+	"stamp": {
+		"expansion": [
+			{
+				"label": "防御力",
+				"value": 4.3,
+				"type": "percent"
+			},
+			{
+				"label": "防御力",
+				"value": 6.5,
+				"type": "percent"
+			},
+			{
+				"label": "防御力",
+				"value": 8.6,
+				"type": "percent"
+			},
+			{
+				"label": "防御力",
+				"value": 10.7,
+				"type": "percent"
+			},
+			{
+				"label": "防御力",
+				"value": 12.9,
+				"type": "percent"
+			}
+		],
+		"collect": [
+			{
+				"label": "攻撃力",
+				"value": 6,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 9,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 12,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 15,
+				"type": "percent"
+			},
+			{
+				"label": "攻撃力",
+				"value": 18,
+				"type": "percent"
+			}
+		]
+	},
+	"skill": [
+		{
+			"name": "死角攻撃",
+			"tern": 0,
+			"desc": "敵単体に攻撃する。この攻撃のクリティカル発生率が50%UPする。対象が強化状態の場合、ダメージがUPする。(魂力1獲得)",
+			"soul": {
+				"soul": 1,
+				"soulbern": true,
+				"bern_desc": "ダメージがUPする。(魂力10消費)",
+				"usesoul": 10
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "傭兵の秘薬",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "緻密な計画",
+			"tern": 4,
+			"desc": "味方対象と自身の弱体効果を2つ解除した後、シールドを2ターンの間付与する。自身のアクションゲージを50%UPさせる。対象の最大生命力が高いほどシールド効果がUPする。(魂力2獲得)",
+			"soul": {
+				"soul": 2,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "シールド効果",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "シールド効果",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "シールド効果",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "シールド効果",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "シールド効果",
+					"value": 15,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "傭兵の秘薬",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		},
+		{
+			"name": "斬殺",
+			"tern": 5,
+			"desc": "敵単体に攻撃し、裂傷を付与した後、自身に無敵を1ターンの間付与する。この攻撃の命中率・クリティカル発生率が50%UPする。ダメージが高いほど裂傷効果がUPし、1回のスキルで対象の最大生命力の35%まで、最大生命力を減少させられる。(魂力3獲得)",
+			"soul": {
+				"soul": 3,
+				"soulbern": false,
+				"bern_desc": "",
+				"usesoul": 0
+			},
+			"level": [
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 5,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "スキルターン",
+					"value": 1,
+					"type": "減少",
+					"num": "fix"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				},
+				{
+					"label": "ダメージ",
+					"value": 10,
+					"type": "UP",
+					"num": "percent"
+				}
+			],
+			"material": [
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 1
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 5
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 3
+					},
+					{
+						"name": "弓術の秘伝書",
+						"count": 7
+					}
+				],
+				[
+					{
+						"name": "モラゴラ",
+						"count": 5
+					},
+					{
+						"name": "傭兵の秘薬",
+						"count": 2
+					}
+				]
+			],
+			"multiple": {}
+		}
+	],
+	"thumbnail": "https://img.game8.jp/6339196/761f5bcec50ff9e5c04092907797dd12.png/show",
+	"name": "ザハーク",
+	"rare": 5,
+	"type": "木",
+	"clazz": "ウォリアー",
+	"extention": {}
+}
